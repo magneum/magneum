@@ -58,7 +58,7 @@ export default function typescript() {
                   >
                     <polygon
                       stroke-width="3"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
                       points="29 13 14 29 25 29 23 39 38 23 27 23"
@@ -78,7 +78,7 @@ export default function typescript() {
                   >
                     <polygon
                       stroke-width="3"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
                       points="29 13 14 29 25 29 23 39 38 23 27 23"
@@ -98,7 +98,7 @@ export default function typescript() {
                   >
                     <polygon
                       stroke-width="3"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
                       points="29 13 14 29 25 29 23 39 38 23 27 23"
@@ -118,7 +118,7 @@ export default function typescript() {
                   >
                     <polygon
                       stroke-width="3"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
                       points="29 13 14 29 25 29 23 39 38 23 27 23"
@@ -138,7 +138,7 @@ export default function typescript() {
                   >
                     <polygon
                       stroke-width="3"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
                       points="29 13 14 29 25 29 23 39 38 23 27 23"
@@ -178,7 +178,7 @@ export default function typescript() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         stroke-width="2"
                         className="w-5 h-5"
@@ -201,7 +201,7 @@ export default function typescript() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         stroke-width="2"
                         className="w-4 h-4 ml-2"
@@ -220,7 +220,7 @@ export default function typescript() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         stroke-width="2"
                         className="w-5 h-5"
@@ -244,7 +244,7 @@ export default function typescript() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         stroke-width="2"
                         className="w-4 h-4 ml-2"
@@ -263,7 +263,7 @@ export default function typescript() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         stroke-width="2"
                         className="w-5 h-5"
@@ -288,7 +288,7 @@ export default function typescript() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         stroke-width="2"
                         className="w-4 h-4 ml-2"
