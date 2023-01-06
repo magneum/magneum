@@ -162,12 +162,12 @@ export default function javascript() {
         <section className="text-gray-400 bg-gradient-to-tr from-gray-900 via-stone-800 to-gray-900 body-font">
           <div className="container px-5 py-24 mx-auto flex flex-wrap">
             <div className="flex flex-col text-center w-full mb-20">
-              <h2 className="text-xs text-yellow-400 tracking-widest font-medium title-font mb-1">
-                ROOF PARTY POLAROID
-              </h2>
-              <h1 className="sm:text-3xl text-2xl font-medium title-font text-white">
-                Master Cleanse Reliac Heirloom
-              </h1>
+              <h2 className="text-xs text-yellow-400 tracking-widest font-mono font-medium title-font mb-1">
+                <i>choose any of the following method</i>
+              </h2>{" "}
+              <h1 className="sm:text-5xl text-4xl font-serif font-extrabold text-yellow-300">
+                Get Started with Javascript
+              </h1>{" "}
             </div>
             <div className="flex flex-wrap -m-4">
               <div className="p-4 md:w-1/3">
