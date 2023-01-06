@@ -172,7 +172,7 @@ export default function typescript() {
             </div>
             <div className="flex flex-wrap -m-4">
               <div className="p-4 md:w-1/3">
-                <div className="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
+                <div className="hover:animate-pulse hover:bg-gray-800 flex rounded-lg h-full bg-gray-700 bg-opacity-60 p-8 flex-col">
                   <div className="flex items-center mb-3">
                     <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0">
                       <svg
@@ -188,13 +188,23 @@ export default function typescript() {
                       </svg>
                     </div>
                     <h2 className="text-white text-lg title-font font-medium">
-                      Shooting Stars
+                      Method 1 Using Axios: <br></br>
+                      <span className="italic text-sm text-blue-200">{`import axios from "axios";`}</span>
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base">
-                      Blue bottle crucifix vinyl post-ironic four dollar toast
-                      vegan taxidermy. Gastropub indxgo juice poutine.
+                      In this example we will be using{" "}
+                      <span className="font-semibold text-blue-400">
+                        {" "}
+                        api/animation{" "}
+                      </span>
+                      endpoint.<br></br>
+                      <span className="font-semibold text-blue-400">
+                        {" "}
+                        ?q={" "}
+                      </span>{" "}
+                      is the querry that api/animation takes.
                     </p>
                     <a className="mt-3 text-blue-400 inline-flex items-center">
                       Learn More
@@ -214,7 +224,7 @@ export default function typescript() {
                 </div>
               </div>
               <div className="p-4 md:w-1/3">
-                <div className="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
+                <div className="hover:animate-pulse hover:bg-gray-800 flex rounded-lg h-full bg-gray-700 bg-opacity-60 p-8 flex-col">
                   <div className="flex items-center mb-3">
                     <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0">
                       <svg
@@ -231,13 +241,23 @@ export default function typescript() {
                       </svg>
                     </div>
                     <h2 className="text-white text-lg title-font font-medium">
-                      The Catalyzer
+                      Method 2 Using Request: <br></br>
+                      <span className="italic text-sm text-blue-200">{`const request = require("request");`}</span>
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base">
-                      Blue bottle crucifix vinyl post-ironic four dollar toast
-                      vegan taxidermy. Gastropub indxgo juice poutine.
+                      In this example we will be using{" "}
+                      <span className="font-semibold text-blue-400">
+                        {" "}
+                        api/nsfw{" "}
+                      </span>
+                      endpoint.<br></br>
+                      <span className="font-semibold text-blue-400">
+                        {" "}
+                        ?q={" "}
+                      </span>{" "}
+                      is the querry that api/nsfw takes.
                     </p>
                     <a className="mt-3 text-blue-400 inline-flex items-center">
                       Learn More
@@ -257,7 +277,7 @@ export default function typescript() {
                 </div>
               </div>
               <div className="p-4 md:w-1/3">
-                <div className="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
+                <div className="hover:animate-pulse hover:bg-gray-800 flex rounded-lg h-full bg-gray-700 bg-opacity-60 p-8 flex-col">
                   <div className="flex items-center mb-3">
                     <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0">
                       <svg
@@ -275,13 +295,23 @@ export default function typescript() {
                       </svg>
                     </div>
                     <h2 className="text-white text-lg title-font font-medium">
-                      Neptune
+                      Method 3 Using Unirest: <br></br>
+                      <span className="italic text-sm text-blue-200">{`const unirest = require("unirest");`}</span>
                     </h2>
                   </div>
                   <div className="flex-grow">
                     <p className="leading-relaxed text-base">
-                      Blue bottle crucifix vinyl post-ironic four dollar toast
-                      vegan taxidermy. Gastropub indxgo juice poutine.
+                      In this example we will be using{" "}
+                      <span className="font-semibold text-blue-400">
+                        {" "}
+                        api/hentai{" "}
+                      </span>
+                      endpoint.<br></br>
+                      <span className="font-semibold text-blue-400">
+                        {" "}
+                        ?q={" "}
+                      </span>{" "}
+                      is the querry that api/hentai takes.
                     </p>
                     <a className="mt-3 text-blue-400 inline-flex items-center">
                       Learn More
