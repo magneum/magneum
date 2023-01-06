@@ -1,0 +1,15 @@
+2023-01-07 00:30:46:3046::[32m[3minfo[23m[39m::[32m[3m[[23m[39m
+[32m[3m  {[23m[39m
+[32m[3m    _status: '🎊success',[23m[39m
+[32m[3m    _id: '04e24205-c330-42c2-8b34-aff4f42f64bb',[23m[39m
+[32m[3m    TIMESTAMP: 1673031645419,[23m[39m
+[32m[3m    TOPIC: 'Animation (gif)',[23m[39m
+[32m[3m    QUERY: 'smile',[23m[39m
+[32m[3m    URL: 'https://tinyurl.com/2lwc3stp'[23m[39m
+[32m[3m  }[23m[39m
+[32m[3m][23m[39m
+2023-01-07 01:12:51:1251::[31m[1merror[22m[39m::[31m[1mRequest failed with status code 404[22m[39m
+2023-01-07 01:13:16:1316::[31m[1merror[22m[39m::[31m[1mRequest failed with status code 404[22m[39m
+2023-01-07 01:14:09:149::[31m[1merror[22m[39m::[31m[1mRequest failed with status code 404[22m[39m
+2023-01-07 01:14:18:1418::[31m[1merror[22m[39m::[31m[1mRequest failed with status code 404[22m[39m
+2023-01-07 01:14:46:1446::[31m[1merror[22m[39m::[31m[1mRequest failed with status code 500[22m[39m

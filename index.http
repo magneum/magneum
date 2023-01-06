@@ -1,5 +1,6 @@
-GET http://localhost:3000/api/nsfw?q=nsfw
+GET http://localhost:3000/api/test
 
+# GET http://localhost:3000/api/nsfw?q=nsfw
 # GET http://localhost:3000/api/hentai?q=
 # GET http://localhost:3000/api/animation?q=
 # GET http://localhost:3000/api/anime?q=
