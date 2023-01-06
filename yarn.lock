@@ -2351,6 +2351,11 @@ tiny-glob@^0.2.9:
     globalyzer "0.1.0"
     globrex "^0.1.2"
 
+tinyurl@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/tinyurl/-/tinyurl-1.1.7.tgz#1a8a1d56776a7c03a72e803ac902d27783d6d212"
+  integrity sha512-NCnyDkBTByS/pLH/Vrx/DPL8EciAUDoAvruaM/WnQLfX6Uame3D1nuWNy2Z9CXw7rcsok0tjuonRLolhmyz5rg==
+
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
