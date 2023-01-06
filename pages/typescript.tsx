@@ -57,7 +57,7 @@ export default function typescript() {
                     viewBox="0 0 52 52"
                   >
                     <polygon
-                      stroke-width="3"
+                      strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
@@ -77,7 +77,7 @@ export default function typescript() {
                     viewBox="0 0 52 52"
                   >
                     <polygon
-                      stroke-width="3"
+                      strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
@@ -97,7 +97,7 @@ export default function typescript() {
                     viewBox="0 0 52 52"
                   >
                     <polygon
-                      stroke-width="3"
+                      strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
@@ -117,7 +117,7 @@ export default function typescript() {
                     viewBox="0 0 52 52"
                   >
                     <polygon
-                      stroke-width="3"
+                      strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
@@ -137,7 +137,7 @@ export default function typescript() {
                     viewBox="0 0 52 52"
                   >
                     <polygon
-                      stroke-width="3"
+                      strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
@@ -180,7 +180,7 @@ export default function typescript() {
                         stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -203,7 +203,7 @@ export default function typescript() {
                         stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >
@@ -222,7 +222,7 @@ export default function typescript() {
                         stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -246,7 +246,7 @@ export default function typescript() {
                         stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >
@@ -265,7 +265,7 @@ export default function typescript() {
                         stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -290,7 +290,7 @@ export default function typescript() {
                         stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >

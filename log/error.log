@@ -3,3 +3,5 @@
 2023-01-07 01:14:09:149::[31m[1merror[22m[39m::[31m[1mRequest failed with status code 404[22m[39m
 2023-01-07 01:14:18:1418::[31m[1merror[22m[39m::[31m[1mRequest failed with status code 404[22m[39m
 2023-01-07 01:14:46:1446::[31m[1merror[22m[39m::[31m[1mRequest failed with status code 500[22m[39m
+2023-01-07 01:17:47:1747::[31m[1merror[22m[39m::[31m[1mRequest failed with status code 500[22m[39m
+2023-01-07 01:18:08:188::[31m[1merror[22m[39m::[31m[1mcolors[Colorizer.allColors[lookup]] is not a function[22m[39m
