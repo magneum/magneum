@@ -351,6 +351,7 @@ export default async function animation(
         "https://www.reddit.com/r/omgbeckylookathiscock/random.json"
       ).then(async (Form) => {
         var FF = JSON.parse(Form.body);
+        var FFLink = FF[0].data.children[0].data.url;
         if (FFLink) {
           var _Found = [
             {
