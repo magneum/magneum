@@ -19,8 +19,15 @@ export default function Home() {
               <span className="text-lime-400">Xhadr-Api</span>
             </h1>
             <p className="px-8 mt-8 mb-12 text-lg font-mono">
-              A <span className="text-lime-400"> Next-js </span> based
-              <span className="text-lime-400"> RESTFul Api </span>
+              A
+              <span className="text-lime-400 hover:text-opacity-75">
+                <Link href="https://nextjs.org/"> Next-Js </Link>
+              </span>
+              based
+              <span className="text-lime-400 hover:text-opacity-75">
+                <Link href="https://restfulapi.net/"> REST-api </Link>
+              </span>
+              <br></br>
               <i className="text-xs">(representational state transfer)</i>
             </p>
             <div className="flex flex-wrap justify-center">
@@ -88,17 +95,18 @@ export default function Home() {
               <div className="flex flex-col justify-center">
                 <div className="pb-4 mb-4 border-b">
                   <h6 className="mb-2 font-bold leading-5 text-xl text-lime-700 text-center">
-                    $ Base Url
+                    $ BASE URL
                   </h6>
-                  <p className="text-xl text-lime-900 hover:scale-125 duration-500 hover:text-lime-600 hover:font-semibold text-center">
-                    https://bit.ly/xhadr-api
+                  <p className="text-xl text-lime-900 hover:text-lime-600 hover:font-semibold text-center">
+                    bit.ly/Xhadr-api (auto-translate)<br></br>
+                    bit.ly/xhadr-api (english)
                   </p>
                 </div>
                 <div className="pb-4 mb-4 border-b">
                   <h6 className="mb-2 font-bold leading-5 text-xl text-lime-700 text-center">
-                    $ Api Url
+                    $ API URL
                   </h6>
-                  <p className="text-xl text-lime-900 hover:scale-125 duration-500 hover:text-lime-600 hover:font-semibold text-center">
+                  <p className="text-xl text-lime-900 hover:text-lime-600 hover:font-semibold text-center italic ">
                     https://xhadr-api.vercel.app/api/
                   </p>
                 </div>
