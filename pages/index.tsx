@@ -91,7 +91,7 @@ export default function Home() {
                     $ Base Url
                   </h6>
                   <p className="text-xl text-lime-900 hover:scale-125 duration-500 hover:text-lime-600 hover:font-semibold text-center">
-                    https://xhadr-api.vercel.app
+                    https://bit.ly/xhadr-api
                   </p>
                 </div>
                 <div className="pb-4 mb-4 border-b">
