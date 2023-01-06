@@ -207,7 +207,7 @@ export default function typescript() {
                       is the querry that api/animation takes.
                     </p>
                     <a className="mt-3 text-blue-400 inline-flex items-center">
-                      Learn More
+                      Continue
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -260,7 +260,7 @@ export default function typescript() {
                       is the querry that api/nsfw takes.
                     </p>
                     <a className="mt-3 text-blue-400 inline-flex items-center">
-                      Learn More
+                      Continue
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -314,7 +314,7 @@ export default function typescript() {
                       is the querry that api/hentai takes.
                     </p>
                     <a className="mt-3 text-blue-400 inline-flex items-center">
-                      Learn More
+                      Continue
                       <svg
                         fill="none"
                         stroke="currentColor"

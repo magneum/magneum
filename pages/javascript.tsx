@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-
 export default function javascript() {
   return (
     <>
@@ -12,19 +11,19 @@ export default function javascript() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <section className="bg-gradient-to-tr from-yellow-700 via-stone-800 to-blue-900 text-blue-100">
+        <section className="bg-gradient-to-tr from-gray-900 via-yellow-800 to-gray-900 text-yellow-100">
           <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
             <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif">
               Rapidly build modern projects with<br></br>
-              <span className="text-blue-400">Xhadr-Api</span>
+              <span className="text-yellow-400">Xhadr-Api</span>
             </h1>
             <p className="px-8 mt-8 mb-12 text-lg font-mono">
-              A <span className="text-blue-400"> Next-js </span> based
-              <span className="text-blue-400"> RESTFul Api </span>
+              A <span className="text-yellow-400"> Next-js </span> based
+              <span className="text-yellow-400"> RESTFul Api </span>
               <i className="text-xs">(representational state transfer)</i>
             </p>
             <div className="sm:mb-8 sm:flex sm:justify-center">
-              <div className="animate-pulse relative overflow-hidden rounded-lg-b-lg py-1.5 px-4 text-sm leading-6 ring-1 ring-blue-600 hover:ring-blue-500">
+              <div className="animate-pulse relative overflow-hidden rounded-lg-b-lg py-1.5 px-4 text-sm leading-6 ring-1 ring-yellow-600 hover:ring-yellow-500">
                 <span className="text-yellow-600 font-bold">
                   Designed & Developed by Xhadr
                 </span>
@@ -33,105 +32,302 @@ export default function javascript() {
           </div>
           <hr
             style={{
-              backgroundColor: "#18337C",
+              backgroundColor: "#7C6118",
               height: 8,
-              borderColor: "#FF9900",
+              borderColor: "#B4B291",
             }}
           />
         </section>
-        <section className="bg-amber-50">
-          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 hover:scale-105">
-            <div className="flex flex-col max-w-screen-lg overflow-hidden border-gray-900 border-4 bg-white rounded-lg shadow-2xl shadow-blue-600 hover:shadow-blue-400 lg:flex-row sm:mx-auto">
-              <div className="relative lg:w-1/2">
-                <Image
-                  className="object-cover w-full lg:absolute h-80 lg:h-full"
-                  src="/Typescript_Choice.png"
-                  alt="blob"
-                  width={720}
-                  height={720}
-                />
-                <svg
-                  className="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
-                  viewBox="0 0 20 104"
-                  fill="currentColor"
-                >
-                  <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104"></polygon>
-                </svg>
-              </div>
-              <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
-                <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl text-blue-900">
-                  Start Using Xhadr-Api using @Types
-                </h5>
-                <p className="mb-5 text-gray-800">
-                  <span className="font-bold text-blue-700">TYPESCRIPT</span> is
-                  a free and open source programming language developed and
-                  maintained by Microsoft. It is a strict syntactical superset
-                  of JavaScript and adds optional static typing to the language.
-                </p>
-                <div className="flex items-center">
-                  <Link
-                    href="/typescript"
-                    aria-label=""
-                    className="inline-flex items-center font-semibold transition-colors duration-200 text-red-400 hover:text-deep-purple-800"
+        <section className="bg-[url(https://i.postimg.cc/cL8NgHxR/hentai.jpg)] bg-cover bg-center bg-no-repeat">
+          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+              <h2 className="max-w-lg mb-6 font-serif text-4xl font-bold leading-none tracking-tight text-yellow-300 sm:text-5xl md:mx-auto">
+                Available api endpoints
+              </h2>
+              <p className="text-base text-yellow-400 md:text-lg font-mono">
+                <i>use these below endpoints to get response from the api</i>
+              </p>
+            </div>
+            <div className="max-w-lg space-y-3 sm:mx-auto lg:max-w-xl">
+              <div className="hover:animate-pulse flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-yellow-200 shadow-sm group bg-stone-900 hover:bg-yellow-400 hover:border-yellow-400">
+                <div className="mr-2">
+                  <svg
+                    className="w-6 h-6 transition-colors duration-500 text-yellow-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
                   >
-                    <button
-                      type="submit"
-                      className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-neutral-800 hover:bg-blue-400 hover:text-slate-100 focus:shadow-outline focus:outline-none"
-                    >
-                      Get started
-                    </button>
-                  </Link>
+                    <polygon
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    ></polygon>
+                  </svg>
                 </div>
+                <span className="text-white transition-colors duration-500 group-hover:text-white">
+                  api/animation?q=
+                </span>
+              </div>
+              <div className="hover:animate-pulse flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-yellow-200 shadow-sm group bg-stone-900 hover:bg-yellow-400 hover:border-yellow-400">
+                <div className="mr-2">
+                  <svg
+                    className="w-6 h-6 transition-colors duration-500 text-yellow-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
+                  >
+                    <polygon
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    ></polygon>
+                  </svg>
+                </div>
+                <span className="text-white transition-colors duration-500 group-hover:text-white">
+                  api/youtube?q=
+                </span>
+              </div>
+              <div className="hover:animate-pulse flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-yellow-200 shadow-sm group bg-stone-900 hover:bg-yellow-400 hover:border-yellow-400">
+                <div className="mr-2">
+                  <svg
+                    className="w-6 h-6 transition-colors duration-500 text-yellow-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
+                  >
+                    <polygon
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    ></polygon>
+                  </svg>
+                </div>
+                <span className="text-white transition-colors duration-500 group-hover:text-white">
+                  api/hentai?q=
+                </span>
+              </div>
+              <div className="hover:animate-pulse flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-yellow-200 shadow-sm group bg-stone-900 hover:bg-yellow-400 hover:border-yellow-400">
+                <div className="mr-2">
+                  <svg
+                    className="w-6 h-6 transition-colors duration-500 text-yellow-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
+                  >
+                    <polygon
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    ></polygon>
+                  </svg>
+                </div>
+                <span className="text-white transition-colors duration-500 group-hover:text-white">
+                  api/anime?q=
+                </span>
+              </div>
+              <div className="hover:animate-pulse flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-yellow-200 shadow-sm group bg-stone-900 hover:bg-yellow-400 hover:border-yellow-400">
+                <div className="mr-2">
+                  <svg
+                    className="w-6 h-6 transition-colors duration-500 text-yellow-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
+                    stroke="currentColor"
+                    viewBox="0 0 52 52"
+                  >
+                    <polygon
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"
+                    ></polygon>
+                  </svg>
+                </div>
+                <span className="text-white transition-colors duration-500 group-hover:text-white">
+                  api/nsfw?q=
+                </span>
               </div>
             </div>
           </div>
           <hr
             style={{
-              backgroundColor: "#222327",
-              height: 4,
+              backgroundColor: "#7C6118",
+              height: 8,
+              borderColor: "#B4B291",
             }}
           />
-          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 hover:scale-105">
-            <div className="flex flex-col max-w-screen-lg overflow-hidden border-gray-900 border-4 bg-white rounded-lg shadow-2xl shadow-yellow-600 hover:shadow-yellow-400 lg:flex-row sm:mx-auto">
-              <div className="relative lg:w-1/2">
-                <Image
-                  className="object-cover w-full lg:absolute h-80 lg:h-full"
-                  src="/Javascript_Choice.png"
-                  alt="blob"
-                  width={720}
-                  height={720}
-                />
-                <svg
-                  className="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
-                  viewBox="0 0 20 104"
-                  fill="currentColor"
-                >
-                  <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104"></polygon>
-                </svg>
+        </section>
+
+        <section className="text-gray-400 bg-gradient-to-tr from-gray-900 via-stone-800 to-gray-900 body-font">
+          <div className="container px-5 py-24 mx-auto flex flex-wrap">
+            <div className="flex flex-col text-center w-full mb-20">
+              <h2 className="text-xs text-yellow-400 tracking-widest font-medium title-font mb-1">
+                ROOF PARTY POLAROID
+              </h2>
+              <h1 className="sm:text-3xl text-2xl font-medium title-font text-white">
+                Master Cleanse Reliac Heirloom
+              </h1>
+            </div>
+            <div className="flex flex-wrap -m-4">
+              <div className="p-4 md:w-1/3">
+                <div className="hover:animate-pulse hover:bg-gray-800 flex rounded-lg h-full bg-gray-700 bg-opacity-60 p-8 flex-col">
+                  <div className="flex items-center mb-3">
+                    <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-yellow-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                      </svg>
+                    </div>
+                    <h2 className="text-white text-lg title-font font-medium">
+                      Method 1 Using Axios: <br></br>
+                      <span className="italic text-sm text-yellow-200">{`const axios = require("axios");`}</span>
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base">
+                      In this example we will be using{" "}
+                      <span className="font-semibold text-yellow-400">
+                        {" "}
+                        api/animation{" "}
+                      </span>
+                      endpoint.<br></br>
+                      <span className="font-semibold text-yellow-400">
+                        {" "}
+                        ?q={" "}
+                      </span>{" "}
+                      is the querry that api/animation takes.
+                    </p>
+                    <a className="mt-3 text-yellow-400 inline-flex items-center">
+                      Continue
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
-                <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl text-yellow-900">
-                  Start Using Xhadr-Api using Vanilla Js
-                </h5>
-                <p className="mb-5 text-gray-800">
-                  <span className="font-bold text-yellow-700">JAVASCRIPT</span>{" "}
-                  is a scripting language that enables you to create dynamically
-                  updating content, control multimedia, animate images, and
-                  pretty much everything else.
-                </p>
-                <div className="flex items-center">
-                  <Link
-                    href="/javascript"
-                    aria-label=""
-                    className="inline-flex items-center font-semibold transition-colors duration-200 text-red-400 hover:text-deep-purple-800"
-                  >
-                    <button
-                      type="submit"
-                      className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-neutral-800 hover:bg-yellow-400 hover:text-slate-900 focus:shadow-outline focus:outline-none"
-                    >
-                      Get started
-                    </button>
-                  </Link>
+              <div className="p-4 md:w-1/3">
+                <div className="hover:animate-pulse hover:bg-gray-800 flex rounded-lg h-full bg-gray-700 bg-opacity-60 p-8 flex-col">
+                  <div className="flex items-center mb-3">
+                    <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-yellow-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+                    <h2 className="text-white text-lg title-font font-medium">
+                      Method 2 Using Request: <br></br>
+                      <span className="italic text-sm text-yellow-200">{`const request = require("request");`}</span>
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base">
+                      In this example we will be using{" "}
+                      <span className="font-semibold text-yellow-400">
+                        {" "}
+                        api/nsfw{" "}
+                      </span>
+                      endpoint.<br></br>
+                      <span className="font-semibold text-yellow-400">
+                        {" "}
+                        ?q={" "}
+                      </span>{" "}
+                      is the querry that api/nsfw takes.
+                    </p>
+                    <a className="mt-3 text-yellow-400 inline-flex items-center">
+                      Continue
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3">
+                <div className="hover:animate-pulse hover:bg-gray-800 flex rounded-lg h-full bg-gray-700 bg-opacity-60 p-8 flex-col">
+                  <div className="flex items-center mb-3">
+                    <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-yellow-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="6" cy="6" r="3"></circle>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                      </svg>
+                    </div>
+                    <h2 className="text-white text-lg title-font font-medium">
+                      Method 3 Using Unirest: <br></br>
+                      <span className="italic text-sm text-yellow-200">{`const unirest = require("unirest");`}</span>
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base">
+                      In this example we will be using{" "}
+                      <span className="font-semibold text-yellow-400">
+                        {" "}
+                        api/hentai{" "}
+                      </span>
+                      endpoint.<br></br>
+                      <span className="font-semibold text-yellow-400">
+                        {" "}
+                        ?q={" "}
+                      </span>{" "}
+                      is the querry that api/hentai takes.
+                    </p>
+                    <a className="mt-3 text-yellow-400 inline-flex items-center">
+                      Continue
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
