@@ -145,29 +145,29 @@ export default function xshade() {
         />
         <footer
           aria-label="Site Footer"
-          className="bg-gradient-to-tr from-blue-700 via-stone-800 to-yellow-900 text-lime-100"
+          className="bg-gradient-to-tr from-blue-700 via-stone-800 to-yellow-900 text-yellow-100"
         >
           <div className="max-w-screen-xl px-4 pt-16 pb-8 mx-auto sm:px-6 lg:px-8 lg:pt-24">
             <div className="text-center">
-              <h2 className="text-5xl font-serif font-bold text-lime-400 sm:text-7xl">
+              <h2 className="text-5xl font-serif font-bold text-yellow-400 sm:text-7xl">
                 Xhadr-Api
               </h2>
               <div>
                 <Link href="/">
-                  <button className="animate-bounce inline-block px-20 py-3 mt-8 text-sm font-medium text-lime-600 border border-lime-600 rounded-lg bg-stone-900 hover:bg-lime-600 hover:text-white focus:outline-none focus:ring active:bg-lime-500">
+                  <button className="animate-bounce inline-block px-20 py-3 mt-8 text-sm font-medium text-yellow-600 border border-yellow-600 rounded-lg bg-stone-900 hover:bg-yellow-600 hover:text-white focus:outline-none focus:ring active:bg-yellow-500">
                     Go Home
                   </button>
                 </Link>
               </div>
             </div>
 
-            <div className="pt-8 mt-16 border-t border-lime-100 sm:flex sm:items-center sm:justify-between lg:mt-24">
+            <div className="pt-8 mt-16 border-t border-yellow-100 sm:flex sm:items-center sm:justify-between lg:mt-24">
               <nav aria-label="Footer Navigation - Support">
                 <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
                   <li>
                     <Link
                       href="#"
-                      className="text-lime-500 transition hover:opacity-75"
+                      className="text-yellow-500 transition hover:opacity-75"
                     >
                       Terms & Conditions
                     </Link>
@@ -176,7 +176,7 @@ export default function xshade() {
                   <li>
                     <Link
                       href="#"
-                      className="text-lime-500 transition hover:opacity-75"
+                      className="text-yellow-500 transition hover:opacity-75"
                     >
                       Privacy Policy
                     </Link>
@@ -185,7 +185,7 @@ export default function xshade() {
                   <li>
                     <Link
                       href="#"
-                      className="text-lime-500 transition hover:opacity-75"
+                      className="text-yellow-500 transition hover:opacity-75"
                     >
                       Cookies
                     </Link>
@@ -199,7 +199,7 @@ export default function xshade() {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-lime-700 transition hover:opacity-75"
+                    className="text-yellow-700 transition hover:opacity-75"
                   >
                     <span className="sr-only">Facebook</span>
 
@@ -223,7 +223,7 @@ export default function xshade() {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-lime-700 transition hover:opacity-75"
+                    className="text-yellow-700 transition hover:opacity-75"
                   >
                     <span className="sr-only">Instagram</span>
 
@@ -247,7 +247,7 @@ export default function xshade() {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-lime-700 transition hover:opacity-75"
+                    className="text-yellow-700 transition hover:opacity-75"
                   >
                     <span className="sr-only">Twitter</span>
 
@@ -267,7 +267,7 @@ export default function xshade() {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-lime-700 transition hover:opacity-75"
+                    className="text-yellow-700 transition hover:opacity-75"
                   >
                     <span className="sr-only">GitHub</span>
 
@@ -291,7 +291,7 @@ export default function xshade() {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-lime-700 transition hover:opacity-75"
+                    className="text-yellow-700 transition hover:opacity-75"
                   >
                     <span className="sr-only">Dribbble</span>
 
