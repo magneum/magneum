@@ -19,26 +19,26 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       console.error(error);
     });
 
-  request(
-    {
-      method: "GET",
-      url: "https://xhadr-api.vercel.app/api/animation?q=smile",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    },
-    (error, response) => {
-      if (error) console.error(error);
-      console.log(response.body);
-    }
-  );
+  // request(
+  // {
+  // method: "GET",
+  // url: "https://xhadr-api.vercel.app/api/animation?q=smile",
+  // headers: {
+  // Accept: "application/json",
+  // "Content-Type": "application/json",
+  // },
+  // },
+  // (error, response) => {
+  // if (error) console.error(error);
+  // console.log(response.body);
+  // }
+  // );
 
-  unirest
-    .post("https://xhadr-api.vercel.app/api/animation")
-    .headers({ Accept: "application/json", "Content-Type": "application/json" })
-    .send({ q: "smile" })
-    .then((response) => {
-      console.log(response.body);
-    });
+  // unirest
+  // .post("https://xhadr-api.vercel.app/api/animation")
+  // .headers({ Accept: "application/json", "Content-Type": "application/json" })
+  // .send({ q: "smile" })
+  // .then((response) => {
+  // console.log(response.body);
+  // });
 }
