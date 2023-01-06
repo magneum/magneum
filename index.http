@@ -1,9 +1,10 @@
-GET http://localhost:3000/api/hentai?q=
-GET http://localhost:3000/api/nsfw?q=
-GET http://localhost:3000/api/animation?q=
-GET http://localhost:3000/api/anime?q=
-GET http://localhost:3000/api/youtube?q=
+GET http://localhost:3000/api/nsfw?q=nsfw
 
-POST http://localhost:3000/api/
-PUT http://localhost:3000/api/
-DELETE http://localhost:3000/api/
+# GET http://localhost:3000/api/hentai?q=
+# GET http://localhost:3000/api/animation?q=
+# GET http://localhost:3000/api/anime?q=
+# GET http://localhost:3000/api/youtube?q=
+
+# POST http://localhost:3000/api/
+# PUT http://localhost:3000/api/
+# DELETE http://localhost:3000/api/
