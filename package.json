@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "clear && next dev",
+    "build": "clear && next build",
+    "start": "clear && next start",
+    "lint": "clear && next lint"
   },
   "dependencies": {
     "@next/font": "13.1.1",
