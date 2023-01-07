@@ -37,10 +37,10 @@ var getLogger = (fileName = "application") => {
     transports: [
       new winston.transports.Console(),
       new winston.transports.File({
-        filename: "log/error.log",
+        filename: "error.log",
         level: "error",
       }),
-      new winston.transports.File({ filename: "log/all.log" }),
+      new winston.transports.File({ filename: "all.log" }),
     ],
   });
 };
