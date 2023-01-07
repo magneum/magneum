@@ -157,7 +157,7 @@ Get started
                 className="max-w-sm rounded-lg shadow-2xl"
               />
               <div>
-                <h1 className="text-5xl font-bold text-orange-400 font-serif">
+                <h1 className="text-5xl font-bold text-lime-500 font-serif">
                   Try Xhadr-Api!
                 </h1>
                 <p className="py-6">
