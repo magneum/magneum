@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+const TryApi = dynamic(() => import("../components/TryApi"));
 const NavHome = dynamic(() => import("../components/NavHome"));
 const NavShade = dynamic(() => import("../components/NavShade"));
 const NavJavascript = dynamic(() => import("../components/NavJavascript"));
@@ -17,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <NavHome />{" "}
+        <NavHome />
         <hr
           style={{
             backgroundColor: "#1F1F1F",
@@ -68,7 +69,7 @@ export default function Home() {
             }}
           />
         </section>
-        <section className="bg-yellow-50">
+        <section className="bg-amber-100">
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
               <h2 className="max-w-lg mb-6 font-semibold text-3xl font-serif leading-none tracking-tight text-lime-700 sm:text-4xl md:mx-auto">
@@ -106,25 +107,67 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-center">
                 <div className="pb-4 mb-4 border-b">
-                  <h6 className="mb-2 font-bold leading-5 text-xl text-lime-700 text-center">
-                    $ BASE URL
+                  <h6 className="mb-2 leading-5 text-2xl font-serif font-bold text-lime-700 text-justify">
+                    What does xhadr-api offers?
                   </h6>
-                  <p className="text-xl text-lime-900 hover:text-lime-600 hover:font-semibold text-center">
-                    bit.ly/Xhadr-api (auto-translate)<br></br>
-                    bit.ly/xhadr-api (english)
-                  </p>
-                </div>
-                <div className="pb-4 mb-4 border-b">
-                  <h6 className="mb-2 font-bold leading-5 text-xl text-lime-700 text-center">
-                    $ API URL
-                  </h6>
-                  <p className="text-xl text-lime-900 hover:text-lime-600 hover:font-semibold text-center italic ">
-                    https://xhadr-api.vercel.app/api/
+                  <p className="text-xl text-lime-900 font-sans hover:text-lime-600 hover:font-semibold text-justify">
+                    <span className="text-lime-700 italic font-bold">
+                      With{" "}
+                    </span>
+                    xhadr-api you can fetch different types of informations
+                    without needing to install any dependencies or worrying
+                    about servers or configurations.<br></br>
+                    <span className="text-lime-700 italic font-bold">
+                      Just{" "}
+                    </span>
+                    use any method to fetch the api endpoints and you will be
+                    delighted with a perfect constructed object as a response
+                    from that endpoint of choice.<br></br>
+                    <span className="text-lime-700 italic font-bold">
+                      Xhadr-Api{" "}
+                    </span>
+                    has many endpoints like animation, anime, hentai, youtube
+                    music, youtube video, youtube search, nsfw and many more
+                    upcoming.
                   </p>
                 </div>
               </div>
             </div>
-          </div>
+          </div>{" "}
+          <hr
+            style={{
+              backgroundColor: "#9AD43D",
+              height: 8,
+            }}
+          />
+        </section>
+        <section className="bg-zinc-800">
+          <br></br> <br></br>
+          <div className="hero min-h-fit">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+              <Image
+                alt="blob"
+                width={500}
+                height={1000}
+                src="/hentai.png"
+                className="max-w-sm rounded-lg shadow-2xl"
+              />
+              <div>
+                <h1 className="text-5xl font-bold text-orange-400 font-serif">
+                  Try Xhadr-Api!
+                </h1>
+                <p className="py-6">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <div className="form-control w-full max-w-xs">
+                  <TryApi />
+                </div>
+              </div>
+            </div>
+          </div>{" "}
+          <br></br> <br></br>
         </section>
         <hr
           style={{
