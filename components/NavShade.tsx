@@ -56,9 +56,10 @@ export default function NavShade() {
       <div className="navbar-center">
         <Link
           href="/"
-          className="btn btn-ghost normal-case font-bold font-serif text-2xl text-blue-300 text-center"
+          className="btn btn-ghost normal-case font-bold font-serif text-2xl text-yellow-300 text-center"
         >
-          Xhadr Api <span className="text-xs text-gray-200"> by Xhadr</span>
+          Designed & Developed{" "}
+          <span className="text-xs text-blue-100"> by Xhadr</span>
         </Link>
       </div>
       <div className="navbar-end"></div>

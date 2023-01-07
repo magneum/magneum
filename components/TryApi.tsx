@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function NavHome() {
   return (
-    <div className="navbar from-lime-900 to-zinc-800 rounded-xl border-lime-700 border-2 hover:bg-zinc-800">
+    <div className="navbar rounded-xl bg-lime-700 border-stone-800 border-2 hover:bg-stone-900 hover:border-lime-600">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -51,10 +51,26 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/animation?q=blush"
+                    href="https://xhadr-api-kryknz.vercel.app/api/animation?q=confused"
                     className="text-xs text-yellow-200"
                   >
-                    ?q=blush
+                    ?q=confused
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://xhadr-api-kryknz.vercel.app/api/animation?q=goodnight"
+                    className="text-xs text-yellow-200"
+                  >
+                    ?q=goodnight
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://xhadr-api-kryknz.vercel.app/api/animation?q=happy"
+                    className="text-xs text-yellow-200"
+                  >
+                    ?q=happy
                   </Link>
                 </li>
               </ul>
@@ -76,6 +92,14 @@ export default function NavHome() {
               <ul className="p-2 bg-stone-900 text-orange-200">
                 <li>
                   <Link
+                    href="https://xhadr-api-kryknz.vercel.app/api/hentai?q=uniform"
+                    className="text-xs text-orange-200"
+                  >
+                    ?q=uniform
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="https://xhadr-api-kryknz.vercel.app/api/hentai?q=ass"
                     className="text-xs text-orange-200"
                   >
@@ -84,10 +108,18 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/hentai?q=bdsm"
+                    href="https://xhadr-api-kryknz.vercel.app/api/hentai?q=doujin"
                     className="text-xs text-orange-200"
                   >
-                    ?q=bdsm
+                    ?q=doujin
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://xhadr-api-kryknz.vercel.app/api/hentai?q=femdom"
+                    className="text-xs text-orange-200"
+                  >
+                    ?q=femdom
                   </Link>
                 </li>
               </ul>
@@ -123,6 +155,22 @@ export default function NavHome() {
                     ?q=bonermaterial
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="https://xhadr-api-kryknz.vercel.app/api/nsfw?q=iwanttofuckher"
+                    className="text-xs text-red-200"
+                  >
+                    ?q=iwanttofuckher
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://xhadr-api-kryknz.vercel.app/api/nsfw?q=cumslut"
+                    className="text-xs text-red-200"
+                  >
+                    ?q=cumslut
+                  </Link>
+                </li>
               </ul>
             </li>
             {/* ================================================================================= */}
@@ -131,7 +179,10 @@ export default function NavHome() {
         <a className="text-xl font-serif">Try or</a>
       </div>
       <div className="navbar-end">
-        <Link href="/xhade" className="btn bg-lime-900 text-lime-100">
+        <Link
+          href="/xhade"
+          className="btn bg-stone-800 text-lime-100 hover:bg-stone-700"
+        >
           Get started
         </Link>
       </div>

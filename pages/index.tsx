@@ -26,13 +26,17 @@ export default function Home() {
             borderColor: "#A6FF00",
           }}
         />
-        <section className="bg-gradient-to-tr from-lime-800 via-zinc-800 to-neutral-900 text-lime-100">
-          <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
+        <section className="backdrop-blur-3xl bg-gradient-to-tr from-stone-800 via-lime-900 to-stone-900 text-lime-100 ">
+          <div className="container mx-auto flex flex-col items-center px-4 py-6 text-center lg:px-32 ">
             <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif">
-              Rapidly build modern projects with<br></br>
+              <div className="btn btn-circle animate-ping"></div> Rapidly build
+              modern projects with{" "}
+              <div className="btn btn-circle animate-ping"></div>
+              <br></br>
               <span className="text-lime-400">Xhadr-Api</span>
             </h1>
-            <p className="px-8 mt-8 mb-12 text-lg font-mono">
+
+            <p className="px-8 mt-8 mb-12 text-lg font-mono font-semibold">
               A
               <span className="text-lime-400 hover:text-opacity-75">
                 <Link href="https://nextjs.org/"> Next-Js </Link>
@@ -44,25 +48,8 @@ export default function Home() {
               <br></br>
               <i className="text-xs">(representational state transfer)</i>
             </p>
-            <div className="flex flex-wrap justify-center">
-              {/* <div>
-<Link href="/xhade">
-<button className="animate-bounce px-28 py-3 m-4 text-lg font-semibold rounded bg-lime-400 text-stone-900">
-Get started
-</button>
-</Link>
-</div> */}
-            </div>
             <div className="form-control w-full max-w-xs">
               <TryApi />
-            </div>{" "}
-            <br></br>
-            <div className="sm:mb-8 sm:flex sm:justify-center">
-              <div className="animate-pulse relative overflow-hidden rounded-b-lg py-1.5 px-4 text-sm leading-6 ring-1 ring-lime-700 hover:ring-lime-500">
-                <span className="text-lime-600 font-bold">
-                  Designed & Developed by Xhadr
-                </span>
-              </div>
             </div>
           </div>
           <hr
@@ -112,7 +99,7 @@ Get started
               <div className="flex flex-col justify-center">
                 <div className="pb-4 mb-4 border-b">
                   <h6 className="mb-2 leading-5 text-2xl font-serif font-bold text-lime-700 text-justify">
-                    What does xhadr-api offers?
+                    What does Xhadr-api Offer?
                   </h6>
                   <p className="text-xl text-lime-900 font-sans hover:text-lime-600 hover:font-semibold text-justify">
                     <span className="text-lime-700 italic font-bold">
@@ -145,34 +132,7 @@ Get started
             }}
           />
         </section>
-        <section className="bg-zinc-800">
-          <br></br> <br></br>
-          <div className="hero min-h-fit">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-              <Image
-                alt="blob"
-                width={500}
-                height={1000}
-                src="/hentai.png"
-                className="max-w-sm rounded-lg shadow-2xl"
-              />
-              <div>
-                <h1 className="text-5xl font-bold text-lime-500 font-serif">
-                  Try Xhadr-Api!
-                </h1>
-                <p className="py-6">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
-                </p>
-                <div className="form-control w-full max-w-xs">
-                  <TryApi />
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          <br></br> <br></br>
-        </section>
+
         <hr
           style={{
             backgroundColor: "#1F1F1F",

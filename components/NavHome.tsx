@@ -58,7 +58,8 @@ export default function NavHome() {
           href="/"
           className="btn btn-ghost normal-case font-bold font-serif text-2xl text-lime-300 text-center"
         >
-          Xhadr Api <span className="text-xs text-gray-200"> by Xhadr</span>
+          Designed & Developed{" "}
+          <span className="text-xs text-lime-100"> by Xhadr</span>
         </Link>
       </div>
       <div className="navbar-end"></div>
