@@ -1,6 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const NavHome = dynamic(() => import("../components/NavHome"));
+const NavShade = dynamic(() => import("../components/NavShade"));
+const NavJavascript = dynamic(() => import("../components/NavJavascript"));
+const NavTypescript = dynamic(() => import("../components/NavTypescript"));
 import { CopyBlock, arta } from "react-code-blocks";
 const code_axios = `import axios from "axios";
 axios
@@ -45,6 +50,14 @@ export default function javascript() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <NavJavascript />{" "}
+        <hr
+          style={{
+            backgroundColor: "#1F1F1F",
+            height: 8,
+            borderColor: "#FFD900",
+          }}
+        />
         <section className="bg-gradient-to-tr from-gray-900 via-yellow-800 to-gray-900 text-yellow-100">
           <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
             <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif">

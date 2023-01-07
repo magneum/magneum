@@ -1,7 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-
+import dynamic from "next/dynamic";
+const NavHome = dynamic(() => import("../components/NavHome"));
+const NavShade = dynamic(() => import("../components/NavShade"));
+const NavJavascript = dynamic(() => import("../components/NavJavascript"));
+const NavTypescript = dynamic(() => import("../components/NavTypescript"));
 export default function xshade() {
   return (
     <>
@@ -12,6 +16,14 @@ export default function xshade() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <NavShade />{" "}
+        <hr
+          style={{
+            backgroundColor: "#5A3E27",
+            height: 8,
+            borderColor: "#4E95FF",
+          }}
+        />
         <section className="bg-gradient-to-tr from-yellow-700 via-stone-800 to-blue-900 text-blue-100">
           <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
             <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif">
@@ -39,7 +51,7 @@ export default function xshade() {
             }}
           />
         </section>
-        <section className="bg-amber-50">
+        <section className="bg-amber-100">
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 hover:scale-105">
             <div className="flex flex-col max-w-screen-lg overflow-hidden border-gray-900 border-4 bg-white rounded-lg shadow-2xl shadow-blue-600 hover:shadow-blue-400 lg:flex-row sm:mx-auto">
               <div className="relative lg:w-1/2">
@@ -76,7 +88,7 @@ export default function xshade() {
                   >
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-neutral-800 hover:bg-blue-400 hover:text-slate-100 focus:shadow-outline focus:outline-none"
+                      className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-slate-900 text-blue-300 transition duration-200 rounded-lg shadow-md bg-neutral-800 hover:bg-blue-400 hover:text-slate-100 focus:shadow-outline focus:outline-none"
                     >
                       Get started
                     </button>
@@ -85,12 +97,6 @@ export default function xshade() {
               </div>
             </div>
           </div>
-          <hr
-            style={{
-              backgroundColor: "#222327",
-              height: 4,
-            }}
-          />
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 hover:scale-105">
             <div className="flex flex-col max-w-screen-lg overflow-hidden border-gray-900 border-4 bg-white rounded-lg shadow-2xl shadow-yellow-600 hover:shadow-yellow-400 lg:flex-row sm:mx-auto">
               <div className="relative lg:w-1/2">
@@ -127,7 +133,7 @@ export default function xshade() {
                   >
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-neutral-800 hover:bg-yellow-400 hover:text-slate-900 focus:shadow-outline focus:outline-none"
+                      className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-slate-900 text-yellow-400 transition duration-200 rounded-lg shadow-md bg-neutral-800 hover:bg-yellow-400 hover:text-slate-900 focus:shadow-outline focus:outline-none"
                     >
                       Get started
                     </button>

@@ -1,6 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const NavHome = dynamic(() => import("../components/NavHome"));
+const NavShade = dynamic(() => import("../components/NavShade"));
+const NavJavascript = dynamic(() => import("../components/NavJavascript"));
+const NavTypescript = dynamic(() => import("../components/NavTypescript"));
 
 export default function Home() {
   return (
@@ -12,6 +17,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <NavHome />{" "}
+        <hr
+          style={{
+            backgroundColor: "#1F1F1F",
+            height: 8,
+            borderColor: "#A6FF00",
+          }}
+        />
         <section className="bg-gradient-to-tr from-lime-800 via-zinc-800 to-neutral-900 text-lime-100">
           <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
             <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif">
@@ -55,7 +68,6 @@ export default function Home() {
             }}
           />
         </section>
-
         <section className="bg-yellow-50">
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -114,7 +126,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         <hr
           style={{
             backgroundColor: "#1F1F1F",
