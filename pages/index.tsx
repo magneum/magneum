@@ -45,14 +45,18 @@ export default function Home() {
               <i className="text-xs">(representational state transfer)</i>
             </p>
             <div className="flex flex-wrap justify-center">
-              <div>
-                <Link href="/xhade">
-                  <button className="animate-bounce px-28 py-3 m-4 text-lg font-semibold rounded bg-lime-400 text-stone-900">
-                    Get started
-                  </button>
-                </Link>
-              </div>
+              {/* <div>
+<Link href="/xhade">
+<button className="animate-bounce px-28 py-3 m-4 text-lg font-semibold rounded bg-lime-400 text-stone-900">
+Get started
+</button>
+</Link>
+</div> */}
             </div>
+            <div className="form-control w-full max-w-xs">
+              <TryApi />
+            </div>{" "}
+            <br></br>
             <div className="sm:mb-8 sm:flex sm:justify-center">
               <div className="animate-pulse relative overflow-hidden rounded-b-lg py-1.5 px-4 text-sm leading-6 ring-1 ring-lime-700 hover:ring-lime-500">
                 <span className="text-lime-600 font-bold">
