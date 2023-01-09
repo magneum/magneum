@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import TypeWriterEffect from "react-typewriter-effect";
 const TryApi = dynamic(() => import("../components/TryApi"));
 const NavHome = dynamic(() => import("../components/NavHome"));
 const NavShade = dynamic(() => import("../components/NavShade"));
@@ -17,145 +18,125 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <NavHome />
-        <hr
-          style={{
-            backgroundColor: "#1F1F1F",
-            height: 8,
-            borderColor: "#3DD4AE",
-          }}
-        />
-        <section className="backdrop-blur-3xl bg-gradient-to-tr from-stone-800 via-cyan-900 to-stone-900 text-cyan-100 ">
-          <div className="container mx-auto flex flex-col items-center px-4 py-6 text-center lg:px-32 ">
-            <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif">
-              <div className="btn btn-circle animate-ping"></div> Rapidly build
-              modern projects with <br></br>
-              <span className="text-cyan-400">Xhadr-Api</span>{" "}
-              <div className="btn btn-square animate-ping"></div>
-            </h1>
-
-            <p className="px-8 mt-8 mb-12 text-lg font-mono font-semibold">
-              A
-              <span className="text-cyan-400 hover:text-opacity-75">
-                <Link href="https://nextjs.org/"> Next-Js </Link>
-              </span>
-              based
-              <span className="text-cyan-400 hover:text-opacity-75">
-                <Link href="https://restfulapi.net/"> REST-api </Link>
-              </span>
-              <br></br>
-              <i className="text-xs">(representational state transfer)</i>
-            </p>
-            <div className="form-control w-full max-w-xs">
-              <TryApi />
-            </div>
-          </div>
-          <hr
-            style={{
-              backgroundColor: "#1F1F1F",
-              height: 8,
-              borderColor: "#3DD4AE",
-            }}
-          />
-        </section>
-        <section className="bg-stone-50">
-          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <main className="backdrop-blur-3xl bg-gradient-to-tl from-stone-900 via-slate-900 to-black min-w-fit min-h-screen">
+        <div className="flex flex-col items-center justify-center px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:pt-32 md:px-0">
+          <div className="flex flex-col items-center max-w-2xl md:px-8">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-              <h2 className="max-w-lg mb-6 font-semibold text-3xl font-serif leading-none tracking-tight text-cyan-700 sm:text-4xl md:mx-auto">
-                Quick & Easy Implementaion
-              </h2>
-              <p className=" text-cyan-700 md:text-lg font-mono text-xs">
-                A REST API is an application programming interface (API or web
-                API) that conforms to the constraints of REST architectural
-                style and allows for interaction with RESTful web services.
-              </p>
-            </div>
-            <div className="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto">
-              <div className="grid grid-cols-2 gap-5">
-                <Image
-                  className="object-cover w-full h-56 col-span-2 rounded-lg shadow-lg shadow-yellow-800 hover:scale-105 transition-all duration-250"
-                  src="/nsfw.png"
-                  alt=""
-                  width={720}
-                  height={500}
-                />
-                <Image
-                  className="object-cover w-full h-48 rounded-lg shadow-lg shadow-neutral-800 hover:scale-105 transition-all duration-250"
-                  src="/hentai.png"
-                  alt=""
-                  width={500}
-                  height={720}
-                />
-                <Image
-                  className="object-cover w-full h-48 rounded-lg shadow-lg shadow-green-800 hover:scale-105 transition-all duration-250"
-                  src="/animation.png"
-                  alt=""
-                  width={500}
-                  height={720}
-                />
+              <div>
+                <p className="animate-pulse font-bold inline-block px-3 py-px mb-4 text-xs tracking-wider text-teal-200 uppercase rounded-full bg-teal-accent-400">
+                  created with 💖 by xhadr
+                </p>
               </div>
-              <div className="flex flex-col justify-center">
-                <div className="pb-4 mb-4 border-b">
-                  <h6 className="mb-2 leading-5 text-2xl font-serif font-bold text-cyan-700 text-justify">
-                    What does Xhadr-api Offer?
-                  </h6>
-                  <p className="text-1xl text-cyan-900 font-sans hover:text-cyan-600 hover:font-semibold text-justify">
-                    <span className="text-cyan-700 italic font-bold">
-                      With{" "}
-                    </span>
-                    xhadr-api you can fetch different types of informations
-                    without needing to install any dependencies or worrying
-                    about servers or configurations.<br></br>
-                    <span className="text-cyan-700 italic font-bold">
-                      Just{" "}
-                    </span>
-                    use any method to fetch the api endpoints and you will be
-                    delighted with a perfect constructed object as a response
-                    from that endpoint of choice.<br></br>
-                    <span className="text-cyan-700 italic font-bold">
-                      Xhadr-Api{" "}
-                    </span>
-                    has many endpoints like animation, anime, hentai, youtube
-                    music, youtube video, youtube search, nsfw and many more
-                    upcoming.
-                  </p>
-                </div>
-              </div>
+              <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif typewritter">
+                Rapidly build modern projects with <br></br>
+                <span className="text-cyan-400">Xhadr-Api</span>
+              </h1>
+              <br></br>
+              <Link
+                href="/api"
+                className="btn btn-wide font-bold border-1 border-slate-400 bg-slate-800 text-cyan-100 hover:bg-cyan-700"
+              >
+                Get started
+              </Link>
             </div>
-          </div>{" "}
-          <hr
-            style={{
-              backgroundColor: "#3DD4AE",
-              height: 8,
-            }}
-          />
-        </section>
-
-        <hr
-          style={{
-            backgroundColor: "#1F1F1F",
-            height: 8,
-          }}
-        />
-        <footer className="footer footer-center  w-full p-4 bg-gradient-to-tr bg-stone-900 text-yellow-100">
-          <div className="text-center">
-            {" "}
-            <Link href="/">
-              <button className="inline-block px-20 py-3 mt-8 text-sm font-medium text-stone-200 border border-stone-600 rounded-lg bg-stone-900 hover:bg-stone-600 hover:text-white focus:outline-none focus:ring active:bg-stone-500">
-                To Home
-              </button>
-            </Link>
-            <br></br> <br></br>
-            <p>
-              Copyright © 2022 -
-              <a className="font-semibold" href="mailto:m.sohanemon@gmail.com">
-                Xhadr
-              </a>
-            </p>{" "}
+            {/* <form className="flex flex-col items-center w-full mb-4 md:flex-row">
+<input
+placeholder="Name"
+required=""
+type="text"
+className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+/>
+<input
+placeholder="Email"
+required=""
+type="text"
+className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+/>
+<button
+type="submit"
+className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+>
+Subscribe
+</button>
+</form> */}
+            <p className="max-w-md mb-10 text-xs italic font-semibold text-gray-300 sm:text-sm md:text-center">
+              xhadr-api you can fetch different types of informations without
+              needing to install any dependencies or worrying about servers or
+              configurations.
+            </p>
           </div>
-        </footer>
+          <div className="blur-2xl text-teal-500 text-5xl animate-pulse text-left">
+            XHADR
+          </div>
+          <Image
+            src="/gify.gif"
+            className="w-full max-w-screen-sm mx-auto rounded animate-wiggle hover:scale-105 px-2 py-2 border-cyan-900 border hover:saturate-150 hover:shadow-cyan-600 shadow-cyan-900 shadow-2xl md:w-auto lg:max-w-screen-md"
+            alt="blob"
+            width={1080}
+            height={200}
+          />
+          <div className="blur-2xl text-cyan-300 text-5xl animate-pulse text-left">
+            XHADR
+          </div>
+          <div className="blur-3xl text-cyan-300 text-5xl animate-pulse text-right">
+            XHADR
+          </div>
+        </div>
+        <div className="blur-3xl text-teal-300 text-5xl animate-pulse text-right">
+          XHADR
+        </div>
       </main>
+      <hr
+        className="blur-2xl animate-spin"
+        style={{
+          backgroundColor: "#3DD4C7 ",
+          height: 1,
+        }}
+      />
+      <footer className="footer footer-center p-10 bg-zinc-900 text-base-content rounded">
+        <div>
+          <div className="grid grid-flow-col gap-4">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-current"
+              >
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-current"
+              >
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-current"
+              >
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p className="font-bold italic text-slate-400">
+            Copyright © 2023 - All right reserved by Xhadr Industries Ltd
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

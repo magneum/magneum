@@ -30,6 +30,7 @@
     "react-code-blocks": "^0.0.9-0",
     "react-dom": "18.2.0",
     "react-syntax-highlighter": "^15.5.0",
+    "react-typewriter-effect": "^1.1.0",
     "tinyurl": "^1.1.7",
     "typescript": "4.9.4",
     "unirest": "^0.6.0",
