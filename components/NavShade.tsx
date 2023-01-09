@@ -46,7 +46,7 @@ export default function NavShade() {
               </Link>
             </li>
             <li>
-              <Link href="/javascript" className="text-xs text-yellow-200">
+              <Link href="/javascript" className="text-xs text-blue-200">
                 Javascript Usage
               </Link>
             </li>
@@ -56,7 +56,7 @@ export default function NavShade() {
       <div className="navbar-center">
         <Link
           href="/"
-          className="btn btn-ghost normal-case font-bold font-serif text-2xl text-yellow-300 text-center"
+          className="btn btn-ghost normal-case font-bold font-serif text-2xl text-blue-300 text-center"
         >
           Designed & Developed{" "}
           <span className="text-xs text-blue-100"> by Xhadr</span>

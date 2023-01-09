@@ -23,26 +23,25 @@ export default function Home() {
           style={{
             backgroundColor: "#1F1F1F",
             height: 8,
-            borderColor: "#A6FF00",
+            borderColor: "#3DD4AE",
           }}
         />
-        <section className="backdrop-blur-3xl bg-gradient-to-tr from-stone-800 via-lime-900 to-stone-900 text-lime-100 ">
+        <section className="backdrop-blur-3xl bg-gradient-to-tr from-stone-800 via-cyan-900 to-stone-900 text-cyan-100 ">
           <div className="container mx-auto flex flex-col items-center px-4 py-6 text-center lg:px-32 ">
             <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif">
               <div className="btn btn-circle animate-ping"></div> Rapidly build
-              modern projects with{" "}
-              <div className="btn btn-circle animate-ping"></div>
-              <br></br>
-              <span className="text-lime-400">Xhadr-Api</span>
+              modern projects with <br></br>
+              <span className="text-cyan-400">Xhadr-Api</span>{" "}
+              <div className="btn btn-square animate-ping"></div>
             </h1>
 
             <p className="px-8 mt-8 mb-12 text-lg font-mono font-semibold">
               A
-              <span className="text-lime-400 hover:text-opacity-75">
+              <span className="text-cyan-400 hover:text-opacity-75">
                 <Link href="https://nextjs.org/"> Next-Js </Link>
               </span>
               based
-              <span className="text-lime-400 hover:text-opacity-75">
+              <span className="text-cyan-400 hover:text-opacity-75">
                 <Link href="https://restfulapi.net/"> REST-api </Link>
               </span>
               <br></br>
@@ -56,17 +55,17 @@ export default function Home() {
             style={{
               backgroundColor: "#1F1F1F",
               height: 8,
-              borderColor: "#A6FF00",
+              borderColor: "#3DD4AE",
             }}
           />
         </section>
-        <section className="bg-amber-100">
+        <section className="bg-stone-50">
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-              <h2 className="max-w-lg mb-6 font-semibold text-3xl font-serif leading-none tracking-tight text-lime-700 sm:text-4xl md:mx-auto">
+              <h2 className="max-w-lg mb-6 font-semibold text-3xl font-serif leading-none tracking-tight text-cyan-700 sm:text-4xl md:mx-auto">
                 Quick & Easy Implementaion
               </h2>
-              <p className=" text-lime-700 md:text-lg font-mono text-xs">
+              <p className=" text-cyan-700 md:text-lg font-mono text-xs">
                 A REST API is an application programming interface (API or web
                 API) that conforms to the constraints of REST architectural
                 style and allows for interaction with RESTful web services.
@@ -98,23 +97,23 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-center">
                 <div className="pb-4 mb-4 border-b">
-                  <h6 className="mb-2 leading-5 text-2xl font-serif font-bold text-lime-700 text-justify">
+                  <h6 className="mb-2 leading-5 text-2xl font-serif font-bold text-cyan-700 text-justify">
                     What does Xhadr-api Offer?
                   </h6>
-                  <p className="text-xl text-lime-900 font-sans hover:text-lime-600 hover:font-semibold text-justify">
-                    <span className="text-lime-700 italic font-bold">
+                  <p className="text-1xl text-cyan-900 font-sans hover:text-cyan-600 hover:font-semibold text-justify">
+                    <span className="text-cyan-700 italic font-bold">
                       With{" "}
                     </span>
                     xhadr-api you can fetch different types of informations
                     without needing to install any dependencies or worrying
                     about servers or configurations.<br></br>
-                    <span className="text-lime-700 italic font-bold">
+                    <span className="text-cyan-700 italic font-bold">
                       Just{" "}
                     </span>
                     use any method to fetch the api endpoints and you will be
                     delighted with a perfect constructed object as a response
                     from that endpoint of choice.<br></br>
-                    <span className="text-lime-700 italic font-bold">
+                    <span className="text-cyan-700 italic font-bold">
                       Xhadr-Api{" "}
                     </span>
                     has many endpoints like animation, anime, hentai, youtube
@@ -127,7 +126,7 @@ export default function Home() {
           </div>{" "}
           <hr
             style={{
-              backgroundColor: "#9AD43D",
+              backgroundColor: "#3DD4AE",
               height: 8,
             }}
           />

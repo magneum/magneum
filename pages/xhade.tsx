@@ -24,7 +24,7 @@ export default function xshade() {
             borderColor: "#4E95FF",
           }}
         />
-        <section className="bg-gradient-to-tr from-yellow-700 via-stone-800 to-blue-900 text-blue-100">
+        <section className="bg-gradient-to-tr from-yellow-600 via-stone-800 to-blue-900 text-blue-100">
           <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
             <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif">
               Rapidly build modern projects with<br></br>
@@ -37,7 +37,7 @@ export default function xshade() {
             </p>
             <div className="sm:mb-8 sm:flex sm:justify-center">
               <div className="animate-pulse relative overflow-hidden rounded-lg-b-lg py-1.5 px-4 text-sm leading-6 ring-1 ring-blue-600 hover:ring-blue-500">
-                <span className="text-yellow-600 font-bold">
+                <span className="text-blue-600 font-bold">
                   Designed & Developed by Xhadr
                 </span>
               </div>
@@ -98,7 +98,7 @@ export default function xshade() {
             </div>
           </div>
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 hover:scale-105">
-            <div className="flex flex-col max-w-screen-lg overflow-hidden border-gray-900 border-4 bg-white rounded-lg shadow-2xl shadow-yellow-600 hover:shadow-yellow-400 lg:flex-row sm:mx-auto">
+            <div className="flex flex-col max-w-screen-lg overflow-hidden border-gray-900 border-4 bg-white rounded-lg shadow-2xl shadow-blue-600 hover:shadow-blue-400 lg:flex-row sm:mx-auto">
               <div className="relative lg:w-1/2">
                 <Image
                   className="object-cover w-full lg:absolute h-80 lg:h-full"
@@ -116,11 +116,11 @@ export default function xshade() {
                 </svg>
               </div>
               <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
-                <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl text-yellow-900">
+                <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl text-blue-900">
                   Start Using Xhadr-Api using Vanilla Js
                 </h5>
                 <p className="mb-5 text-gray-800">
-                  <span className="font-bold text-yellow-700">JAVASCRIPT</span>{" "}
+                  <span className="font-bold text-blue-700">JAVASCRIPT</span>{" "}
                   is a scripting language that enables you to create dynamically
                   updating content, control multimedia, animate images, and
                   pretty much everything else.
@@ -133,7 +133,7 @@ export default function xshade() {
                   >
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-slate-900 text-yellow-400 transition duration-200 rounded-lg shadow-md bg-neutral-800 hover:bg-yellow-400 hover:text-slate-900 focus:shadow-outline focus:outline-none"
+                      className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-slate-900 text-blue-400 transition duration-200 rounded-lg shadow-md bg-neutral-800 hover:bg-blue-400 hover:text-slate-900 focus:shadow-outline focus:outline-none"
                     >
                       Get started
                     </button>
@@ -149,7 +149,7 @@ export default function xshade() {
             height: 8,
           }}
         />
-        <footer className="footer footer-center  w-full p-4 bg-gradient-to-tr bg-neutral-900 text-yellow-100">
+        <footer className="footer footer-center  w-full p-4 bg-gradient-to-tr bg-neutral-900 text-blue-100">
           <div className="text-center">
             {" "}
             <Link href="/">

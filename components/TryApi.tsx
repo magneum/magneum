@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function NavHome() {
   return (
-    <div className="navbar rounded-xl bg-lime-700 border-stone-800 border-2 hover:bg-stone-900 hover:border-lime-600">
+    <div className="navbar rounded-xl bg-cyan-700 border-stone-800 border-2 hover:bg-stone-900 hover:border-cyan-600">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -181,7 +181,7 @@ export default function NavHome() {
       <div className="navbar-end">
         <Link
           href="/xhade"
-          className="btn bg-stone-800 text-lime-100 hover:bg-stone-700"
+          className="btn bg-stone-800 text-cyan-100 hover:bg-stone-700"
         >
           Get started
         </Link>

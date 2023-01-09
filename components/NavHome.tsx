@@ -36,7 +36,7 @@ export default function NavHome() {
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-xs text-lime-200">
+              <Link href="/" className="text-xs text-cyan-200">
                 Xhadr-Api
               </Link>
             </li>
@@ -56,10 +56,10 @@ export default function NavHome() {
       <div className="navbar-center">
         <Link
           href="/"
-          className="btn btn-ghost normal-case font-bold font-serif text-2xl text-lime-300 text-center"
+          className="btn btn-ghost normal-case font-bold font-serif text-2xl text-cyan-300 text-center"
         >
           Designed & Developed{" "}
-          <span className="text-xs text-lime-100"> by Xhadr</span>
+          <span className="text-xs text-cyan-100"> by Xhadr</span>
         </Link>
       </div>
       <div className="navbar-end"></div>
