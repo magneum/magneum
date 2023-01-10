@@ -32,7 +32,7 @@ export default function Home() {
               </h1>
               <br></br>
               <Link
-                href="/api"
+                href="/land"
                 className="btn btn-wide font-bold border-1 border-slate-400 bg-slate-800 text-cyan-100 hover:bg-cyan-700"
               >
                 Get started
