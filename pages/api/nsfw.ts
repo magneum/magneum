@@ -864,7 +864,7 @@ export default async function animation(
           endpoint: "/api/nsfw?q=",
           example: "/api/nsfw?q=ass",
           commands: [
-            "nsfw",
+            "nsfw", 
             "nsfw2",
             "bonermaterial",
             "nsfw411",

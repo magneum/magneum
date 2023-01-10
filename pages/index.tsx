@@ -86,7 +86,7 @@ Subscribe
         </div>
       </main>
       <hr
-        className="blur-2xl animate-spin"
+        className="blur-2xl"
         style={{
           backgroundColor: "#3DD4C7 ",
           height: 1,
