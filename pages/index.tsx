@@ -68,34 +68,34 @@ export default function javascript() {
             height: 4,
           }}
         />
-        <section class="text-orange-600 body-font bg-gradient-to-br from-[#202020] via-[#1f1414] to-[#141414] backdrop-blur-2xl">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-col">
-              <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-                <h1 class="sm:w-2/5 text-orange-500 font-bold title-font text-2xl mb-2 sm:mb-0">
+        <section className="text-orange-600 body-font bg-gradient-to-br from-[#202020] via-[#1f1414] to-[#141414] backdrop-blur-2xl">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-col">
+              <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+                <h1 className="sm:w-2/5 text-orange-500 font-bold title-font text-2xl mb-2 sm:mb-0">
                   Lets head over to different places:
                 </h1>
-                <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0"></p>
-                <div class="h-1 bg-orange-100 rounded overflow-hidden">
-                  <div class="w-24 h-full bg-orange-600"></div>
+                <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0"></p>
+                <div className="h-1 bg-orange-100 rounded overflow-hidden">
+                  <div className="w-24 h-full bg-orange-600"></div>
                 </div>
               </div>
             </div>
-            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-                <div class="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
+            <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+              <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
                   <Image
                     alt="content"
                     width={500}
                     height={500}
-                    class="object-cover object-center h-full w-full"
+                    className="object-cover object-center h-full w-full"
                     src="/github.jpeg"
                   ></Image>
                 </div>
-                <h2 class="text-xl font-medium title-font text-orange-500 mt-5">
+                <h2 className="text-xl font-medium title-font text-orange-500 mt-5">
                   🛵Github.com/shadr
                 </h2>
-                <p class="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
                   GitHub, Inc. is an Internet hosting service for software
                   development and version control using Git. It provides the
                   distributed version control of Git plus access control, bug
@@ -103,93 +103,93 @@ export default function javascript() {
                   continuous integration, and wikis for every project.
                 </p>
                 <br></br>
-                <div class="flex justify-start">
+                <div className="flex justify-start">
                   <Link href="https://github.com/shadr">
-                    <button class="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
+                    <button className="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
                       Visit
                     </button>
                   </Link>
                 </div>
               </div>
 
-              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-                <div class="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 contrast-125">
+              <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 contrast-125">
                   <Image
                     alt="content"
                     width={500}
                     height={500}
-                    class="object-cover object-center h-full w-full"
+                    className="object-cover object-center h-full w-full"
                     src="/api.jpg"
                   ></Image>
                 </div>
-                <h2 class="text-xl font-medium title-font text-orange-500 mt-5">
+                <h2 className="text-xl font-medium title-font text-orange-500 mt-5">
                   🛰️ Shadr-Api
                 </h2>
-                <p class="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
                   With Shadr you can fetch different types of informations
                   without needing to install any dependencies or worrying about
                   servers or configurations.
                 </p>
                 <br></br>
-                <div class="flex justify-start">
+                <div className="flex justify-start">
                   <Link href="/application">
-                    <button class="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
+                    <button className="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
                       Visit
                     </button>
                   </Link>
                 </div>
               </div>
-              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-                <div class="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
+              <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
                   <Image
                     alt="content"
                     width={500}
                     height={500}
-                    class="object-cover object-center h-full w-full"
+                    className="object-cover object-center h-full w-full"
                     src="/node.png"
                   ></Image>
                 </div>
-                <h2 class="text-xl font-medium title-font text-orange-500 mt-5">
+                <h2 className="text-xl font-medium title-font text-orange-500 mt-5">
                   🔥 My Node-pkg Page
                 </h2>
-                <p class="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
                   NPM is the worlds largest software registry.<br></br>
                   Open source developers from every continent use npm to share
                   and borrow packages,and many organizations use npm to manage
                   private development as well.
                 </p>
                 <br></br>
-                <div class="flex justify-start">
+                <div className="flex justify-start">
                   <Link href="https://www.npmjs.com/settings/xhadr/packages">
-                    <button class="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
+                    <button className="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
                       Visit
                     </button>
                   </Link>
                 </div>
               </div>
-              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-                <div class="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
+              <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
                   <Image
                     alt="content"
                     width={500}
                     height={500}
-                    class="object-cover object-center h-full w-full"
+                    className="object-cover object-center h-full w-full"
                     src="/vlkyre.png"
                   ></Image>
                 </div>
-                <h2 class="text-xl font-medium title-font text-orange-500 mt-5">
+                <h2 className="text-xl font-medium title-font text-orange-500 mt-5">
                   🦇 Vlkyre Home Page
                 </h2>
-                <p class="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
                   Vlkyre is a whatsapp bot with automation, moderation, music,
                   games and 200+ commands! You can easily deploy your own vlkyre
                   by using npm. To Find Out What Vlkyre Offers, Join Any Vlkyre
                   Official Groups in vlkyre-home-page.
                 </p>
                 <br></br>{" "}
-                <div class="flex justify-start">
+                <div className="flex justify-start">
                   <Link href="https://xhadr.up.railway.app">
-                    <button class="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
+                    <button className="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
                       Visit
                     </button>
                   </Link>
