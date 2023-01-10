@@ -127,7 +127,7 @@ export default function Home() {
                         alt="blob"
                         width={720}
                         height={500}
-                        className="object-cover object-center h-full w-full contrast-150"
+                        className="object-cover object-center h-full w-full animate-spin"
                         src="/vscode.png"
                       ></Image>
                     </div>
