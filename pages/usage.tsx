@@ -36,6 +36,12 @@ unirest
         console.log(response.body);
       });
 `;
+const code_python = `import requests
+import json
+response_API = requests.get('https://shadr-api.vercel.app/api/animation?q=cry')
+data = response_API.text
+parse_json = json.loads(data)
+print(parse_json)`;
 
 export default function typescript() {
   return (
@@ -46,277 +52,142 @@ export default function typescript() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-      <div className="modal">
-        <div className="modal-box relative">
-          <label
-            htmlFor="my-modal-3"
-            className="btn btn-sm btn-circle absolute right-2 top-2"
-          >
-            ✕
-          </label>
-          <h3 className="text-lg font-bold">
-            Congratulations random Internet user!
-          </h3>
-          <p className="py-4">
-            You have been selected for a chance to get one year of subscription
-            to use Wikipedia for free!
-          </p>
-        </div>
-      </div>
       <main>
-        <section className="bg-[url(https://i.postImage.cc/cL8NgHxR/hentai.jpg)] bg-cover bg-center bg-no-repeat">
-          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-              <h2 className="max-w-lg mb-6 font-serif text-4xl font-bold leading-none tracking-tight text-blue-300 sm:text-5xl md:mx-auto">
-                Available api endpoints
-              </h2>
-              <p className="text-base text-blue-400 md:text-lg font-mono">
-                <i>use these below endpoints to get response from the api</i>
+        <div className="relative z-20 flex items-center backdrop-blur-3xl bg-gradient-to-b from-zinc-900 to-slate-900 hover:scale-110">
+          <div className="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
+            <div className="flex flex-col">
+              <h1 className="w-full text-4xl font-light text-center text-blue-400 uppercase sm:text-5xl">
+                Get Started With Shadr Api
+              </h1>
+            </div>
+            <div className="relative block w-full mx-auto mt-6 md:mt-0">
+              <img src="/next.svg" className="max-w-xs m-auto md:max-w-2xl" />
+            </div>
+          </div>
+        </div>
+        <div class="container p-6 px-6 mx-auto">
+          <div class="mb-16 text-center">
+            <h2 class="tracking-wide text-blue-600 uppercase font-extrabold">
+              ________
+            </h2>
+            <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-300 dark:text-white sm:text-4xl">
+              Start with JavaScript or TypeScript
+            </p>
+          </div>
+
+          <div class="flex-wrap items-center justify-center gap-8 text-center sm:flex">
+            <div class="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800 hover:scale-110">
+              <h3 class="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
+                Axios method fetching
+              </h3>
+              <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+                <div
+                  tabIndex={0}
+                  className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+                >
+                  <div className="collapse-title text-xl font-medium italic ">
+                    View
+                  </div>
+                  <div className="collapse-content">
+                    <CopyBlock
+                      text={code_axios}
+                      language="typescript"
+                      wrapLines
+                      theme={nord}
+                    />
+                  </div>
+                </div>
               </p>
             </div>
-            <div className="max-w-lg space-y-3 sm:mx-auto lg:max-w-xl">
-              <div className=" flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-blue-200 shadow-sm group bg-stone-900 hover:bg-blue-400 hover:border-blue-400">
-                <div className="mr-2">
-                  <svg
-                    className="w-6 h-6 transition-colors duration-500 text-blue-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
+            <div class="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800 hover:scale-110">
+              <h3 class="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
+                Axios method fetching
+              </h3>
+              <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+                <div
+                  tabIndex={0}
+                  className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+                >
+                  <div className="collapse-title text-xl font-medium italic ">
+                    View
+                  </div>
+                  <div className="collapse-content">
+                    <CopyBlock
+                      text={code_axios}
+                      language="typescript"
+                      wrapLines
+                      theme={nord}
+                    />
+                  </div>
                 </div>
-                <span className="text-white transition-colors duration-500 group-hover:text-white">
-                  api/animation?q=
-                </span>
-              </div>
-              <div className=" flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-blue-200 shadow-sm group bg-stone-900 hover:bg-blue-400 hover:border-blue-400">
-                <div className="mr-2">
-                  <svg
-                    className="w-6 h-6 transition-colors duration-500 text-blue-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
+              </p>
+            </div>
+            <div class="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800 hover:scale-110">
+              <h3 class="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
+                Axios method fetching
+              </h3>
+              <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+                <div
+                  tabIndex={0}
+                  className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+                >
+                  <div className="collapse-title text-xl font-medium italic ">
+                    View
+                  </div>
+                  <div className="collapse-content">
+                    <CopyBlock
+                      text={code_axios}
+                      language="typescript"
+                      wrapLines
+                      theme={nord}
+                    />
+                  </div>
                 </div>
-                <span className="text-white transition-colors duration-500 group-hover:text-white">
-                  api/youtube?q=
-                </span>
-              </div>
-              <div className=" flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-blue-200 shadow-sm group bg-stone-900 hover:bg-blue-400 hover:border-blue-400">
-                <div className="mr-2">
-                  <svg
-                    className="w-6 h-6 transition-colors duration-500 text-blue-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
+              </p>
+            </div>
+            <div class="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800 hover:scale-110">
+              <h3 class="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
+                Python Requests module method
+              </h3>
+              <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+                <div
+                  tabIndex={0}
+                  className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+                >
+                  <div className="collapse-title text-xl font-medium italic ">
+                    View
+                  </div>
+                  <div className="collapse-content">
+                    <CopyBlock
+                      text={code_python}
+                      language="typescript"
+                      wrapLines
+                      theme={nord}
+                    />
+                  </div>
                 </div>
-                <span className="text-white transition-colors duration-500 group-hover:text-white">
-                  api/hentai?q=
-                </span>
-              </div>
-              <div className=" flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-blue-200 shadow-sm group bg-stone-900 hover:bg-blue-400 hover:border-blue-400">
-                <div className="mr-2">
-                  <svg
-                    className="w-6 h-6 transition-colors duration-500 text-blue-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </div>
-                <span className="text-white transition-colors duration-500 group-hover:text-white">
-                  api/anime?q=
-                </span>
-              </div>
-              <div className=" flex items-center p-2 transition-colors duration-500 border rounded-lg shadow-blue-200 shadow-sm group bg-stone-900 hover:bg-blue-400 hover:border-blue-400">
-                <div className="mr-2">
-                  <svg
-                    className="w-6 h-6 transition-colors duration-500 text-blue-400 group-hover:text-white group-hover:bg-neutral-900 rounded-full sm:w-8 sm:h-8"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </div>
-                <span className="text-white transition-colors duration-500 group-hover:text-white">
-                  api/nsfw?q=
-                </span>
-              </div>
+              </p>
             </div>
           </div>
-          <hr
-            style={{
-              backgroundColor: "#18337C",
-              height: 8,
-              borderColor: "#91A2B4",
-            }}
-          />
-        </section>
-
-        <section className="bg-zinc-900 min-h-screen min-w-screen">
-          <div className="flex flex-col text-center w-full mb-20 py-6">
-            <h2 className="text-xs text-blue-400 tracking-widest title-font mb-1">
-              <i>choose any of the following method</i>
-            </h2>
-            <h1 className="sm:text-5xl text-4xl font-serif font-extrabold text-blue-300">
-              Pick any method of fetching Api Information
-            </h1>
-          </div>
-          <div class="container px-5 py-2 mx-auto">
-            <div class="flex flex-wrap -m-4">
-              <div class="xl:w-1/4 md:w-1/2 p-4">
-                <div class="bg-gray-700 p-1 rounded-lg">
-                  <Image
-                    class="h-40 rounded w-full object-cover object-center mb-6"
-                    src="/axios.png"
-                    alt="content"
-                    width={600}
-                    height={200}
-                  ></Image>
-                  <h3 class="tracking-widest text-white text-xs title-font text-center font-bold">
-                    Using <span className="text-yellow-500 italic">Axios </span>
-                    module
-                  </h3>
-                  <h2 class="uppercase text-yellow-500 text-lg text-gray-900 font-semibold title-font mb-4 text-center">
-                    method 1
-                  </h2>
-                  <p class="leading-relaxed text-base text-center">
-                    <div
-                      tabIndex={0}
-                      className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
-                    >
-                      <div className="collapse-title text-xl font-medium">
-                        Focus me to see content
-                      </div>
-                      <div className="collapse-content">
-                        <CopyBlock
-                          text={code_axios}
-                          language="typescript"
-                          wrapLines
-                          theme={nord}
-                        />
-                      </div>
-                    </div>
-                  </p>
-                </div>
-              </div>
-
-              <div class="xl:w-1/4 md:w-1/2 p-4">
-                <div class="bg-gray-700 p-1 rounded-lg">
-                  <Image
-                    class="h-40 rounded w-full object-cover object-center mb-6"
-                    src="/axios.png"
-                    alt="content"
-                    width={600}
-                    height={200}
-                  ></Image>
-                  <h3 class="tracking-widest text-white text-xs title-font text-center font-bold">
-                    Using{" "}
-                    <span className="text-yellow-500 font-bold">Request </span>
-                    module
-                  </h3>
-                  <h2 class="uppercase text-yellow-500 text-lg text-gray-900 font-semibold title-font mb-4 text-center">
-                    method 2
-                  </h2>
-                  <p class="leading-relaxed text-base text-center">
-                    <div
-                      tabIndex={0}
-                      className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
-                    >
-                      <div className="collapse-title text-xl font-medium">
-                        Focus me to see content
-                      </div>
-                      <div className="collapse-content">
-                        <CopyBlock
-                          text={code_request}
-                          language="typescript"
-                          wrapLines
-                          theme={nord}
-                        />
-                      </div>
-                    </div>
-                  </p>
-                </div>
-              </div>
-
-              <div class="xl:w-1/4 md:w-1/2 p-4">
-                <div class="bg-gray-700 p-1 rounded-lg">
-                  <Image
-                    class="h-40 rounded w-full object-cover object-center mb-6"
-                    src="/unirest.png"
-                    alt="content"
-                    width={600}
-                    height={200}
-                  ></Image>
-                  <h3 class="tracking-widest text-white text-xs title-font text-center font-bold">
-                    Using{" "}
-                    <span className="text-yellow-500 font-bold">Unirest </span>
-                    module
-                  </h3>
-                  <h2 class="uppercase text-yellow-500 text-lg text-gray-900 font-semibold title-font mb-4 text-center">
-                    method 3
-                  </h2>
-                  <p class="leading-relaxed text-base text-center">
-                    <div
-                      tabIndex={0}
-                      className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
-                    >
-                      <div className="collapse-title text-xl font-medium">
-                        Focus me to see content
-                      </div>
-                      <div className="collapse-content">
-                        <CopyBlock
-                          text={code_unirest}
-                          language="typescript"
-                          wrapLines
-                          theme={nord}
-                        />
-                      </div>
-                    </div>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <label htmlFor="my-modal-3" className="btn items-center">
-open modal
-</label> */}
-        </section>
+        </div>
       </main>
     </>
   );
+}
+
+{
+  /* <div
+tabIndex={0}
+className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+>
+<div className="collapse-title text-xl font-medium italic ">View</div>
+<div className="collapse-content">
+<CopyBlock
+text={code_axios}
+language="typescript"
+wrapLines
+theme={nord}
+/>
+</div>
+</div> */
 }
