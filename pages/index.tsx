@@ -5,11 +5,11 @@ import dynamic from "next/dynamic";
 const TryApi = dynamic(() => import("../components/TryApi"));
 const NavHome = dynamic(() => import("../components/NavHome"));
 const NavLand = dynamic(() => import("../components/NavLand"));
-const NavShade = dynamic(() => import("../components/NavShade"));
+const NavFetch = dynamic(() => import("../components/NavFetch"));
 const NavJavascript = dynamic(() => import("../components/NavJavascript"));
 const NavTypescript = dynamic(() => import("../components/NavTypescript"));
 
-export default function Home() {
+export default function javascript() {
   return (
     <>
       <Head>
@@ -18,150 +18,191 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <NavLand />{" "}
-        <hr
-          className="blur animate-pulse"
-          style={{
-            backgroundColor: "#4E5858 ",
-            height: 4,
-          }}
-        />
-        <section className="backdrop-blur-3xl bg-gradient-to-tl from-stone-900 via-slate-900 to-black min-w-fit min-h-screen">
-          <div className="flex flex-col items-center justify-center px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:pt-32 md:px-0">
-            <div className="flex flex-col items-center max-w-2xl md:px-8">
-              <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-                <div>
-                  <p className="rounded-md btn-ghost font-bold inline-block px-3 py-px mb-4 text-xs text-teal-200 uppercase">
-                    created with 💖 by xhadr
-                  </p>
-                </div>
-                <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif typewritter">
-                  Rapidly build modern projects with <br></br>
-                  <span className="text-cyan-400">
-                    &lsquo; Shadr &rsquo;
-                  </span>{" "}
-                  <p className="mb-8 text-lg font-serif font-semibold italic">
-                    A
-                    <span className="text-cyan-400 hover:text-opacity-75">
-                      <Link href="https://nextjs.org/"> Next-Js </Link>
-                    </span>
-                    based
-                    <span className="text-cyan-400 hover:text-opacity-75">
-                      <Link href="https://restfulapi.net/"> REST-api </Link>
-                    </span>
-                    <br></br>
-                    <i className="text-xs">(representational state transfer)</i>
-                  </p>
-                </h1>
-
-                <TryApi />
-              </div>
-              <div className="flex flex-col justify-center">
-                <div className="pb-4 mb-4 border-b">
-                  <h2 className="max-w-lg mb-6 font-semibold text-3xl font-serif leading-none tracking-tight sm:text-4xl md:mx-auto">
-                    What is Shadr?
-                  </h2>
-                  <p className="text-1xl hover:text-cyan-600 text-justify font-serif">
-                    <span className="text-cyan-400 font-semibold">With </span>
-                    Shadr you can fetch different types of informations without
-                    needing to install any dependencies or worrying about
-                    servers or configurations.<br></br>
-                    <span className="text-cyan-400 font-semibold">Just </span>
-                    use any method to fetch the api endpoints and you will be
-                    delighted with a perfect constructed object as a response
-                    from that endpoint of choice.<br></br>
-                    <span className="text-cyan-400 font-semibold">Shadr </span>
-                    has many endpoints like animation, anime, hentai, youtube
-                    music, youtube video, youtube search, nsfw and many more
-                    upcoming.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="blur-2xl text-teal-500 text-5xl animate-pulse text-left">
-              XHADR
-            </div>
+      <main className="font-serif">
+        <header className="font-serif text-orange-100 body-font">
+          <div className="relative">
             <Image
-              src="/gify.gif"
-              className="w-full max-w-screen-sm mx-auto rounded contrast-100 hover:scale-105 px-2 py-2 border-cyan-900 border hover:saturate-150 hover:shadow-cyan-600 shadow-cyan-900 shadow-2xl md:w-auto lg:max-w-screen-md"
-              alt="blob"
-              width={1080}
-              height={200}
+              src="/anime_orange.jpg"
+              className="absolute inset-0 object-cover w-full h-full blur-xl"
+              alt="content"
+              width={1270}
+              height={720}
             />
-            <div className="blur-2xl text-cyan-300 text-5xl animate-pulse text-left">
-              XHADR
-            </div>
-            <div className="blur-3xl text-cyan-300 text-5xl animate-pulse text-right">
-              XHADR
+            <div className="relative bg-stone-900 bg-opacity-75">
+              <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div className="flex flex-col items-center justify-between xl:flex-row">
+                  <h1 className="mb-5 font-bold tracking-tight text-orange-100 text-4xl sm:leading-none justify-center">
+                    When you have a dream, <br className="hidden md:block" />
+                    you have got to{" "}
+                    <span className="inline-block text-orange-500">
+                      grab
+                    </span>{" "}
+                    it and
+                    <span className="inline-block text-orange-500">
+                      never{" "}
+                    </span>{" "}
+                    let go.
+                  </h1>
+                  <p className="lg:w-2/3 text-orange-100">
+                    ✧ Hi, I am{" "}
+                    <span className="inline-block text-orange-500 font-bold">
+                      Shadr (▀͜͞ʖ▀) ▄︻̷̿┻̿═━━ ~~
+                    </span>
+                    <br></br>✧ A Front/Back-end self-taught developer.
+                    <br></br>✧ Have been developing Whatsapp,Telegram,Discord
+                    bots since 2k21.
+                    <br></br>✧ Below you can find all my work including{" "}
+                    <span className="inline-block text-orange-500">
+                      Shadr-Api
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="blur-3xl text-teal-300 text-5xl animate-pulse text-right">
-            XHADR
-          </div>
-        </section>
+        </header>
         <hr
           className="blur animate-pulse"
           style={{
-            backgroundColor: "#81D3CC ",
+            backgroundColor: "#FF7300 ",
             height: 4,
           }}
         />
-        <section className="backdrop-blur-3xl bg-gradient-to-tr from-stone-900 via-slate-900 to-black">
-          <section className="text-gray-600 body-font">
-            <div className="container px-5 py-24 mx-auto flex flex-col">
-              <div className="lg:w-4/6 mx-auto">
-                <div className="rounded-lg h-64 overflow-hidden">
+        <section class="text-orange-600 body-font bg-gradient-to-br from-[#202020] via-[#1f1414] to-[#141414] backdrop-blur-2xl">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col">
+              <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+                <h1 class="sm:w-2/5 text-orange-500 font-bold title-font text-2xl mb-2 sm:mb-0">
+                  Lets head over to different places:
+                </h1>
+                <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0"></p>
+                <div class="h-1 bg-orange-100 rounded overflow-hidden">
+                  <div class="w-24 h-full bg-orange-600"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
                   <Image
-                    alt=""
-                    width={720}
+                    alt="content"
+                    width={500}
                     height={500}
-                    className="object-cover object-center h-full w-full rounded-lg bg-gradient-to-r p-[2px] from-[#6EE7B7] via-[#3B82F6] to-[#ea6733]"
-                    src="/multi.png"
+                    class="object-cover object-center h-full w-full"
+                    src="/github.jpeg"
                   ></Image>
                 </div>
-                <div className="flex flex-col sm:flex-row mt-10">
-                  <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                    <div className="w-20 h-20 rounded-full inline-flex items-center justify-center shadow-blue-500 shadow">
-                      <Image
-                        alt="blob"
-                        width={720}
-                        height={500}
-                        className="object-cover object-center h-full w-full contrast-150"
-                        src="/Visual_Studio_Code_1.35_icon.svg"
-                      ></Image>
-                    </div>
-                    <div className="flex flex-col items-center text-center justify-center">
-                      <h2 className="font-serif font-bold title-font mt-4 text-gray-300 text-lg">
-                        Fetch Api Infos
-                      </h2>
-                      <div className="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
-                    </div>
-                  </div>
-                  <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                    <p className="font-serif leading-relaxed text-lg mb-4 text-gray-400">
-                      ⦿ You can use any method that you like to fetch
-                      informations from the api.
-                      <br></br>⦿ If you are new to the concept of rest api,
-                      press{" "}
-                      <span className="italic text-blue-300">Get Started</span>.
-                      <br></br> ⦿ Want to try out Shadr? Press{" "}
-                      <span className="italic text-blue-300">Try Now</span>.
-                    </p>
+                <h2 class="text-xl font-medium title-font text-orange-500 mt-5">
+                  🛵Github.com/shadr
+                </h2>
+                <p class="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                  GitHub, Inc. is an Internet hosting service for software
+                  development and version control using Git. It provides the
+                  distributed version control of Git plus access control, bug
+                  tracking, software feature requests, task management,
+                  continuous integration, and wikis for every project.
+                </p>
+                <br></br>
+                <div class="flex justify-start">
+                  <Link href="https://github.com/shadr">
+                    <button class="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
+                      Visit
+                    </button>
+                  </Link>
+                </div>
+              </div>
 
-                    <TryApi />
-                  </div>
+              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 contrast-125">
+                  <Image
+                    alt="content"
+                    width={500}
+                    height={500}
+                    class="object-cover object-center h-full w-full"
+                    src="/api.jpg"
+                  ></Image>
+                </div>
+                <h2 class="text-xl font-medium title-font text-orange-500 mt-5">
+                  🛰️ Shadr-Api
+                </h2>
+                <p class="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                  With Shadr you can fetch different types of informations
+                  without needing to install any dependencies or worrying about
+                  servers or configurations.
+                </p>
+                <br></br>
+                <div class="flex justify-start">
+                  <Link href="/application">
+                    <button class="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
+                      Visit
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
+                  <Image
+                    alt="content"
+                    width={500}
+                    height={500}
+                    class="object-cover object-center h-full w-full"
+                    src="/node.png"
+                  ></Image>
+                </div>
+                <h2 class="text-xl font-medium title-font text-orange-500 mt-5">
+                  🔥 My Node-pkg Page
+                </h2>
+                <p class="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                  NPM is the worlds largest software registry.<br></br>
+                  Open source developers from every continent use npm to share
+                  and borrow packages,and many organizations use npm to manage
+                  private development as well.
+                </p>
+                <br></br>
+                <div class="flex justify-start">
+                  <Link href="https://www.npmjs.com/settings/xhadr/packages">
+                    <button class="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
+                      Visit
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
+                  <Image
+                    alt="content"
+                    width={500}
+                    height={500}
+                    class="object-cover object-center h-full w-full"
+                    src="/vlkyre.png"
+                  ></Image>
+                </div>
+                <h2 class="text-xl font-medium title-font text-orange-500 mt-5">
+                  🦇 Vlkyre Home Page
+                </h2>
+                <p class="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                  Vlkyre is a whatsapp bot with automation, moderation, music,
+                  games and 200+ commands! You can easily deploy your own vlkyre
+                  by using npm. To Find Out What Vlkyre Offers, Join Any Vlkyre
+                  Official Groups in vlkyre-home-page.
+                </p>
+                <br></br>{" "}
+                <div class="flex justify-start">
+                  <Link href="https://xhadr.up.railway.app">
+                    <button class="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
+                      Visit
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </section>
-      </main>
+      </main>{" "}
       <hr
         className="blur animate-pulse"
         style={{
-          backgroundColor: "#81D3CC ",
+          backgroundColor: "#FF7300 ",
           height: 4,
         }}
       />
