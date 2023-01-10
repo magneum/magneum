@@ -128,7 +128,7 @@ export default function Home() {
                         width={720}
                         height={500}
                         className="object-cover object-center h-full w-full contrast-150"
-                        src="/Visual_Studio_Code_1.35_icon.svg"
+                        src="/vscode.png"
                       ></Image>
                     </div>
                     <div className="flex flex-col items-center text-center justify-center">
