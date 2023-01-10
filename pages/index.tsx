@@ -108,39 +108,39 @@ export default function Home() {
             height: 4,
           }}
         />
-        <section class="backdrop-blur-3xl bg-gradient-to-tr from-stone-900 via-slate-900 to-black">
-          <section class="text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto flex flex-col">
-              <div class="lg:w-4/6 mx-auto">
-                <div class="rounded-lg h-64 overflow-hidden">
+        <section className="backdrop-blur-3xl bg-gradient-to-tr from-stone-900 via-slate-900 to-black">
+          <section className="text-gray-600 body-font">
+            <div className="container px-5 py-24 mx-auto flex flex-col">
+              <div className="lg:w-4/6 mx-auto">
+                <div className="rounded-lg h-64 overflow-hidden">
                   <Image
                     alt=""
                     width={720}
                     height={500}
-                    class="object-cover object-center h-full w-full rounded-lg bg-gradient-to-r p-[2px] from-[#6EE7B7] via-[#3B82F6] to-[#ea6733]"
+                    className="object-cover object-center h-full w-full rounded-lg bg-gradient-to-r p-[2px] from-[#6EE7B7] via-[#3B82F6] to-[#ea6733]"
                     src="/multi.png"
                   ></Image>
                 </div>
-                <div class="flex flex-col sm:flex-row mt-10">
-                  <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                    <div class="w-20 h-20 rounded-full inline-flex items-center justify-center shadow-blue-500 shadow">
+                <div className="flex flex-col sm:flex-row mt-10">
+                  <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+                    <div className="w-20 h-20 rounded-full inline-flex items-center justify-center shadow-blue-500 shadow">
                       <Image
                         alt="blob"
                         width={720}
                         height={500}
-                        class="object-cover object-center h-full w-full contrast-150"
+                        className="object-cover object-center h-full w-full contrast-150"
                         src="/Visual_Studio_Code_1.35_icon.svg"
                       ></Image>
                     </div>
-                    <div class="flex flex-col items-center text-center justify-center">
-                      <h2 class="font-serif font-bold title-font mt-4 text-gray-300 text-lg">
+                    <div className="flex flex-col items-center text-center justify-center">
+                      <h2 className="font-serif font-bold title-font mt-4 text-gray-300 text-lg">
                         Fetch Api Infos
                       </h2>
-                      <div class="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
+                      <div className="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
                     </div>
                   </div>
-                  <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                    <p class="font-serif leading-relaxed text-lg mb-4 text-gray-400">
+                  <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                    <p className="font-serif leading-relaxed text-lg mb-4 text-gray-400">
                       ⦿ You can use any method that you like to fetch
                       informations from the api.
                       <br></br>⦿ If you are new to the concept of rest api,
