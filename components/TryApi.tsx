@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function NavHome() {
   return (
-    <div className="navbar rounded-xl bg-cyan-700 border-stone-800 border-2 hover:bg-stone-900 hover:border-cyan-600">
+    <div className="navbar rounded-xl bg-slate-900 border-stone-800 border hover:bg-stone-900 hover:border-cyan-600">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -13,7 +13,7 @@ export default function NavHome() {
               className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="cyan"
             >
               <path
                 strokeLinecap="round"
@@ -43,7 +43,7 @@ export default function NavHome() {
               <ul className="p-2 bg-stone-900 text-amber-200">
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/animation?q=bite"
+                    href="https://shadr-api-kryknz.vercel.app/api/animation?q=bite"
                     className="text-xs text-yellow-200"
                   >
                     ?q=bite
@@ -51,7 +51,7 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/animation?q=confused"
+                    href="https://shadr-api-kryknz.vercel.app/api/animation?q=confused"
                     className="text-xs text-yellow-200"
                   >
                     ?q=confused
@@ -59,7 +59,7 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/animation?q=goodnight"
+                    href="https://shadr-api-kryknz.vercel.app/api/animation?q=goodnight"
                     className="text-xs text-yellow-200"
                   >
                     ?q=goodnight
@@ -67,7 +67,7 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/animation?q=happy"
+                    href="https://shadr-api-kryknz.vercel.app/api/animation?q=happy"
                     className="text-xs text-yellow-200"
                   >
                     ?q=happy
@@ -92,7 +92,7 @@ export default function NavHome() {
               <ul className="p-2 bg-stone-900 text-orange-200">
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/hentai?q=uniform"
+                    href="https://shadr-api-kryknz.vercel.app/api/hentai?q=uniform"
                     className="text-xs text-orange-200"
                   >
                     ?q=uniform
@@ -100,7 +100,7 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/hentai?q=ass"
+                    href="https://shadr-api-kryknz.vercel.app/api/hentai?q=ass"
                     className="text-xs text-orange-200"
                   >
                     ?q=ass
@@ -108,7 +108,7 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/hentai?q=doujin"
+                    href="https://shadr-api-kryknz.vercel.app/api/hentai?q=doujin"
                     className="text-xs text-orange-200"
                   >
                     ?q=doujin
@@ -116,7 +116,7 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/hentai?q=femdom"
+                    href="https://shadr-api-kryknz.vercel.app/api/hentai?q=femdom"
                     className="text-xs text-orange-200"
                   >
                     ?q=femdom
@@ -141,7 +141,7 @@ export default function NavHome() {
               <ul className="p-2 bg-stone-900 text-red-200">
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/nsfw?q=nsfw"
+                    href="https://shadr-api-kryknz.vercel.app/api/nsfw?q=nsfw"
                     className="text-xs text-red-200"
                   >
                     ?q=nsfw
@@ -149,7 +149,7 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/nsfw?q=bonermaterial"
+                    href="https://shadr-api-kryknz.vercel.app/api/nsfw?q=bonermaterial"
                     className="text-xs text-red-200"
                   >
                     ?q=bonermaterial
@@ -157,7 +157,7 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/nsfw?q=iwanttofuckher"
+                    href="https://shadr-api-kryknz.vercel.app/api/nsfw?q=iwanttofuckher"
                     className="text-xs text-red-200"
                   >
                     ?q=iwanttofuckher
@@ -165,7 +165,7 @@ export default function NavHome() {
                 </li>
                 <li>
                   <Link
-                    href="https://xhadr-api-kryknz.vercel.app/api/nsfw?q=cumslut"
+                    href="https://shadr-api-kryknz.vercel.app/api/nsfw?q=cumslut"
                     className="text-xs text-red-200"
                   >
                     ?q=cumslut
@@ -176,7 +176,7 @@ export default function NavHome() {
             {/* ================================================================================= */}
           </ul>
         </div>
-        <a className="text-xl font-serif">Try or</a>
+        <a className="text-xl font-serif text-white">Try Now</a>
       </div>
       <div className="navbar-end">
         <Link

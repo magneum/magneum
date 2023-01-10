@@ -29,15 +29,15 @@ export default function NavTypescript() {
           >
             <li>
               <Link
-                href="https://bit.ly/xhadr"
+                href="https://bit.ly/shadr"
                 className="text-xs text-red-200"
               >
-                Xhadr
+                Shadr
               </Link>
             </li>
             <li>
               <Link href="/" className="text-xs text-lime-200">
-                Xhadr-Api
+                Shadr-Api
               </Link>
             </li>
             <li>
@@ -59,7 +59,7 @@ export default function NavTypescript() {
           className="btn btn-ghost normal-case font-bold font-serif text-2xl text-blue-300 text-center"
         >
           Designed & Developed{" "}
-          <span className="text-xs text-blue-100"> by Xhadr</span>
+          <span className="text-xs text-blue-100"> by Shadr</span>
         </Link>
       </div>
       <div className="navbar-end"></div>

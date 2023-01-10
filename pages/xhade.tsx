@@ -28,7 +28,7 @@ export default function xshade() {
           <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
             <h1 className="text-4xl font-bold leading-none sm:text-5xl font-serif">
               Rapidly build modern projects with<br></br>
-              <span className="text-blue-400">Xhadr-Api</span>
+              <span className="text-blue-400">Shader</span>
             </h1>
             <p className="px-8 mt-8 mb-12 text-lg font-mono">
               A <span className="text-blue-400"> Next-js </span> based
@@ -72,7 +72,7 @@ export default function xshade() {
               </div>
               <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
                 <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl text-blue-900">
-                  Start Using Xhadr-Api using @Types
+                  Start Using Shader using @Types
                 </h5>
                 <p className="mb-5 text-gray-800">
                   <span className="font-bold text-blue-700">TYPESCRIPT</span> is
@@ -117,11 +117,11 @@ export default function xshade() {
               </div>
               <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
                 <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl text-blue-900">
-                  Start Using Xhadr-Api using Vanilla Js
+                  Start Using Shader using Vanilla Js
                 </h5>
                 <p className="mb-5 text-gray-800">
-                  <span className="font-bold text-blue-700">JAVASCRIPT</span>{" "}
-                  is a scripting language that enables you to create dynamically
+                  <span className="font-bold text-blue-700">JAVASCRIPT</span> is
+                  a scripting language that enables you to create dynamically
                   updating content, control multimedia, animate images, and
                   pretty much everything else.
                 </p>
