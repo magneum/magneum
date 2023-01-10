@@ -5,9 +5,6 @@ import dynamic from "next/dynamic";
 const TryApi = dynamic(() => import("../components/TryApi"));
 const NavHome = dynamic(() => import("../components/NavHome"));
 const NavLand = dynamic(() => import("../components/NavLand"));
-const NavShade = dynamic(() => import("../components/NavShade"));
-const NavJavascript = dynamic(() => import("../components/NavJavascript"));
-const NavTypescript = dynamic(() => import("../components/NavTypescript"));
 
 export default function Home() {
   return (

@@ -180,7 +180,7 @@ export default function NavHome() {
       </div>
       <div className="navbar-end">
         <Link
-          href="/xhade"
+          href="/usage"
           className="btn bg-stone-800 text-cyan-100 hover:bg-stone-700"
         >
           Get started

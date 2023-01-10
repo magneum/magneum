@@ -27,8 +27,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("@tailwindcss/forms"),
     require("daisyui"),
-    require("tw-elements/dist/plugin"),
+    require("preline/plugin"),
+    require("@tailwindcss/forms"),
   ],
 };

@@ -4,10 +4,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 const TryApi = dynamic(() => import("../components/TryApi"));
 const NavHome = dynamic(() => import("../components/NavHome"));
-const NavLand = dynamic(() => import("../components/NavLand"));
 const NavFetch = dynamic(() => import("../components/NavFetch"));
-const NavJavascript = dynamic(() => import("../components/NavJavascript"));
-const NavTypescript = dynamic(() => import("../components/NavTypescript"));
 
 export default function javascript() {
   return (
