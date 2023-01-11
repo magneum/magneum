@@ -185,7 +185,7 @@ export default function javascript() {
                 </p>
                 <br></br>{" "}
                 <div className="flex justify-start">
-                  <Link href="https://xhadr.up.railway.app">
+                  <Link href="https://xhadr.up.railway.app/vlkyre.html">
                     <button className="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
                       Visit
                     </button>
