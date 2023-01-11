@@ -6,7 +6,7 @@ const NavHome = dynamic(() => import("../components/NavHome"));
 import { CopyBlock, nord } from "react-code-blocks";
 const code_axios = `import axios from "axios";
 axios
-.get("https://magneum.vercel.app/api/animation?q=smile")
+.get("https://magneum.vercel.app/api/animationsmile")
 .then(function (response) {
   console.log(response.data);
 })
@@ -16,11 +16,11 @@ axios
 `;
 const code_request = `const request = require("request");
 request({
-    method: "GET",
-    url: "https://magneum.vercel.app/api/animation?q=smile",
+    method: "GET<br></br>
+    url: "https://magneum.vercel.app/api/animationsmile<br></br>
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Accept: "application/json<br></br>
+      "Content-Type": "application/json<br></br>
     },
   },
   (error, response) => {
@@ -30,15 +30,15 @@ request({
 `;
 const code_unirest = `const unirest = require("unirest");
 unirest
-      .post("https://magneum.vercel.app/api/animation?q=smile")
-      .headers({ accept: "application/json", "Content-Type": "application/json" })
+      .post("https://magneum.vercel.app/api/animationsmile")
+      .headers({ accept: "application/json<br></br>Content-Type": "application/json" })
       .then((response) => {
         console.log(response.body);
       });
 `;
 const code_python = `import requests
 import json
-response_API = requests.get('https://magneum.vercel.app/api/animation?q=cry')
+response_API = requests.get('https://magneum.vercel.app/api/animationcry')
 data = response_API.text
 parse_json = json.loads(data)
 print(parse_json)`;
@@ -52,142 +52,354 @@ export default function typescript() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div className="relative z-20 flex items-center backdrop-blur-3xl bg-gradient-to-b from-zinc-900 to-slate-900 hover:scale-110">
-          <div className="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
-            <div className="flex flex-col">
-              <h1 className="w-full text-4xl font-light text-center text-blue-400 uppercase sm:text-5xl">
-                Get Started With Magneum Api
-              </h1>
-            </div>
-            <div className="relative block w-full mx-auto mt-6 md:mt-0">
-              <img src="/next.svg" className="max-w-xs m-auto md:max-w-2xl" />
+      <main className="bg-gradient-to-b from-zinc-900 to-slate-900 font-serif">
+        <section>
+          <div className="relative z-20 flex items-center backdrop-blur-3xl ">
+            <div className="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
+              <div className="flex flex-col">
+                <h1 className="w-full text-4xl font-light text-center text-blue-400 uppercase sm:text-5xl hover:font-semibold">
+                  Get Started With Magneum Api
+                </h1>
+              </div>
+              <div className="relative block w-full mx-auto mt-6 md:mt-0">
+                <Image
+                  alt="blob"
+                  width={700}
+                  height={700}
+                  src="/next.svg"
+                  className="max-w-xs m-auto md:max-w-2xl hover:scale-110"
+                ></Image>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="container p-6 px-6 mx-auto">
-          <div className="mb-16 text-center">
-            <h2 className="tracking-wide text-blue-600 uppercase font-extrabold">
-              ________
-            </h2>
-            <p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-300 dark:text-white sm:text-4xl">
-              Start with JavaScript or TypeScript
-            </p>
-          </div>
+        </section>
+        {/* ============================================================================================================== */}
+        <section>
+          <div className="container px-6 py-10 mx-auto">
+            <h1 className="text-3xl font-semibold text-gray-400 capitalize lg:text-4xl">
+              explore all <br></br> awesome{" "}
+              <span className="underline decoration-blue-500 text-blue-400">
+                magneum Endpoints
+              </span>
+            </h1>
 
-          <div className="flex-wrap items-center justify-center gap-8 text-center sm:flex">
-            <div className="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800 hover:scale-110">
-              <h3 className="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
-                Axios method fetching
-              </h3>
-              <p className="py-4 text-gray-500 text-md dark:text-gray-300">
-                <div
-                  tabIndex={0}
-                  className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
-                >
-                  <div className="collapse-title text-xl font-medium italic ">
-                    View
-                  </div>
-                  <div className="collapse-content">
-                    <CopyBlock
-                      text={code_axios}
-                      language="typescript"
-                      wrapLines
-                      theme={nord}
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                     />
+                  </svg>
+                </span>
+                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                  Api/Animation
+                </h1>
+
+                <p className="text-gray-500 dark:text-gray-300">
+                  You can use all below available animations endpoints to get
+                  .gif .png & .jpg/eg links from the api.
+                  <br></br>
+                  <br></br>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+                  >
+                    <div className="collapse-title text-xl font-medium text-blue-200">
+                      view content
+                    </div>
+                    <div className="collapse-content text-gray-400">
+                      <p>
+                        bite blush bonk bully<br></br>
+                        bored confused cry cuddle<br></br>
+                        dance goodnight happy highfive<br></br>
+                        hug kick kill kiss nervous pat poke<br></br>
+                        punch sad scream slap<br></br>
+                        smile stare wave wink<br></br>
+                        yeet yes zerotwo thinking<br></br>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </p>
+                </p>
+              </div>
+
+              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                    />
+                  </svg>
+                </span>
+                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                  Api/Hentai
+                </h1>
+
+                <p className="text-gray-500 dark:text-gray-300">
+                  You can use all below available hentai endpoints to get .gif
+                  .png & .jpg/eg links from the api.
+                  <br></br>
+                  <br></br>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+                  >
+                    <div className="collapse-title text-xl font-medium text-blue-200">
+                      view content
+                    </div>
+                    <div className="collapse-content text-gray-400">
+                      <p>
+                        ass bdsm blowjob cum<br></br>
+                        doujin feet femdom foxgirl<br></br>
+                        glasses hentai netorare maid<br></br>
+                        masturbation orgy panties pussy<br></br>
+                        school succubus tentacles thighs<br></br>
+                        uglyBastard uniform yuri zettaiRyouiki<br></br>
+                      </p>
+                    </div>
+                  </div>
+                </p>
+              </div>
+
+              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                    />
+                  </svg>
+                </span>
+
+                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                  Api/Nsfw
+                </h1>
+
+                <p className="text-gray-500 dark:text-gray-300">
+                  You can use all below available not-safe-for-work endpoints to
+                  get .gif .mp4 .png & .jpg/eg links from the api.
+                  <br></br>
+                  <br></br>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+                  >
+                    <div className="collapse-title text-xl font-medium text-blue-200">
+                      view content
+                    </div>
+                    <div className="collapse-content text-gray-400">
+                      <p>
+                        nsfw nsfw2 bonermaterial nsfw411<br></br>
+                        iwanttofuckher exxxtras distension bimbofetish<br></br>
+                        christiangirls dirtygaming sexybutnotporn femalepov
+                        <br></br>
+                        omgbeckylookathiscock sexygirls breedingmaterial
+                        <br></br>
+                        canthold toocuteforporn justhotwomen stripgirls<br></br>
+                        hotstuffnsfw uncommonposes gifsofremoval
+                        nostalgiafapping<br></br>
+                        truefmk nudes 4k realgirls blowjobs milf milk milking
+                        <br></br>
+                        lactating pussy cum slut cumslut<br></br>
+                      </p>
+                    </div>
+                  </div>
+                </p>
+              </div>
             </div>
-            <div className="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800 hover:scale-110">
-              <h3 className="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
-                Axios method fetching
-              </h3>
-              <p className="py-4 text-gray-500 text-md dark:text-gray-300">
-                <div
-                  tabIndex={0}
-                  className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
-                >
-                  <div className="collapse-title text-xl font-medium italic ">
-                    View
-                  </div>
-                  <div className="collapse-content">
-                    <CopyBlock
-                      text={code_axios}
-                      language="typescript"
-                      wrapLines
-                      theme={nord}
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                     />
+                  </svg>
+                </span>
+                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                  Api/Animation
+                </h1>
+
+                <p className="text-gray-500 dark:text-gray-300">
+                  You can use all below available animations endpoints to get
+                  .gif .png & .jpg/eg links from the api.
+                  <br></br>
+                  <br></br>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+                  >
+                    <div className="collapse-title text-xl font-medium text-blue-200">
+                      view content
+                    </div>
+                    <div className="collapse-content text-gray-400">
+                      <p>
+                        bite blush bonk bully<br></br>
+                        bored confused cry cuddle<br></br>
+                        dance goodnight happy highfive<br></br>
+                        hug kick kill kiss nervous pat poke<br></br>
+                        punch sad scream slap<br></br>
+                        smile stare wave wink<br></br>
+                        yeet yes zerotwo thinking<br></br>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </p>
-            </div>
-            <div className="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800 hover:scale-110">
-              <h3 className="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
-                Axios method fetching
-              </h3>
-              <p className="py-4 text-gray-500 text-md dark:text-gray-300">
-                <div
-                  tabIndex={0}
-                  className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
-                >
-                  <div className="collapse-title text-xl font-medium italic ">
-                    View
-                  </div>
-                  <div className="collapse-content">
-                    <CopyBlock
-                      text={code_axios}
-                      language="typescript"
-                      wrapLines
-                      theme={nord}
+                </p>
+              </div>
+
+              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                     />
+                  </svg>
+                </span>
+                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                  Api/Hentai
+                </h1>
+
+                <p className="text-gray-500 dark:text-gray-300">
+                  You can use all below available hentai endpoints to get .gif
+                  .png & .jpg/eg links from the api.
+                  <br></br>
+                  <br></br>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+                  >
+                    <div className="collapse-title text-xl font-medium text-blue-200">
+                      view content
+                    </div>
+                    <div className="collapse-content text-gray-400">
+                      <p>
+                        ass bdsm blowjob cum<br></br>
+                        doujin feet femdom foxgirl<br></br>
+                        glasses hentai netorare maid<br></br>
+                        masturbation orgy panties pussy<br></br>
+                        school succubus tentacles thighs<br></br>
+                        uglyBastard uniform yuri zettaiRyouiki<br></br>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </p>
-            </div>
-            <div className="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800 hover:scale-110">
-              <h3 className="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
-                Python Requests module method
-              </h3>
-              <p className="py-4 text-gray-500 text-md dark:text-gray-300">
-                <div
-                  tabIndex={0}
-                  className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
-                >
-                  <div className="collapse-title text-xl font-medium italic ">
-                    View
-                  </div>
-                  <div className="collapse-content">
-                    <CopyBlock
-                      text={code_python}
-                      language="typescript"
-                      wrapLines
-                      theme={nord}
+                </p>
+              </div>
+
+              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                     />
+                  </svg>
+                </span>
+
+                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                  Api/Nsfw
+                </h1>
+
+                <p className="text-gray-500 dark:text-gray-300">
+                  You can use all below available not-safe-for-work endpoints to
+                  get .gif .mp4 .png & .jpg/eg links from the api.
+                  <br></br>
+                  <br></br>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+                  >
+                    <div className="collapse-title text-xl font-medium text-blue-200">
+                      view content
+                    </div>
+                    <div className="collapse-content text-gray-400">
+                      <p>
+                        nsfw nsfw2 bonermaterial nsfw411<br></br>
+                        iwanttofuckher exxxtras distension bimbofetish<br></br>
+                        christiangirls dirtygaming sexybutnotporn femalepov
+                        <br></br>
+                        omgbeckylookathiscock sexygirls breedingmaterial
+                        <br></br>
+                        canthold toocuteforporn justhotwomen stripgirls<br></br>
+                        hotstuffnsfw uncommonposes gifsofremoval
+                        nostalgiafapping<br></br>
+                        truefmk nudes 4k realgirls blowjobs milf milk milking
+                        <br></br>
+                        lactating pussy cum slut cumslut<br></br>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </p>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
+      <hr
+        className="blur animate-pulse"
+        style={{
+          backgroundColor: "#FFFFFF",
+          height: 4,
+        }}
+      />
+      <footer className="footer footer-center p-10 bg-slate-900 text-base-content rounded">
+        <div>
+          <p className="font-bold italic text-slate-400">
+            Copyright © 2023 - All right reserved by Magneum Industries Ltd
+          </p>
+        </div>
+      </footer>
     </>
   );
-}
-
-{
-  /* <div
-tabIndex={0}
-className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
->
-<div className="collapse-title text-xl font-medium italic ">View</div>
-<div className="collapse-content">
-<CopyBlock
-text={code_axios}
-language="typescript"
-wrapLines
-theme={nord}
-/>
-</div>
-</div> */
 }
