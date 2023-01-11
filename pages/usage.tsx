@@ -65,22 +65,22 @@ export default function typescript() {
             </div>
           </div>
         </div>
-        <div class="container p-6 px-6 mx-auto">
-          <div class="mb-16 text-center">
-            <h2 class="tracking-wide text-blue-600 uppercase font-extrabold">
+        <div className="container p-6 px-6 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="tracking-wide text-blue-600 uppercase font-extrabold">
               ________
             </h2>
-            <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-300 dark:text-white sm:text-4xl">
+            <p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-300 dark:text-white sm:text-4xl">
               Start with JavaScript or TypeScript
             </p>
           </div>
 
-          <div class="flex-wrap items-center justify-center gap-8 text-center sm:flex">
-            <div class="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800 hover:scale-110">
-              <h3 class="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
+          <div className="flex-wrap items-center justify-center gap-8 text-center sm:flex">
+            <div className="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800 hover:scale-110">
+              <h3 className="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
                 Axios method fetching
               </h3>
-              <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+              <p className="py-4 text-gray-500 text-md dark:text-gray-300">
                 <div
                   tabIndex={0}
                   className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
@@ -99,11 +99,11 @@ export default function typescript() {
                 </div>
               </p>
             </div>
-            <div class="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800 hover:scale-110">
-              <h3 class="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
+            <div className="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800 hover:scale-110">
+              <h3 className="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
                 Axios method fetching
               </h3>
-              <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+              <p className="py-4 text-gray-500 text-md dark:text-gray-300">
                 <div
                   tabIndex={0}
                   className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
@@ -122,11 +122,11 @@ export default function typescript() {
                 </div>
               </p>
             </div>
-            <div class="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800 hover:scale-110">
-              <h3 class="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
+            <div className="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800 hover:scale-110">
+              <h3 className="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
                 Axios method fetching
               </h3>
-              <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+              <p className="py-4 text-gray-500 text-md dark:text-gray-300">
                 <div
                   tabIndex={0}
                   className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
@@ -145,11 +145,11 @@ export default function typescript() {
                 </div>
               </p>
             </div>
-            <div class="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800 hover:scale-110">
-              <h3 class="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
+            <div className="w-full px-4 py-4 mt-6 bg-slate-700 rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800 hover:scale-110">
+              <h3 className="py-4 text-2xl font-semibold text-gray-200 sm:text-xl dark:text-white">
                 Python Requests module method
               </h3>
-              <p class="py-4 text-gray-500 text-md dark:text-gray-300">
+              <p className="py-4 text-gray-500 text-md dark:text-gray-300">
                 <div
                   tabIndex={0}
                   className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
