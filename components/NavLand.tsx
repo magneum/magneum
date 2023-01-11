@@ -29,15 +29,15 @@ export default function NavHome() {
           >
             <li>
               <Link
-                href="https://bit.ly/shadr"
+                href="https://bit.ly/magneum"
                 className="text-xs text-red-200"
               >
-                Shadr
+                Magneum
               </Link>
             </li>
             <li>
               <Link href="/" className="text-xs text-cyan-200">
-                Shadr-Api
+                Magneum-Api
               </Link>
             </li>
             <li>
@@ -59,7 +59,7 @@ export default function NavHome() {
           className="btn btn-ghost normal-case font-bold font-serif text-2xl text-gray-500 text-center"
         >
           Designed & Developed{" "}
-          <span className="text-xs text-gray-400"> by Shadr</span>
+          <span className="text-xs text-gray-400"> by Magneum</span>
         </Link>
       </div>
       <div className="navbar-end"></div>
