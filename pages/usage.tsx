@@ -54,21 +54,21 @@ export default function typescript() {
       </Head>
       <main className="bg-gradient-to-b from-zinc-900 to-slate-900 font-serif">
         <section>
-          <div className="relative z-20 flex items-center backdrop-blur-3xl ">
-            <div className="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
-              <div className="flex flex-col">
-                <h1 className="w-full text-4xl font-light text-center text-blue-400 uppercase sm:text-5xl hover:text-blue-50">
-                  Get Started With Magneum Api
-                </h1>
-              </div>
-              <div className="relative block w-full mx-auto mt-6 md:mt-0">
-                <Image
-                  alt="blob"
-                  width={700}
-                  height={700}
-                  src="/Next_By_Vercel_White.png"
-                  className="max-w-xs m-auto md:max-w-2xl hover:scale-110 animate-pulse"
-                ></Image>
+          <div className="relative block w-full mx-auto md:mt-0">
+            <Image
+              alt="blob"
+              width={700}
+              height={700}
+              src="/Next_By_Vercel_White.png"
+              className="max-w-xs m-auto md:max-w-2xl animate-pulse"
+            ></Image>
+            <div className="relative flex items-center backdrop-blur-3xl ">
+              <div className="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
+                <div className="flex flex-col">
+                  <h1 className="w-full text-4xl font-light text-center text-blue-400 uppercase sm:text-5xl hover:text-blue-50">
+                    Get Started With Magneum Api
+                  </h1>
+                </div>
               </div>
             </div>
           </div>
@@ -76,15 +76,15 @@ export default function typescript() {
         {/* ============================================================================================================== */}
         <section>
           <div className="container px-6 mx-auto">
-            <h1 className="text-3xl font-semibold text-gray-400 capitalize lg:text-4xl text-center">
+            <h1 className="text-2xl text-gray-400 capitalize lg:text-3xl text-center">
               explore all <br></br> awesome{" "}
               <span className="underline decoration-blue-500 text-blue-400">
                 magneum Endpoints
               </span>
             </h1>
-            <h1 className="text-lg font-light text-gray-400 capitalize lg:text-lg text-center">
+            <h1 className="italic text-md font-light text-gray-400 capitalize lg:text-lg text-center">
               Api Endpoint{" "}
-              <span className="underline decoration-blue-500 text-blue-400 lowercase">
+              <span className="text-blue-400 lowercase">
                 https://magneum.vercel.app/api/
               </span>
             </h1>
