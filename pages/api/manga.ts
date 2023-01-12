@@ -51,10 +51,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             (await tinyurl.shorten(
               response.data[0].images.jpg.large_image_url
             )) || null,
-          Description: response.data[0].synopsis.replace(
-            /\[MAL Rewrite]/g,
-            "Magneum API"
-          ),
+          Description: response.data[0].synopsis,
         },
       ];
       logger.info(_Found);
