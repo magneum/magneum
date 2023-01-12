@@ -36,7 +36,7 @@ export default function magneum() {
             <div className="relative flex items-center backdrop-blur-3xl">
               <div className="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
                 <div className="flex flex-col">
-                  <h1 className="w-full text-5xl font-light text-center uppercase sm:text-5xl text-blue-50">
+                  <h1 className="underline decoration-blue-50 w-full text-5xl font-light text-center uppercase sm:text-5xl text-blue-50">
                     Get Started With Magneum Api
                   </h1>
                 </div>
@@ -49,7 +49,7 @@ export default function magneum() {
           <div className="container px-6 mx-auto">
             <h1 className="text-2xl text-gray-400 capitalize lg:text-3xl text-left">
               explore all <br></br> awesome{" "}
-              <span className="underline decoration-blue-500 text-blue-400">
+              <span className=" decoration-blue-500 text-blue-400">
                 magneum Endpoints
               </span>
             </h1>
