@@ -57,7 +57,7 @@ export default function typescript() {
           <div className="relative z-20 flex items-center backdrop-blur-3xl ">
             <div className="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
               <div className="flex flex-col">
-                <h1 className="w-full text-4xl font-light text-center text-blue-400 uppercase sm:text-5xl hover:font-semibold">
+                <h1 className="w-full text-4xl font-light text-center text-blue-400 uppercase sm:text-5xl hover:text-blue-50">
                   Get Started With Magneum Api
                 </h1>
               </div>
@@ -66,7 +66,7 @@ export default function typescript() {
                   alt="blob"
                   width={700}
                   height={700}
-                  src="/next.svg"
+                  src="/Next_By_Vercel_White.png"
                   className="max-w-xs m-auto md:max-w-2xl hover:scale-110 animate-pulse"
                 ></Image>
               </div>
@@ -75,21 +75,20 @@ export default function typescript() {
         </section>
         {/* ============================================================================================================== */}
         <section>
-          <div className="container px-6 py-10 mx-auto">
-            <div className="hover:scale-105">
-              <h1 className="text-3xl font-semibold text-gray-400 capitalize lg:text-4xl text-center">
-                explore all <br></br> awesome{" "}
-                <span className="underline decoration-blue-500 text-blue-400">
-                  magneum Endpoints
-                </span>
-              </h1>
-              <h1 className="text-lg font-light text-gray-400 capitalize lg:text-lg text-center">
-                Api Endpoint{" "}
-                <span className="underline decoration-blue-500 text-blue-400 lowercase">
-                  https://magneum.vercel.app/api/
-                </span>
-              </h1>
-            </div>
+          <div className="container px-6 mx-auto">
+            <h1 className="text-3xl font-semibold text-gray-400 capitalize lg:text-4xl text-center">
+              explore all <br></br> awesome{" "}
+              <span className="underline decoration-blue-500 text-blue-400">
+                magneum Endpoints
+              </span>
+            </h1>
+            <h1 className="text-lg font-light text-gray-400 capitalize lg:text-lg text-center">
+              Api Endpoint{" "}
+              <span className="underline decoration-blue-500 text-blue-400 lowercase">
+                https://magneum.vercel.app/api/
+              </span>
+            </h1>
+
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
