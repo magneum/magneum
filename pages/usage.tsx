@@ -3,11 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
+const Text2Speech = dynamic(() => import("../components/examples/Text2Speech"));
 const Animation = dynamic(() => import("../components/examples/Animation"));
 const Youtube = dynamic(() => import("../components/examples/Youtube"));
 const Shorten = dynamic(() => import("../components/examples/Shorten"));
 const Hentai = dynamic(() => import("../components/examples/Hentai"));
 const Anime = dynamic(() => import("../components/examples/Anime"));
+const Manga = dynamic(() => import("../components/examples/Manga"));
 const Nsfw = dynamic(() => import("../components/examples/Nsfw"));
 
 export default function magneum() {
@@ -19,7 +21,7 @@ export default function magneum() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-gradient-to-b from-zinc-900 to-slate-900 font-serif">
+      <main className="bg-gradient-to-b from-zinc-900 to-slate-900 font-serif backdrop-blur-3xl">
         <section>
           <div className="relative block w-full mx-auto md:mt-0">
             <Image
@@ -29,10 +31,10 @@ export default function magneum() {
               src="/Next_By_Vercel_White.png"
               className="max-w-xs m-auto md:max-w-2xl animate-pulse"
             ></Image>
-            <div className="relative flex items-center backdrop-blur-3xl ">
+            <div className="relative flex items-center backdrop-blur-3xl">
               <div className="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
                 <div className="flex flex-col">
-                  <h1 className="w-full text-4xl font-light text-center text-blue-400 uppercase sm:text-5xl hover:text-blue-50">
+                  <h1 className="w-full text-5xl font-light text-center uppercase sm:text-5xl text-blue-50">
                     Get Started With Magneum Api
                   </h1>
                 </div>
@@ -52,76 +54,32 @@ export default function magneum() {
             <h1 className="italic text-md font-light text-gray-400 capitalize lg:text-lg text-center">
               Api Endpoint{" "}
               <span className="text-blue-400 lowercase">
-                https://magneum.vercel.app/api/
+                https://magneum.vercel.app/♚ Api/
               </span>
             </h1>
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </span>
-                <h1 className="text-lg text-blue-200 uppercase">Api/Shorten</h1>
-                <p className="text-gray-500 ">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Shorten
+                </h1>
+                <p className="text-gray-400 italic lowercase">
                   <Shorten />
                 </p>
               </div>
               {/* ============================================================================================================== */}
               <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </span>
-                <h1 className="text-lg text-blue-200 uppercase">Api/Anime</h1>
-                <p className="text-gray-500 ">
+                <h1 className="text-lg text-blue-200 uppercase">♚ Api/Anime</h1>
+                <p className="text-gray-400 italic lowercase">
                   <Anime />
                 </p>
               </div>
               {/* ============================================================================================================== */}
               <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </span>
-                <h1 className="text-lg text-blue-200 uppercase">Api/Youtube</h1>
-                <p className="text-gray-500 ">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Youtube
+                </h1>
+                <p className="text-gray-400 italic lowercase">
                   <Youtube />
                 </p>
               </div>
@@ -129,76 +87,58 @@ export default function magneum() {
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </span>
                 <h1 className="text-lg text-blue-200 uppercase">
-                  Api/Animation
+                  ♚ Api/Animation
                 </h1>
-                <p className="text-gray-500 ">
+                <p className="text-gray-400 italic lowercase">
                   <Animation />
                 </p>
               </div>
               {/* ============================================================================================================== */}
               <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </span>
-                <h1 className="text-lg text-blue-200 uppercase">Api/Hentai</h1>
-                <p className="text-gray-500 ">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Hentai
+                </h1>
+                <p className="text-gray-400 italic lowercase">
                   <Hentai />
                 </p>
               </div>
               {/* ============================================================================================================== */}
               <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </span>
-                <h1 className="text-lg text-blue-200 uppercase">Api/Nsfw</h1>
-                <p className="text-gray-500 ">
+                <h1 className="text-lg text-blue-200 uppercase">♚ Api/Nsfw</h1>
+                <p className="text-gray-400 italic lowercase">
                   <Nsfw />
                 </p>
               </div>
             </div>
+            {/* ============================================================================================================== */}
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">♚ Api/Manga</h1>
+                <p className="text-gray-400 italic lowercase">
+                  <Manga />
+                </p>
+              </div>
+              {/* ============================================================================================================== */}
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Text2Speech
+                </h1>
+                <p className="text-gray-400 italic lowercase">
+                  <Text2Speech />
+                </p>
+              </div>
+              {/* ============================================================================================================== */}
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Text2Speech
+                </h1>
+                <p className="text-gray-400 italic lowercase">
+                  <Text2Speech />
+                </p>
+              </div>
+            </div>
+            {/* ============================================================================================================== */}
           </div>
         </section>
       </main>

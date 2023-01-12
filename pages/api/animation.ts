@@ -592,7 +592,6 @@ export default async function animation(
     default:
       res.send({
         _status: "⚠️ failed",
-        _id: uuidv4(),
         TIMESTAMP: Date.now(),
         USAGE: {
           endpoint: "/api/animation?q=",

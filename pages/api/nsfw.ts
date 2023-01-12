@@ -858,13 +858,12 @@ export default async function animation(
     default:
       res.send({
         _status: "⚠️ failed",
-        _id: uuidv4(),
         TIMESTAMP: Date.now(),
         USAGE: {
           endpoint: "/api/nsfw?q=",
           example: "/api/nsfw?q=ass",
           commands: [
-            "nsfw", 
+            "nsfw",
             "nsfw2",
             "bonermaterial",
             "nsfw411",

@@ -2,10 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { CopyBlock, nord } from "react-code-blocks";
-const codeSnippet = `// ?q=  is the querry that api/shorten takes
+const codeSnippet = `// ?q=  is the querry that api/manga takes
 
 // Method 1 (Axios)
-axios.get("https://magneum.vercel.app/api/shorten?q=www.github.com")
+axios.get("https://magneum.vercel.app/api/manga?q=My Hero Academia by Kohei Horikoshi")
 .then(function (response) {
 console.log(response.data);
 })
@@ -16,7 +16,7 @@ console.error(error);
 // Method 2 (Request)
 request({
 method: "GET",
-url: "https://magneum.vercel.app/api/shorten?q=www.github.com",
+url: "https://magneum.vercel.app/api/manga?q=My Hero Academia by Kohei Horikoshi",
 headers: {
 Accept: "application/json",
 "Content-Type": "application/json",
@@ -28,7 +28,7 @@ console.log(response.body);
 });
   
 // Method 3 (Unirest)
-unirest.post("https://magneum.vercel.app/api/shorten?q=www.github.com")
+unirest.post("https://magneum.vercel.app/api/manga?q=My Hero Academia by Kohei Horikoshi")
 .headers({ Accept: "application/json", "Content-Type": "application/json" })
 .then((response) => {
 console.log(response.body);
@@ -37,7 +37,7 @@ console.log(response.body);
 export default function magneum() {
   return (
     <div>
-      Use this module to get a shortened url from tinyurl.
+      Use this module to get all information about any manga from myanimelist.
       <br></br>
       <br></br>
       <div
@@ -50,10 +50,12 @@ export default function magneum() {
         <div className="collapse-content text-gray-400">
           <p>
             endpoint:{" "}
-            <span className="italic text-blue-300">/api/shorten?q=</span>
+            <span className="italic text-blue-300">/api/manga?q=</span>
             <br></br>
-            example: /api/shorten?q=
-            <span className="italic text-blue-300">https://google.com</span>
+            example: /api/manga?q=
+            <span className="italic text-blue-300">
+              My Hero Academia by Kohei Horikoshi
+            </span>
             <br></br>
           </p>
         </div>

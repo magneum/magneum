@@ -170,8 +170,8 @@ export default function magneum() {
                     alt="content"
                     width={500}
                     height={500}
-                    className="object-cover object-center h-full w-full"
-                    src="/vlkyre.png"
+                    className="object-cover object-center h-full w-full contrast-150"
+                    src="/whatsapp.png"
                   ></Image>
                 </div>
                 <h2 className="text-xl font-medium title-font text-orange-500 mt-5">

@@ -5,7 +5,7 @@ import { CopyBlock, nord } from "react-code-blocks";
 const codeSnippet = `// ?q=  is the querry that api/hentai takes
 
 // Method 1 (Axios)
-axios.get("https://magneum-api.vercel.app/api/hentai?q=ass")
+axios.get("https://magneum.vercel.app/api/hentai?q=ass")
 .then(function (response) {
 console.log(response.data);
 })
@@ -16,7 +16,7 @@ console.error(error);
 // Method 2 (Request)
 request({
 method: "GET",
-url: "https://magneum-api.vercel.app/api/hentai?q=ass",
+url: "https://magneum.vercel.app/api/hentai?q=ass",
 headers: {
 Accept: "application/json",
 "Content-Type": "application/json",
@@ -28,7 +28,7 @@ console.log(response.body);
 });
   
 // Method 3 (Unirest)
-unirest.post("https://magneum-api.vercel.app/api/hentai?q=ass")
+unirest.post("https://magneum.vercel.app/api/hentai?q=ass")
 .headers({ Accept: "application/json", "Content-Type": "application/json" })
 .then((response) => {
 console.log(response.body);
