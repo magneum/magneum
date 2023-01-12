@@ -5,6 +5,8 @@ import dynamic from "next/dynamic";
 
 const Text2Speech = dynamic(() => import("../components/examples/Text2Speech"));
 const Animation = dynamic(() => import("../components/examples/Animation"));
+const Wallpaper = dynamic(() => import("../components/examples/Wallpaper"));
+const Unsplash = dynamic(() => import("../components/examples/Unsplash"));
 const Youtube = dynamic(() => import("../components/examples/Youtube"));
 const Shorten = dynamic(() => import("../components/examples/Shorten"));
 const Hentai = dynamic(() => import("../components/examples/Hentai"));
@@ -131,12 +133,41 @@ export default function magneum() {
               {/* ============================================================================================================== */}
               <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Unsplash
+                </h1>
+                <p className="text-gray-400 italic lowercase">
+                  <Unsplash />
+                </p>
+              </div>
+            </div>
+            {/* ============================================================================================================== */}
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Wallpaper
+                </h1>
+                <p className="text-gray-400 italic lowercase">
+                  <Wallpaper />
+                </p>
+              </div>
+              {/* ============================================================================================================== */}
+              {/* <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Text2Speech
                 </h1>
                 <p className="text-gray-400 italic lowercase">
                   <Text2Speech />
                 </p>
-              </div>
+              </div> */}
+              {/* ============================================================================================================== */}
+              {/* <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Unsplash
+                </h1>
+                <p className="text-gray-400 italic lowercase">
+                  <Unsplash />
+                </p>
+              </div> */}
             </div>
             {/* ============================================================================================================== */}
           </div>

@@ -12,6 +12,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   if (req.query.q) {
     const unsplash = createApi({
       accessKey: "OGx0PMTS_u06PSSsRwTmmxjxfe3OhABXYpDimOjE4d4",
+      fetch: fetch,
     });
     const cobra = await unsplash.search.getPhotos({
       query: req.query.q,
@@ -35,34 +36,27 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           _status: "🎊success",
           _id: uuidv4(),
           TIMESTAMP: Date.now(),
-          TOPIC: "Unsplash HD Wallpapers",
+          TOPIC: "HD Wallpapers",
           QUERY: req.query.q,
-          created_at: cobra.response.results[0].created_at,
-          updated_at: cobra.response.results[0].updated_at,
-          promoted_at: cobra.response.results[0].promoted_at,
           width: cobra.response.results[0].width,
           height: cobra.response.results[0].height,
-          color: cobra.response.results[0].color,
-          blur_hash: cobra.response.results[0].blur_hash,
-          description: cobra.response.results[0].description,
-          alt_description: cobra.response.results[0].alt_description,
           images: [
             {
-              raw: cobra.response.results[0].urls.raw,
-              full: cobra.response.results[0].urls.full,
-              regular: cobra.response.results[0].urls.regular,
-              small: cobra.response.results[0].urls.small,
-              thumb: cobra.response.results[0].urls.thumb,
-              small_s3: cobra.response.results[0].urls.small_s3,
-            },
-          ],
-          links: [
-            {
-              self: cobra.response.results[0].links.self,
-              html: cobra.response.results[0].links.html,
-              download: cobra.response.results[0].links.download,
-              download_location:
-                cobra.response.results[0].links.download_location,
+              raw_size: await tinyurl.shorten(
+                cobra.response.results[0].urls.raw
+              ),
+              full_size: await tinyurl.shorten(
+                cobra.response.results[0].urls.full
+              ),
+              regular_size: await tinyurl.shorten(
+                cobra.response.results[0].urls.regular
+              ),
+              small_size: await tinyurl.shorten(
+                cobra.response.results[0].urls.small
+              ),
+              thumbnail_size: await tinyurl.shorten(
+                cobra.response.results[0].urls.thumb
+              ),
             },
           ],
         },
