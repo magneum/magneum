@@ -233,6 +233,7 @@ export default function typescript() {
                 </p>
               </div>
             </div>
+            {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <span className="inline-block text-blue-500 dark:text-blue-400">
@@ -252,12 +253,11 @@ export default function typescript() {
                   </svg>
                 </span>
                 <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Animation
+                  Api/Shorten
                 </h1>
 
                 <p className="text-gray-500 dark:text-gray-300">
-                  You can use all below available animations endpoints to get
-                  .gif .png & .jpg/eg links from the api.
+                  You can use this module to get a shortened url from tinyurl.
                   <br></br>
                   <br></br>
                   <div
@@ -269,13 +269,8 @@ export default function typescript() {
                     </div>
                     <div className="collapse-content text-gray-400">
                       <p>
-                        bite blush bonk bully<br></br>
-                        bored confused cry cuddle<br></br>
-                        dance goodnight happy highfive<br></br>
-                        hug kick kill kiss nervous pat poke<br></br>
-                        punch sad scream slap<br></br>
-                        smile stare wave wink<br></br>
-                        yeet yes zerotwo thinking<br></br>
+                        endpoint: /api/shorten?q=<br></br>
+                        example: /api/shorten?q=https://google.com
                       </p>
                     </div>
                   </div>
