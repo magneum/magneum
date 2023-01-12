@@ -47,16 +47,16 @@ export default function magneum() {
         {/* ============================================================================================================== */}
         <section>
           <div className="container px-6 mx-auto">
-            <h1 className="text-2xl text-gray-400 capitalize lg:text-3xl text-center">
+            <h1 className="text-2xl text-gray-400 capitalize lg:text-3xl text-left">
               explore all <br></br> awesome{" "}
               <span className="underline decoration-blue-500 text-blue-400">
                 magneum Endpoints
               </span>
             </h1>
             <h1 className="italic text-md font-light text-gray-400 capitalize lg:text-lg text-center">
-              Api Endpoint{" "}
+              Api:{" "}
               <span className="text-blue-400 lowercase">
-                https://magneum.vercel.app/♚ Api/
+                https://magneum.vercel.app/Api/
               </span>
             </h1>
             {/* ============================================================================================================== */}
