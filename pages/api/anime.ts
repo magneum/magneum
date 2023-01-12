@@ -10,7 +10,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   if (req.query.q) {
     malScraper.getInfoFromName(req.query.q).then((cobra: any) => {
-      res.send([
+      var _Found = [
         {
           status: "✓ success ✓",
           _id: uuidv4(),
@@ -43,7 +43,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           CHARACTERS: cobra.charaters,
           STAFF: cobra.staff,
         },
-      ]);
+      ];
+      logger.info(_Found);
+      return res.send(_Found);
     });
   } else {
     res.send({

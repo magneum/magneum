@@ -16,7 +16,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
       },
     }).then((response) => {
-      var _youtube = {
+      var _Found = {
         status: response.data.status,
         _id: response.data._id,
         _youtube_search: [
@@ -53,8 +53,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           },
         ],
       };
-      logger.info(" [ YouTube Search By Magneum Api ]");
-      return res.send(_youtube);
+      logger.info(_Found);
+      return res.send(_Found);
     });
   } else {
     res.send({
