@@ -69,10 +69,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       _status: "⚠️ failed",
       TIMESTAMP: Date.now(),
       USAGE: {
-        endpoint: "/api/youtube?q=",
+        endpoint: "/api/wallpaper?q=",
         example: [
-          "/api/youtube?q=ncs music 5 minutes",
-          "/api/youtube?q=https://youtu.be/3gxus8LnMfI",
+          "/api/wallpaper?q=dog",
         ],
       },
     });
