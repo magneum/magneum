@@ -67,7 +67,7 @@ export default function typescript() {
                   width={700}
                   height={700}
                   src="/next.svg"
-                  className="max-w-xs m-auto md:max-w-2xl hover:scale-110"
+                  className="max-w-xs m-auto md:max-w-2xl hover:scale-110 animate-pulse"
                 ></Image>
               </div>
             </div>
@@ -76,19 +76,179 @@ export default function typescript() {
         {/* ============================================================================================================== */}
         <section>
           <div className="container px-6 py-10 mx-auto">
-            <h1 className="text-3xl font-semibold text-gray-400 capitalize lg:text-4xl">
-              explore all <br></br> awesome{" "}
-              <span className="underline decoration-blue-500 text-blue-400">
-                magneum Endpoints
-              </span>
-            </h1>
-            <h1 className="text-lg font-light text-gray-400 capitalize lg:text-lg">
-              Api Endpoint{" "}
-              <span className="underline decoration-blue-500 text-blue-400 lowercase">
-                https://magneum.vercel.app/api/
-              </span>
-            </h1>
+            <div className="hover:scale-105">
+              <h1 className="text-3xl font-semibold text-gray-400 capitalize lg:text-4xl text-center">
+                explore all <br></br> awesome{" "}
+                <span className="underline decoration-blue-500 text-blue-400">
+                  magneum Endpoints
+                </span>
+              </h1>
+              <h1 className="text-lg font-light text-gray-400 capitalize lg:text-lg text-center">
+                Api Endpoint{" "}
+                <span className="underline decoration-blue-500 text-blue-400 lowercase">
+                  https://magneum.vercel.app/api/
+                </span>
+              </h1>
+            </div>
+            {/* ============================================================================================================== */}
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                    />
+                  </svg>
+                </span>
+                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                  Api/Shorten
+                </h1>
 
+                <p className="text-gray-500 dark:text-gray-300">
+                  Use this module to get a shortened url from tinyurl.
+                  <br></br>
+                  <br></br>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+                  >
+                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
+                      view content
+                    </div>
+                    <div className="collapse-content text-gray-400">
+                      <p>
+                        endpoint:{" "}
+                        <span className="italic text-blue-300">
+                          /api/shorten?q=
+                        </span>
+                        <br></br>
+                        example: /api/shorten?q=
+                        <span className="italic text-blue-300">
+                          https://google.com
+                        </span>
+                        <br></br>
+                      </p>
+                    </div>
+                  </div>
+                </p>
+              </div>
+
+              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                    />
+                  </svg>
+                </span>
+                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                  Api/Anime
+                </h1>
+
+                <p className="text-gray-500 dark:text-gray-300">
+                  Use this module to get all information about any anime.
+                  <br></br>
+                  <br></br>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+                  >
+                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
+                      view content
+                    </div>
+                    <div className="collapse-content text-gray-400">
+                      <p>
+                        endpoint:{" "}
+                        <span className="italic text-blue-300">
+                          /api/anime?q=
+                        </span>
+                        <br></br>
+                        example: /api/anime?q=
+                        <span className="italic text-blue-300">death note</span>
+                        <br></br>
+                      </p>
+                    </div>
+                  </div>
+                </p>
+              </div>
+
+              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 dark:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                    />
+                  </svg>
+                </span>
+
+                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                  Api/Youtube
+                </h1>
+
+                <p className="text-gray-500 dark:text-gray-300">
+                  Use this module to get all information about any youtube video
+                  including direct audio & video download links.
+                  <br></br>
+                  <br></br>
+                  <div
+                    tabIndex={0}
+                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+                  >
+                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
+                      view content
+                    </div>
+                    <div className="collapse-content text-gray-400">
+                      <p>
+                        endpoint:{" "}
+                        <span className="italic text-blue-300">
+                          /api/youtube?q=
+                        </span>
+                        <br></br>
+                        example: /api/youtube?q=
+                        <span className="italic text-blue-300">
+                          ncs music 5 minutes
+                        </span>
+                        <br></br>
+                        example: /api/youtube?q=
+                        <span className="italic text-blue-300">
+                          https://youtu.be/3gxus8LnMfI
+                        </span>
+                        <br></br>
+                      </p>
+                    </div>
+                  </div>
+                </p>
+              </div>
+            </div>
+
+            {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <span className="inline-block text-blue-500 dark:text-blue-400">
@@ -511,163 +671,6 @@ export default function typescript() {
                         <br></br>
                         /api/nsfw?q=
                         <span className="italic text-blue-300">cumslut</span>
-                        <br></br>
-                      </p>
-                    </div>
-                  </div>
-                </p>
-              </div>
-            </div>
-            {/* ============================================================================================================== */}
-            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 dark:text-blue-400">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </span>
-                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Shorten
-                </h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  Use this module to get a shortened url from tinyurl.
-                  <br></br>
-                  <br></br>
-                  <div
-                    tabIndex={0}
-                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
-                  >
-                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-                      view content
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                      <p>
-                        endpoint:{" "}
-                        <span className="italic text-blue-300">
-                          /api/shorten?q=
-                        </span>
-                        <br></br>
-                        example: /api/shorten?q=
-                        <span className="italic text-blue-300">
-                          https://google.com
-                        </span>
-                        <br></br>
-                      </p>
-                    </div>
-                  </div>
-                </p>
-              </div>
-
-              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 dark:text-blue-400">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </span>
-                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Anime
-                </h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  Use this module to get all information about any anime.
-                  <br></br>
-                  <br></br>
-                  <div
-                    tabIndex={0}
-                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
-                  >
-                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-                      view content
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                      <p>
-                        endpoint:{" "}
-                        <span className="italic text-blue-300">
-                          /api/anime?q=
-                        </span>
-                        <br></br>
-                        example: /api/anime?q=
-                        <span className="italic text-blue-300">death note</span>
-                        <br></br>
-                      </p>
-                    </div>
-                  </div>
-                </p>
-              </div>
-
-              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 dark:text-blue-400">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </span>
-
-                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Youtube
-                </h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  Use this module to get all information about any youtube video
-                  including direct audio & video download links.
-                  <br></br>
-                  <br></br>
-                  <div
-                    tabIndex={0}
-                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
-                  >
-                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-                      view content
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                      <p>
-                        endpoint:{" "}
-                        <span className="italic text-blue-300">
-                          /api/youtube?q=
-                        </span>
-                        <br></br>
-                        example: /api/youtube?q=
-                        <span className="italic text-blue-300">
-                          ncs music 5 minutes
-                        </span>
-                        <br></br>
-                        example: /api/youtube?q=
-                        <span className="italic text-blue-300">
-                          https://youtu.be/3gxus8LnMfI
-                        </span>
                         <br></br>
                       </p>
                     </div>
