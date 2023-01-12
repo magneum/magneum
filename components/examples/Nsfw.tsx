@@ -6,7 +6,7 @@ const codeSnippet = `// ?q=  is the querry that api/nsfw takes
 
 // Method 1 (Axios)
 const axios = require("axios");
-// import axios from "axios"; while using @types
+/** @type {import axios from "axios"} */
 axios.get("https://magneum.vercel.app/api/nsfw?q=bonermaterial")
 .then(function (response) {
 console.log(response.data);

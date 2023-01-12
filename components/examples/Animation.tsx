@@ -6,7 +6,7 @@ const codeSnippet = `// ?q=  is the querry that api/animation takes
 
 // Method 1 (Axios)
 const axios = require("axios");
-// import axios from "axios"; while using @types
+/** @type {import axios from "axios"} */
 axios.get("https://magneum-api.vercel.app/api/animation?q=smile")
 .then(function (response) {
 console.log(response.data);

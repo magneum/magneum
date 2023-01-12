@@ -6,7 +6,7 @@ const codeSnippet = `// ?q=  is the querry that api/anime takes
 
 // Method 1 (Axios)
 const axios = require("axios");
-// import axios from "axios"; while using @types
+/** @type {import axios from "axios"} */
 axios.get("https://magneum.vercel.app/api/anime?q=death note")
 .then(function (response) {
 console.log(response.data);

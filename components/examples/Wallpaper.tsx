@@ -6,7 +6,7 @@ const codeSnippet = `// ?q=  is the querry that api/wallpaper takes
 
 // Method 1 (Axios)
 const axios = require("axios");
-// import axios from "axios"; while using @types
+/** @type {import axios from "axios"} */
 axios.get("https://magneum.vercel.app/api/wallpaper?q=Asus Tuf")
 .then(function (response) {
 console.log(response.data);
