@@ -54,7 +54,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         ],
       };
       logger.info(" [ YouTube Search By Magneum Api ]");
-      return resp.send(_youtube);
+      return res.send(_youtube);
     });
   } else {
     res.send({
