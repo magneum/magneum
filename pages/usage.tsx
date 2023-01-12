@@ -55,8 +55,9 @@ export default function magneum() {
             </h1>
             <h1 className="italic text-md text-gray-400 capitalize lg:text-lg text-left">
               Api:{" "}
-              <span className="text-blue-400 lowercase">
-                https://magneum.vercel.app/Api/
+              <span href="https://magneum.vercel.app/api/"
+              className="text-blue-400 lowercase">
+                https://magneum.vercel.app/api/
               </span>
             </h1>
             {/* ============================================================================================================== */}
