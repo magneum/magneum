@@ -6,7 +6,7 @@ const TryApi = dynamic(() => import("../components/TryApi"));
 const NavHome = dynamic(() => import("../components/NavHome"));
 const NavFetch = dynamic(() => import("../components/NavFetch"));
 
-export default function javascript() {
+export default function magneum() {
   return (
     <>
       <Head>

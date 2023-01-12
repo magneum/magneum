@@ -2,48 +2,15 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-const NavHome = dynamic(() => import("../components/NavHome"));
-import { CopyBlock, nord } from "react-code-blocks";
-const code_axios = `import axios from "axios";
-axios
-.get("https://magneum.vercel.app/api/animationsmile")
-.then(function (response) {
-console.log(response.data);
-})
-.catch(function (error) {
-console.error(error);
-});
-`;
-const code_request = `const request = require("request");
-request({
-method: "GET<br></br>
-url: "https://magneum.vercel.app/api/animationsmile<br></br>
-headers: {
-Accept: "application/json<br></br>
-"Content-Type": "application/json<br></br>
-},
-},
-(error, response) => {
-if (error) console.error(error);
-console.log(response.body);
-});
-`;
-const code_unirest = `const unirest = require("unirest");
-unirest
-.post("https://magneum.vercel.app/api/animationsmile")
-.headers({ accept: "application/json<br></br>Content-Type": "application/json" })
-.then((response) => {
-console.log(response.body);
-});
-`;
-const code_python = `import requests
-import json
-response_API = requests.get('https://magneum.vercel.app/api/animationcry')
-data = response_API.text
-parse_json = json.loads(data)
-print(parse_json)`;
 
-export default function typescript() {
+const Animation = dynamic(() => import("../components/examples/Animation"));
+const Youtube = dynamic(() => import("../components/examples/Youtube"));
+const Shorten = dynamic(() => import("../components/examples/Shorten"));
+const Hentai = dynamic(() => import("../components/examples/Hentai"));
+const Anime = dynamic(() => import("../components/examples/Anime"));
+const Nsfw = dynamic(() => import("../components/examples/Nsfw"));
+
+export default function magneum() {
   return (
     <>
       <Head>
@@ -88,11 +55,10 @@ export default function typescript() {
                 https://magneum.vercel.app/api/
               </span>
             </h1>
-
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 dark:text-blue-400">
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-8 h-8"
@@ -108,41 +74,14 @@ export default function typescript() {
                     />
                   </svg>
                 </span>
-                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Shorten
-                </h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  Use this module to get a shortened url from tinyurl.
-                  <br></br>
-                  <br></br>
-                  <div
-                    tabIndex={0}
-                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
-                  >
-                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-                      view content
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                      <p>
-                        endpoint:{" "}
-                        <span className="italic text-blue-300">
-                          /api/shorten?q=
-                        </span>
-                        <br></br>
-                        example: /api/shorten?q=
-                        <span className="italic text-blue-300">
-                          https://google.com
-                        </span>
-                        <br></br>
-                      </p>
-                    </div>
-                  </div>
+                <h1 className="text-lg text-blue-200 uppercase">Api/Shorten</h1>
+                <p className="text-gray-500 ">
+                  <Shorten />
                 </p>
               </div>
-
-              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 dark:text-blue-400">
+              {/* ============================================================================================================== */}
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-8 h-8"
@@ -158,39 +97,14 @@ export default function typescript() {
                     />
                   </svg>
                 </span>
-                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Anime
-                </h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  Use this module to get all information about any anime.
-                  <br></br>
-                  <br></br>
-                  <div
-                    tabIndex={0}
-                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
-                  >
-                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-                      view content
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                      <p>
-                        endpoint:{" "}
-                        <span className="italic text-blue-300">
-                          /api/anime?q=
-                        </span>
-                        <br></br>
-                        example: /api/anime?q=
-                        <span className="italic text-blue-300">death note</span>
-                        <br></br>
-                      </p>
-                    </div>
-                  </div>
+                <h1 className="text-lg text-blue-200 uppercase">Api/Anime</h1>
+                <p className="text-gray-500 ">
+                  <Anime />
                 </p>
               </div>
-
-              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 dark:text-blue-400">
+              {/* ============================================================================================================== */}
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-8 h-8"
@@ -206,51 +120,16 @@ export default function typescript() {
                     />
                   </svg>
                 </span>
-
-                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Youtube
-                </h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  Use this module to get all information about any youtube video
-                  including direct audio & video download links.
-                  <br></br>
-                  <br></br>
-                  <div
-                    tabIndex={0}
-                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
-                  >
-                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-                      view content
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                      <p>
-                        endpoint:{" "}
-                        <span className="italic text-blue-300">
-                          /api/youtube?q=
-                        </span>
-                        <br></br>
-                        example: /api/youtube?q=
-                        <span className="italic text-blue-300">
-                          ncs music 5 minutes
-                        </span>
-                        <br></br>
-                        example: /api/youtube?q=
-                        <span className="italic text-blue-300">
-                          https://youtu.be/3gxus8LnMfI
-                        </span>
-                        <br></br>
-                      </p>
-                    </div>
-                  </div>
+                <h1 className="text-lg text-blue-200 uppercase">Api/Youtube</h1>
+                <p className="text-gray-500 ">
+                  <Youtube />
                 </p>
               </div>
             </div>
-
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 dark:text-blue-400">
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-8 h-8"
@@ -266,125 +145,16 @@ export default function typescript() {
                     />
                   </svg>
                 </span>
-                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
+                <h1 className="text-lg text-blue-200 uppercase">
                   Api/Animation
                 </h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  Use all below available animations endpoints to get .gif .png
-                  & .jpg/eg links from the api.
-                  <br></br>
-                  <br></br>
-                  <div
-                    tabIndex={0}
-                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
-                  >
-                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-                      view content
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                      <p>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">bite</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">blush</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">bonk</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">bully</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">bored</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">confused</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">cry</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">cuddle</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">dance</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">goodnight</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">happy</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">highfive</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">hug</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">kick</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">kill</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">kiss</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">nervous</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">pat</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">poke</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">punch</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">sad</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">scream</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">slap</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">smile</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">stare</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">wave</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">wink</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">yeet</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">yes</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">zerotwo</span>
-                        <br></br>
-                        /api/animation?q=
-                        <span className="italic text-blue-300">thinking</span>
-                        <br></br>
-                      </p>
-                    </div>
-                  </div>
+                <p className="text-gray-500 ">
+                  <Animation />
                 </p>
               </div>
-
-              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 dark:text-blue-400">
+              {/* ============================================================================================================== */}
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-8 h-8"
@@ -400,110 +170,14 @@ export default function typescript() {
                     />
                   </svg>
                 </span>
-                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Hentai
-                </h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  Use all below available hentai endpoints to get .gif .png &
-                  .jpg/eg links from the api.
-                  <br></br>
-                  <br></br>
-                  <div
-                    tabIndex={0}
-                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
-                  >
-                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-                      view content
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                      <p>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">ass</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">bdsm</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">blowjob</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">cum</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">doujin</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">feet</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">femdom</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">foxgirl</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">glasses</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">hentai</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">netorare</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">maid</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">
-                          masturbation
-                        </span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">orgy</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">panties</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">pussy</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">school</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">succubus</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">tentacles</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">thighs</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">
-                          uglyBastard
-                        </span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">uniform</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">yuri</span>
-                        <br></br>
-                        /api/hentai?q=
-                        <span className="italic text-blue-300">
-                          zettaiRyouiki
-                        </span>
-                        <br></br>
-                      </p>
-                    </div>
-                  </div>
+                <h1 className="text-lg text-blue-200 uppercase">Api/Hentai</h1>
+                <p className="text-gray-500 ">
+                  <Hentai />
                 </p>
               </div>
-
-              <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <span className="inline-block text-blue-500 dark:text-blue-400">
+              {/* ============================================================================================================== */}
+              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <span className="inline-block text-blue-500 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-8 h-8"
@@ -519,174 +193,15 @@ export default function typescript() {
                     />
                   </svg>
                 </span>
-
-                <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Nsfw
-                </h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  Use all below available not-safe-for-work endpoints to get
-                  .gif .mp4 .png & .jpg/eg links from the api.
-                  <br></br>
-                  <br></br>
-                  <div
-                    tabIndex={0}
-                    className="collapse collapse-plus border-2 border-blue-900 rounded-box "
-                  >
-                    <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-                      view content
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                      <p>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">nsfw</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">nsfw2</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          bonermaterial
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">nsfw411</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          iwanttofuckher
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">exxxtras</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">distension</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          bimbofetish
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          christiangirls
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          dirtygaming
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          sexybutnotporn
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">femalepov</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          omgbeckylookathiscock
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">sexygirls</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          breedingmaterial
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">canthold</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          toocuteforporn
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          justhotwomen
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">stripgirls</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          hotstuffnsfw
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          uncommonposes
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          gifsofremoval
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">
-                          nostalgiafapping
-                        </span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">truefmk</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">nudes</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">4k</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">realgirls</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">blowjobs</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">milf</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">milk</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">milking</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">lactating</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">pussy</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">slut</span>
-                        <br></br>
-                        /api/nsfw?q=
-                        <span className="italic text-blue-300">cumslut</span>
-                        <br></br>
-                      </p>
-                    </div>
-                  </div>
+                <h1 className="text-lg text-blue-200 uppercase">Api/Nsfw</h1>
+                <p className="text-gray-500 ">
+                  <Nsfw />
                 </p>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <hr
-        className="blur animate-pulse"
-        style={{
-          backgroundColor: "#FFFFFF",
-          height: 4,
-        }}
-      />
       <footer className="footer footer-center p-10 bg-slate-900 text-base-content rounded">
         <div>
           <p className="font-bold italic text-slate-400">

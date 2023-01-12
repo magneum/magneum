@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function NavHome() {
+export default function magneum() {
   return (
     <div className="navbar bg-zinc-900">
       <div className="navbar-start">

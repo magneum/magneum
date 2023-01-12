@@ -23,6 +23,8 @@
     "daisyui": "^2.46.1",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
+    "flowbite": "^1.6.1",
+    "flowbite-react": "^0.3.7",
     "got": "^12.5.3",
     "mal-scraper": "^2.11.4",
     "next": "13.1.1",

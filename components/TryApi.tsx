@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function NavHome() {
+export default function magneum() {
   return (
     <div className="navbar rounded-xl bg-slate-900 border-stone-800 border hover:bg-stone-900 hover:border-cyan-600">
       <div className="navbar-start">
