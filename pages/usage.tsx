@@ -106,8 +106,8 @@ export default function typescript() {
                 </h1>
 
                 <p className="text-gray-500 dark:text-gray-300">
-                  You can use all below available animations endpoints to get
-                  .gif .png & .jpg/eg links from the api.
+                  Use all below available animations endpoints to get .gif .png
+                  & .jpg/eg links from the api.
                   <br></br>
                   <br></br>
                   <div
@@ -154,8 +154,8 @@ export default function typescript() {
                 </h1>
 
                 <p className="text-gray-500 dark:text-gray-300">
-                  You can use all below available hentai endpoints to get .gif
-                  .png & .jpg/eg links from the api.
+                  Use all below available hentai endpoints to get .gif .png &
+                  .jpg/eg links from the api.
                   <br></br>
                   <br></br>
                   <div
@@ -202,8 +202,8 @@ export default function typescript() {
                 </h1>
 
                 <p className="text-gray-500 dark:text-gray-300">
-                  You can use all below available not-safe-for-work endpoints to
-                  get .gif .mp4 .png & .jpg/eg links from the api.
+                  Use all below available not-safe-for-work endpoints to get
+                  .gif .mp4 .png & .jpg/eg links from the api.
                   <br></br>
                   <br></br>
                   <div
@@ -257,7 +257,7 @@ export default function typescript() {
                 </h1>
 
                 <p className="text-gray-500 dark:text-gray-300">
-                  You can use this module to get a shortened url from tinyurl.
+                  Use this module to get a shortened url from tinyurl.
                   <br></br>
                   <br></br>
                   <div
@@ -295,12 +295,11 @@ export default function typescript() {
                   </svg>
                 </span>
                 <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Hentai
+                  Api/Anime
                 </h1>
 
                 <p className="text-gray-500 dark:text-gray-300">
-                  You can use all below available hentai endpoints to get .gif
-                  .png & .jpg/eg links from the api.
+                  Use this module to get all information about any anime.
                   <br></br>
                   <br></br>
                   <div
@@ -312,12 +311,8 @@ export default function typescript() {
                     </div>
                     <div className="collapse-content text-gray-400">
                       <p>
-                        ass bdsm blowjob cum<br></br>
-                        doujin feet femdom foxgirl<br></br>
-                        glasses hentai netorare maid<br></br>
-                        masturbation orgy panties pussy<br></br>
-                        school succubus tentacles thighs<br></br>
-                        uglyBastard uniform yuri zettaiRyouiki<br></br>
+                        endpoint: /api/anime?q=<br></br>
+                        example: /api/anime?q=death note
                       </p>
                     </div>
                   </div>
@@ -343,12 +338,12 @@ export default function typescript() {
                 </span>
 
                 <h1 className="text-2xl font-semibold text-blue-200 capitalize">
-                  Api/Nsfw
+                  Api/Youtube
                 </h1>
 
                 <p className="text-gray-500 dark:text-gray-300">
-                  You can use all below available not-safe-for-work endpoints to
-                  get .gif .mp4 .png & .jpg/eg links from the api.
+                  Use this module to get all information about any youtube video
+                  including direct audio & video download links.
                   <br></br>
                   <br></br>
                   <div
@@ -360,18 +355,8 @@ export default function typescript() {
                     </div>
                     <div className="collapse-content text-gray-400">
                       <p>
-                        nsfw nsfw2 bonermaterial nsfw411<br></br>
-                        iwanttofuckher exxxtras distension bimbofetish<br></br>
-                        christiangirls dirtygaming sexybutnotporn femalepov
-                        <br></br>
-                        omgbeckylookathiscock sexygirls breedingmaterial
-                        <br></br>
-                        canthold toocuteforporn justhotwomen stripgirls<br></br>
-                        hotstuffnsfw uncommonposes gifsofremoval
-                        nostalgiafapping<br></br>
-                        truefmk nudes 4k realgirls blowjobs milf milk milking
-                        <br></br>
-                        lactating pussy cum slut cumslut<br></br>
+                        endpoint: /api/youtube?q=ncs music 5 minutes<br></br>
+                        example: /api/youtube?q=https://youtu.be/3gxus8LnMfI
                       </p>
                     </div>
                   </div>
