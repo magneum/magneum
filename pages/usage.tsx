@@ -53,7 +53,7 @@ export default function magneum() {
                 magneum Endpoints
               </span>
             </h1>
-            <h1 className="italic text-md font-light text-gray-400 capitalize lg:text-lg text-center">
+            <h1 className="italic text-md text-gray-400 capitalize lg:text-lg text-left">
               Api:{" "}
               <span className="text-blue-400 lowercase">
                 https://magneum.vercel.app/Api/
