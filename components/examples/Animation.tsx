@@ -5,7 +5,9 @@ import { CopyBlock, nord } from "react-code-blocks";
 const codeSnippet = `// ?q=  is the querry that api/animation takes
 
 // Method 1 (Axios)
-axios.get("https://magneum.vercel.app/api/animation?q=smile")
+const axios = require("axios");
+// import axios from "axios"; while using @types
+axios.get("https://magneum-api.vercel.app/api/animation?q=smile")
 .then(function (response) {
 console.log(response.data);
 })
@@ -14,9 +16,10 @@ console.error(error);
 });
 
 // Method 2 (Request)
+const request = require("request");
 request({
 method: "GET",
-url: "https://magneum.vercel.app/api/animation?q=smile",
+url: "https://magneum-api.vercel.app/api/animation?q=smile",
 headers: {
 Accept: "application/json",
 "Content-Type": "application/json",
@@ -28,7 +31,8 @@ console.log(response.body);
 });
   
 // Method 3 (Unirest)
-unirest.post("https://magneum.vercel.app/api/animation?q=smile")
+const unirest = require("unirest");
+unirest.post("https://magneum-api.vercel.app/api/animation?q=smile")
 .headers({ Accept: "application/json", "Content-Type": "application/json" })
 .then((response) => {
 console.log(response.body);

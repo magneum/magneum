@@ -5,6 +5,8 @@ import { CopyBlock, nord } from "react-code-blocks";
 const codeSnippet = `// ?q=  is the querry that api/text2speech takes
 
 // Method 1 (Axios)
+const axios = require("axios");
+// import axios from "axios"; while using @types
 axios.get("https://magneum.vercel.app/api/text2speech?q=Hello. How are You?")
 .then(function (response) {
 console.log(response.data);
@@ -14,6 +16,7 @@ console.error(error);
 });
 
 // Method 2 (Request)
+const request = require("request");
 request({
 method: "GET",
 url: "https://magneum.vercel.app/api/text2speech?q=Hello. How are You?",
@@ -28,6 +31,7 @@ console.log(response.body);
 });
   
 // Method 3 (Unirest)
+const unirest = require("unirest");
 unirest.post("https://magneum.vercel.app/api/text2speech?q=Hello. How are You?")
 .headers({ Accept: "application/json", "Content-Type": "application/json" })
 .then((response) => {
