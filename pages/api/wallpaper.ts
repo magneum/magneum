@@ -1,78 +1,60 @@
+const qs = require("qs");
 import axios from "axios";
 import fetch from "node-fetch";
 const tinyurl = require("tinyurl");
 const unirest = require("unirest");
 const request = require("request");
+const cheerio = require("cheerio");
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import { createApi } from "unsplash-js";
 import type { NextApiRequest, NextApiResponse } from "next";
 
+function Wallpaper_Flare(query: any) {
+  return new Promise((resolve, reject) => {
+    axios
+      .get("https://www.wallpaperflare.com/search?wallpaper=" + query, {
+        headers: {
+          "user-agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+          cookie:
+            "_ga=GA1.2.863074474.1624987429; _gid=GA1.2.857771494.1624987429; __gads=ID=84d12a6ae82d0a63-2242b0820eca0058:T=1624987427:RT=1624987427:S=ALNI_MaJYaH0-_xRbokdDkQ0B49vSYgYcQ",
+        },
+      })
+      .then(({ data }) => {
+        const $ = cheerio.load(data);
+        const result: any = [];
+        $("#gallery > li > figure > a").each(function (a: any, b: any) {
+          result.push($(b).find("img").attr("data-src"));
+        });
+        resolve(result);
+      })
+      .catch();
+  });
+}
+
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   if (req.query.q) {
-    const unsplash = createApi({
-      accessKey: "OGx0PMTS_u06PSSsRwTmmxjxfe3OhABXYpDimOjE4d4",
-      fetch: fetch,
-    });
-    const cobra = await unsplash.search.getPhotos({
-      query: req.query.q,
-      page: 1,
-      perPage: 1,
-      orderBy: "latest",
-      orientation: "portrait",
-    });
-    if (!cobra) {
-      res.send({
-        _status: "⚠️ failed",
+    const cobra = await Wallpaper_Flare(req.query.q);
+    var _Found = [
+      {
+        _status: "🎊success",
+        _id: uuidv4(),
         TIMESTAMP: Date.now(),
-        USAGE: {
-          endpoint: "/api/manga?q=",
-          example: "/api/manga?q=My Hero Academia by Kohei Horikoshi",
-        },
-      });
-    } else {
-      var _Found = [
-        {
-          _status: "🎊success",
-          _id: uuidv4(),
-          TIMESTAMP: Date.now(),
-          TOPIC: "HD Wallpapers",
-          QUERY: req.query.q,
-          width: cobra.response.results[0].width,
-          height: cobra.response.results[0].height,
-          images: [
-            {
-              raw_size: await tinyurl.shorten(
-                cobra.response.results[0].urls.raw
-              ),
-              full_size: await tinyurl.shorten(
-                cobra.response.results[0].urls.full
-              ),
-              regular_size: await tinyurl.shorten(
-                cobra.response.results[0].urls.regular
-              ),
-              small_size: await tinyurl.shorten(
-                cobra.response.results[0].urls.small
-              ),
-              thumbnail_size: await tinyurl.shorten(
-                cobra.response.results[0].urls.thumb
-              ),
-            },
-          ],
-        },
-      ];
-      logger.info(_Found);
-      return res.send(_Found);
-    }
+        TOPIC: "Wallpapers from Wallpaper Flare",
+        QUERY: req.query.q,
+        links: cobra,
+      },
+    ];
+    logger.info(_Found);
+    return res.send(_Found);
   } else {
-    res.send({
-      _status: "⚠️ failed",
+    return res.send({
+      _status: "Failed with error code 911",
       TIMESTAMP: Date.now(),
       USAGE: {
         endpoint: "/api/wallpaper?q=",
-        example: [
-          "/api/wallpaper?q=dog",
-        ],
+        example: ["/api/wallpaper?q=dog"],
       },
     });
   }

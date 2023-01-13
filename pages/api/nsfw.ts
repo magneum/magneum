@@ -20,6 +20,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -48,6 +49,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -76,6 +78,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -104,6 +107,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -132,6 +136,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -160,6 +165,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -188,6 +194,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -216,6 +223,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -244,6 +252,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -272,6 +281,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -300,6 +310,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -328,6 +339,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -384,6 +396,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -412,6 +425,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -440,6 +454,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -468,6 +483,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -496,6 +512,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -524,6 +541,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -552,6 +570,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -580,6 +599,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -608,6 +628,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -636,6 +657,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -664,6 +686,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -693,6 +716,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -721,6 +745,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -749,6 +774,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -779,6 +805,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -807,6 +834,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -837,6 +865,7 @@ export default async function animation(
               {
                 _status: "🎊success",
                 TIMESTAMP: Date.now(),
+                TOPIC: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -856,8 +885,8 @@ export default async function animation(
       );
       break;
     default:
-      res.send({
-        _status: "⚠️ failed",
+      return res.send({
+        _status: "Failed with error code 911",
         TIMESTAMP: Date.now(),
         USAGE: {
           endpoint: "/api/nsfw?q=",

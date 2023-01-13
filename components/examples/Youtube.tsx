@@ -74,7 +74,7 @@ export default function magneum() {
         className="collapse collapse-plus border-2 border-blue-900 rounded-box "
       >
         <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-          get code example
+          code example :)
         </div>
         <div className="collapse-content text-gray-400">
           <p>

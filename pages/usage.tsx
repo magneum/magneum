@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 const Text2Speech = dynamic(() => import("../components/examples/Text2Speech"));
 const Animation = dynamic(() => import("../components/examples/Animation"));
 const Wallpaper = dynamic(() => import("../components/examples/Wallpaper"));
+const Pinterest = dynamic(() => import("../components/examples/Pinterest"));
 const Unsplash = dynamic(() => import("../components/examples/Unsplash"));
 const Youtube = dynamic(() => import("../components/examples/Youtube"));
 const Shorten = dynamic(() => import("../components/examples/Shorten"));
@@ -13,6 +14,7 @@ const Hentai = dynamic(() => import("../components/examples/Hentai"));
 const Anime = dynamic(() => import("../components/examples/Anime"));
 const Manga = dynamic(() => import("../components/examples/Manga"));
 const Nsfw = dynamic(() => import("../components/examples/Nsfw"));
+const SFW = dynamic(() => import("../components/examples/SFW"));
 
 export default function magneum() {
   return (
@@ -23,7 +25,7 @@ export default function magneum() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-gradient-to-b from-zinc-900 to-slate-900 font-serif backdrop-blur-3xl">
+      <main className="bg-gradient-to-b from-black via-slate-900 to-slate-900 font-serif backdrop-blur-3xl">
         <section>
           <div className="relative block w-full mx-auto md:mt-0">
             <Image
@@ -55,30 +57,29 @@ export default function magneum() {
             </h1>
             <h1 className="italic text-md text-gray-400 capitalize lg:text-lg text-left">
               Api:{" "}
-              <span href="https://magneum.vercel.app/api/"
-              className="text-blue-400 lowercase">
-                https://magneum.vercel.app/api/
-              </span>
+              <Link href="https://magneum.vercel.app/api/">
+                <span className="text-blue-400 lowercase">
+                  https://magneum.vercel.app/api/
+                </span>
+              </Link>
             </h1>
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <h1 className="text-lg text-blue-200 uppercase">
-                  ♚ Api/Shorten
-                </h1>
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">♚ Api/Manga</h1>
                 <p className="text-gray-400 italic lowercase">
-                  <Shorten />
+                  <Manga />
                 </p>
               </div>
               {/* ============================================================================================================== */}
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">♚ Api/Anime</h1>
                 <p className="text-gray-400 italic lowercase">
                   <Anime />
                 </p>
               </div>
               {/* ============================================================================================================== */}
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Youtube
                 </h1>
@@ -89,7 +90,7 @@ export default function magneum() {
             </div>
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Animation
                 </h1>
@@ -98,7 +99,7 @@ export default function magneum() {
                 </p>
               </div>
               {/* ============================================================================================================== */}
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Hentai
                 </h1>
@@ -107,7 +108,7 @@ export default function magneum() {
                 </p>
               </div>
               {/* ============================================================================================================== */}
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">♚ Api/Nsfw</h1>
                 <p className="text-gray-400 italic lowercase">
                   <Nsfw />
@@ -116,14 +117,16 @@ export default function magneum() {
             </div>
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <h1 className="text-lg text-blue-200 uppercase">♚ Api/Manga</h1>
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Shorten
+                </h1>
                 <p className="text-gray-400 italic lowercase">
-                  <Manga />
+                  <Shorten />
                 </p>
               </div>
               {/* ============================================================================================================== */}
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Text2Speech
                 </h1>
@@ -132,7 +135,7 @@ export default function magneum() {
                 </p>
               </div>
               {/* ============================================================================================================== */}
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Unsplash
                 </h1>
@@ -143,7 +146,7 @@ export default function magneum() {
             </div>
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-              <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Wallpaper
                 </h1>
@@ -152,23 +155,21 @@ export default function magneum() {
                 </p>
               </div>
               {/* ============================================================================================================== */}
-              {/* <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
-                <h1 className="text-lg text-blue-200 uppercase">
-                  ♚ Api/Text2Speech
-                </h1>
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">♚ Api/SFW</h1>
                 <p className="text-gray-400 italic lowercase">
-                  <Text2Speech />
+                  <SFW />
                 </p>
-              </div> */}
+              </div>
               {/* ============================================================================================================== */}
-              {/* <div className="p-8 space-y-3 border-2 border-blue-400  rounded-xl hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
-                  ♚ Api/Unsplash
+                  ♚ Api/Pinterest
                 </h1>
                 <p className="text-gray-400 italic lowercase">
-                  <Unsplash />
+                  <Pinterest />
                 </p>
-              </div> */}
+              </div>
             </div>
             {/* ============================================================================================================== */}
           </div>

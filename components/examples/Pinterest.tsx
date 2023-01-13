@@ -2,12 +2,12 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { CopyBlock, nord } from "react-code-blocks";
-const codeSnippet = `// ?q=  is the querry that api/manga takes
+const codeSnippet = `// ?q=  is the querry that api/pinterest takes
 
 // Method 1 (Axios)
 const axios = require("axios");
 /** @type {import axios from "axios"} */
-axios.get("https://magneum.vercel.app/api/manga?q=My Hero Academia by Kohei Horikoshi")
+axios.get("https://magneum.vercel.app/api/pinterest?q=cobra")
 .then(function (response) {
 console.log(response.data);
 })
@@ -19,7 +19,7 @@ console.error(error);
 const request = require("request");
 request({
 method: "GET",
-url: "https://magneum.vercel.app/api/manga?q=My Hero Academia by Kohei Horikoshi",
+url: "https://magneum.vercel.app/api/pinterest?q=cobra",
 headers: {
 Accept: "application/json",
 "Content-Type": "application/json",
@@ -32,7 +32,7 @@ console.log(response.body);
   
 // Method 3 (Unirest)
 const unirest = require("unirest");
-unirest.post("https://magneum.vercel.app/api/manga?q=My Hero Academia by Kohei Horikoshi")
+unirest.post("https://magneum.vercel.app/api/pinterest?q=cobra")
 .headers({ Accept: "application/json", "Content-Type": "application/json" })
 .then((response) => {
 console.log(response.body);
@@ -41,7 +41,7 @@ console.log(response.body);
 export default function magneum() {
   return (
     <div>
-      Use this module to get all information about any manga from myanimelist.
+      Use this module to get high quality wallpapers.
       <br></br>
       <br></br>
       <div
@@ -54,12 +54,10 @@ export default function magneum() {
         <div className="collapse-content text-gray-400">
           <p>
             endpoint:{" "}
-            <span className="italic text-blue-300">/api/manga?q=</span>
+            <span className="italic text-blue-300">/api/pinterest?q=</span>
             <br></br>
-            example: /api/manga?q=
-            <span className="italic text-blue-300">
-              My Hero Academia by Kohei Horikoshi
-            </span>
+            example: /api/pinterest?q=
+            <span className="italic text-blue-300">cobra</span>
             <br></br>
           </p>
         </div>

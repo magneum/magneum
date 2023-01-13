@@ -31,16 +31,17 @@ var getLogger = (fileName = "application") => {
       winston.format.timestamp({ format: "YYYY-MM-DD HH:mm:ss:ms" }),
       winston.format.colorize({ all: true }),
       winston.format.printf(
-        (info: any) => `${info.timestamp}::${info.level}::${info.message}`
+        (info: any) =>
+          `[MAGGEUM API]: ${info.timestamp}::${info.level}::${info.message} >>`
       )
     ),
     transports: [
       new winston.transports.Console(),
       new winston.transports.File({
-        filename: "error.log",
+        filename: "services/error.log",
         level: "error",
       }),
-      new winston.transports.File({ filename: "all.log" }),
+      new winston.transports.File({ filename: "services/all.log" }),
     ],
   });
 };

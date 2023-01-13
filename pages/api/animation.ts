@@ -590,8 +590,8 @@ export default async function animation(
         });
       break;
     default:
-      res.send({
-        _status: "⚠️ failed",
+      return res.send({
+        _status: "Failed with error code 911",
         TIMESTAMP: Date.now(),
         USAGE: {
           endpoint: "/api/animation?q=",

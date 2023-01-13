@@ -48,8 +48,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       return res.send(_Found);
     });
   } else {
-    res.send({
-      _status: "⚠️ failed",
+    return res.send({
+      _status: "Failed with error code 911",
       TIMESTAMP: Date.now(),
       USAGE: {
         endpoint: "/api/youtube?q=",

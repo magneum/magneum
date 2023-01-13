@@ -13,8 +13,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     const unsplash = createApi({
       accessKey: "OGx0PMTS_u06PSSsRwTmmxjxfe3OhABXYpDimOjE4d4",
     });
-    const cobra = await unsplash.search.getPhotos({
-      query: req.query.q,
+    const cobra: any = await unsplash.search.getPhotos({
+      query: `${req.query.q}`,
       page: 1,
       perPage: 1,
       orderBy: "latest",
@@ -22,7 +22,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     });
     if (!cobra) {
       res.send({
-        _status: "⚠️ failed",
+        _status: "Failed with error code 911",
         TIMESTAMP: Date.now(),
         USAGE: {
           endpoint: "/api/manga?q=",
@@ -71,14 +71,12 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       return res.send(_Found);
     }
   } else {
-    res.send({
-      _status: "⚠️ failed",
+    return res.send({
+      _status: "Failed with error code 911",
       TIMESTAMP: Date.now(),
       USAGE: {
         endpoint: "/api/unsplash?q=",
-        example: [
-          "/api/unsplash?q=cat",
-        ],
+        example: ["/api/unsplash?q=cat"],
       },
     });
   }
