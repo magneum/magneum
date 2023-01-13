@@ -80,16 +80,18 @@ export default function magneum() {
             </div>
             <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
               <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
-                  <Image
-                    alt="content"
-                    width={500}
-                    height={500}
-                    className="object-cover object-center h-full w-full"
-                    src="/github.jpeg"
-                  ></Image>
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 shadow-lg shadow-orange-800">
+                  <Link href="https://github.com/magneum">
+                    <Image
+                      alt="content"
+                      width={500}
+                      height={500}
+                      className="object-cover animate-pulse object-center h-full w-full"
+                      src="/github.jpeg"
+                    ></Image>
+                  </Link>
                 </div>
-                <h2 className="text-xl font-medium title-font text-orange-500 mt-5">
+                <h2 className="text-xl font-bold title-font text-orange-500 mt-5 uppercase">
                   🛵Github.com/magneum
                 </h2>
                 <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
@@ -99,55 +101,42 @@ export default function magneum() {
                   tracking, software feature requests, task management,
                   continuous integration, and wikis for every project.
                 </p>
-                <br></br>
-                <div className="flex justify-start">
-                  <Link href="https://github.com/magneum">
-                    <button className="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
-                      Visit
-                    </button>
+              </div>
+              <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 shadow-lg shadow-orange-800 contrast-125">
+                  <Link href="/application">
+                    <Image
+                      alt="content"
+                      width={500}
+                      height={500}
+                      className="object-cover animate-pulse object-center h-full w-full"
+                      src="/api.jpg"
+                    ></Image>
                   </Link>
                 </div>
-              </div>
-
-              <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 contrast-125">
-                  <Image
-                    alt="content"
-                    width={500}
-                    height={500}
-                    className="object-cover object-center h-full w-full"
-                    src="/api.jpg"
-                  ></Image>
-                </div>
-                <h2 className="text-xl font-medium title-font text-orange-500 mt-5">
-                  🛰️ Magneum-Api
+                <h2 className="text-xl font-bold title-font text-orange-500 mt-5 uppercase">
+                  🛰️ Magneum Api
                 </h2>
                 <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
                   With Magneum you can fetch different types of informations
                   without needing to install any dependencies or worrying about
                   servers or configurations.
                 </p>
-                <br></br>
-                <div className="flex justify-start">
-                  <Link href="/application">
-                    <button className="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
-                      Visit
-                    </button>
-                  </Link>
-                </div>
               </div>
               <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
-                  <Image
-                    alt="content"
-                    width={500}
-                    height={500}
-                    className="object-cover object-center h-full w-full"
-                    src="/node.png"
-                  ></Image>
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 shadow-lg shadow-orange-800">
+                  <Link href="https://www.npmjs.com/settings/xhadr/packages">
+                    <Image
+                      alt="content"
+                      width={500}
+                      height={500}
+                      className="object-cover animate-pulse object-center h-full w-full"
+                      src="/node.png"
+                    ></Image>
+                  </Link>
                 </div>
-                <h2 className="text-xl font-medium title-font text-orange-500 mt-5">
-                  🔥 My Node-pkg Page
+                <h2 className="text-xl font-bold title-font text-orange-500 mt-5 uppercase">
+                  🔥 Node NPM Packages
                 </h2>
                 <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
                   NPM is the worlds largest software registry.<br></br>
@@ -155,26 +144,20 @@ export default function magneum() {
                   and borrow packages,and many organizations use npm to manage
                   private development as well.
                 </p>
-                <br></br>
-                <div className="flex justify-start">
-                  <Link href="https://www.npmjs.com/settings/xhadr/packages">
-                    <button className="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
-                      Visit
-                    </button>
-                  </Link>
-                </div>
               </div>
               <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105">
-                  <Image
-                    alt="content"
-                    width={500}
-                    height={500}
-                    className="object-cover object-center h-full w-full contrast-150"
-                    src="/whatsapp.png"
-                  ></Image>
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 shadow-lg shadow-orange-800">
+                  <Link href="https://vlkyre.up.railway.app/vlkyre.html">
+                    <Image
+                      alt="content"
+                      width={500}
+                      height={500}
+                      className="object-cover animate-pulse object-center h-full w-full contrast-150"
+                      src="/whatsapp.png"
+                    ></Image>
+                  </Link>
                 </div>
-                <h2 className="text-xl font-medium title-font text-orange-500 mt-5">
+                <h2 className="text-xl font-bold title-font text-orange-500 mt-5 uppercase">
                   🦇 Vlkyre Home Page
                 </h2>
                 <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
@@ -183,14 +166,51 @@ export default function magneum() {
                   by using npm. To Find Out What Vlkyre Offers, Join Any Vlkyre
                   Official Groups in vlkyre-home-page.
                 </p>
-                <br></br>{" "}
-                <div className="flex justify-start">
-                  <Link href="https://vlkyre.up.railway.app/vlkyre.html">
-                    <button className="inline-flex text-orange-200 bg-stone-800 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded-lg text-lg  hover:text-orange-200">
-                      Visit
-                    </button>
+              </div>
+              <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 shadow-lg shadow-orange-800">
+                  <Link href="https://www.youtube.com/channel/UC5_VwWIUIdmv96OvR5rFvaA">
+                    <Image
+                      alt="content"
+                      width={500}
+                      height={500}
+                      className="object-cover animate-pulse object-center h-full w-full"
+                      src="/YouTube.jpg"
+                    ></Image>
                   </Link>
                 </div>
+                <h2 className="text-xl font-bold title-font text-orange-500 mt-5 uppercase">
+                  🦇 Vlkyre YouTube
+                </h2>
+                <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                  YouTube is a global online video sharing and social media
+                  platform headquartered in San Bruno, California. It was
+                  launched on February 14, 2005, by Steve Chen, Chad Hurley, and
+                  Jawed Karim. It is owned by Google, and is the second most
+                  visited website, after Google Search
+                </p>
+              </div>
+              <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div className="h-64 overflow-y-hidden border-orange-800 border-2 rounded-lg hover:scale-105 shadow-lg shadow-orange-800">
+                  <Link href="https://hub.docker.com/repositories/magneum">
+                    <Image
+                      alt="content"
+                      width={500}
+                      height={500}
+                      className="object-cover animate-pulse object-center h-full w-full contrast-125"
+                      src="/Docker.jpg"
+                    ></Image>
+                  </Link>
+                </div>
+                <h2 className="text-xl font-bold title-font text-orange-500 mt-5 uppercase">
+                  🦇 Magneum Docker
+                </h2>
+                <p className="text-base leading-relaxed mt-2 text-orange-100 hover:text-orange-300">
+                  Docker is a set of platform as a service products that use
+                  OS-level virtualization to deliver software in packages called
+                  containers. The service has both free and premium tiers. The
+                  software that hosts the containers is called Docker Engine.
+                </p>
               </div>
             </div>
           </div>
