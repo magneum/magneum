@@ -1159,7 +1159,7 @@ cheerio-select@^2.1.0:
     domhandler "^5.0.3"
     domutils "^3.0.1"
 
-cheerio@^1.0.0-rc.10, cheerio@^1.0.0-rc.3:
+cheerio@^1.0.0-rc.10, cheerio@^1.0.0-rc.12, cheerio@^1.0.0-rc.3:
   version "1.0.0-rc.12"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.12.tgz#788bf7466506b1c6bf5fae51d24a2c4d62e47683"
   integrity sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==
@@ -4950,14 +4950,6 @@ xtend@^4.0.0, xtend@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
-
-y2mate-api@^1.6.5:
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/y2mate-api/-/y2mate-api-1.6.5.tgz#5d1b5a731886563bdb6a82459dd296f1ede7cb42"
-  integrity sha512-VvYX6FQz2JZcp6H36XqCcU+DVFlmizR/DmS65G5MzwEHX2CcxiKoYZE4PQ4VCfTeVtJi1yfO1gHJLocMEwfWtQ==
-  dependencies:
-    chalk "^4.1.2"
-    tinyurl "^1.1.7"
 
 yallist@^4.0.0:
   version "4.0.0"

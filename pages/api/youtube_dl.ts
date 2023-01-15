@@ -1,6 +1,5 @@
 import axios from "axios";
 const chalk = require("chalk");
-const y2 = require("y2mate-api");
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
