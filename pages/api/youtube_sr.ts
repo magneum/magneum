@@ -1,0 +1,54 @@
+import axios from "axios";
+const chalk = require("chalk");
+const y2 = require("y2mate-api");
+import YouTube_Sr from "yt-search";
+import logger from "../../services";
+import { v4 as uuidv4 } from "uuid";
+import type { NextApiRequest, NextApiResponse } from "next";
+
+export default async function test(req: NextApiRequest, res: NextApiResponse) {
+  if (req.query.q) {
+    let _Found;
+    let Query = await YouTube_Sr(req.query.q);
+    let QueryFound = Query.videos.slice(0, 1);
+    QueryFound.forEach(function (response) {
+      _Found = {
+        _status: "🎊success",
+        _id: uuidv4(),
+        TIMESTAMP: Date.now(),
+        TOPIC: "[YouTube Meta Searcher]",
+        QUERY: req.query.q,
+        _youtube_search: [
+          {
+            YT_ID: response.videoId,
+            TITLE: response.title,
+            UPLOADED: response.ago,
+            VIEWS: response.views,
+            DURATION_FULL: response.duration.timestamp,
+            DURATION_SECONDS: response.duration.seconds,
+            AUTHOR_NAME: response.author.name,
+            AUTHOR_CHANNEL: response.author.url,
+            LINK: response.url,
+            THUMB: response.thumbnail,
+            HQ_IMAGE: response.image,
+            DESCRIPTION: response.description,
+          },
+        ],
+      };
+    });
+    logger.info(_Found);
+    return res.send(_Found);
+  } else {
+    return res.send({
+      _status: "Failed with error code 911",
+      TIMESTAMP: Date.now(),
+      USAGE: {
+        endpoint: "/api/youtube_sr?q=",
+        example: [
+          "/api/youtube_sr?q=ncs music 5 minutes",
+          "/api/youtube_sr?q=https://youtu.be/3gxus8LnMfI",
+        ],
+      },
+    });
+  }
+}

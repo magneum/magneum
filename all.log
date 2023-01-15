@@ -1,91 +1,23 @@
-[MAGGEUM API]: 2023-01-13 07:09:12:912::[32m[3minfo[23m[39m::[32m[3m[[23m[39m
-[32m[3m  {[23m[39m
-[32m[3m    _status: '🎊success',[23m[39m
-[32m[3m    _id: 'b246b4cf-059c-4971-bda6-1e618735c0c6',[23m[39m
-[32m[3m    TIMESTAMP: 1673622552374,[23m[39m
-[32m[3m    TOPIC: 'Wallpapers from Wallpaper Flare',[23m[39m
-[32m[3m    QUERY: 'cat',[23m[39m
-[32m[3m    links: [[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/772/105/265/naruto-shippuuden-anime-fox-hatake-kakashi-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/459/87/740/cat-glasses-space-abstract-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/757/911/790/women-anime-girls-brunette-cat-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/705/826/351/digital-digital-art-artwork-illustration-ricodz-hd-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/196/254/439/artwork-digital-art-fantasy-art-cat-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/367/252/59/5bd3350aedb54-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/793/5/131/minimalism-digital-art-simple-background-cats-eyes-hd-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/434/309/126/minimalism-cat-funny-digital-art-artwork-hd-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/731/313/238/naruto-anime-cat-anime-boys-colorful-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/101/380/61/cat-animals-bokeh-cute-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/271/682/513/notebooks-cat-laptop-monochrome-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/371/371/613/laptop-cat-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/938/503/588/anime-manga-minimalism-simple-background-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/864/806/346/minimalism-digital-art-simple-cat-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/135/524/987/jaguar-big-cute-wild-cat-desktop-hd-wallpaper-for-mobile-phones-tablet-and-pc-3840×2160-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/288/916/867/cat-animals-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/470/670/449/anime-boy-cat-raining-scenic-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/873/699/653/kagaya-moon-anime-girl-cat-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/854/450/467/black-black-panther-purple-low-poly-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/262/735/661/reflection-cat-neon-cyberpunk-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/404/38/409/artwork-lion-colorful-big-cats-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/90/583/800/1tomjerry-animation-cartoon-cat-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/92/159/593/lion-muzzle-mane-loок-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/595/798/475/animals-blue-cats-eyes-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/710/914/487/lion-animals-nature-wildlife-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/644/757/64/animal-cat-cute-cat-kitten-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/1010/919/718/sunset-girl-the-city-cat-view-hd-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/629/286/513/anime-anime-girls-mx-shimmer-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/920/434/482/predator-art-grin-lion-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/564/256/1012/1920x1080-px-black-black-background-black-cats-cat-dark-selective-coloring-nature-fields-hd-art-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/181/179/710/cat-mammal-dandelion-flower-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/703/44/925/kitty-cat-cats-sleep-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/349/743/746/monstercat-simple-minimalism-simple-background-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/21/270/425/anime-naruto-kurama-naruto-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/809/124/984/cats-cat-cute-funny-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/399/827/727/lion-animals-texture-digital-art-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/834/272/980/pusheen-lazy-cat-memes-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/55/661/301/cat-black-cats-black-dark-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/1020/274/359/cartoon-cat-goldfish-artwork-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/99/251/623/humor-cat-grumpy-cat-cartoon-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/97/63/638/wildlife-black-black-and-white-lion-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/949/791/647/anime-anime-girls-cat-girl-glitch-art-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/503/401/298/cat-black-breed-russian-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/950/381/215/wild-cats-wild-cats-tiger-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/513/441/116/tiger-animals-dark-artwork-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/560/984/964/artwork-neon-neon-glow-cats-street-hd-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/904/109/277/leopard-dark-animal-wild-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/827/176/890/starcraft-ii-starcraft-james-raynor-cat-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/66/471/682/computer-cat-table-room-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/738/18/572/artwork-anime-cat-glowing-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/470/455/703/cat-jump-butterfly-grass-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/145/152/895/blue-eyes-cat-mammal-kittens-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/788/429/181/lion-black-background-animals-big-cats-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/1/966/501/joker-red-black-eyes-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/551/829/320/cat-kitty-kittens-humor-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/547/217/266/cat-glasses-animals-selective-coloring-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/270/660/12/tokyo-japan-aestethic-artwork-digital-art-hd-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/759/991/793/cat-black-cats-animals-green-eyes-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/30/439/757/cat-feline-kitten-animal-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/699/126/441/anime-manga-anime-girls-fan-art-illustration-hd-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/3/543/670/digital-art-women-city-car-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/10/973/206/anime-anime-girls-cat-girl-school-uniform-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/437/114/550/cat-animals-black-background-green-eyes-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/861/484/874/lofigirl-lofi-black-cat-lantern-headsets-hd-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/917/507/619/cat-eyes-simple-background-cat-black-cats-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/771/660/8/anime-landscape-senjougahara-hitagi-monogatari-series-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/511/327/768/shirakami-fubuki-anime-girls-animal-ears-animal-tail-hololive-hd-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/861/607/630/nature-animals-grass-puppies-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/714/378/493/cat-animals-memes-city-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/886/15/649/studio-ghibli-my-neighbor-totoro-spirited-away-castle-in-the-sky-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/160/19/802/anime-my-neighbor-totoro-totoro-studio-ghibli-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/264/760/926/animals-tiger-white-tigers-nature-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/113/999/747/2b-nier-automata-nier-automata-nier-blindfold-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/404/611/770/anime-girls-headphones-original-characters-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/740/393/208/cat-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/840/933/234/funny-cats-background-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/232/276/866/tom-and-jerry-tom-and-jerry-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/120/510/344/anime-anime-girls-artwork-simple-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/1000/903/608/panther-lowpoly-low-poly-art-wallpaper-preview.jpg',[23m[39m
-[32m[3m      'https://c4.wallpaperflare.com/wallpaper/114/731/629/fireflies-anime-girls-forest-kimono-wallpaper-preview.jpg'[23m[39m
-[32m[3m    ][23m[39m
-[32m[3m  }[23m[39m
-[32m[3m][23m[39m >>
+[MAGGEUM API]: 2023-01-15 06:03:28:328::[32m[3minfo[23m[39m::[32m[3m{[23m[39m
+[32m[3m  _status: '🎊success',[23m[39m
+[32m[3m  _id: '5889920f-ad69-4402-ae13-11caead61553',[23m[39m
+[32m[3m  TIMESTAMP: 1673791408444,[23m[39m
+[32m[3m  TOPIC: '[YouTube Meta Searcher]',[23m[39m
+[32m[3m  QUERY: 'calm down',[23m[39m
+[32m[3m  _youtube_search: [[23m[39m
+[32m[3m    {[23m[39m
+[32m[3m      YT_ID: 'WcIcVapfqXw',[23m[39m
+[32m[3m      TITLE: 'Rema, Selena Gomez - Calm Down (Official Music Video)',[23m[39m
+[32m[3m      UPLOADED: '4 months ago',[23m[39m
+[32m[3m      VIEWS: 230593162,[23m[39m
+[32m[3m      DURATION_FULL: '4:00',[23m[39m
+[32m[3m      DURATION_SECONDS: 240,[23m[39m
+[32m[3m      AUTHOR_NAME: 'Selena Gomez',[23m[39m
+[32m[3m      AUTHOR_CHANNEL: 'https://youtube.com/channel/UCPNxhDvTcytIdvwXWAm43cA',[23m[39m
+[32m[3m      LINK: 'https://youtube.com/watch?v=WcIcVapfqXw',[23m[39m
+[32m[3m      THUMB: 'https://i.ytimg.com/vi/WcIcVapfqXw/hq720.jpg',[23m[39m
+[32m[3m      HQ_IMAGE: 'https://i.ytimg.com/vi/WcIcVapfqXw/hq720.jpg',[23m[39m
+[32m[3m      DESCRIPTION: '#rema #selenagomez #calmdown #raveandroses Music video by Rema, Selena Gomez performing Calm Down. © 2022 Mavin ...'[23m[39m
+[32m[3m    }[23m[39m
+[32m[3m  ][23m[39m
+[32m[3m}[23m[39m >>

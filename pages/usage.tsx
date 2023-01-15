@@ -4,11 +4,12 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 
 const Text2Speech = dynamic(() => import("../components/examples/Text2Speech"));
+const Youtube_dl = dynamic(() => import("../components/examples/Youtube_dl"));
+const Youtube_sr = dynamic(() => import("../components/examples/Youtube_sr"));
 const Animation = dynamic(() => import("../components/examples/Animation"));
 const Wallpaper = dynamic(() => import("../components/examples/Wallpaper"));
 const Pinterest = dynamic(() => import("../components/examples/Pinterest"));
 const Unsplash = dynamic(() => import("../components/examples/Unsplash"));
-const Youtube = dynamic(() => import("../components/examples/Youtube"));
 const Shorten = dynamic(() => import("../components/examples/Shorten"));
 const Hentai = dynamic(() => import("../components/examples/Hentai"));
 const Anime = dynamic(() => import("../components/examples/Anime"));
@@ -81,15 +82,24 @@ export default function magneum() {
               {/* ============================================================================================================== */}
               <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
-                  ♚ Api/Youtube
+                  ♚ Api/Youtube_dl
                 </h1>
                 <p className="text-gray-400 italic lowercase">
-                  <Youtube />
+                  <Youtube_dl />
                 </p>
               </div>
             </div>
             {/* ============================================================================================================== */}
             <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Youtube_sr
+                </h1>
+                <p className="text-gray-400 italic lowercase">
+                  <Youtube_sr />
+                </p>
+              </div>
+              {/* ============================================================================================================== */}
               <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Animation
@@ -107,16 +117,16 @@ export default function magneum() {
                   <Hentai />
                 </p>
               </div>
-              {/* ============================================================================================================== */}
+            </div>
+            {/* ============================================================================================================== */}
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">♚ Api/Nsfw</h1>
                 <p className="text-gray-400 italic lowercase">
                   <Nsfw />
                 </p>
               </div>
-            </div>
-            {/* ============================================================================================================== */}
-            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              {/* ============================================================================================================== */}
               <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Shorten
@@ -134,7 +144,9 @@ export default function magneum() {
                   <Text2Speech />
                 </p>
               </div>
-              {/* ============================================================================================================== */}
+            </div>
+            {/* ============================================================================================================== */}
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Unsplash
@@ -143,9 +155,7 @@ export default function magneum() {
                   <Unsplash />
                 </p>
               </div>
-            </div>
-            {/* ============================================================================================================== */}
-            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              {/* ============================================================================================================== */}
               <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Wallpaper
@@ -161,7 +171,9 @@ export default function magneum() {
                   <SFW />
                 </p>
               </div>
-              {/* ============================================================================================================== */}
+            </div>
+            {/* ============================================================================================================== */}
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
                 <h1 className="text-lg text-blue-200 uppercase">
                   ♚ Api/Pinterest
@@ -170,8 +182,23 @@ export default function magneum() {
                   <Pinterest />
                 </p>
               </div>
+              {/* ============================================================================================================== */}
+              {/* <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">♚ Api/SFW</h1>
+                <p className="text-gray-400 italic lowercase">
+                  <SFW />
+                </p>
+              </div> */}
+              {/* ============================================================================================================== */}
+              {/* <div className="p-8 space-y-3 border-2 border-blue-400 rounded-lg hover:scale-105 duration-500 hover:contrast-125 bg-slate-900">
+                <h1 className="text-lg text-blue-200 uppercase">
+                  ♚ Api/Pinterest
+                </h1>
+                <p className="text-gray-400 italic lowercase">
+                  <Pinterest />
+                </p>
+              </div> */}
             </div>
-            {/* ============================================================================================================== */}
           </div>
         </section>
       </main>
