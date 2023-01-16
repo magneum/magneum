@@ -7,8 +7,8 @@ import { v4 as uuidv4 } from "uuid";
 const { load } = require("cheerio");
 import type { NextApiRequest, NextApiResponse } from "next";
 
-async function Tube_D(url) {
-  function regex(url) {
+async function Tube_D(url: any) {
+  function regex(url: any) {
     try {
       const regex =
         /https:\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?[\w\?=]*)?/;
