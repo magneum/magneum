@@ -32,7 +32,7 @@ var getLogger = (fileName = "application") => {
       winston.format.colorize({ all: true }),
       winston.format.printf(
         (info: any) =>
-          `[MAGGEUM API]: ${info.timestamp}::${info.level}::${info.message} >>`
+          `[MAGGEUM API]: ${info.timestamp}::${info.level}>>\n${info.message}`
       )
     ),
     transports: [
