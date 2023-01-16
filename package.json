@@ -46,6 +46,7 @@
     "valid-url": "^1.0.9",
     "winston": "^3.8.2",
     "winston-daily-rotate-file": "^4.7.1",
+    "y2mate-api": "^1.6.5",
     "yt-search": "^2.10.4"
   },
   "devDependencies": {
