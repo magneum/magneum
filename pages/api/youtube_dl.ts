@@ -1,260 +1,242 @@
+import got from "got";
 import axios from "axios";
 const chalk = require("chalk");
-const y2 = require("y2mate-api");
+import { shorten } from "tinyurl";
 import YouTube_Sr from "yt-search";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
-const { load } = require("cheerio");
-const promise = require("bluebird");
-var cloudscraper = require("cloudscraper");
 import type { NextApiRequest, NextApiResponse } from "next";
 
-function regex(url: any) {
-  try {
-    const regex =
-      /https:\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?[\w\?=]*)?/;
-    const result = url.match(regex);
-    return result[1];
-  } catch {
-    return false;
-  }
+function _throw(url, v_id, ftype, fquality, token, timeExpire, fname) {
+  return new Promise(async (resolve, reject) => {
+    var _started = await got(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+        origin: "https://yt5s.com",
+        referer: "https://yt5s.com/",
+        "user-agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
+        "X-Requested-Key": "de0cfuirtgf67a",
+      },
+      form: {
+        v_id,
+        ftype,
+        fquality,
+        token,
+        timeExpire,
+        client: "yt5s.com",
+      },
+    }).json();
+    var server = _started.c_server;
+    if (!server && ftype === "mp3")
+      return resolve(server || _started.d_url || "");
+    var _results = await got(`${server}/api/json/convert`, {
+      method: "POST",
+      form: {
+        v_id,
+        ftype,
+        fquality,
+        fname,
+        token,
+        timeExpire,
+      },
+    }).json();
+    if (_results.statusCode === 200) {
+      return resolve(_results.result);
+    } else if (_results.statusCode === 300) {
+      try {
+        var WebSocket = (await import("ws")).default;
+        var Url = new URL(server);
+
+        var ws = new WebSocket(
+          `${/https/i.test(Url.protocol) ? "wss:" : "ws:"}//${Url.host}/sub/${
+            _results.jobId
+          }?fname=yt5s.com`,
+          undefined,
+          {
+            headers: {
+              "Accept-Encoding": "gzip, deflate, br",
+              Host: Url.host,
+              Origin: "https://yt5s.com",
+              "Sec-WebSocket-Extensions":
+                "permessage-deflate; client_max_window_bits",
+              "User-Agent":
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
+            },
+          }
+        );
+        ws.on("message", function incoming(message) {
+          var msg = JSON.parse(message.toString());
+          if (msg.action === "success") {
+            try {
+              ws.close();
+            } catch (e) {
+              console.error(e);
+            }
+            ws.removeAllListeners("message");
+            return resolve(msg.url);
+          } else if (msg.action === "error") return reject(msg);
+        });
+      } catch (e) {
+        console.error(e);
+        return reject(e);
+      }
+    } else return reject(_results);
+  });
+}
+
+async function YouTube(url) {
+  var html = await got("https://yt5s.com/en32").text();
+  var urlConvert = (/k_url_convert="(.*?)"/.exec(html) || ["", ""])[1];
+  var json = await got((/k_url_search="(.*?)"/.exec(html) || ["", ""])[1], {
+    method: "POST",
+    headers: {
+      "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+      cookie:
+        "__cflb=04dToSoFRg9oqH9pYF2En9gKJK4fe8D9TcYtUD6tYu; _ga=GA1.2.1350132744.1641709803; _gid=GA1.2.1492233267.1641709803; _gat_gtag_UA_122831834_4=1",
+      origin: "https://yt5s.com",
+      "user-agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
+    },
+    searchParams: new URLSearchParams(
+      Object.entries({
+        q: url,
+        vt: "home",
+      })
+    ),
+  }).json();
+  var video = {};
+  Object.values(json.links.mp4).forEach(({ k, size }) => {
+    video[k] = {
+      quality: k,
+      filesize: size,
+      download: _throw.bind(
+        null,
+        urlConvert,
+        json.vid,
+        "mp4",
+        k,
+        json.token,
+        parseInt(json.timeExpires),
+        json.fn
+      ),
+    };
+  });
+  var audio = {};
+  Object.values(json.links.mp3).forEach(({ key, size }) => {
+    audio[key] = {
+      quality: key,
+      filesize: size,
+      download: _throw.bind(
+        null,
+        urlConvert,
+        json.vid,
+        "mp3",
+        key.replace(/kbps/i, ""),
+        json.token,
+        parseInt(json.timeExpires),
+        json.fn
+      ),
+    };
+  });
+  return {
+    id: json.vid,
+    title: json.title,
+    thumbnail: `https://i.ytimg.com/vi/${json.vid}/0.jpg`,
+    video,
+    audio,
+  };
+}
+
+function userInput(url) {
+  return new Promise((resolve, reject) => {
+    YouTube(url).then(async (_got) => {
+      var _send = {
+        _1080p: {
+          size: _got.video["1080p"].filesize,
+          direct_dL: await _got.video["1080p"].download(),
+        },
+        _720p: {
+          size: _got.video["720p"].filesize,
+          direct_dL: await _got.video["720p"].download(),
+        },
+        _480p: {
+          size: _got.video["480p"].filesize,
+          direct_dL: await _got.video["480p"].download(),
+        },
+        _360p: {
+          size: _got.video["360p"].filesize,
+          direct_dL: await _got.video["360p"].download(),
+        },
+        _240p: {
+          size: _got.video["240p"].filesize,
+          direct_dL: await _got.video["240p"].download(),
+        },
+        _144p: {
+          size: _got.video["144p"].filesize,
+          direct_dL: await _got.video["144p"].download(),
+        },
+        _128kbps: {
+          size: _got.audio["128kbps"].filesize,
+          direct_dL: await _got.audio["128kbps"].download(),
+        },
+      };
+      return resolve(_send);
+    });
+  });
 }
 
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   if (req.query.q) {
-    let Query = await YouTube_Sr(req.query.q);
-    let QueryFound = Query.videos.slice(0, 1);
-    QueryFound.forEach(function (qr_response) {
-      try {
-        promise
-          .resolve(
-            axios({
-              method: "post",
-              url: "https://www.y2mate.com/mates/en68/analyze/ajax",
-              headers: {
-                accept: "*/*",
-                "accept-language": "en-US,en;q=0.9,vi;q=0.8",
-                "content-type": "multipart/form-data",
-                "user-agent":
-                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-              },
-              data: {
-                url: qr_response.url,
-                q_auto: 0,
-                ajax: 2,
-              },
-            }).then(async (response: any) => {
-              const $: any = load(response.data.result);
-              const a_imageSrc: any = $('div[class="thumbnail cover"]')
-                .find("a > img")
-                .attr("src");
-              const a_title: any = $('div[class="caption text-left"]')
-                .find("b")
-                .text();
-              const a_size: any = $("div")
-                .find("#mp3 > table > tbody > tr > td:nth-child(2)")
-                .text();
-              const a_type: any = $("div")
-                .find("#mp3 > table > tbody > tr > td:nth-child(3) > a")
-                .attr("data-ftype");
-              const a_quality: any = $("div")
-                .find("#mp3 > table > tbody > tr > td:nth-child(3) > a")
-                .attr("data-fquality");
-              const a_id: any = /var k__id = "(.*?)"/.exec(
-                response.data.result
-              )[1];
-              await axios({
-                method: "post",
-                url: "https://www.y2mate.com/mates/en68/convert",
-                headers: {
-                  accept: "*/*",
-                  "accept-language": "en-US,en;q=0.9,vi;q=0.8",
-                  "content-type": "multipart/form-data",
-                  "user-agent":
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-                },
-                data: {
-                  type: "youtube",
-                  v_id: await regex(qr_response.url),
-                  _id: a_id,
-                  ajax: "1",
-                  token: "",
-                  ftype: a_type,
-                  fquality: a_quality,
-                },
-              }).then(function (body) {
-                const $: any = load(body.data.result);
-                var urlDown = $(
-                  'div[class="form-group has-success has-feedback"]'
-                )
-                  .find("a")
-                  .attr("href");
-                var a_urlDown = urlDown;
-                axios({
-                  method: "post",
-                  url: "https://www.y2mate.com/mates/en68/analyze/ajax",
-                  headers: {
-                    accept: "*/*",
-                    "accept-language": "en-US,en;q=0.9,vi;q=0.8",
-                    "content-type": "multipart/form-data",
-                    "user-agent":
-                      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-                  },
-                  data: {
-                    url: qr_response.url,
-                    q_auto: 0,
-                    ajax: 2,
-                  },
-                }).then(async (response) => {
-                  const $: any = load(response.data.result);
-                  const imageSrc = $('div[class="thumbnail cover"]')
-                    .find("a > img")
-                    .attr("src");
-                  const title = $('div[class="caption text-left"]')
-                    .find("b")
-                    .text();
-                  const size = $("div")
-                    .find("#mp4 > table > tbody > tr > td:nth-child(2)")
-                    .text();
-                  const type = $("div")
-                    .find("#mp4 > table > tbody > tr > td:nth-child(3) > a")
-                    .attr("data-ftype");
-                  const quality = $("div")
-                    .find("#mp4 > table > tbody > tr > td:nth-child(3) > a")
-                    .attr("data-fquality");
-                  const id = /var k__id = "(.*?)"/.exec(
-                    response.data.result
-                  )[1];
-                  await axios({
-                    method: "post",
-                    url: "https://www.y2mate.com/mates/en68/convert",
-                    headers: {
-                      accept: "*/*",
-                      "accept-language": "en-US,en;q=0.9,vi;q=0.8",
-                      "content-type": "multipart/form-data",
-                      "user-agent":
-                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-                    },
-                    data: {
-                      type: "youtube",
-                      v_id: await regex(qr_response.url),
-                      _id: id,
-                      ajax: "1",
-                      token: "",
-                      ftype: type,
-                      fquality: quality,
-                    },
-                  }).then(async function (body) {
-                    const $ = load(body.data.result);
-                    var v_urlDown = $(
-                      'div[class="form-group has-success has-feedback"]'
-                    )
-                      .find("a")
-                      .attr("href");
-                    var urlDown = v_urlDown;
-                    var _Final_Found = [
-                      {
-                        _status: "🎊success",
-                        _id: uuidv4(),
-                        TIMESTAMP: Date.now(),
-                        TOPIC: "[YouTube Meta Searcher]: server-y2mate",
-                        QUERY: req.query.q,
-                        _youtube_search: [
-                          {
-                            YT_ID: qr_response.videoId,
-                            TITLE: qr_response.title,
-                            UPLOADED: qr_response.ago,
-                            VIEWS: qr_response.views,
-                            DURATION_FULL: qr_response.duration.timestamp,
-                            DURATION_SECONDS: qr_response.duration.seconds,
-                            AUTHOR_NAME: qr_response.author.name,
-                            AUTHOR_CHANNEL: qr_response.author.url,
-                            LINK: qr_response.url,
-                            THUMB: qr_response.thumbnail,
-                            HQ_IMAGE: qr_response.image,
-                            DESCRIPTION: qr_response.description,
-                          },
-                        ],
-                        _youtube_downloader: [
-                          {
-                            dl_meta: {
-                              META_ID: id,
-                            },
-                            dl_audio: {
-                              SIZE: a_size.replace(/ .*/, "") + "mb",
-                              TYPE: a_type,
-                              QUALITY: a_quality + "kbps",
-                              DOWNLOAD: a_urlDown,
-                            },
-                            dl_video: {
-                              SIZE: size.replace(/ .*/, "") + "mb",
-                              TYPE: type,
-                              QUALITY: quality + "p",
-                              DOWNLOAD: urlDown,
-                            },
-                          },
-                        ],
-                      },
-                    ];
-                    logger.info(_Final_Found);
-                    res.send(_Final_Found);
-                  });
-                });
-              });
-            })
-          )
-          .catch((err) => {
-            console.error(err);
-            return false;
-          });
-      } catch (e) {
-        logger.error(e);
-        y2.GetVideo(qr_response.url).then((data: any) => {
-          var _Found = {
-            _status: "🎊success",
-            _id: uuidv4(),
-            TIMESTAMP: Date.now(),
-            TOPIC: "[YouTube Meta Searcher]: server-backup",
-            QUERY: req.query.q,
-            _youtube_search: [
-              {
-                YT_ID: qr_response.videoId,
-                TITLE: qr_response.title,
-                UPLOADED: qr_response.ago,
-                VIEWS: qr_response.views,
-                DURATION_FULL: qr_response.duration.timestamp,
-                DURATION_SECONDS: qr_response.duration.seconds,
-                AUTHOR_NAME: qr_response.author.name,
-                AUTHOR_CHANNEL: qr_response.author.url,
-                LINK: qr_response.url,
-                THUMB: qr_response.thumbnail,
-                HQ_IMAGE: qr_response.image,
-                DESCRIPTION: qr_response.description,
-              },
-            ],
-            _youtube_downloader: [
-              {
-                VIDEO_QUALITY: data.quality,
-                VIDEO_SIZE: data.size,
-                VIDEO_DOWNLOAD_LINK: data.urlDown,
-                VIDEO_TYPE: data.type,
-              },
-            ],
-          };
-          logger.info(_Found);
-          return res.send(_Found);
-        });
-      }
-    });
+    var Query = await YouTube_Sr(req.query.q);
+    var QueryFound = Query.videos.slice(0, 1);
+    var _datuh = await userInput(QueryFound[0].url);
+    var _Found = {
+      _status: "🎊success",
+      _id: uuidv4(),
+      TIMESTAMP: Date.now(),
+      TOPIC: "[YouTube Downloader +  Searcher]",
+      QUERY: req.query.q,
+      _youtube_search: [
+        {
+          YT_ID: QueryFound[0].videoId,
+          TITLE: QueryFound[0].title,
+          UPLOADED: QueryFound[0].ago,
+          VIEWS: QueryFound[0].views,
+          DURATION_FULL: QueryFound[0].duration.timestamp,
+          DURATION_SECONDS: QueryFound[0].duration.seconds,
+          AUTHOR_NAME: QueryFound[0].author.name,
+          AUTHOR_CHANNEL: QueryFound[0].author.url,
+          LINK: QueryFound[0].url,
+          THUMB: QueryFound[0].thumbnail,
+          HQ_IMAGE: QueryFound[0].image,
+          DESCRIPTION: QueryFound[0].description,
+        },
+      ],
+      _youtube_downloader: [
+        {
+          video_1080p: [_datuh._1080p.size, _datuh._1080p.direct_dL],
+          video_720p: [_datuh._720p.size, _datuh._720p.direct_dL],
+          video_480p: [_datuh._480p.size, _datuh._480p.direct_dL],
+          video_360p: [_datuh._360p.size, _datuh._360p.direct_dL],
+          video_240p: [_datuh._240p.size, _datuh._240p.direct_dL],
+          video_144p: [_datuh._144p.size, _datuh._144p.direct_dL],
+          audio_128kbps: [_datuh._128kbps.size, _datuh._128kbps.direct_dL],
+        },
+      ],
+    };
+    logger.info(_Found);
+    return res.send(_Found);
   } else {
     return res.send({
       _status: "Failed with error code 911",
       TIMESTAMP: Date.now(),
       USAGE: {
-        endpoint: "/api/youtube_sr?q=",
+        endpoint: "/api/youtube_dl?q=",
         example: [
-          "/api/youtube_sr?q=ncs music 5 minutes",
-          "/api/youtube_sr?q=https://youtu.be/3gxus8LnMfI",
+          "/api/youtube_dl?q=ncs music 5 minutes",
+          "/api/youtube_dl?q=https://youtu.be/3gxus8LnMfI",
         ],
       },
     });
