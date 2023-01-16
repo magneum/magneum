@@ -157,26 +157,6 @@ function userInput(url) {
           size: _got.video["1080p"].filesize,
           direct_dL: await _got.video["1080p"].download(),
         },
-        _720p: {
-          size: _got.video["720p"].filesize,
-          direct_dL: await _got.video["720p"].download(),
-        },
-        _480p: {
-          size: _got.video["480p"].filesize,
-          direct_dL: await _got.video["480p"].download(),
-        },
-        _360p: {
-          size: _got.video["360p"].filesize,
-          direct_dL: await _got.video["360p"].download(),
-        },
-        _240p: {
-          size: _got.video["240p"].filesize,
-          direct_dL: await _got.video["240p"].download(),
-        },
-        _144p: {
-          size: _got.video["144p"].filesize,
-          direct_dL: await _got.video["144p"].download(),
-        },
         _128kbps: {
           size: _got.audio["128kbps"].filesize,
           direct_dL: await _got.audio["128kbps"].download(),
@@ -217,11 +197,6 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       _youtube_downloader: [
         {
           video_1080p: [_datuh._1080p.size, _datuh._1080p.direct_dL],
-          video_720p: [_datuh._720p.size, _datuh._720p.direct_dL],
-          video_480p: [_datuh._480p.size, _datuh._480p.direct_dL],
-          video_360p: [_datuh._360p.size, _datuh._360p.direct_dL],
-          video_240p: [_datuh._240p.size, _datuh._240p.direct_dL],
-          video_144p: [_datuh._144p.size, _datuh._144p.direct_dL],
           audio_128kbps: [_datuh._128kbps.size, _datuh._128kbps.direct_dL],
         },
       ],
