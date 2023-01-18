@@ -1,6 +1,6 @@
 import got from "got";
-import fetch from "node-fetch";
-const tinyurl = require("tinyurl");
+import moment from "moment";
+import tinyurl from "tinyurl";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -19,8 +19,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -48,8 +49,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -77,8 +79,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -106,8 +109,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -135,8 +139,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -164,8 +169,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -193,8 +199,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -222,8 +229,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -251,8 +259,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -280,8 +289,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -309,8 +319,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -338,8 +349,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -368,7 +380,7 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              TIMESTAMP: Date.now(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               QUERY: req.query.q,
               URL: await tinyurl.shorten(FFLink),
               DOMAIN: FF[0].data.children[0].data.domain,
@@ -395,8 +407,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -424,8 +437,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -453,8 +467,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -482,8 +497,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -511,8 +527,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -540,8 +557,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -569,8 +587,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -598,8 +617,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -627,8 +647,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -656,8 +677,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -685,8 +707,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -715,8 +738,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -744,8 +768,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -773,8 +798,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -804,8 +830,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -833,8 +860,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -864,8 +892,9 @@ export default async function animation(
             var _Found = [
               {
                 _status: "🎊success",
-                TIMESTAMP: Date.now(),
-                TOPIC: "[NSFW Images]",
+                _uuid: uuidv4(),
+                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+                _topic: "[NSFW Images]",
                 QUERY: req.query.q,
                 URL: await tinyurl.shorten(FFLink),
                 DOMAIN: FF[0].data.children[0].data.domain,
@@ -887,7 +916,7 @@ export default async function animation(
     default:
       return res.send({
         _status: "Failed with error code 911",
-        TIMESTAMP: Date.now(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         USAGE: {
           endpoint: "/api/nsfw?q=",
           example: "/api/nsfw?q=ass",

@@ -1,7 +1,4 @@
-import axios from "axios";
-import fetch from "node-fetch";
-const unirest = require("unirest");
-const request = require("request");
+import moment from "moment";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 const googleTTS = require("google-tts-api");
@@ -17,9 +14,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     var _Found = [
       {
         _status: "🎊success",
-        _id: uuidv4(),
-        TIMESTAMP: Date.now(),
-        TOPIC: "Text To Speech",
+        _uuid: uuidv4(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+        _topic: "Text To Speech",
         QUERY: req.query.q,
         SHORTEN_URL: urlMedia,
       },
@@ -29,7 +26,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   } else {
     return res.send({
       _status: "Failed with error code 911",
-      TIMESTAMP: Date.now(),
+      _uuid: uuidv4(),
+      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
       USAGE: {
         endpoint: "/api/text2speech?q=",
         example: "/api/text2speech?q=Hello. How are You?",

@@ -1,5 +1,6 @@
+import moment from "moment";
+import tinyurl from "tinyurl";
 import fetch from "node-fetch";
-const tinyurl = require("tinyurl");
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -16,9 +17,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -34,9 +35,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -52,9 +53,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -70,9 +71,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -88,9 +89,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -106,9 +107,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -124,9 +125,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -142,9 +143,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -160,9 +161,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -178,9 +179,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -196,9 +197,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -214,9 +215,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -232,9 +233,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -250,9 +251,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -268,9 +269,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -286,9 +287,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -304,9 +305,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -322,9 +323,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -340,9 +341,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -358,9 +359,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -376,9 +377,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -394,9 +395,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -412,9 +413,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -432,8 +433,8 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               QUERY: req.query.q,
               URL: json.reaction,
             },
@@ -451,8 +452,8 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               QUERY: req.query.q,
               URL: json.reaction,
             },
@@ -470,8 +471,8 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               QUERY: req.query.q,
               URL: json.reaction,
             },
@@ -489,8 +490,8 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               QUERY: req.query.q,
               URL: json.reaction,
             },
@@ -506,9 +507,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -524,9 +525,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -542,9 +543,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -560,9 +561,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -578,9 +579,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Animation (gif)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Animation (gif)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -592,7 +593,7 @@ export default async function animation(
     default:
       return res.send({
         _status: "Failed with error code 911",
-        TIMESTAMP: Date.now(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         USAGE: {
           endpoint: "/api/animation?q=",
           example: "/api/animation?q=bite",

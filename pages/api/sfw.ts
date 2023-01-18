@@ -1,8 +1,6 @@
-import axios from "axios";
+import moment from "moment";
+import tinyurl from "tinyurl";
 import fetch from "node-fetch";
-const tinyurl = require("tinyurl");
-const unirest = require("unirest");
-const request = require("request");
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -16,9 +14,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: yeet",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: yeet",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -34,9 +32,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: neko",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: neko",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -52,9 +50,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: shinobu",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: shinobu",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -70,9 +68,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: megumin",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: megumin",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -88,9 +86,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: bully",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: bully",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -106,9 +104,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: cuddle",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: cuddle",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -124,9 +122,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: cry",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: cry",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -142,9 +140,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: hug",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: hug",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -160,9 +158,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: awoo",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: awoo",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -178,9 +176,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: kiss",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: kiss",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -196,9 +194,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: lick",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: lick",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -214,9 +212,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: yeet",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: yeet",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -232,9 +230,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: smug",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: smug",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -250,9 +248,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: bonk",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: bonk",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -268,9 +266,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: yeet",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: yeet",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -286,9 +284,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: blush",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: blush",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -304,9 +302,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: smile",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: smile",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -322,9 +320,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: wave",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: wave",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -340,9 +338,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: highfive",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: highfive",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -358,9 +356,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: handhold",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: handhold",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -376,9 +374,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: nom",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: nom",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -394,9 +392,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: bite",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: bite",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -412,9 +410,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: glomp",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: glomp",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -430,9 +428,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: slap",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: slap",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -448,9 +446,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: kill",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: kill",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -466,9 +464,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: kick",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: kick",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -484,9 +482,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: happy",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: happy",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -502,9 +500,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: wink",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: wink",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -520,9 +518,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: poke",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: poke",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -538,9 +536,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: dance",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: dance",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -556,9 +554,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "[SFW Images]: cringe",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[SFW Images]: cringe",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
             },
@@ -570,7 +568,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     default:
       return res.send({
         _status: "Failed with error code 911",
-        TIMESTAMP: Date.now(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         USAGE: {
           endpoint: "/api/sfw?q=",
           example: "/api/sfw?q=waifu",

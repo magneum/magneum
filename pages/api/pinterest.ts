@@ -1,13 +1,8 @@
-const qs = require("qs");
 import axios from "axios";
-import fetch from "node-fetch";
-const tinyurl = require("tinyurl");
-const unirest = require("unirest");
-const request = require("request");
-const cheerio = require("cheerio");
+import moment from "moment";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
-import { createApi } from "unsplash-js";
+import { load as cLoad } from "cheerio";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 function Pinterest(querry: any) {
@@ -20,7 +15,7 @@ function Pinterest(querry: any) {
         },
       })
       .then(({ data }) => {
-        const $ = cheerio.load(data);
+        const $ = cLoad(data);
         const result: any = [];
         const hasil: any = [];
         $("div > a")
@@ -45,9 +40,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     var _Found = [
       {
         _status: "🎊success",
-        _id: uuidv4(),
-        TIMESTAMP: Date.now(),
-        TOPIC: "Pinterest Searcher",
+        _uuid: uuidv4(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+        _topic: "Pinterest Searcher",
         QUERY: req.query.q,
         links: cobra,
       },
@@ -57,7 +52,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   } else {
     return res.send({
       _status: "Failed with error code 911",
-      TIMESTAMP: Date.now(),
+      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
       USAGE: {
         endpoint: "/api/youtube?q=",
         example: ["/api/anime?q=death note"],

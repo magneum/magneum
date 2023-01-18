@@ -1,7 +1,4 @@
-import axios from "axios";
-import fetch from "node-fetch";
-const unirest = require("unirest");
-const request = require("request");
+import moment from "moment";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 const malScraper = require("mal-scraper");
@@ -13,7 +10,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       var _Found = [
         {
           status: "✓ success ✓",
-          _id: uuidv4(),
+          _uuid: uuidv4(),
           MAL_ID: cobra.id,
           TITLE: cobra.title,
           EN_TITLE: cobra.englishTitle,
@@ -50,7 +47,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   } else {
     return res.send({
       _status: "Failed with error code 911",
-      TIMESTAMP: Date.now(),
+      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
       USAGE: {
         endpoint: "/api/youtube?q=",
         example: ["/api/anime?q=death note"],

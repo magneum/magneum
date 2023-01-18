@@ -1,5 +1,4 @@
-import axios from "axios";
-const chalk = require("chalk");
+import moment from "moment";
 import YouTube_Sr from "yt-search";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
@@ -13,9 +12,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     QueryFound.forEach(function (response) {
       _Found = {
         _status: "🎊success",
-        _id: uuidv4(),
-        TIMESTAMP: Date.now(),
-        TOPIC: "[YouTube Meta Searcher]",
+        _uuid: uuidv4(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+        _topic: "[YouTube Meta Searcher]",
         QUERY: req.query.q,
         _youtube_search: [
           {
@@ -40,7 +39,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   } else {
     return res.send({
       _status: "Failed with error code 911",
-      TIMESTAMP: Date.now(),
+      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
       USAGE: {
         endpoint: "/api/youtube_sr?q=",
         example: [

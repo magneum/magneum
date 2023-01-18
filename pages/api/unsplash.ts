@@ -1,8 +1,4 @@
-import axios from "axios";
-import fetch from "node-fetch";
-const tinyurl = require("tinyurl");
-const unirest = require("unirest");
-const request = require("request");
+import moment from "moment";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import { createApi } from "unsplash-js";
@@ -23,7 +19,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     if (!cobra) {
       res.send({
         _status: "Failed with error code 911",
-        TIMESTAMP: Date.now(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         USAGE: {
           endpoint: "/api/manga?q=",
           example: "/api/manga?q=My Hero Academia by Kohei Horikoshi",
@@ -33,9 +29,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       var _Found = [
         {
           _status: "🎊success",
-          _id: uuidv4(),
-          TIMESTAMP: Date.now(),
-          TOPIC: "Unsplash HD Wallpapers",
+          _uuid: uuidv4(),
+          _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+          _topic: "Unsplash HD Wallpapers",
           QUERY: req.query.q,
           created_at: cobra.response.results[0].created_at,
           updated_at: cobra.response.results[0].updated_at,
@@ -73,7 +69,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   } else {
     return res.send({
       _status: "Failed with error code 911",
-      TIMESTAMP: Date.now(),
+      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
       USAGE: {
         endpoint: "/api/unsplash?q=",
         example: ["/api/unsplash?q=cat"],

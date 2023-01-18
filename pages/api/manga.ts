@@ -1,9 +1,8 @@
-const tinyurl = require("tinyurl");
-const request = require("request");
+import moment from "moment";
+import tinyurl from "tinyurl";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
-const validUrl = require("valid-url");
-import { Anime, Character, Manga } from "@shineiichijo/marika";
+import { Manga } from "@shineiichijo/marika";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
@@ -14,7 +13,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     if (!response) {
       res.send({
         _status: "Failed with error code 911",
-        TIMESTAMP: Date.now(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         USAGE: {
           endpoint: "/api/manga?q=",
           example: "/api/manga?q=My Hero Academia by Kohei Horikoshi",
@@ -32,9 +31,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       var _Found = [
         {
           _status: "🎊success",
-          _id: uuidv4(),
-          TIMESTAMP: Date.now(),
-          TOPIC: "Manga Search",
+          _uuid: uuidv4(),
+          _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+          _topic: "Manga Search",
           QUERY: argument,
           Title: response.data[0].title,
           Status: response.data[0].status,
@@ -60,7 +59,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   } else {
     return res.send({
       _status: "Failed with error code 911",
-      TIMESTAMP: Date.now(),
+      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
       USAGE: {
         endpoint: "/api/manga?q=",
         example: "/api/manga?q=My Hero Academia by Kohei Horikoshi",

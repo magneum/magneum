@@ -1,5 +1,6 @@
+import moment from "moment";
+import tinyurl from "tinyurl";
 import fetch from "node-fetch";
-const tinyurl = require("tinyurl");
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -16,9 +17,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "I know you like anime ass~ uwu",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -35,9 +36,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "If you don't know what it is, search it up",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -54,9 +55,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION:
                 "Basically an image of a girl sucking on a sharp blade!",
               QUERY: req.query.q,
@@ -74,9 +75,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION:
                 "Basically sticky white stuff that is usually milked from sharpies.",
               QUERY: req.query.q,
@@ -94,9 +95,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "Sends a random doujin page imageURL!",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -113,9 +114,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "So you like smelly feet huh?",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -132,9 +133,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "Female Domination over you",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -151,9 +152,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "Girl's that are wannabe foxes, yes",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -170,9 +171,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "Girls that wear glasses, uwu~",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -189,9 +190,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "Wow, I won't even question your fetishes.",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -208,9 +209,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION:
                 "Maids, Maid Uniforms, etc, you know what maids are :3",
               QUERY: req.query.q,
@@ -228,9 +229,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "The power of solo queue",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -247,9 +248,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "Group Lewd Acts",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -266,9 +267,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "I mean... just why? You like underwear?",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -285,9 +286,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "School Uniforms!~ Yatta~!",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -304,9 +305,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "School Uniforms!~ Yatta~!",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -323,9 +324,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION:
                 "Spooky Succubus, oh I'm so scared~ Totally don't suck me~",
               QUERY: req.query.q,
@@ -343,9 +344,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "I'm sorry but, why do they look like intestines?",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -362,9 +363,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "The top part of your legs, very hot, isn't it?",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -381,9 +382,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "The one thing most of us can all agree to hate :)",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -400,9 +401,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION:
                 "Military, Konbini, Work, Nurse Uniforms, etc!~ Sexy~",
               QUERY: req.query.q,
@@ -420,9 +421,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION: "yuri | Girls on Girls, and Girl's only!<3",
               QUERY: req.query.q,
               URL: await tinyurl.shorten(json.url),
@@ -439,9 +440,9 @@ export default async function animation(
           var _Found = [
             {
               _status: "🎊success",
-              _id: uuidv4(),
-              TIMESTAMP: Date.now(),
-              TOPIC: "Hentai (image)",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "Hentai (image)",
               DESCRIPTION:
                 "That one part of the flesh being squeeze in thigh-highs~<3",
               QUERY: req.query.q,
@@ -455,7 +456,7 @@ export default async function animation(
     default:
       return res.send({
         _status: "Failed with error code 911",
-        TIMESTAMP: Date.now(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         USAGE: {
           endpoint: "/api/hentai?q=",
           example: "/api/hentai?q=ass",

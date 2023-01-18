@@ -1,5 +1,5 @@
-const tinyurl = require("tinyurl");
-const request = require("request");
+import moment from "moment";
+import tinyurl from "tinyurl";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 const validUrl = require("valid-url");
@@ -11,9 +11,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       var _Found = [
         {
           _status: "🎊success",
-          _id: uuidv4(),
-          TIMESTAMP: Date.now(),
-          TOPIC: "Shorten Url",
+          _uuid: uuidv4(),
+          _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+          _topic: "Shorten Url",
           QUERY: req.query.q,
           SHORTEN_URL: await tinyurl.shorten(req.query.q),
         },
@@ -23,7 +23,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     } else {
       res.send({
         _status: "Failed with error code 911",
-        TIMESTAMP: Date.now(),
+        _uuid: uuidv4(),
+        _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         USAGE: {
           endpoint: "/api/shorten?q=",
           example: "/api/shorten?q=https://google.com",
@@ -33,7 +34,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   } else {
     return res.send({
       _status: "Failed with error code 911",
-      TIMESTAMP: Date.now(),
+      _uuid: uuidv4(),
+      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
       USAGE: {
         endpoint: "/api/shorten?q=",
         example: "/api/shorten?q=https://google.com",

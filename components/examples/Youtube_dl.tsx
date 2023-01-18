@@ -7,7 +7,7 @@ const codeSnippet = `// ?q=  is the querry that api/youtube_dl takes
 // Method 1 (Axios)
 const axios = require("axios");
 /** @type {import axios from "axios"} */
-axios.get("https://magneum.vercel.app/api/youtube_dl?q=ncs 2min song")
+axios.get("https://magneum.vercel.app/api/youtube_dl?q=ncs 2min song&quality=1080p")
 .then(function (response) {
 console.log(response.data);
 })
@@ -19,7 +19,7 @@ console.error(error);
 const request = require("request");
 request({
 method: "GET",
-url: "https://magneum.vercel.app/api/youtube_dl?q=ncs 2min song",
+url: "https://magneum.vercel.app/api/youtube_dl?q=ncs 2min song&quality=1080p",
 headers: {
 Accept: "application/json",
 "Content-Type": "application/json",
@@ -32,7 +32,7 @@ console.log(response.body);
   
 // Method 3 (Unirest)
 const unirest = require("unirest");
-unirest.post("https://magneum.vercel.app/api/youtube_dl?q=ncs 2min song")
+unirest.post("https://magneum.vercel.app/api/youtube_dl?q=ncs 2min song&quality=1080p")
 .headers({ Accept: "application/json", "Content-Type": "application/json" })
 .then((response) => {
 console.log(response.body);
@@ -58,11 +58,29 @@ export default function magneum() {
             <br></br>
             example: /api/youtube_dl?q=
             <span className="italic text-blue-300">ncs music 5 minutes</span>
-            <br></br>
+            &quality=1080p<br></br>
             example: /api/youtube_dl?q=
             <span className="italic text-blue-300">
               https://youtu.be/3gxus8LnMfI
             </span>
+            &quality=1080p<br></br>
+          </p>
+          <br></br>
+          <p>
+            <span className="italic text-blue-400 uppercase">QUALITY</span>
+            <br></br>
+            &quality=<span className="italic text-blue-300">1080p</span>
+            <br></br>
+            &quality=<span className="italic text-blue-300">720p</span>
+            <br></br>
+            &quality=<span className="italic text-blue-300">480p</span>
+            <br></br>
+            &quality=<span className="italic text-blue-300">360p</span>
+            <br></br>
+            &quality=<span className="italic text-blue-300">240p</span>
+            <br></br>
+            (audio) &quality=
+            <span className="italic text-blue-300">128kbps</span>
             <br></br>
           </p>
         </div>
