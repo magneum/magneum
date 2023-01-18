@@ -1,6 +1,3 @@
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import { CopyBlock, nord } from "react-code-blocks";
 const codeSnippet = `// ?q=  is the querry that api/text2speech takes
 
