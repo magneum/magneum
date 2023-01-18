@@ -17,8 +17,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: yeet",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -35,8 +35,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: neko",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -53,8 +53,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: shinobu",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -71,8 +71,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: megumin",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -89,8 +89,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: bully",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -107,8 +107,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: cuddle",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -125,8 +125,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: cry",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -143,8 +143,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: hug",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -161,8 +161,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: awoo",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -179,8 +179,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: kiss",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -197,8 +197,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: lick",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -215,8 +215,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: yeet",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -233,8 +233,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: smug",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -251,8 +251,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: bonk",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -269,8 +269,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: yeet",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -287,8 +287,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: blush",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -305,8 +305,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: smile",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -323,8 +323,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: wave",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -341,8 +341,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: highfive",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -359,8 +359,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: handhold",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -377,8 +377,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: nom",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -395,8 +395,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: bite",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -413,8 +413,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: glomp",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -431,8 +431,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: slap",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -449,8 +449,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: kill",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -467,8 +467,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: kick",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -485,8 +485,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: happy",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -503,8 +503,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: wink",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -521,8 +521,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: poke",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -539,8 +539,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: dance",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -557,8 +557,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
               _topic: "[SFW Images]: cringe",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);

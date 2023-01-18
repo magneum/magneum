@@ -39,7 +39,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         _uuid: uuidv4(),
         _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         _topic: "Wallpapers from Wallpaper Flare",
-        QUERY: req.query.q,
+        _query: req.query.q,
         links: cobra,
       },
     ];

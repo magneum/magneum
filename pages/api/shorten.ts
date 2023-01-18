@@ -14,7 +14,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           _uuid: uuidv4(),
           _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
           _topic: "Shorten Url",
-          QUERY: req.query.q,
+          _query: req.query.q,
           SHORTEN_URL: await tinyurl.shorten(req.query.q),
         },
       ];

@@ -32,7 +32,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           _uuid: uuidv4(),
           _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
           _topic: "Unsplash HD Wallpapers",
-          QUERY: req.query.q,
+          _query: req.query.q,
           created_at: cobra.response.results[0].created_at,
           updated_at: cobra.response.results[0].updated_at,
           promoted_at: cobra.response.results[0].promoted_at,

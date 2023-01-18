@@ -11,7 +11,7 @@ export default async function animation(
 ) {
   switch (req.query.q) {
     case "blush":
-      return fetch("https://api.waifu.pics/sfw/blush")
+      fetch("https://api.waifu.pics/sfw/blush")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -19,9 +19,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -29,7 +29,7 @@ export default async function animation(
         });
       break;
     case "dance":
-      return fetch("https://api.waifu.pics/sfw/dance")
+      fetch("https://api.waifu.pics/sfw/dance")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -37,9 +37,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -47,7 +47,7 @@ export default async function animation(
         });
       break;
     case "cuddle":
-      return fetch("https://nekos.life/api/v2/img/cuddle")
+      fetch("https://nekos.life/api/v2/img/cuddle")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -55,9 +55,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -65,7 +65,7 @@ export default async function animation(
         });
       break;
     case "bite":
-      return fetch("https://api.waifu.pics/sfw/bite")
+      fetch("https://api.waifu.pics/sfw/bite")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -73,9 +73,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -83,7 +83,7 @@ export default async function animation(
         });
       break;
     case "slap":
-      return fetch("https://nekos.life/api/v2/img/slap")
+      fetch("https://nekos.life/api/v2/img/slap")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -91,9 +91,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -101,7 +101,7 @@ export default async function animation(
         });
       break;
     case "wink":
-      return fetch("https://api.waifu.pics/sfw/wink")
+      fetch("https://api.waifu.pics/sfw/wink")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -109,9 +109,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -119,7 +119,7 @@ export default async function animation(
         });
       break;
     case "bonk":
-      return fetch("https://api.waifu.pics/sfw/bonk")
+      fetch("https://api.waifu.pics/sfw/bonk")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -127,9 +127,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -137,7 +137,7 @@ export default async function animation(
         });
       break;
     case "bully":
-      return fetch("https://nekos.life/api/v2/img/bully")
+      fetch("https://nekos.life/api/v2/img/bully")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -145,9 +145,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -155,7 +155,7 @@ export default async function animation(
         });
       break;
     case "hug":
-      return fetch("https://api.waifu.pics/sfw/hug")
+      fetch("https://api.waifu.pics/sfw/hug")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -163,9 +163,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -173,7 +173,7 @@ export default async function animation(
         });
       break;
     case "kiss":
-      return fetch("https://api.waifu.pics/sfw/kiss")
+      fetch("https://api.waifu.pics/sfw/kiss")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -181,9 +181,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -191,7 +191,7 @@ export default async function animation(
         });
       break;
     case "pat":
-      return fetch("https://api.waifu.pics/sfw/pat")
+      fetch("https://api.waifu.pics/sfw/pat")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -199,9 +199,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -209,7 +209,7 @@ export default async function animation(
         });
       break;
     case "wallpaper":
-      return fetch("https://akaneko-api.herokuapp.com/api/wallpapers")
+      fetch("https://akaneko-api.herokuapp.com/api/wallpapers")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -217,9 +217,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -227,7 +227,7 @@ export default async function animation(
         });
       break;
     case "happy":
-      return fetch("https://api.waifu.pics/sfw/happy")
+      fetch("https://api.waifu.pics/sfw/happy")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -235,9 +235,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -245,7 +245,7 @@ export default async function animation(
         });
       break;
     case "kill":
-      return fetch("https://api.waifu.pics/sfw/kill")
+      fetch("https://api.waifu.pics/sfw/kill")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -253,9 +253,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -263,7 +263,7 @@ export default async function animation(
         });
       break;
     case "highfive":
-      return fetch("https://api.waifu.pics/sfw/highfive")
+      fetch("https://api.waifu.pics/sfw/highfive")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -271,9 +271,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -281,7 +281,7 @@ export default async function animation(
         });
       break;
     case "wave":
-      return fetch("https://api.waifu.pics/sfw/wave")
+      fetch("https://api.waifu.pics/sfw/wave")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -289,9 +289,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -299,7 +299,7 @@ export default async function animation(
         });
       break;
     case "cry":
-      return fetch("https://api.waifu.pics/sfw/cry")
+      fetch("https://api.waifu.pics/sfw/cry")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -307,9 +307,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -317,7 +317,7 @@ export default async function animation(
         });
       break;
     case "smile":
-      return fetch("https://api.waifu.pics/sfw/smile")
+      fetch("https://api.waifu.pics/sfw/smile")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -325,9 +325,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -335,7 +335,7 @@ export default async function animation(
         });
       break;
     case "punch":
-      return fetch("https://neko-love.xyz/api/v1/punch")
+      fetch("https://neko-love.xyz/api/v1/punch")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -343,9 +343,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -353,7 +353,7 @@ export default async function animation(
         });
       break;
     case "kick":
-      return fetch("https://api.waifu.pics/sfw/kick")
+      fetch("https://api.waifu.pics/sfw/kick")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -361,9 +361,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -371,7 +371,7 @@ export default async function animation(
         });
       break;
     case "poke":
-      return fetch("https://nekos.life/api/v2/img/poke")
+      fetch("https://nekos.life/api/v2/img/poke")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -379,9 +379,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -389,7 +389,7 @@ export default async function animation(
         });
       break;
     case "goodnight":
-      return fetch("https://api.deltaa.me/goodnight")
+      fetch("https://api.deltaa.me/goodnight")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -397,9 +397,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -407,7 +407,7 @@ export default async function animation(
         });
       break;
     case "zerotwo":
-      return fetch("https://api.deltaa.me/zerotwo")
+      fetch("https://api.deltaa.me/zerotwo")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -415,9 +415,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -425,7 +425,7 @@ export default async function animation(
         });
       break;
     case "confused":
-      return fetch(
+      fetch(
         "https://anime-reactions.uzairashraf.dev/api/reactions/random?category=confused"
       )
         .then((res) => res.json())
@@ -435,8 +435,8 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              QUERY: req.query.q,
-              URL: json.reaction,
+              _query: req.query.q,
+              _url: json.reaction,
             },
           ];
           logger.info(_Found);
@@ -444,7 +444,7 @@ export default async function animation(
         });
       break;
     case "sad":
-      return fetch(
+      fetch(
         "https://anime-reactions.uzairashraf.dev/api/reactions/random?category=sad"
       )
         .then((res) => res.json())
@@ -454,8 +454,8 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              QUERY: req.query.q,
-              URL: json.reaction,
+              _query: req.query.q,
+              _url: json.reaction,
             },
           ];
           logger.info(_Found);
@@ -463,7 +463,7 @@ export default async function animation(
         });
       break;
     case "thinking":
-      return fetch(
+      fetch(
         "https://anime-reactions.uzairashraf.dev/api/reactions/random?category=thinking"
       )
         .then((res) => res.json())
@@ -473,8 +473,8 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              QUERY: req.query.q,
-              URL: json.reaction,
+              _query: req.query.q,
+              _url: json.reaction,
             },
           ];
           logger.info(_Found);
@@ -482,7 +482,7 @@ export default async function animation(
         });
       break;
     case "yeah":
-      return fetch(
+      fetch(
         "https://anime-reactions.uzairashraf.dev/api/reactions/random?category=yes"
       )
         .then((res) => res.json())
@@ -492,8 +492,8 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              QUERY: req.query.q,
-              URL: json.reaction,
+              _query: req.query.q,
+              _url: json.reaction,
             },
           ];
           logger.info(_Found);
@@ -501,7 +501,7 @@ export default async function animation(
         });
       break;
     case "yeet":
-      return fetch("https://api.waifu.pics/sfw/yeet")
+      fetch("https://api.waifu.pics/sfw/yeet")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -509,9 +509,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -519,7 +519,7 @@ export default async function animation(
         });
       break;
     case "stare":
-      return fetch("https://nekoapi.vanillank2006.repl.co/api/action/stare")
+      fetch("https://nekoapi.vanillank2006.repl.co/api/action/stare")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -527,9 +527,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -537,7 +537,7 @@ export default async function animation(
         });
       break;
     case "bored":
-      return fetch("https://nekoapi.vanillank2006.repl.co/api/reaction/bored")
+      fetch("https://nekoapi.vanillank2006.repl.co/api/reaction/bored")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -545,9 +545,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -555,7 +555,7 @@ export default async function animation(
         });
       break;
     case "scream":
-      return fetch("https://nekoapi.vanillank2006.repl.co/api/reaction/scream")
+      fetch("https://nekoapi.vanillank2006.repl.co/api/reaction/scream")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -563,9 +563,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
@@ -573,7 +573,7 @@ export default async function animation(
         });
       break;
     case "nervous":
-      return fetch("https://nekoapi.vanillank2006.repl.co/api/reaction/nervous")
+      fetch("https://nekoapi.vanillank2006.repl.co/api/reaction/nervous")
         .then((res) => res.json())
         .then(async (json: any) => {
           var _Found = [
@@ -581,9 +581,9 @@ export default async function animation(
               _status: "🎊success",
               _uuid: uuidv4(),
               _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-              _topic: "Animation (gif)",
-              QUERY: req.query.q,
-              URL: await tinyurl.shorten(json.url),
+              _topic: "[ ANIMATION ]: gif",
+              _query: req.query.q,
+              _url: await tinyurl.shorten(json.url),
             },
           ];
           logger.info(_Found);
