@@ -165,96 +165,118 @@ function YouTube_Genre(url: any) {
 }
 
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
-  const query = req.query;
-  const { q, quality } = query;
-  if (q) {
-    const Query = await YouTube_Sr(q);
-    const QueryFound = Query.videos.slice(0, 1);
-    const _maker: any = await YouTube_Genre(QueryFound[0].url);
-    if (quality === "1080p") {
-      const _Found = [
-        {
-          type: "[ VIDEO ]: 1080p",
-          id: _maker.id,
-          title: _maker.title,
-          size: _maker.video["1080p"].Fsize,
-          quick_dl: await shorten(await _maker.video["1080p"].download()),
-        },
-      ];
-      logger.info(_Found);
-      return res.send(_Found);
-    } else if (quality === "720p") {
-      const _Found = [
-        {
-          type: "[ VIDEO ]: 720p",
-          id: _maker.id,
-          title: _maker.title,
-          size: _maker.video["720p"].Fsize,
-          quick_dl: await shorten(await _maker.video["720p"].download()),
-        },
-      ];
-      logger.info(_Found);
-      return res.send(_Found);
-    } else if (quality === "480p") {
-      const _Found = [
-        {
-          type: "[ VIDEO ]: 480p",
-          id: _maker.id,
-          title: _maker.title,
-          size: _maker.video["480p"].Fsize,
-          quick_dl: await shorten(await _maker.video["480p"].download()),
-        },
-      ];
-      logger.info(_Found);
-      return res.send(_Found);
-    } else if (quality === "360p") {
-      const _Found = [
-        {
-          type: "[ VIDEO ]: 360p",
-          id: _maker.id,
-          title: _maker.title,
-          size: _maker.video["360p"].Fsize,
-          quick_dl: await shorten(await _maker.video["360p"].download()),
-        },
-      ];
-      logger.info(_Found);
-      return res.send(_Found);
-    } else if (quality === "240p") {
-      const _Found = [
-        {
-          type: "[ VIDEO ]: 240p",
-          id: _maker.id,
-          title: _maker.title,
-          size: _maker.video["240p"].Fsize,
-          quick_dl: await shorten(await _maker.video["240p"].download()),
-        },
-      ];
-      logger.info(_Found);
-      return res.send(_Found);
-    } else if (quality === "144p") {
-      const _Found = [
-        {
-          type: "[ VIDEO ]: 144p",
-          id: _maker.id,
-          title: _maker.title,
-          size: _maker.video["144p"].Fsize,
-          quick_dl: await shorten(await _maker.video["144p"].download()),
-        },
-      ];
-      logger.info(_Found);
-      return res.send(_Found);
-    } else if (quality === "128kbps") {
-      const _Found = [
-        {
-          type: "[ AUDIO ]: 128kbps",
-          id: _maker.id,
-          title: _maker.title,
-          size: _maker.video["128kbps"].Fsize,
-          quick_dl: await shorten(await _maker.video["128kbps"].download()),
-        },
-      ];
-      logger.info(_Found);
-      return res.send(_Found);
+  try {
+    const query = req.query;
+    const { q, quality } = query;
+    if (q) {
+      const Query = await YouTube_Sr(q);
+      const QueryFound = Query.videos.slice(0, 1);
+      const _maker: any = await YouTube_Genre(QueryFound[0].url);
+      if (quality === "1080p") {
+        const _Found = [
+          {
+            type: "[ VIDEO ]: 1080p",
+            id: _maker.id,
+            title: _maker.title,
+            size: _maker.video["1080p"].Fsize,
+            quick_dl: await shorten(await _maker.video["1080p"].download()),
+          },
+        ];
+        logger.info(_Found);
+        return res.send(_Found);
+      } else if (quality === "720p") {
+        const _Found = [
+          {
+            type: "[ VIDEO ]: 720p",
+            id: _maker.id,
+            title: _maker.title,
+            size: _maker.video["720p"].Fsize,
+            quick_dl: await shorten(await _maker.video["720p"].download()),
+          },
+        ];
+        logger.info(_Found);
+        return res.send(_Found);
+      } else if (quality === "480p") {
+        const _Found = [
+          {
+            type: "[ VIDEO ]: 480p",
+            id: _maker.id,
+            title: _maker.title,
+            size: _maker.video["480p"].Fsize,
+            quick_dl: await shorten(await _maker.video["480p"].download()),
+          },
+        ];
+        logger.info(_Found);
+        return res.send(_Found);
+      } else if (quality === "360p") {
+        const _Found = [
+          {
+            type: "[ VIDEO ]: 360p",
+            id: _maker.id,
+            title: _maker.title,
+            size: _maker.video["360p"].Fsize,
+            quick_dl: await shorten(await _maker.video["360p"].download()),
+          },
+        ];
+        logger.info(_Found);
+        return res.send(_Found);
+      } else if (quality === "240p") {
+        const _Found = [
+          {
+            type: "[ VIDEO ]: 240p",
+            id: _maker.id,
+            title: _maker.title,
+            size: _maker.video["240p"].Fsize,
+            quick_dl: await shorten(await _maker.video["240p"].download()),
+          },
+        ];
+        logger.info(_Found);
+        return res.send(_Found);
+      } else if (quality === "144p") {
+        const _Found = [
+          {
+            type: "[ VIDEO ]: 144p",
+            id: _maker.id,
+            title: _maker.title,
+            size: _maker.video["144p"].Fsize,
+            quick_dl: await shorten(await _maker.video["144p"].download()),
+          },
+        ];
+        logger.info(_Found);
+        return res.send(_Found);
+      } else if (quality === "128kbps") {
+        const _Found = [
+          {
+            type: "[ AUDIO ]: 128kbps",
+            id: _maker.id,
+            title: _maker.title,
+            size: _maker.video["128kbps"].Fsize,
+            quick_dl: await shorten(await _maker.video["128kbps"].download()),
+          },
+        ];
+        logger.info(_Found);
+        return res.send(_Found);
+      } else {
+        return res.send({
+          _status: "Failed with error code 911",
+          _uuid: uuidv4(),
+          _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+          _message: "Please provide download quality",
+          _example:
+            "YouTube(url, quality).then((data) => {console.log(data)});",
+          _usage: [
+            {
+              _1080p: "'https://youtu.be/need_arg', '1080p'",
+              _720p: "'https://youtu.be/need_arg', '720p'",
+              _480p: "'https://youtu.be/need_arg', '480p'",
+              _360p: "'https://youtu.be/need_arg', '360p'",
+              _240p: "'https://youtu.be/need_arg', '144p'",
+              _144p: "'https://youtu.be/need_arg', '144p'",
+              _128kbps: "'https://youtu.be/need_arg', '128kbps'",
+            },
+          ],
+        });
+      }
     } else {
       return res.send({
         _status: "Failed with error code 911",
@@ -275,24 +297,10 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         ],
       });
     }
-  } else {
-    return res.send({
-      _status: "Failed with error code 911",
-      _uuid: uuidv4(),
-      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-      _message: "Please provide download quality",
-      _example: "YouTube(url, quality).then((data) => {console.log(data)});",
-      _usage: [
-        {
-          _1080p: "'https://youtu.be/need_arg', '1080p'",
-          _720p: "'https://youtu.be/need_arg', '720p'",
-          _480p: "'https://youtu.be/need_arg', '480p'",
-          _360p: "'https://youtu.be/need_arg', '360p'",
-          _240p: "'https://youtu.be/need_arg', '144p'",
-          _144p: "'https://youtu.be/need_arg', '144p'",
-          _128kbps: "'https://youtu.be/need_arg', '128kbps'",
-        },
-      ],
+  } catch (error) {
+    return res.status(500).json({
+      status: "error",
+      message: error.message,
     });
   }
 }

@@ -12,8 +12,8 @@ function Wallpaper_Flare(query: any) {
         headers: {
           accept: "application/json",
           "Content-Type": "application/json",
-          // "user-agent":
-          // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+          "user-agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
           cookie:
             "_ga=GA1.2.863074474.1624987429; _gid=GA1.2.857771494.1624987429; __gads=ID=84d12a6ae82d0a63-2242b0820eca0058:T=1624987427:RT=1624987427:S=ALNI_MaJYaH0-_xRbokdDkQ0B49vSYgYcQ",
         },
@@ -31,28 +31,35 @@ function Wallpaper_Flare(query: any) {
 }
 
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
-  if (req.query.q) {
-    const cobra = await Wallpaper_Flare(req.query.q);
-    var _Found = [
-      {
-        _status: "🎊success",
-        _uuid: uuidv4(),
+  try {
+    if (req.query.q) {
+      const cobra = await Wallpaper_Flare(req.query.q);
+      var _Found = [
+        {
+          _status: "🎊success",
+          _uuid: uuidv4(),
+          _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+          _topic: "Wallpapers from Wallpaper Flare",
+          _query: req.query.q,
+          links: cobra,
+        },
+      ];
+      logger.info(_Found);
+      return res.send(_Found);
+    } else {
+      return res.send({
+        _status: "Failed with error code 911",
         _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-        _topic: "Wallpapers from Wallpaper Flare",
-        _query: req.query.q,
-        links: cobra,
-      },
-    ];
-    logger.info(_Found);
-    return res.send(_Found);
-  } else {
-    return res.send({
-      _status: "Failed with error code 911",
-      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-      USAGE: {
-        endpoint: "/api/wallpaper?q=",
-        example: ["/api/wallpaper?q=dog"],
-      },
+        _usage: {
+          _api_link: "/api/wallpaper?q=",
+          _example: ["/api/wallpaper?q=dog"],
+        },
+      });
+    }
+  } catch (error) {
+    return res.status(500).json({
+      status: "error",
+      message: error.message,
     });
   }
 }

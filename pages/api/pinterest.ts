@@ -35,28 +35,35 @@ function Pinterest(querry: any) {
 }
 
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
-  if (req.query.q) {
-    const cobra = await Pinterest(req.query.q);
-    var _Found = [
-      {
-        _status: "🎊success",
-        _uuid: uuidv4(),
+  try {
+    if (req.query.q) {
+      const cobra = await Pinterest(req.query.q);
+      var _Found = [
+        {
+          _status: "🎊success",
+          _uuid: uuidv4(),
+          _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+          _topic: "Pinterest Searcher",
+          _query: req.query.q,
+          links: cobra,
+        },
+      ];
+      logger.info(_Found);
+      return res.send(_Found);
+    } else {
+      return res.send({
+        _status: "Failed with error code 911",
         _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-        _topic: "Pinterest Searcher",
-        _query: req.query.q,
-        links: cobra,
-      },
-    ];
-    logger.info(_Found);
-    return res.send(_Found);
-  } else {
-    return res.send({
-      _status: "Failed with error code 911",
-      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-      USAGE: {
-        endpoint: "/api/youtube?q=",
-        example: ["/api/anime?q=death note"],
-      },
+        _usage: {
+          _api_link: "/api/youtube?q=",
+          _example: ["/api/anime?q=death note"],
+        },
+      });
+    }
+  } catch (error) {
+    return res.status(500).json({
+      status: "error",
+      message: error.message,
     });
   }
 }

@@ -1,69 +1,74 @@
 import moment from "moment";
-import tinyurl from "tinyurl";
+import { shorten } from "tinyurl";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import { Manga } from "@shineiichijo/marika";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
-  if (req.query.q) {
-    var manga = new Manga();
-    var argument: any = req.query.q;
-    var response = await manga.searchManga(argument);
-    if (!response) {
-      res.send({
+  try {
+    if (req.query.q) {
+      var manga = new Manga();
+      var argument: any = req.query.q;
+      var response = await manga.searchManga(argument);
+      if (!response) {
+        res.send({
+          _status: "Failed with error code 911",
+          _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+          _usage: {
+            _api_link: "/api/manga?q=",
+            _example: "/api/manga?q=My Hero Academia by Kohei Horikoshi",
+          },
+        });
+      } else {
+        let Genres = "";
+        let Authors = "";
+        for (var i = 0; i < response.data[0].genres.length; i++) {
+          Genres += `${response.data[0].genres[i].name}`;
+        }
+        for (var i = 0; i < response.data[0].authors.length; i++) {
+          Authors += `name=>${response.data[0].authors[i].name} | type=>${response.data[0].authors[0].type}`;
+        }
+        var _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Manga Search",
+            _query: argument,
+            _title: response.data[0].title,
+            _chapters: response.data[0].chapters,
+            _published_on: response.data[0].published.from,
+            _score: response.data[0].scored,
+            _popularity: response.data[0].popularity,
+            _favorites: response.data[0].favorites,
+            _url: response.data[0].url,
+            _genres: Genres || null,
+            _authors: Authors || null,
+            _background: response.data[0].background || null,
+            _image:
+              (await shorten(response.data[0].images.jpg.large_image_url)) ||
+              null,
+            _description: response.data[0].synopsis,
+          },
+        ];
+        logger.info(_Found);
+        return res.send(_Found);
+      }
+    } else {
+      return res.send({
         _status: "Failed with error code 911",
         _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-        USAGE: {
-          endpoint: "/api/manga?q=",
-          example: "/api/manga?q=My Hero Academia by Kohei Horikoshi",
+        _usage: {
+          _api_link: "/api/manga?q=",
+          _example: "/api/manga?q=My Hero Academia by Kohei Horikoshi",
         },
       });
-    } else {
-      let Genres = "";
-      let Authors = "";
-      for (var i = 0; i < response.data[0].genres.length; i++) {
-        Genres += `${response.data[0].genres[i].name}`;
-      }
-      for (var i = 0; i < response.data[0].authors.length; i++) {
-        Authors += `name=>${response.data[0].authors[i].name} | type=>${response.data[0].authors[0].type}`;
-      }
-      var _Found = [
-        {
-          _status: "🎊success",
-          _uuid: uuidv4(),
-          _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-          _topic: "Manga Search",
-          _query: argument,
-          Title: response.data[0].title,
-          Status: response.data[0].status,
-          Total_Chapters: response.data[0].chapters,
-          Published_On: response.data[0].published.from,
-          Score: response.data[0].scored,
-          Popularity: response.data[0].popularity,
-          Favorites: response.data[0].favorites,
-          _url: response.data[0].url,
-          Genres: Genres || null,
-          Authors: Authors || null,
-          Background: response.data[0].background || null,
-          Thumbnail:
-            (await tinyurl.shorten(
-              response.data[0].images.jpg.large_image_url
-            )) || null,
-          Description: response.data[0].synopsis,
-        },
-      ];
-      logger.info(_Found);
-      return res.send(_Found);
     }
-  } else {
-    return res.send({
-      _status: "Failed with error code 911",
-      _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-      USAGE: {
-        endpoint: "/api/manga?q=",
-        example: "/api/manga?q=My Hero Academia by Kohei Horikoshi",
-      },
+  } catch (error) {
+    return res.status(500).json({
+      status: "error",
+      message: error.message,
     });
   }
 }
