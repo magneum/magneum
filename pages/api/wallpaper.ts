@@ -41,7 +41,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
           _topic: "Wallpapers from Wallpaper Flare",
           _query: req.query.q,
-          links: cobra,
+          _links: cobra,
         },
       ];
       logger.info(_Found);
@@ -49,6 +49,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     } else {
       return res.send({
         _status: "Failed with error code 911",
+        _message: "Parameters requirement not met.",
         _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         _usage: {
           _api_link: "/api/wallpaper?q=",

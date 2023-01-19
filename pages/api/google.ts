@@ -55,6 +55,7 @@ export default async function Google(
     } else {
       return res.send({
         _status: "Failed with error code 911",
+        _message: "Parameters requirement not met.",
         _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         _usage: {
           _api_link: "/api/google?q=",

@@ -25,12 +25,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -55,12 +55,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -85,12 +85,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -115,12 +115,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -145,12 +145,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -175,12 +175,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -205,12 +205,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -235,12 +235,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -265,12 +265,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -295,12 +295,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -325,12 +325,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -355,12 +355,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -384,12 +384,12 @@ export default async function animation(
                 _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
                 _query: req.query.q,
                 _url: await shorten(FFLink),
-                DOMAIN: FF[0].data.children[0].data.domain,
-                SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                TITLE: FF[0].data.children[0].data.title,
-                AUTHOR: FF[0].data.children[0].data.author,
-                THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                WEBSITE_LINK:
+                _domain: FF[0].data.children[0].data.domain,
+                _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                _title: FF[0].data.children[0].data.title,
+                _author: FF[0].data.children[0].data.author,
+                _thumbnail: FF[0].data.children[0].data.thumbnail,
+                _web_link:
                   "https://www.reddit.com" +
                   FF[0].data.children[0].data.permalink,
               },
@@ -413,12 +413,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -443,12 +443,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -473,12 +473,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -503,12 +503,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -533,12 +533,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -563,12 +563,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -593,12 +593,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -623,12 +623,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -653,12 +653,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -683,12 +683,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -713,12 +713,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -744,12 +744,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -774,12 +774,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -804,12 +804,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -836,12 +836,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -866,12 +866,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -898,12 +898,12 @@ export default async function animation(
                   _topic: "[NSFW Images]",
                   _query: req.query.q,
                   _url: await shorten(FFLink),
-                  DOMAIN: FF[0].data.children[0].data.domain,
-                  SUBREDDIT_ID: FF[0].data.children[0].data.subreddit_id,
-                  TITLE: FF[0].data.children[0].data.title,
-                  AUTHOR: FF[0].data.children[0].data.author,
-                  THUMBNAIL: FF[0].data.children[0].data.thumbnail,
-                  WEBSITE_LINK:
+                  _domain: FF[0].data.children[0].data.domain,
+                  _sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+                  _title: FF[0].data.children[0].data.title,
+                  _author: FF[0].data.children[0].data.author,
+                  _thumbnail: FF[0].data.children[0].data.thumbnail,
+                  _web_link:
                     "https://www.reddit.com" +
                     FF[0].data.children[0].data.permalink,
                 },
@@ -917,6 +917,7 @@ export default async function animation(
       default:
         res.send({
           _status: "Failed with error code 911",
+          _message: "Parameters requirement not met.",
           _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
           _usage: {
             _api_link: "/api/nsfw?q=",

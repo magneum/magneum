@@ -1,5 +1,5 @@
 import { CopyBlock, nord } from "react-code-blocks";
-const codeSnippet = `// ?q=  is the querry that api/youtube_dl takes
+const code_1 = `// ?q=  is the querry that api/youtube_dl takes
 
 // Method 1 (Axios)
 const axios = require("axios");
@@ -10,7 +10,8 @@ console.log(response.data);
 })
 .catch(function (error) {
 console.error(error);
-});
+});`;
+const code_2 = `// ?q=  is the querry that api/youtube_dl takes
 
 // Method 2 (Request)
 const request = require("request");
@@ -18,84 +19,68 @@ request({
 method: "GET",
 url: "https://magneum.vercel.app/api/youtube_dl?q=ncs 2min song&quality=1080p",
 headers: {
-Accept: "application/json",
+accept: "application/json",
 "Content-Type": "application/json",
 },
 },
 (error, response) => {
 if (error) console.error(error);
 console.log(response.body);
-});
-  
+});`;
+const code_3 = `// ?q=  is the querry that api/youtube_dl takes
+
 // Method 3 (Unirest)
 const unirest = require("unirest");
 unirest.post("https://magneum.vercel.app/api/youtube_dl?q=ncs 2min song&quality=1080p")
-.headers({ Accept: "application/json", "Content-Type": "application/json" })
+.headers({ accept: "application/json", "Content-Type": "application/json" })
 .then((response) => {
 console.log(response.body);
 });`;
 
 export default function magneum() {
   return (
-    <div>
-      Use this module to get youtube direct audio & video download links.
-      <br></br>
+    <section>
+      <div
+        tabIndex={0}
+        className="collapse collapse-plus border-2 border-blue-900 rounded-box "
+      >
+        <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
+          yarn install axios;
+        </div>
+        <div className="collapse-content text-gray-400">
+          <p>
+            <CopyBlock text={code_1} language="typescript" theme={nord} />
+          </p>
+        </div>
+      </div>{" "}
       <br></br>
       <div
         tabIndex={0}
         className="collapse collapse-plus border-2 border-blue-900 rounded-box "
       >
         <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-          view components
+          yarn install request;
         </div>
         <div className="collapse-content text-gray-400">
           <p>
-            endpoint:{" "}
-            <span className="italic text-blue-300">/api/youtube_dl?q=</span>
-            <br></br>
-            example: /api/youtube_dl?q=
-            <span className="italic text-blue-300">ncs music 5 minutes</span>
-            &quality=1080p<br></br>
-            example: /api/youtube_dl?q=
-            <span className="italic text-blue-300">
-              https://youtu.be/3gxus8LnMfI
-            </span>
-            &quality=1080p<br></br>
-          </p>
-          <br></br>
-          <p>
-            <span className="italic text-blue-400 uppercase">QUALITY</span>
-            <br></br>
-            &quality=<span className="italic text-blue-300">1080p</span>
-            <br></br>
-            &quality=<span className="italic text-blue-300">720p</span>
-            <br></br>
-            &quality=<span className="italic text-blue-300">480p</span>
-            <br></br>
-            &quality=<span className="italic text-blue-300">360p</span>
-            <br></br>
-            &quality=<span className="italic text-blue-300">240p</span>
-            <br></br>
-            (audio) &quality=
-            <span className="italic text-blue-300">128kbps</span>
-            <br></br>
+            <CopyBlock text={code_2} language="typescript" theme={nord} />
           </p>
         </div>
-      </div>
+      </div>{" "}
       <br></br>
       <div
         tabIndex={0}
         className="collapse collapse-plus border-2 border-blue-900 rounded-box "
       >
         <div className="collapse-title text-xl font-medium text-blue-200 bg-zinc-900">
-          code example :)
+          yarn install unirest;
         </div>
         <div className="collapse-content text-gray-400">
           <p>
-            <CopyBlock text={codeSnippet} language="typescript" theme={nord} />
+            <CopyBlock text={code_3} language="typescript" theme={nord} />
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

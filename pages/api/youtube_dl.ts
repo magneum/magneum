@@ -259,9 +259,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       } else {
         return res.send({
           _status: "Failed with error code 911",
+          _message: "Please provide download quality",
           _uuid: uuidv4(),
           _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-          _message: "Please provide download quality",
           _example:
             "YouTube(url, quality).then((data) => {console.log(data)});",
           _usage: [
@@ -280,9 +280,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     } else {
       return res.send({
         _status: "Failed with error code 911",
+        _message: "Please provide download quality",
         _uuid: uuidv4(),
         _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-        _message: "Please provide download quality",
         _example: "YouTube(url, quality).then((data) => {console.log(data)});",
         _usage: [
           {

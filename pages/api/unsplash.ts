@@ -20,6 +20,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
       if (!cobra) {
         res.send({
           _status: "Failed with error code 911",
+          _message: "Parameters requirement not met.",
           _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
           _usage: {
             _api_link: "/api/manga?q=",
@@ -34,31 +35,31 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
             _topic: "Unsplash HD Wallpapers",
             _query: req.query.q,
-            created_at: cobra.response.results[0].created_at,
-            updated_at: cobra.response.results[0].updated_at,
-            promoted_at: cobra.response.results[0].promoted_at,
-            width: cobra.response.results[0].width,
-            height: cobra.response.results[0].height,
-            color: cobra.response.results[0].color,
-            blur_hash: cobra.response.results[0].blur_hash,
-            description: cobra.response.results[0].description,
-            alt_description: cobra.response.results[0].alt_description,
-            images: [
+            _created_at: cobra.response.results[0].created_at,
+            _updated_at: cobra.response.results[0].updated_at,
+            _promoted_at: cobra.response.results[0].promoted_at,
+            _width: cobra.response.results[0].width,
+            _height: cobra.response.results[0].height,
+            _color: cobra.response.results[0].color,
+            _blur_hash: cobra.response.results[0].blur_hash,
+            _description: cobra.response.results[0].description,
+            _alt_description: cobra.response.results[0].alt_description,
+            _images: [
               {
-                raw: cobra.response.results[0].urls.raw,
-                full: cobra.response.results[0].urls.full,
-                regular: cobra.response.results[0].urls.regular,
-                small: cobra.response.results[0].urls.small,
-                thumb: cobra.response.results[0].urls.thumb,
-                small_s3: cobra.response.results[0].urls.small_s3,
+                _raw: cobra.response.results[0].urls.raw,
+                _full: cobra.response.results[0].urls.full,
+                _regular: cobra.response.results[0].urls.regular,
+                _small: cobra.response.results[0].urls.small,
+                _thumb: cobra.response.results[0].urls.thumb,
+                _small_s3: cobra.response.results[0].urls.small_s3,
               },
             ],
-            links: [
+            _links: [
               {
-                self: cobra.response.results[0].links.self,
-                html: cobra.response.results[0].links.html,
-                download: cobra.response.results[0].links.download,
-                download_location:
+                _self: cobra.response.results[0].links.self,
+                _html: cobra.response.results[0].links.html,
+                _download: cobra.response.results[0].links.download,
+                _download_location:
                   cobra.response.results[0].links.download_location,
               },
             ],
@@ -70,6 +71,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     } else {
       return res.send({
         _status: "Failed with error code 911",
+        _message: "Parameters requirement not met.",
         _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
         _usage: {
           _api_link: "/api/unsplash?q=",
