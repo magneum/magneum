@@ -1,6 +1,5 @@
 import got from "got";
 import moment from "moment";
-import { shorten } from "tinyurl";
 import YouTube_Sr from "yt-search";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";

@@ -6,9 +6,12 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
-    if (req.query.q) {
+    const query: any = req.query;
+    const { q } = query;
+    console.log(query);
+    if (q) {
       let _Found;
-      let Query: any = await YouTube_Sr(req.query.q);
+      let Query: any = await YouTube_Sr(q);
       let QueryFound: any = Query.videos.slice(0, 1);
       QueryFound.forEach(function (response: any) {
         _Found = {
@@ -16,7 +19,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           _uuid: uuidv4(),
           _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
           _topic: "[YouTube Meta Searcher]",
-          _query: req.query.q,
+          _query: q,
           _youtube_search: [
             {
               YT_ID: response.videoId,
