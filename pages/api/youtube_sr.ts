@@ -8,9 +8,9 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
       let _Found;
-      let Query = await YouTube_Sr(req.query.q);
-      let QueryFound = Query.videos.slice(0, 1);
-      QueryFound.forEach(function (response) {
+      let Query: any = await YouTube_Sr(req.query.q);
+      let QueryFound: any = Query.videos.slice(0, 1);
+      QueryFound.forEach(function (response: any) {
         _Found = {
           _status: "🎊success",
           _uuid: uuidv4(),

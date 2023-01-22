@@ -16,7 +16,7 @@ function _(
   fname: any
 ) {
   return new Promise(async (resolve, reject) => {
-    const _started = await got(url, {
+    const _started: any = await got(url, {
       method: "POST",
       headers: {
         "_content-type": "application/x-www-form-urlencoded; charset=UTF-8",
@@ -78,7 +78,7 @@ function _(
             },
           }
         );
-        ws.on("message", function incoming(message) {
+        ws.on("message", function incoming(message: any) {
           const msg: any = JSON.parse(message.toString());
           if (msg.action === "success") {
             try {
@@ -166,12 +166,14 @@ function YouTube_Genre(url: any) {
 
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const query = req.query;
+    const query: any = req.query;
     const { q, quality } = query;
+    console.log(query);
     if (q) {
-      const Query = await YouTube_Sr(q);
-      const QueryFound = Query.videos.slice(0, 1);
+      const Query: any = await YouTube_Sr(q);
+      const QueryFound: any = Query.videos.slice(0, 1);
       const _maker: any = await YouTube_Genre(QueryFound[0].url);
+      const Queryrslt: any = QueryFound;
       if (quality === "1080p") {
         const _Found = [
           {
@@ -180,6 +182,11 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             title: _maker.title,
             size: _maker.video["1080p"].Fsize,
             quick_dl: await shorten(await _maker.video["1080p"].download()),
+            YT_ID: Queryrslt[0].videoId,
+            TITLE: Queryrslt[0].title,
+            LINK: Queryrslt[0].url,
+            THUMB: Queryrslt[0].thumbnail,
+            HQ_IMAGE: Queryrslt[0].image,
           },
         ];
         logger.info(_Found);
@@ -192,6 +199,11 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             title: _maker.title,
             size: _maker.video["720p"].Fsize,
             quick_dl: await shorten(await _maker.video["720p"].download()),
+            YT_ID: Queryrslt[0].videoId,
+            TITLE: Queryrslt[0].title,
+            LINK: Queryrslt[0].url,
+            THUMB: Queryrslt[0].thumbnail,
+            HQ_IMAGE: Queryrslt[0].image,
           },
         ];
         logger.info(_Found);
@@ -204,6 +216,11 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             title: _maker.title,
             size: _maker.video["480p"].Fsize,
             quick_dl: await shorten(await _maker.video["480p"].download()),
+            YT_ID: Queryrslt[0].videoId,
+            TITLE: Queryrslt[0].title,
+            LINK: Queryrslt[0].url,
+            THUMB: Queryrslt[0].thumbnail,
+            HQ_IMAGE: Queryrslt[0].image,
           },
         ];
         logger.info(_Found);
@@ -216,6 +233,11 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             title: _maker.title,
             size: _maker.video["360p"].Fsize,
             quick_dl: await shorten(await _maker.video["360p"].download()),
+            YT_ID: Queryrslt[0].videoId,
+            TITLE: Queryrslt[0].title,
+            LINK: Queryrslt[0].url,
+            THUMB: Queryrslt[0].thumbnail,
+            HQ_IMAGE: Queryrslt[0].image,
           },
         ];
         logger.info(_Found);
@@ -228,6 +250,11 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             title: _maker.title,
             size: _maker.video["240p"].Fsize,
             quick_dl: await shorten(await _maker.video["240p"].download()),
+            YT_ID: Queryrslt[0].videoId,
+            TITLE: Queryrslt[0].title,
+            LINK: Queryrslt[0].url,
+            THUMB: Queryrslt[0].thumbnail,
+            HQ_IMAGE: Queryrslt[0].image,
           },
         ];
         logger.info(_Found);
@@ -240,6 +267,11 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             title: _maker.title,
             size: _maker.video["144p"].Fsize,
             quick_dl: await shorten(await _maker.video["144p"].download()),
+            YT_ID: Queryrslt[0].videoId,
+            TITLE: Queryrslt[0].title,
+            LINK: Queryrslt[0].url,
+            THUMB: Queryrslt[0].thumbnail,
+            HQ_IMAGE: Queryrslt[0].image,
           },
         ];
         logger.info(_Found);
@@ -250,8 +282,13 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             type: "[ AUDIO ]: 128kbps",
             id: _maker.id,
             title: _maker.title,
-            size: _maker.video["128kbps"].Fsize,
-            quick_dl: await shorten(await _maker.video["128kbps"].download()),
+            size: _maker.audio["128kbps"].Fsize,
+            quick_dl: await shorten(await _maker.audio["128kbps"].download()),
+            YT_ID: Queryrslt[0].videoId,
+            TITLE: Queryrslt[0].title,
+            LINK: Queryrslt[0].url,
+            THUMB: Queryrslt[0].thumbnail,
+            HQ_IMAGE: Queryrslt[0].image,
           },
         ];
         logger.info(_Found);
