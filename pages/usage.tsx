@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 const Text2Speech = dynamic(() => import("../components/examples/Text2Speech"));
 const Youtube_dl = dynamic(() => import("../components/examples/Youtube_dl"));
 const Youtube_sr = dynamic(() => import("../components/examples/Youtube_sr"));
-const Animation = dynamic(() => import("../components/examples/Animation"));
+const Emotions = dynamic(() => import("../components/examples/Emotions"));
 const Wallpaper = dynamic(() => import("../components/examples/Wallpaper"));
 const Pinterest = dynamic(() => import("../components/examples/Pinterest"));
 const Unsplash = dynamic(() => import("../components/examples/Unsplash"));
@@ -123,7 +123,7 @@ export default function magneum() {
                   <p className="font-serif text-3xl font-extrabold leading-none tracking-tight text-blue-300">
                     <span className="text-white animate-ping text-5xl">● </span>
                     <span className="text-blue-300 decoration-blue-800 underline">
-                      Api/Animation
+                      Api/Emotions
                     </span>
                   </p>
                   <br></br>
@@ -145,18 +145,18 @@ export default function magneum() {
                   </div>
                   <p className="mb-4 text-base text-blue-50 md:text-lg">
                     <span className="text-blue-200 font-semibold">
-                      Use all below available animations endpoints to get .gif
+                      Use all below available emotions endpoints to get .gif
                       .png & .jpeg links.
                     </span>
                     <br></br>
                     <span className="text-blue-500 font-semibold">
                       ● endpoint:{" "}
                     </span>
-                    /api/animation?q=<br></br>
+                    /api/emotions?q=<br></br>
                     <span className="text-blue-500 font-semibold">
                       ● example:{" "}
                     </span>
-                    /api/animation?q=smile<br></br>
+                    /api/emotions?q=smile<br></br>
                     <span className="text-blue-500 font-semibold">
                       ● querries available:{" "}
                     </span>
@@ -184,7 +184,7 @@ export default function magneum() {
                     </span>
                     <br></br>
                     <br></br>
-                    <Animation />
+                    <Emotions />
                   </p>
                 </div>
               </div>

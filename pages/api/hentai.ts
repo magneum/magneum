@@ -5,6 +5,31 @@ import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
 
+// Local Storage For imports of all local.jsons
+import ls_ass from "../../src/hentai/ass.json";
+import ls_cum from "../../src/hentai/cum.json";
+import ls_bdsm from "../../src/hentai/bdsm.json";
+import ls_feet from "../../src/hentai/feet.json";
+import ls_maid from "../../src/hentai/maid.json";
+import ls_orgy from "../../src/hentai/orgy.json";
+import ls_yuri from "../../src/hentai/yuri.json";
+import ls_pussy from "../../src/hentai/pussy.json";
+import ls_hentai from "../../src/hentai/hentai.json";
+import ls_doujin from "../../src/hentai/doujin.json";
+import ls_femdom from "../../src/hentai/femdom.json";
+import ls_thighs from "../../src/hentai/thighs.json";
+import ls_school from "../../src/hentai/school.json";
+import ls_blowjob from "../../src/hentai/blowjob.json";
+import ls_foxgirl from "../../src/hentai/foxgirl.json";
+import ls_panties from "../../src/hentai/panties.json";
+import ls_uniform from "../../src/hentai/uniform.json";
+import ls_succubus from "../../src/hentai/succubus.json";
+import ls_netorare from "../../src/hentai/netorare.json";
+import ls_tentacles from "../../src/hentai/tentacles.json";
+import ls_uglyBastard from "../../src/hentai/uglyBastard.json";
+import ls_masturbation from "../../src/hentai/masturbation.json";
+
+let _Found: any;
 export default async function animation(
   req: NextApiRequest,
   res: NextApiResponse
@@ -12,449 +37,370 @@ export default async function animation(
   try {
     switch (req.query.q) {
       case "ass":
-        fetch("https://cuteasfubuki.cf/api/ass")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "I know you like anime ass~ uwu",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __ass = ls_ass[Math.floor(Math.random() * ls_ass.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "I know you like anime ass~ uwu",
+            _query: req.query.q,
+            _url: __ass,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "bdsm":
-        fetch("https://cuteasfubuki.cf/api/bdsm")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "If you don't know what it is, search it up",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __bdsm = ls_bdsm[Math.floor(Math.random() * ls_bdsm.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "If you don't know what it is, search it up",
+            _query: req.query.q,
+            _url: __bdsm,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "blowjob":
-        fetch("https://cuteasfubuki.cf/api/blowjob")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description:
-                  "Basically an image of a girl sucking on a sharp blade!",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __blowjob =
+          ls_blowjob[Math.floor(Math.random() * ls_blowjob.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description:
+              "Basically an image of a girl sucking on a sharp blade!",
+            _query: req.query.q,
+            _url: __blowjob,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "cum":
-        fetch("https://cuteasfubuki.cf/api/cum")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description:
-                  "Basically sticky white stuff that is usually milked from sharpies.",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __cum = ls_cum[Math.floor(Math.random() * ls_cum.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description:
+              "Basically sticky white stuff that is usually milked from sharpies.",
+            _query: req.query.q,
+            _url: __cum,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "doujin":
-        fetch("https://cuteasfubuki.cf/api/doujin")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "Sends a random doujin page imageURL!",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __doujin = ls_doujin[Math.floor(Math.random() * ls_doujin.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "Sends a random doujin page imageURL!",
+            _query: req.query.q,
+            _url: __doujin,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "feet":
-        fetch("https://cuteasfubuki.cf/api/feet")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "So you like smelly feet huh?",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __feet = ls_feet[Math.floor(Math.random() * ls_feet.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "So you like smelly feet huh?",
+            _query: req.query.q,
+            _url: __feet,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "femdom":
-        fetch("https://cuteasfubuki.cf/api/femdom")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "Female Domination over you",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __femdom = ls_femdom[Math.floor(Math.random() * ls_femdom.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "Female Domination over you",
+            _query: req.query.q,
+            _url: __femdom,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "foxgirl":
-        fetch("https://cuteasfubuki.cf/api/foxgirl")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "Girl's that are wannabe foxes, yes",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
-        break;
-      case "glasses":
-        fetch("https://cuteasfubuki.cf/api/glasses")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "Girls that wear glasses, uwu~",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __foxgirl =
+          ls_foxgirl[Math.floor(Math.random() * ls_foxgirl.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "Girl's that are wannabe foxes, yes",
+            _query: req.query.q,
+            _url: __foxgirl,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "netorare":
-        fetch("https://cuteasfubuki.cf/api/netorare")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "Wow, I won't even question your fetishes.",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __netorare =
+          ls_netorare[Math.floor(Math.random() * ls_netorare.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "Wow, I won't even question your fetishes.",
+            _query: req.query.q,
+            _url: __netorare,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "maid":
-        fetch("https://cuteasfubuki.cf/api/maid")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description:
-                  "Maids, Maid Uniforms, etc, you know what maids are :3",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __maid = ls_maid[Math.floor(Math.random() * ls_maid.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description:
+              "Maids, Maid Uniforms, etc, you know what maids are :3",
+            _query: req.query.q,
+            _url: __maid,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "masturbation":
-        fetch("https://cuteasfubuki.cf/api/masturbation")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "The power of solo queue",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __masturbation =
+          ls_masturbation[Math.floor(Math.random() * ls_masturbation.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "The power of solo queue",
+            _query: req.query.q,
+            _url: __masturbation,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "orgy":
-        fetch("https://cuteasfubuki.cf/api/orgy")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "Group Lewd Acts",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __orgy = ls_orgy[Math.floor(Math.random() * ls_orgy.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "Group Lewd Acts",
+            _query: req.query.q,
+            _url: __orgy,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "panties":
-        fetch("https://cuteasfubuki.cf/api/panties")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "I mean... just why? You like underwear?",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __panties =
+          ls_panties[Math.floor(Math.random() * ls_panties.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "I mean... just why? You like underwear?",
+            _query: req.query.q,
+            _url: __panties,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "pussy":
-        fetch("https://cuteasfubuki.cf/api/pussy")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "School Uniforms!~ Yatta~!",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __pussy = ls_pussy[Math.floor(Math.random() * ls_pussy.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "School Uniforms!~ Yatta~!",
+            _query: req.query.q,
+            _url: __pussy,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "school":
-        fetch("https://cuteasfubuki.cf/api/school")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "School Uniforms!~ Yatta~!",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __school = ls_school[Math.floor(Math.random() * ls_school.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "School Uniforms!~ Yatta~!",
+            _query: req.query.q,
+            _url: __school,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "succubus":
-        fetch("https://cuteasfubuki.cf/api/succubus")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description:
-                  "Spooky Succubus, oh I'm so scared~ Totally don't suck me~",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __succubus =
+          ls_succubus[Math.floor(Math.random() * ls_succubus.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description:
+              "Spooky Succubus, oh I'm so scared~ Totally don't suck me~",
+            _query: req.query.q,
+            _url: __succubus,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "tentacles":
-        fetch("https://cuteasfubuki.cf/api/tentacles")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description:
-                  "I'm sorry but, why do they look like intestines?",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __tentacles =
+          ls_tentacles[Math.floor(Math.random() * ls_tentacles.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "I'm sorry but, why do they look like intestines?",
+            _query: req.query.q,
+            _url: __tentacles,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "thighs":
-        fetch("https://cuteasfubuki.cf/api/thighs")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "The top part of your legs, very hot, isn't it?",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __thighs = ls_thighs[Math.floor(Math.random() * ls_thighs.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "The top part of your legs, very hot, isn't it?",
+            _query: req.query.q,
+            _url: __thighs,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "uglyBastard":
-        fetch("https://cuteasfubuki.cf/api/uglyBastard")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description:
-                  "The one thing most of us can all agree to hate :)",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __uglyBastard =
+          ls_uglyBastard[Math.floor(Math.random() * ls_uglyBastard.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "The one thing most of us can all agree to hate :)",
+            _query: req.query.q,
+            _url: __uglyBastard,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "uniform":
-        fetch("https://cuteasfubuki.cf/api/uniform")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description:
-                  "Military, Konbini, Work, Nurse Uniforms, etc!~ Sexy~",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __uniform =
+          ls_uniform[Math.floor(Math.random() * ls_uniform.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description:
+              "Military, Konbini, Work, Nurse Uniforms, etc!~ Sexy~",
+            _query: req.query.q,
+            _url: __uniform,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       case "yuri":
-        fetch("https://cuteasfubuki.cf/api/yuri")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description: "yuri | Girls on Girls, and Girl's only!<3",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+        var __yuri = ls_yuri[Math.floor(Math.random() * ls_yuri.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "yuri | Girls on Girls, and Girl's only!<3",
+            _query: req.query.q,
+            _url: __yuri,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
-      case "zettaiRyouiki":
-        fetch("https://cuteasfubuki.cf/api/zettaiRyouiki")
-          .then((res) => res.json())
-          .then(async (json: any) => {
-            var _Found = [
-              {
-                _status: "🎊success",
-                _uuid: uuidv4(),
-                _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                _topic: "Hentai (image)",
-                _description:
-                  "That one part of the flesh being squeeze in thigh-highs~<3",
-                _query: req.query.q,
-                _url: await shorten(json.url),
-              },
-            ];
-            logger.info(_Found);
-            return res.send(_Found);
-          });
+      case "hentai":
+        var __hentai = ls_hentai[Math.floor(Math.random() * ls_hentai.length)];
+        _Found = [
+          {
+            _status: "🎊success",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _topic: "Hentai (image)",
+            _description: "Random hentai...",
+            _query: req.query.q,
+            _url: __hentai,
+          },
+        ];
+        logger.info(_Found);
+        res.send(_Found);
         break;
       default:
         res.send({
@@ -473,7 +419,6 @@ export default async function animation(
               "feet",
               "femdom",
               "foxgirl",
-              "glasses",
               "hentai",
               "netorare",
               "maid",
@@ -488,7 +433,6 @@ export default async function animation(
               "uglyBastard",
               "uniform",
               "yuri",
-              "zettaiRyouiki",
             ],
           },
         });

@@ -5,567 +5,514 @@ import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
 
+// Local Storage For imports of all local.jsons
+import ls_awoo from "../../src/sfw/awoo.json";
+import ls_bite from "../../src/sfw/bite.json";
+import ls_blush from "../../src/sfw/blush.json";
+import ls_bonk from "../../src/sfw/bonk.json";
+import ls_bully from "../../src/sfw/bully.json";
+import ls_cringe from "../../src/sfw/cringe.json";
+import ls_cry from "../../src/sfw/cry.json";
+import ls_cuddle from "../../src/sfw/cuddle.json";
+import ls_dance from "../../src/sfw/dance.json";
+import ls_glomp from "../../src/sfw/glomp.json";
+import ls_handhold from "../../src/sfw/handhold.json";
+import ls_happy from "../../src/sfw/happy.json";
+import ls_highfive from "../../src/sfw/highfive.json";
+import ls_hug from "../../src/sfw/hug.json";
+import ls_kick from "../../src/sfw/kick.json";
+import ls_kill from "../../src/sfw/kill.json";
+import ls_kiss from "../../src/sfw/kiss.json";
+import ls_lick from "../../src/sfw/lick.json";
+import ls_megumin from "../../src/sfw/megumin.json";
+import ls_neko from "../../src/sfw/neko.json";
+import ls_nom from "../../src/sfw/nom.json";
+import ls_pat from "../../src/sfw/pat.json";
+import ls_poke from "../../src/sfw/poke.json";
+import ls_shinobu from "../../src/sfw/shinobu.json";
+import ls_slap from "../../src/sfw/slap.json";
+import ls_smile from "../../src/sfw/smile.json";
+import ls_smug from "../../src/sfw/smug.json";
+import ls_waifu from "../../src/sfw/waifu.json";
+import ls_wave from "../../src/sfw/wave.json";
+import ls_wink from "../../src/sfw/wink.json";
+import ls_yeet from "../../src/sfw/yeet.json";
+
+let _Found: any;
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
       switch (req.query.q) {
         case "waifu":
-          fetch("https://waifu.pics/api/sfw/waifu")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: yeet",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __waifu = ls_waifu[Math.floor(Math.random() * ls_waifu.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: yeet",
+              _query: req.query.q,
+              _url: __waifu,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "neko":
-          fetch("https://waifu.pics/api/sfw/neko")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: neko",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __neko = ls_neko[Math.floor(Math.random() * ls_neko.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: neko",
+              _query: req.query.q,
+              _url: __neko,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "shinobu":
-          fetch("https://waifu.pics/api/sfw/shinobu")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: shinobu",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __shinobu =
+            ls_shinobu[Math.floor(Math.random() * ls_shinobu.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: shinobu",
+              _query: req.query.q,
+              _url: __shinobu,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "megumin":
-          fetch("https://waifu.pics/api/sfw/megumin")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: megumin",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __megumin =
+            ls_megumin[Math.floor(Math.random() * ls_megumin.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: megumin",
+              _query: req.query.q,
+              _url: __megumin,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "bully":
-          fetch("https://waifu.pics/api/sfw/bully")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: bully",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __bully = ls_bully[Math.floor(Math.random() * ls_bully.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: bully",
+              _query: req.query.q,
+              _url: __bully,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "cuddle":
-          fetch("https://waifu.pics/api/sfw/cuddle")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: cuddle",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __cuddle =
+            ls_cuddle[Math.floor(Math.random() * ls_cuddle.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: cuddle",
+              _query: req.query.q,
+              _url: __cuddle,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "cry":
-          fetch("https://waifu.pics/api/sfw/cry")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: cry",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __cry = ls_cry[Math.floor(Math.random() * ls_cry.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: cry",
+              _query: req.query.q,
+              _url: __cry,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "hug":
-          fetch("https://waifu.pics/api/sfw/hug")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: hug",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __hug = ls_hug[Math.floor(Math.random() * ls_hug.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: hug",
+              _query: req.query.q,
+              _url: __hug,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "awoo":
-          fetch("https://waifu.pics/api/sfw/awoo")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: awoo",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __awoo = ls_awoo[Math.floor(Math.random() * ls_awoo.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: awoo",
+              _query: req.query.q,
+              _url: __awoo,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "kiss":
-          fetch("https://waifu.pics/api/sfw/kiss")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: kiss",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __kiss = ls_kiss[Math.floor(Math.random() * ls_kiss.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: kiss",
+              _query: req.query.q,
+              _url: __kiss,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "lick":
-          fetch("https://waifu.pics/api/sfw/lick")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: lick",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __lick = ls_lick[Math.floor(Math.random() * ls_lick.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: lick",
+              _query: req.query.q,
+              _url: __lick,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "pat":
-          fetch("https://waifu.pics/api/sfw/pat")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: yeet",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __pat = ls_pat[Math.floor(Math.random() * ls_pat.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: yeet",
+              _query: req.query.q,
+              _url: __pat,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "smug":
-          fetch("https://waifu.pics/api/sfw/smug")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: smug",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __smug = ls_smug[Math.floor(Math.random() * ls_smug.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: smug",
+              _query: req.query.q,
+              _url: __smug,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "bonk":
-          fetch("https://waifu.pics/api/sfw/bonk")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: bonk",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __bonk = ls_bonk[Math.floor(Math.random() * ls_bonk.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: bonk",
+              _query: req.query.q,
+              _url: __bonk,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "yeet":
-          fetch("https://waifu.pics/api/sfw/yeet")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: yeet",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __yeet = ls_yeet[Math.floor(Math.random() * ls_yeet.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: yeet",
+              _query: req.query.q,
+              _url: __yeet,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "blush":
-          fetch("https://waifu.pics/api/sfw/blush")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: blush",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __blush = ls_blush[Math.floor(Math.random() * ls_blush.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: blush",
+              _query: req.query.q,
+              _url: __blush,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "smile":
-          fetch("https://waifu.pics/api/sfw/smile")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: smile",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __smile = ls_smile[Math.floor(Math.random() * ls_smile.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: smile",
+              _query: req.query.q,
+              _url: __smile,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "wave":
-          fetch("https://waifu.pics/api/sfw/wave")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: wave",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __wave = ls_wave[Math.floor(Math.random() * ls_wave.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: wave",
+              _query: req.query.q,
+              _url: __wave,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "highfive":
-          fetch("https://waifu.pics/api/sfw/highfive")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: highfive",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __highfive =
+            ls_highfive[Math.floor(Math.random() * ls_highfive.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: highfive",
+              _query: req.query.q,
+              _url: __highfive,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "handhold":
-          fetch("https://waifu.pics/api/sfw/handhold")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: handhold",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __handhold =
+            ls_handhold[Math.floor(Math.random() * ls_handhold.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: handhold",
+              _query: req.query.q,
+              _url: __handhold,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "nom":
-          fetch("https://waifu.pics/api/sfw/nom")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: nom",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __nom = ls_nom[Math.floor(Math.random() * ls_nom.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: nom",
+              _query: req.query.q,
+              _url: __nom,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "bite":
-          fetch("https://waifu.pics/api/sfw/bite")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: bite",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __bite = ls_bite[Math.floor(Math.random() * ls_bite.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: bite",
+              _query: req.query.q,
+              _url: __bite,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "glomp":
-          fetch("https://waifu.pics/api/sfw/glomp")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: glomp",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __glomp = ls_glomp[Math.floor(Math.random() * ls_glomp.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: glomp",
+              _query: req.query.q,
+              _url: __glomp,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "slap":
-          fetch("https://waifu.pics/api/sfw/slap")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: slap",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __slap = ls_slap[Math.floor(Math.random() * ls_slap.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: slap",
+              _query: req.query.q,
+              _url: __slap,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "kill":
-          fetch("https://waifu.pics/api/sfw/kill")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: kill",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __kill = ls_kill[Math.floor(Math.random() * ls_kill.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: kill",
+              _query: req.query.q,
+              _url: __kill,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "kick":
-          fetch("https://waifu.pics/api/sfw/kick")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: kick",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __kick = ls_kick[Math.floor(Math.random() * ls_kick.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: kick",
+              _query: req.query.q,
+              _url: __kick,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "happy":
-          fetch("https://waifu.pics/api/sfw/happy")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: happy",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __happy = ls_happy[Math.floor(Math.random() * ls_happy.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: happy",
+              _query: req.query.q,
+              _url: __happy,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "wink":
-          fetch("https://waifu.pics/api/sfw/wink")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: wink",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __wink = ls_wink[Math.floor(Math.random() * ls_wink.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: wink",
+              _query: req.query.q,
+              _url: __wink,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "poke":
-          fetch("https://waifu.pics/api/sfw/poke")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: poke",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __poke = ls_poke[Math.floor(Math.random() * ls_poke.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: poke",
+              _query: req.query.q,
+              _url: __poke,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "dance":
-          fetch("https://waifu.pics/api/sfw/dance")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: dance",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __dance = ls_dance[Math.floor(Math.random() * ls_dance.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: dance",
+              _query: req.query.q,
+              _url: __dance,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         case "cringe":
-          fetch("https://waifu.pics/api/sfw/cringe")
-            .then((res) => res.json())
-            .then(async (json: any) => {
-              var _Found = [
-                {
-                  _status: "🎊success",
-                  _uuid: uuidv4(),
-                  _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-                  _topic: "[ SFW IMAGES ]: cringe",
-                  _query: req.query.q,
-                  _url: await shorten(json.url),
-                },
-              ];
-              logger.info(_Found);
-              return res.send(_Found);
-            });
+          var __cringe =
+            ls_cringe[Math.floor(Math.random() * ls_cringe.length)];
+          _Found = [
+            {
+              _status: "🎊success",
+              _uuid: uuidv4(),
+              _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+              _topic: "[ SFW IMAGES ]: cringe",
+              _query: req.query.q,
+              _url: __cringe,
+            },
+          ];
+          logger.info(_Found);
+          res.send(_Found);
           break;
         default:
           res.send({
