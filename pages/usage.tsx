@@ -1,13 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+const OngoingAnime = dynamic(() => import("../components/examples/OngoingAnime"));
 const Text2Speech = dynamic(() => import("../components/examples/Text2Speech"));
 const Youtube_dl = dynamic(() => import("../components/examples/Youtube_dl"));
 const Youtube_sr = dynamic(() => import("../components/examples/Youtube_sr"));
-const Emotions = dynamic(() => import("../components/examples/Emotions"));
 const Wallpaper = dynamic(() => import("../components/examples/Wallpaper"));
 const Pinterest = dynamic(() => import("../components/examples/Pinterest"));
 const Unsplash = dynamic(() => import("../components/examples/Unsplash"));
+const Emotions = dynamic(() => import("../components/examples/Emotions"));
 const Shorten = dynamic(() => import("../components/examples/Shorten"));
 const Hentai = dynamic(() => import("../components/examples/Hentai"));
 const Anime = dynamic(() => import("../components/examples/Anime"));
@@ -162,12 +163,10 @@ export default function magneum() {
                     </span>
                     <br></br>
                     <span className="text-blue-200 italic">
-                      bite, blush, bonk, bully, bored, confused, cry, cuddle,
-                      dance, goodnight<br></br>
+                      bite, bonk, bored, confused, cry, cuddle, dance,<br></br>
                       happy, highfive, hug, kick, kill, kiss, nervous, pat,
                       poke, punch, sad, scream<br></br>
-                      slap, smile, stare, wave, wink, yeet, yes, zerotwo,
-                      thinking
+                      slap, smile, stare, wave, wink, yeet, thinking
                     </span>
                     <br></br>
                   </p>
@@ -436,7 +435,7 @@ export default function magneum() {
               height: 1,
             }}
           />
-          {/* =========================================================================================== */}
+          {/* ============================================================================================================== */}
           <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="grid gap-10 row-gap-8 lg:grid-cols-5">
               <div className="lg:col-span-2">
@@ -556,7 +555,8 @@ export default function magneum() {
                       awoo, kiss<br></br>
                       lick, pat, smug, bonk, yeet, blush, smile, wave, highfive,
                       nom, bite, glomp<br></br>
-                      slap, kill, kick, happy, wink, poke, dance, cringe
+                      slap, kill, kick, happy, wink, poke, dance, cringe,
+                      handhold
                     </span>
                     <br></br>
                   </p>
@@ -868,6 +868,70 @@ export default function magneum() {
                   <p className="font-serif text-3xl font-extrabold leading-none tracking-tight text-blue-300">
                     <span className="text-white animate-ping text-5xl">● </span>
                     <span className="text-blue-300 decoration-blue-800 underline">
+                      Api/OngoingAnime
+                    </span>
+                  </p>
+                  <br></br>
+                  <Image
+                    className="lg:h-48 md:h-36 w-full object-cover object-center rounded-lg border border-blue-900 shadow-sm shadow-blue-900"
+                    src="/gify.gif"
+                    alt="blob"
+                    width={500}
+                    height={500}
+                  ></Image>
+                </div>
+              </div>
+              <div className="flex flex-col space-y-8 lg:col-span-3">
+                <div>
+                  <div className="mb-3">
+                    <p className="font-sans text-2xl font-extrabold leading-none tracking-tight lg:text-2xl text-blue-600">
+                      - Informator:
+                    </p>
+                  </div>
+                  <p className="mb-4 text-base text-blue-50 md:text-lg">
+                    <span className="text-blue-200 font-semibold">
+                      Use this module to get all latest on going anime.
+                    </span>
+                    <br></br>
+                    <span className="text-blue-500 font-semibold">
+                      ● endpoint:{" "}
+                    </span>
+                    /api/ongoinganime<br></br>
+                  </p>
+                </div>
+                <div>
+                  <div className="mb-3">
+                    <p className="font-sans text-2xl font-extrabold leading-none tracking-tight lg:text-2xl text-blue-600">
+                      - Code Examples
+                    </p>
+                  </div>
+                  <p className="mb-4 text-base text-blue-50 md:text-lg">
+                    <span className="text-blue-200 font-semibold">
+                      Examples are demonstrated using javascript & typescript.
+                    </span>
+                    <br></br>
+                    <br></br>
+                    <OngoingAnime />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr
+            className="blur animate-pulse"
+            style={{
+              backgroundColor: "#ffff",
+              height: 1,
+            }}
+          />
+          {/* ============================================================================================================== */}
+          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="grid gap-10 row-gap-8 lg:grid-cols-5">
+              <div className="lg:col-span-2">
+                <div className="mb-3">
+                  <p className="font-serif text-3xl font-extrabold leading-none tracking-tight text-blue-300">
+                    <span className="text-white animate-ping text-5xl">● </span>
+                    <span className="text-blue-300 decoration-blue-800 underline">
                       Api/Hentai
                     </span>
                   </p>
@@ -908,11 +972,10 @@ export default function magneum() {
                     <br></br>
                     <span className="text-blue-200 italic">
                       ass, bdsm, blowjob, cum, doujin, feet, femdom, foxgirl,
-                      glasses, hentai<br></br>
+                      hentai<br></br>
                       netorare, maid, masturbation, orgy, panties, pussy,
-                      school, succubus, tentacles, thighs, uglyBastard, uniform
-                      <br></br>
-                      yuri, zettaiRyouiki
+                      school, succubus,<br></br>
+                      tentacles, thighs, uglyBastard, uniform, yuri<br></br>
                     </span>
                     <br></br>
                   </p>
