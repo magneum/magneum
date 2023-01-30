@@ -173,9 +173,23 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     if (q) {
       const Query: any = await YouTube_Sr(q);
       const QueryFound: any = Query.videos.slice(0, 1);
-      const _maker: any = await YouTube_Genre(QueryFound[0].url);
       const Queryrslt: any = QueryFound;
-      if (quality === "1080p") {
+      if (quality === "music") {
+        let stream: any = await singer.stream(QueryFound[0].url);
+        const _Found = [
+          {
+            type: "[ AUDIO ]: 128kbps",
+            quick_dl: await shorten(stream.url),
+            YT_ID: Queryrslt[0].videoId,
+            TITLE: Queryrslt[0].title,
+            LINK: Queryrslt[0].url,
+            THUMB: Queryrslt[0].thumbnail,
+            HQ_IMAGE: Queryrslt[0].image,
+          },
+        ];
+        logger.info(_Found);
+        return res.send(_Found);
+      } else if (quality === "1080p") {
         const _Found = [
           {
             type: "[ VIDEO ]: 1080p",
@@ -278,7 +292,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         logger.info(_Found);
         return res.send(_Found);
       } else if (quality === "128kbps") {
-        let stream = await singer.stream("https://youtu.be/RpHIdB7i0oM");
+        let stream: any = await singer.stream("https://youtu.be/RpHIdB7i0oM");
         const _Found = [
           {
             type: "[ AUDIO ]: 128kbps",

@@ -3974,6 +3974,18 @@ pify@^2.3.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
 
+play-audio@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/play-audio/-/play-audio-0.5.2.tgz#191dd45b95ff64ae20bbd718671da4e987d4edd1"
+  integrity sha512-ZAqHUKkQLix2Iga7pPbsf1LpUoBjcpwU93F1l3qBIfxYddQLhxS6GKmS0d3jV8kSVaUbr6NnOEcEMFvuX93SWQ==
+
+play-dl@^1.9.6:
+  version "1.9.6"
+  resolved "https://registry.yarnpkg.com/play-dl/-/play-dl-1.9.6.tgz#32722bfe5b71e298e47faa8dcf098730ad9da56a"
+  integrity sha512-JW44bQbME9fNfGhGXQ/rdcsHr4BfgJabVlSgpS9QY/NscfprFH1asv+q9atrZThP3+hHIpgtFNABccg9rFWlwg==
+  dependencies:
+    play-audio "^0.5.2"
+
 popmotion@11.0.3:
   version "11.0.3"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-11.0.3.tgz#565c5f6590bbcddab7a33a074bb2ba97e24b0cc9"
