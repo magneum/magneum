@@ -1,5 +1,7 @@
 import got from "got";
 import moment from "moment";
+import singer from "play-dl";
+import { shorten } from "tinyurl";
 import YouTube_Sr from "yt-search";
 import logger from "../../services";
 import { v4 as uuidv4 } from "uuid";
@@ -276,13 +278,14 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         logger.info(_Found);
         return res.send(_Found);
       } else if (quality === "128kbps") {
+        let stream = await singer.stream("https://youtu.be/RpHIdB7i0oM");
         const _Found = [
           {
             type: "[ AUDIO ]: 128kbps",
             id: _maker.id,
             title: _maker.title,
             size: _maker.audio["128kbps"].Fsize,
-            quick_dl: await _maker.audio["128kbps"].download(),
+            quick_dl: await shorten(stream.url),
             YT_ID: Queryrslt[0].videoId,
             TITLE: Queryrslt[0].title,
             LINK: Queryrslt[0].url,
@@ -298,8 +301,10 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           _message: "Please provide download quality",
           _uuid: uuidv4(),
           _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-          _example:
-            "YouTube(url, quality).then((data) => {console.log(data)});",
+          _example: [
+            "/api/youtube_dl?q=ncs music 5 minutes&quality=1080p",
+            "/api/youtube_dl?q=ncs music 5 minutes&quality=128kbps",
+          ],
           _usage: [
             {
               _1080p: "'https://youtu.be/need_arg', '1080p'",
@@ -319,7 +324,10 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         _message: "Please provide download quality",
         _uuid: uuidv4(),
         _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-        _example: "YouTube(url, quality).then((data) => {console.log(data)});",
+        _example: [
+          "/api/youtube_dl?q=ncs music 5 minutes&quality=1080p",
+          "/api/youtube_dl?q=ncs music 5 minutes&quality=128kbps",
+        ],
         _usage: [
           {
             _1080p: "'https://youtu.be/need_arg', '1080p'",
