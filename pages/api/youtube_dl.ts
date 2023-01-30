@@ -178,127 +178,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         let stream: any = await singer.stream(QueryFound[0].url);
         const _Found = [
           {
-            type: "[ AUDIO ]: 128kbps",
-            quick_dl: await shorten(stream.url),
-            YT_ID: Queryrslt[0].videoId,
-            TITLE: Queryrslt[0].title,
-            LINK: Queryrslt[0].url,
-            THUMB: Queryrslt[0].thumbnail,
-            HQ_IMAGE: Queryrslt[0].image,
-          },
-        ];
-        logger.info(_Found);
-        return res.send(_Found);
-      } else if (quality === "1080p") {
-        const _Found = [
-          {
-            type: "[ VIDEO ]: 1080p",
-            id: _maker.id,
-            title: _maker.title,
-            size: _maker.video["1080p"].Fsize,
-            quick_dl: await _maker.video["1080p"].download(),
-            YT_ID: Queryrslt[0].videoId,
-            TITLE: Queryrslt[0].title,
-            LINK: Queryrslt[0].url,
-            THUMB: Queryrslt[0].thumbnail,
-            HQ_IMAGE: Queryrslt[0].image,
-          },
-        ];
-        logger.info(_Found);
-        return res.send(_Found);
-      } else if (quality === "720p") {
-        const _Found = [
-          {
-            type: "[ VIDEO ]: 720p",
-            id: _maker.id,
-            title: _maker.title,
-            size: _maker.video["720p"].Fsize,
-            quick_dl: await _maker.video["720p"].download(),
-            YT_ID: Queryrslt[0].videoId,
-            TITLE: Queryrslt[0].title,
-            LINK: Queryrslt[0].url,
-            THUMB: Queryrslt[0].thumbnail,
-            HQ_IMAGE: Queryrslt[0].image,
-          },
-        ];
-        logger.info(_Found);
-        return res.send(_Found);
-      } else if (quality === "480p") {
-        const _Found = [
-          {
-            type: "[ VIDEO ]: 480p",
-            id: _maker.id,
-            title: _maker.title,
-            size: _maker.video["480p"].Fsize,
-            quick_dl: await _maker.video["480p"].download(),
-            YT_ID: Queryrslt[0].videoId,
-            TITLE: Queryrslt[0].title,
-            LINK: Queryrslt[0].url,
-            THUMB: Queryrslt[0].thumbnail,
-            HQ_IMAGE: Queryrslt[0].image,
-          },
-        ];
-        logger.info(_Found);
-        return res.send(_Found);
-      } else if (quality === "360p") {
-        const _Found = [
-          {
-            type: "[ VIDEO ]: 360p",
-            id: _maker.id,
-            title: _maker.title,
-            size: _maker.video["360p"].Fsize,
-            quick_dl: await _maker.video["360p"].download(),
-            YT_ID: Queryrslt[0].videoId,
-            TITLE: Queryrslt[0].title,
-            LINK: Queryrslt[0].url,
-            THUMB: Queryrslt[0].thumbnail,
-            HQ_IMAGE: Queryrslt[0].image,
-          },
-        ];
-        logger.info(_Found);
-        return res.send(_Found);
-      } else if (quality === "240p") {
-        const _Found = [
-          {
-            type: "[ VIDEO ]: 240p",
-            id: _maker.id,
-            title: _maker.title,
-            size: _maker.video["240p"].Fsize,
-            quick_dl: await _maker.video["240p"].download(),
-            YT_ID: Queryrslt[0].videoId,
-            TITLE: Queryrslt[0].title,
-            LINK: Queryrslt[0].url,
-            THUMB: Queryrslt[0].thumbnail,
-            HQ_IMAGE: Queryrslt[0].image,
-          },
-        ];
-        logger.info(_Found);
-        return res.send(_Found);
-      } else if (quality === "144p") {
-        const _Found = [
-          {
-            type: "[ VIDEO ]: 144p",
-            id: _maker.id,
-            title: _maker.title,
-            size: _maker.video["144p"].Fsize,
-            quick_dl: await _maker.video["144p"].download(),
-            YT_ID: Queryrslt[0].videoId,
-            TITLE: Queryrslt[0].title,
-            LINK: Queryrslt[0].url,
-            THUMB: Queryrslt[0].thumbnail,
-            HQ_IMAGE: Queryrslt[0].image,
-          },
-        ];
-        logger.info(_Found);
-        return res.send(_Found);
-      } else if (quality === "128kbps") {
-        let stream: any = await singer.stream("https://youtu.be/RpHIdB7i0oM");
-        const _Found = [
-          {
-            type: "[ AUDIO ]: 128kbps",
-            id: _maker.id,
-            title: _maker.title,
-            size: _maker.audio["128kbps"].Fsize,
+            type: "[ AUDIO ]: highest quality",
             quick_dl: await shorten(stream.url),
             YT_ID: Queryrslt[0].videoId,
             TITLE: Queryrslt[0].title,
@@ -310,27 +190,150 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         logger.info(_Found);
         return res.send(_Found);
       } else {
-        return res.send({
-          _status: "Failed with error code 911",
-          _message: "Please provide download quality",
-          _uuid: uuidv4(),
-          _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-          _example: [
-            "/api/youtube_dl?q=ncs music 5 minutes&quality=1080p",
-            "/api/youtube_dl?q=ncs music 5 minutes&quality=128kbps",
-          ],
-          _usage: [
+        const _maker: any = await YouTube_Genre(QueryFound[0].url);
+        if (quality === "1080p") {
+          const _Found = [
             {
-              _1080p: "'https://youtu.be/need_arg', '1080p'",
-              _720p: "'https://youtu.be/need_arg', '720p'",
-              _480p: "'https://youtu.be/need_arg', '480p'",
-              _360p: "'https://youtu.be/need_arg', '360p'",
-              _240p: "'https://youtu.be/need_arg', '144p'",
-              _144p: "'https://youtu.be/need_arg', '144p'",
-              _128kbps: "'https://youtu.be/need_arg', '128kbps'",
+              type: "[ VIDEO ]: 1080p",
+              id: _maker.id,
+              title: _maker.title,
+              size: _maker.video["1080p"].Fsize,
+              quick_dl: await _maker.video["1080p"].download(),
+              YT_ID: Queryrslt[0].videoId,
+              TITLE: Queryrslt[0].title,
+              LINK: Queryrslt[0].url,
+              THUMB: Queryrslt[0].thumbnail,
+              HQ_IMAGE: Queryrslt[0].image,
             },
-          ],
-        });
+          ];
+          logger.info(_Found);
+          return res.send(_Found);
+        } else if (quality === "720p") {
+          const _Found = [
+            {
+              type: "[ VIDEO ]: 720p",
+              id: _maker.id,
+              title: _maker.title,
+              size: _maker.video["720p"].Fsize,
+              quick_dl: await _maker.video["720p"].download(),
+              YT_ID: Queryrslt[0].videoId,
+              TITLE: Queryrslt[0].title,
+              LINK: Queryrslt[0].url,
+              THUMB: Queryrslt[0].thumbnail,
+              HQ_IMAGE: Queryrslt[0].image,
+            },
+          ];
+          logger.info(_Found);
+          return res.send(_Found);
+        } else if (quality === "480p") {
+          const _Found = [
+            {
+              type: "[ VIDEO ]: 480p",
+              id: _maker.id,
+              title: _maker.title,
+              size: _maker.video["480p"].Fsize,
+              quick_dl: await _maker.video["480p"].download(),
+              YT_ID: Queryrslt[0].videoId,
+              TITLE: Queryrslt[0].title,
+              LINK: Queryrslt[0].url,
+              THUMB: Queryrslt[0].thumbnail,
+              HQ_IMAGE: Queryrslt[0].image,
+            },
+          ];
+          logger.info(_Found);
+          return res.send(_Found);
+        } else if (quality === "360p") {
+          const _Found = [
+            {
+              type: "[ VIDEO ]: 360p",
+              id: _maker.id,
+              title: _maker.title,
+              size: _maker.video["360p"].Fsize,
+              quick_dl: await _maker.video["360p"].download(),
+              YT_ID: Queryrslt[0].videoId,
+              TITLE: Queryrslt[0].title,
+              LINK: Queryrslt[0].url,
+              THUMB: Queryrslt[0].thumbnail,
+              HQ_IMAGE: Queryrslt[0].image,
+            },
+          ];
+          logger.info(_Found);
+          return res.send(_Found);
+        } else if (quality === "240p") {
+          const _Found = [
+            {
+              type: "[ VIDEO ]: 240p",
+              id: _maker.id,
+              title: _maker.title,
+              size: _maker.video["240p"].Fsize,
+              quick_dl: await _maker.video["240p"].download(),
+              YT_ID: Queryrslt[0].videoId,
+              TITLE: Queryrslt[0].title,
+              LINK: Queryrslt[0].url,
+              THUMB: Queryrslt[0].thumbnail,
+              HQ_IMAGE: Queryrslt[0].image,
+            },
+          ];
+          logger.info(_Found);
+          return res.send(_Found);
+        } else if (quality === "144p") {
+          const _Found = [
+            {
+              type: "[ VIDEO ]: 144p",
+              id: _maker.id,
+              title: _maker.title,
+              size: _maker.video["144p"].Fsize,
+              quick_dl: await _maker.video["144p"].download(),
+              YT_ID: Queryrslt[0].videoId,
+              TITLE: Queryrslt[0].title,
+              LINK: Queryrslt[0].url,
+              THUMB: Queryrslt[0].thumbnail,
+              HQ_IMAGE: Queryrslt[0].image,
+            },
+          ];
+          logger.info(_Found);
+          return res.send(_Found);
+        } else if (quality === "128kbps") {
+          let stream: any = await singer.stream("https://youtu.be/RpHIdB7i0oM");
+          const _Found = [
+            {
+              type: "[ AUDIO ]: 128kbps",
+              id: _maker.id,
+              title: _maker.title,
+              size: _maker.audio["128kbps"].Fsize,
+              quick_dl: await shorten(stream.url),
+              YT_ID: Queryrslt[0].videoId,
+              TITLE: Queryrslt[0].title,
+              LINK: Queryrslt[0].url,
+              THUMB: Queryrslt[0].thumbnail,
+              HQ_IMAGE: Queryrslt[0].image,
+            },
+          ];
+          logger.info(_Found);
+          return res.send(_Found);
+        } else {
+          return res.send({
+            _status: "Failed with error code 911",
+            _message: "Please provide download quality",
+            _uuid: uuidv4(),
+            _date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+            _example: [
+              "/api/youtube_dl?q=ncs music 5 minutes&quality=1080p",
+              "/api/youtube_dl?q=ncs music 5 minutes&quality=128kbps",
+            ],
+            _usage: [
+              {
+                _1080p: "'https://youtu.be/need_arg', '1080p'",
+                _720p: "'https://youtu.be/need_arg', '720p'",
+                _480p: "'https://youtu.be/need_arg', '480p'",
+                _360p: "'https://youtu.be/need_arg', '360p'",
+                _240p: "'https://youtu.be/need_arg', '144p'",
+                _144p: "'https://youtu.be/need_arg', '144p'",
+                _128kbps: "'https://youtu.be/need_arg', '128kbps'",
+              },
+            ],
+          });
+        }
       }
     } else {
       return res.send({
