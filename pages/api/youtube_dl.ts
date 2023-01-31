@@ -179,7 +179,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         const _Found = [
           {
             type: "[ AUDIO ]: highest quality",
-            quick_dl: await shorten(stream.url),
+            quick_dl: stream.url,
             YT_ID: Queryrslt[0].videoId,
             TITLE: Queryrslt[0].title,
             LINK: Queryrslt[0].url,
