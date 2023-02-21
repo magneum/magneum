@@ -15,12 +15,12 @@ return (
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" href="/favicon.ico" />
 </Head>
-<main className="font-serif">
+<main className="">
 <header className="font-serif text-orange-100 body-font">
 <div className="relative">
 <Image
-src="/anime_orange.jpg"
-className="absolute inset-0 object-cover w-full h-full blur-xl"
+src="/magneum_ui.png"
+className="absolute inset-0 object-cover w-full h-full md:blur-sm lg:blur-sm xl:blur-sm"
 alt="content"
 width={1270}
 height={720}
@@ -61,11 +61,11 @@ Magneum-Api
 <hr
 className="blur animate-pulse"
 style={{
-backgroundColor: "#FF7300 ",
+backgroundColor: "#42231b ",
 height: 4,
 }}
 />
-<section className="text-orange-600 body-font bg-gradient-to-br from-[#202020] via-[#1f1414] to-[#141414] backdrop-blur-2xl">
+<section className="text-orange-600 body-font bg-gradient-to-br from-[#202020] via-[#1f1414] to-[#141414]">
 <div className="container px-5 py-24 mx-auto">
 <div className="flex flex-col">
 <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
@@ -245,7 +245,7 @@ software that hosts the containers is called Docker Engine.
 <hr
 className="blur animate-pulse"
 style={{
-backgroundColor: "#FF7300 ",
+backgroundColor: "#42231b ",
 height: 4,
 }}
 />
