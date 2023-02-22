@@ -65,7 +65,8 @@ backgroundColor: "#42231b ",
 height: 4,
 }}
 />
-<section className="text-orange-600 body-font bg-gradient-to-br from-[#202020] via-[#1f1414] to-[#141414]">
+{/* bg-gradient-to-br from-[#202020] via-[#1f1414] to-[#141414] */}
+<section className="text-orange-600 body-font bg-stone-900">
 <div className="container px-5 py-24 mx-auto">
 <div className="flex flex-col">
 <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
