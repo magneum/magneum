@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {
@@ -32,6 +30,8 @@ module.exports = {
   plugins: [
     require("daisyui"),
     require("preline/plugin"),
+    require("flowbite/plugin"),
     require("@tailwindcss/forms"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
   ],
 };
