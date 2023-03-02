@@ -6,11 +6,11 @@
 
 <p align="left"> <a href="https://twitter.com/magneum" target="blank"><img src="https://img.shields.io/twitter/follow/magneum?logo=twitter&style=for-the-badge" alt="magneum" /></a> </p>
 
-- 🔭 I’m currently working on [magneum api](bit.ly/magneum)
+- 🔭 I’m currently working on [magneum api](https://bit.ly/magneum)
 
 - 🌱 I’m currently learning **Nextjs, React, DSA, Java, C++, Python**
 
-- 👨‍💻 All of my projects are available at [bit.ly/magneum](bit.ly/magneum)
+- 👨‍💻 All of my projects are available at [bit.ly/magneum](https://bit.ly/magneum)
 
 - 📫 How to reach me **krakinzkon@gmail.com**
 
