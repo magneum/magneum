@@ -1,34 +1,20 @@
-/** @type {import('next').NextConfig} */
-// const withPWA = require("next-pwa")({
-// dest: "public",
-// });
+/** @type {import("next").NextConfig} */
 
-// module.exports = withPWA({
-// typescript: {
-// ignoreBuildErrors: true,
-// },
-// reactStrictMode: true,
-// images: {
-// domains: [
-// "user-images.githubusercontent.com",
-// "cdn.myanimelist.net",
-// "i.ytimg.com",
-// ],
-// },
-// });
-
-const nextConfig = {
-reactStrictMode: true,
-images: {
-domains: [
-"user-images.githubusercontent.com",
-"cdn.myanimelist.net",
-"i.ytimg.com",
-],
-},
-typescript: {
-ignoreBuildErrors: true,
-},
+module.exports = {
+  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
+  images: {
+    domains: [
+      "user-images.githubusercontent.com",
+      "avatars.githubusercontent.com",
+      "cdn.myanimelist.net",
+      "i.ytimg.com",
+      "i.scdn.co",
+    ],
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
 };
-
-module.exports = nextConfig;

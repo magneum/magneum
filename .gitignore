@@ -30,8 +30,6 @@ yarn-error.log*
 
 # vercel
 .vercel
-all.log
-error.log
 
 # typescript
 *.tsbuildinfo

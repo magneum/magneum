@@ -3,10 +3,9 @@ import https from "https";
 import moment from "moment";
 import singer from "play-dl";
 import YouTube_Sr from "yt-search";
-import logger from "../../services";
+import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
-
 
 function shorten(url: any) {
 https.get(
@@ -135,7 +134,8 @@ vt: "home",
 ).json();
 if (!json) return reject(new Error("Sorry no json found!"));
 const Video_obj: any = {};
-Object.values(json.links.mp4).forEach(({ k, size }) => {
+Object.values(json.links.mp4).forEach((data: any) => {
+const { k, size } = data;
 Video_obj[k] = {
 quality: k,
 Fsize: size,
@@ -152,7 +152,8 @@ json.fn
 };
 });
 const Audio_obj: any = {};
-Object.values(json.links.mp3).forEach(({ key, size }) => {
+Object.values(json.links.mp3).forEach((data: any) => {
+const { key, size } = data;
 Audio_obj[key] = {
 quality: key,
 Fsize: size,

@@ -1,5 +1,5 @@
 import moment from "moment";
-import logger from "../../services";
+import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
 const malScraper = require("mal-scraper");
 import type { NextApiRequest, NextApiResponse } from "next";

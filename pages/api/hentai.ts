@@ -1,31 +1,31 @@
 import moment from "moment";
-import logger from "../../services";
+import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 // Local Storage For imports of all local.jsons
-import ls_ass from "../../src/hentai/ass.json";
-import ls_cum from "../../src/hentai/cum.json";
-import ls_bdsm from "../../src/hentai/bdsm.json";
-import ls_feet from "../../src/hentai/feet.json";
-import ls_maid from "../../src/hentai/maid.json";
-import ls_orgy from "../../src/hentai/orgy.json";
-import ls_yuri from "../../src/hentai/yuri.json";
-import ls_pussy from "../../src/hentai/pussy.json";
-import ls_hentai from "../../src/hentai/hentai.json";
-import ls_doujin from "../../src/hentai/doujin.json";
-import ls_femdom from "../../src/hentai/femdom.json";
-import ls_thighs from "../../src/hentai/thighs.json";
-import ls_school from "../../src/hentai/school.json";
-import ls_blowjob from "../../src/hentai/blowjob.json";
-import ls_foxgirl from "../../src/hentai/foxgirl.json";
-import ls_panties from "../../src/hentai/panties.json";
-import ls_uniform from "../../src/hentai/uniform.json";
-import ls_succubus from "../../src/hentai/succubus.json";
-import ls_netorare from "../../src/hentai/netorare.json";
-import ls_tentacles from "../../src/hentai/tentacles.json";
-import ls_uglyBastard from "../../src/hentai/uglyBastard.json";
-import ls_masturbation from "../../src/hentai/masturbation.json";
+import ls_ass from "../../lib/hentai/ass.json";
+import ls_cum from "../../lib/hentai/cum.json";
+import ls_bdsm from "../../lib/hentai/bdsm.json";
+import ls_feet from "../../lib/hentai/feet.json";
+import ls_maid from "../../lib/hentai/maid.json";
+import ls_orgy from "../../lib/hentai/orgy.json";
+import ls_yuri from "../../lib/hentai/yuri.json";
+import ls_pussy from "../../lib/hentai/pussy.json";
+import ls_hentai from "../../lib/hentai/hentai.json";
+import ls_doujin from "../../lib/hentai/doujin.json";
+import ls_femdom from "../../lib/hentai/femdom.json";
+import ls_thighs from "../../lib/hentai/thighs.json";
+import ls_school from "../../lib/hentai/school.json";
+import ls_blowjob from "../../lib/hentai/blowjob.json";
+import ls_foxgirl from "../../lib/hentai/foxgirl.json";
+import ls_panties from "../../lib/hentai/panties.json";
+import ls_uniform from "../../lib/hentai/uniform.json";
+import ls_succubus from "../../lib/hentai/succubus.json";
+import ls_netorare from "../../lib/hentai/netorare.json";
+import ls_tentacles from "../../lib/hentai/tentacles.json";
+import ls_uglyBastard from "../../lib/hentai/uglyBastard.json";
+import ls_masturbation from "../../lib/hentai/masturbation.json";
 
 let _Found: any;
 export default async function animation(

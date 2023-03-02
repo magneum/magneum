@@ -1,6 +1,6 @@
-import https from "https"
+import https from "https";
 import moment from "moment";
-import logger from "../../services";
+import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
 const validUrl = require("valid-url");
 import type { NextApiRequest, NextApiResponse } from "next";
