@@ -230,7 +230,7 @@ alt=""
 <div className="p-5">
 <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
 <a
-href="https://vlkyre.up.railway.app"
+href="https://vlkyre.up.railway.app/vlkyre"
 className="transition-colors duration-200 text-blue-gray-900 hover:text-lime-700"
 aria-label="Category"
 title="traveling"
@@ -240,7 +240,7 @@ traveling
 <span className="text-gray-600">— 🦇</span>
 </p>
 <a
-href="https://vlkyre.up.railway.app"
+href="https://vlkyre.up.railway.app/vlkyre"
 aria-label="Category"
 title="Visit the East"
 className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-lime-500/70 uppercase font-serif"
@@ -254,7 +254,7 @@ by using npm. To Find Out What Vlkyre Offers, Join Any Vlkyre
 Official Groups in vlkyre-home-page.
 </p>
 <a
-href="https://vlkyre.up.railway.app"
+href="https://vlkyre.up.railway.app/vlkyre"
 className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-lime-800 rounded-md cursor-pointer group shadow-xl shadow-lime-900 ease focus:outline-none hover:bg-lime-900"
 >
 <span className="mr-2">
