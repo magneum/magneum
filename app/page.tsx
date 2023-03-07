@@ -1,10 +1,10 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MdCode } from "react-icons/md";
 import EarthCanvas from "./test/canvas/Earth";
 import { useTypewriter as Typewriter } from "react-simple-typewriter";
-import Link from "next/link";
 
 export default function Home() {
 var [TypeHead] = Typewriter({
