@@ -1,5 +1,5 @@
+import logger from "@/log";
 import moment from "moment";
-import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
 const googleTTS = require("google-tts-api");
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -12,33 +12,31 @@ lang: "en",
 slow: false,
 host: "https://translate.google.com",
 });
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "Text To Speech",
-_query: req.query.q,
-_url: urlMedia,
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-} else {
-return res.send({
-_status: "Failed with error code 911",
-_message: "Parameters requirement not met.",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_usage: {
-_api_link: "/api/text2speech?q=",
-_example: "/api/text2speech?q=Hello. How are You?",
+meta: { topic: "Text To Speech", query: req.query.q, url: urlMedia },
+});
+} else
+return res.status(500).json({
+id: uuidv4(),
+status: false,
+message: "Arguments not satisfied.",
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+usage: {
+endpoint: "/api/text2speech?q=",
+example: "/api/text2speech?q=Hello. How are You?",
 },
 });
-}
 } catch (error: any) {
+logger.error(error.message);
 return res.status(500).json({
-status: "error",
+id: uuidv4(),
+status: false,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
 message: error.message,
 });
 }

@@ -1,7 +1,7 @@
 import got from "got";
 import https from "https";
+import logger from "@/log";
 import moment from "moment";
-import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -28,27 +28,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -58,27 +62,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -88,27 +96,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -118,27 +130,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -148,27 +164,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -178,27 +198,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -208,27 +232,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -238,27 +266,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -268,27 +300,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -298,27 +334,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -328,27 +368,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -358,27 +402,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -389,25 +437,31 @@ await got(
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 });
 break;
 case "sexygirls":
@@ -416,27 +470,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -446,27 +504,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -476,27 +538,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -506,27 +572,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -536,27 +606,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -566,27 +640,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -596,27 +674,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -626,27 +708,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -656,27 +742,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -686,27 +776,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -716,27 +810,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -747,27 +845,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -777,27 +879,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -807,27 +913,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -839,27 +949,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -869,27 +983,31 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
@@ -901,39 +1019,44 @@ async (Form) => {
 var FF = JSON.parse(Form.body);
 var FFLink = FF[0].data.children[0].data.url;
 if (FFLink) {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[NSFW Images]",
-_query: req.query.q,
-_url: await shorten(FFLink),
-_domain: FF[0].data.children[0].data.domain,
-_sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
-_title: FF[0].data.children[0].data.title,
-_author: FF[0].data.children[0].data.author,
-_thumbnail: FF[0].data.children[0].data.thumbnail,
-_web_link:
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+topic: "[NSFW Images]",
+query: req.query.q,
+url: shorten(FFLink),
+domain: FF[0].data.children[0].data.domain,
+sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
+title: FF[0].data.children[0].data.title,
+author: FF[0].data.children[0].data.author,
+thumbnail: FF[0].data.children[0].data.thumbnail,
+web_link:
 "https://www.reddit.com" +
 FF[0].data.children[0].data.permalink,
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-}
+});
+} else
+return res.status(500).json({
+status: false,
+message: "Server time error.",
+});
 }
 );
 break;
 default:
-res.send({
-_status: "Failed with error code 911",
-_message: "Parameters requirement not met.",
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_usage: {
-_api_link: "/api/nsfw?q=",
-_example: "/api/nsfw?q=ass",
-_querry: [
+res.status(500).json({
+id: uuidv4(),
+status: false,
+message: "Arguments not satisfied.",
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+usage: {
+endpoint: "/api/nsfw?q=",
+example: "/api/nsfw?q=ass",
+querry: [
 "nsfw",
 "nsfw2",
 "bonermaterial",
@@ -970,14 +1093,18 @@ _querry: [
 "cum",
 "slut",
 "cumslut",
+"cringe",
 ],
 },
 });
 break;
 }
 } catch (error: any) {
+logger.error(error.message);
 return res.status(500).json({
-status: "error",
+id: uuidv4(),
+status: false,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
 message: error.message,
 });
 }

@@ -1,7 +1,7 @@
 import axios from "axios";
+import logger from "@/log";
 import moment from "moment";
 import { load } from "cheerio";
-import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
 const malScraper = require("mal-scraper");
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -29,25 +29,31 @@ episode.push($(n).text());
 });
 for (let i = 0; i < thumbnail.length; i++) {
 result.push({
-_title: title[i],
-_thumbnail: thumbnail[i],
-_current: episode[i],
-_release: release[i],
-_webpage: webpage[i],
+title: title[i],
+thumbnail: thumbnail[i],
+current: episode[i],
+release: release[i],
+webpage: webpage[i],
 });
 }
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_animes: result,
+
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
 },
-];
-logger.info(_Found);
-return res.send(_Found);
+meta: {
+topic: "ANIME: on going",
+animes: result,
+},
+});
 } catch (error: any) {
+logger.error(error.message);
 return res.status(500).json({
-status: "error",
+id: uuidv4(),
+status: false,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
 message: error.message,
 });
 }

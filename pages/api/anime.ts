@@ -1,63 +1,72 @@
+import logger from "@/log";
 import moment from "moment";
-import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
-const malScraper = require("mal-scraper");
+var malScraper = require("mal-scraper");
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
 try {
 if (req.query.q) {
-malScraper.getInfoFromName(req.query.q).then((cobra: any) => {
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_mal_id: cobra.id,
-_title: cobra.title,
-_en_title: cobra.englishTitle,
-_jp_title: cobra.japaneseTitle,
-_image: cobra.picture,
-_premiered: cobra.premiered,
-_webpage: cobra.url,
-_broadcast: cobra.broadcast,
-_genres: cobra.genres,
-_type: cobra.type,
-_episodes: cobra.episodes,
-_rating: cobra.rating,
-_aired: cobra.aired,
-_score: cobra.score,
-_favourites: cobra.favorites,
-_rank: cobra.ranked,
-_duration: cobra.duration,
-_studios: cobra.studios,
-_producers: cobra.producers,
-_popularity: cobra.popularity,
-_members: cobra.members,
-_scores: cobra.scoreStats,
-_source: cobra.source,
-_synonyms: cobra.synonyms,
-_synopsis: cobra.synopsis,
-_characters: cobra.charaters,
-_staffs: cobra.staff,
-},
-];
-logger.info(_Found);
-return res.send(_Found);
-});
-} else {
-return res.send({
-_status: "Failed with error code 911",
-_message: "Parameters requirement not met.",
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_usage: {
-_api_link: "/api/youtube?q=",
-_example: ["/api/anime?q=death note"],
-},
-});
-}
-} catch (error: any) {
+var _resp: any = await malScraper.getInfoFromName(req.query.q);
+if (!_resp) {
 return res.status(500).json({
-status: "error",
+status: false,
+message: "Server time error.",
+});
+} else
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+},
+meta: {
+id_mal: _resp.id,
+title: _resp.title,
+en_title: _resp.englishTitle,
+jp_title: _resp.japaneseTitle,
+image: _resp.picture,
+premiered: _resp.premiered,
+webpage: _resp.url,
+broadcast: _resp.broadcast,
+genres: _resp.genres,
+type: _resp.type,
+episodes: _resp.episodes,
+rating: _resp.rating,
+aired: _resp.aired,
+score: _resp.score,
+favourites: _resp.favorites,
+rank: _resp.ranked,
+duration: _resp.duration,
+studios: _resp.studios,
+producers: _resp.producers,
+popularity: _resp.popularity,
+members: _resp.members,
+scores: _resp.scoreStats,
+source: _resp.source,
+synonyms: _resp.synonyms,
+synopsis: _resp.synopsis,
+characters: _resp.charaters,
+staffs: _resp.staff,
+},
+});
+} else
+return res.status(500).json({
+id: uuidv4(),
+status: false,
+message: "Arguments not satisfied.",
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+usage: {
+endpoint: "/api/anime?q=",
+example: ["/api/anime?q=death note"],
+},
+});
+} catch (error: any) {
+logger.error(error.message);
+return res.status(500).json({
+id: uuidv4(),
+status: false,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
 message: error.message,
 });
 }

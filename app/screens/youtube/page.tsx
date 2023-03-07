@@ -26,7 +26,7 @@ return `https://me3l9y-3003.preview.csb.app/video?video=${video}&audio=${audio}&
 var handleSubmit = async (event: any) => {
 setLoading(true);
 event.preventDefault();
-var crons = await axios.get(`/api/search?q=${userInput.current.value}`);
+var crons = await axios.get(`/api/youtube_sr?q=${userInput.current.value}`);
 if (!crons) {
 router.push("/router/YouTube_null/serYerr");
 setLoading(false);

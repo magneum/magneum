@@ -1,6 +1,6 @@
 import axios from "axios";
+import logger from "@/log";
 import moment from "moment";
-import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
 import { load as cLoad } from "cheerio";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -34,32 +34,35 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
 try {
 if (req.query.q) {
 const cobra = await Wallpaper_Flare(req.query.q);
-var _Found = [
-{
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "Wallpapers from Wallpaper Flare",
-_query: req.query.q,
-_links: cobra,
+return res.status(200).json({
+resp: {
+id: uuidv4(),
+status: true,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
 },
-];
-logger.info(_Found);
-return res.send(_Found);
-} else {
-return res.send({
-_status: "Failed with error code 911",
-_message: "Parameters requirement not met.",
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_usage: {
-_api_link: "/api/wallpaper?q=",
-_example: ["/api/wallpaper?q=dog"],
+meta: {
+topic: "Wallpapers from Wallpaper Flare",
+query: req.query.q,
+links: cobra,
 },
 });
-}
-} catch (error: any) {
+} else
 return res.status(500).json({
-status: "error",
+id: uuidv4(),
+status: false,
+message: "Arguments not satisfied.",
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+usage: {
+endpoint: "/api/wallpaper?q=",
+example: ["/api/wallpaper?q=dog"],
+},
+});
+} catch (error: any) {
+logger.error(error.message);
+return res.status(500).json({
+id: uuidv4(),
+status: false,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
 message: error.message,
 });
 }

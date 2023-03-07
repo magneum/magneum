@@ -1,6 +1,6 @@
+import logger from "@/log";
 import moment from "moment";
 import YouTube_Sr from "yt-search";
-import logger from "../../log";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -10,44 +10,44 @@ const query: any = req.query;
 const { q } = query;
 console.log(query);
 if (q) {
-let _Found;
+let Found;
 let Query: any = await YouTube_Sr(q);
 let QueryFound: any = Query.videos.slice(0, 1);
-QueryFound.forEach(function (response: any) {
-_Found = {
-_status: "🎊success",
-_uuid: uuidv4(),
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_topic: "[YouTube Meta Searcher]",
-_query: q,
-_youtube_search: [
+QueryFound.forEach(function (resp: any) {
+Found = {
+status: true,
+uuid: uuidv4(),
+date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+topic: "[YouTube Meta Searcher]",
+query: q,
+youtube_search: [
 {
-YT_ID: response.videoId,
-TITLE: response.title,
-UPLOADED: response.ago,
-VIEWS: response.views,
-DURATION_FULL: response.duration.timestamp,
-DURATION_SECONDS: response.duration.seconds,
-AUTHOR_NAME: response.author.name,
-AUTHOR_CHANNEL: response.author.url,
-LINK: response.url,
-THUMB: response.thumbnail,
-HQ_IMAGE: response.image,
-DESCRIPTION: response.description,
+YT_ID: resp.videoId,
+TITLE: resp.title,
+UPLOADED: resp.ago,
+VIEWS: resp.views,
+DURATION_FULL: resp.duration.timestamp,
+DURATION_SECONDS: resp.duration.seconds,
+AUTHOR_NAME: resp.author.name,
+AUTHOR_CHANNEL: resp.author.url,
+LINK: resp.url,
+THUMB: resp.thumbnail,
+HQ_IMAGE: resp.image,
+DESCRIPTION: resp.description,
 },
 ],
 };
 });
-logger.info(_Found);
-return res.send(_Found);
+logger.info(Found);
+return res.send(Found);
 } else {
 return res.send({
-_status: "Failed with error code 911",
-_message: "Parameters requirement not met.",
-_date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
-_usage: {
-_api_link: "/api/youtube_sr?q=",
-_example: [
+status: "Failed with error code 911",
+message: "Parameters requirement not met.",
+date_create: moment().format("DD-MM-YYYY hh:mm:ss"),
+usage: {
+endpoint: "/api/youtube_sr?q=",
+example: [
 "/api/youtube_sr?q=ncs music 5 minutes",
 "/api/youtube_sr?q=https://youtu.be/3gxus8LnMfI",
 ],
@@ -55,8 +55,11 @@ _example: [
 });
 }
 } catch (error: any) {
+logger.error(error.message);
 return res.status(500).json({
-status: "error",
+id: uuidv4(),
+status: false,
+timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
 message: error.message,
 });
 }
