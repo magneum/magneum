@@ -1,7 +1,6 @@
 "use client";
 import Cards from "./baseCards";
 import Craft from "./baseCraft";
-import StarsCanvas from "./canvas/Stars";
 import ComputersCanvas from "./canvas/Computers";
 
 export default function Home() {
@@ -9,7 +8,7 @@ export default function Home() {
     <div>
       <div
         className="bg-cover bg-no-repeat bg-center"
-        style={{ backgroundImage: `url("/nebula.gif")` }}
+        style={{ backgroundImage: `url("/space_blur_red.gif")` }}
       >
         <section className="relative w-full h-screen mx-auto">
           <div className="absolute inset-0 top-[120px]  max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5">
@@ -30,9 +29,6 @@ export default function Home() {
                   deserunt dolore sit minim sunt nostrud aliqua pariatur ad
                   officia.
                 </span>
-                <div className="flex items-center justify-center text-7xl rotate-180">
-                  <Craft />
-                </div>
               </p>
             </div>
           </div>
@@ -40,13 +36,9 @@ export default function Home() {
         </section>
       </div>
       <section id="Cards">
-        <hr className="h-1 bg-neutral-600/60 border-0" />
+        <hr className="h-1 bg-[#ff5e5e]/60 border-0" />
         <Cards />
       </section>
-
-      <div className="relative z-0">
-        <StarsCanvas />
-      </div>
     </div>
   );
 }
