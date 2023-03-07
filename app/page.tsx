@@ -1,11 +1,11 @@
 "use client";
-// import Cards from "./baseCards";
-// import Craft from "./baseCraft";
-// import { motion } from "framer-motion";
-// import { ComputersCanvas } from "./canvas";
+import Cards from "./baseCards";
+import Craft from "./baseCraft";
+import { motion } from "framer-motion";
+import { ComputersCanvas } from "./canvas";
 
 export default function Home() {
-  return <div>Hello</div>;
+  return;
 }
 
 {
