@@ -1,9 +1,12 @@
 import Craft from "./baseCraft";
 import Cards from "./baseCards";
+import { motion } from "framer-motion";
+import { ComputersCanvas } from "./canvas";
+
 
 export default function Home() {
-return (
-<div>
+  return {
+    /* <div>
 <header className="h-screen bg-neutral-900">
 <div
 className="hero h-screen"
@@ -38,6 +41,6 @@ made with <span className="animate-ping">💚</span> using nextjs
 <hr className="h-1 bg-neutral-600/60 border-0" />
 <Cards />
 </section>
-</div>
-);
+</div> */
+  };
 }
