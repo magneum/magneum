@@ -6,20 +6,20 @@ type Props = {};
 
 function baseCraft({}: Props) {
 return (
-<div>
-<motion.div
-initial={{ y: 600, opacity: 0, scale: 0.4 }}
-animate={{
-y: 0,
-opacity: 1,
-scale: 1.5,
-color: ["#ffff", "rgb(163 230 53 / 0.5)"],
-}}
-transition={{ duration: 1 }}
->
-<RiSpaceShipFill className="animate-bounce drop-shadow-2xl" />
-</motion.div>
-</div>
+  <div>
+    <motion.div
+      initial={{ y: 600, opacity: 0, scale: 0.4 }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        scale: 1.5,
+        color: ["#ffff", "rgb(74 29 150 / 0.7)"],
+      }}
+      transition={{ duration: 1 }}
+    >
+      <RiSpaceShipFill className="animate-bounce drop-shadow-2xl" />
+    </motion.div>
+  </div>
 );
 }
 

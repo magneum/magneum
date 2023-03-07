@@ -17,11 +17,11 @@ return (
 <section className="items-center justify-center text-xl bg-[#1b1b1b]">
 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 <div className="max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
-<div className="ring-1 ring-lime-600/50 relative rounded-lg ml-4 mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-lime-600 font-bold">
+<div className="ring-1 ring-purple-600/50 relative rounded-lg ml-4 mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-purple-600 font-bold">
 made with <span className="animate-ping">💚</span> using nextjs +
 tailwindcss
 </div>
-<h2 className="mb-6 font-bold tracking-wide text-lime-400/70 capitalize text-4xl md:text-5xl lg:text-6xl xl:text-7xl  sm:leading-none">
+<h2 className="mb-6 font-bold tracking-wide text-purple-400/70 capitalize text-4xl md:text-5xl lg:text-6xl xl:text-7xl  sm:leading-none">
 {TypeHead}
 </h2>
 <p className="mb-6 text-base font-thin text-gray-400/70 md:text-lg md:text-center lg:text-center xl:text-center capitalize italic">
@@ -33,7 +33,7 @@ Dive into the galaxy of unknowns and discover new skills.
 
 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-1 lg:py-20">
 <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
-<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-lime-600">
+<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
 <Image
 width={800}
 height={800}
@@ -45,7 +45,7 @@ alt=""
 <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
 <a
 href="https://github.com/magneum"
-className="transition-colors duration-200 text-blue-gray-900 hover:text-lime-700"
+className="transition-colors duration-200 text-blue-gray-900 hover:text-purple-700"
 aria-label="Category"
 title="traveling"
 >
@@ -57,7 +57,7 @@ traveling
 href="https://github.com/magneum"
 aria-label="Category"
 title="Visit the East"
-className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-lime-500/70 uppercase font-serif"
+className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-purple-500/70 uppercase font-serif"
 >
 Github
 </a>
@@ -70,7 +70,7 @@ continuous integration, and wikis for every project.
 </p>
 <a
 href="https://github.com/magneum"
-className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-lime-800 rounded-md cursor-pointer group shadow-xl shadow-lime-900 ease focus:outline-none hover:bg-lime-900"
+className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-purple-800 rounded-md cursor-pointer group shadow-xl shadow-purple-900 ease focus:outline-none hover:bg-purple-900"
 >
 <span className="mr-2">
 <MdCode />{" "}
@@ -80,7 +80,7 @@ Lauch
 </div>
 </div>
 
-<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-lime-600">
+<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
 <Image
 width={800}
 height={800}
@@ -92,7 +92,7 @@ className="object-cover w-full h-64 contrast-90"
 <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
 <a
 href="/screens/premiumdl"
-className="transition-colors duration-200 text-blue-gray-900 hover:text-lime-700"
+className="transition-colors duration-200 text-blue-gray-900 hover:text-purple-700"
 aria-label="Category"
 title="traveling"
 >
@@ -104,7 +104,7 @@ traveling
 href="/screens/premiumdl"
 aria-label="Category"
 title="Visit the East"
-className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-lime-500/70 uppercase font-serif"
+className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-purple-500/70 uppercase font-serif"
 >
 premiumdl
 </a>
@@ -118,7 +118,7 @@ are shown in the page.
 </p>
 <a
 href="/screens/premiumdl"
-className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-lime-800 rounded-md cursor-pointer group shadow-xl shadow-lime-900 ease focus:outline-none hover:bg-lime-900"
+className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-purple-800 rounded-md cursor-pointer group shadow-xl shadow-purple-900 ease focus:outline-none hover:bg-purple-900"
 >
 <span className="mr-2">
 <MdCode />{" "}
@@ -128,7 +128,7 @@ Lauch
 </div>
 </div>
 
-<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-lime-600">
+<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
 <Image
 width={800}
 height={800}
@@ -140,7 +140,7 @@ alt=""
 <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
 <a
 href="/screens/magneumapi"
-className="transition-colors duration-200 text-blue-gray-900 hover:text-lime-700"
+className="transition-colors duration-200 text-blue-gray-900 hover:text-purple-700"
 aria-label="Category"
 title="traveling"
 >
@@ -152,7 +152,7 @@ traveling
 href="/screens/magneumapi"
 aria-label="Category"
 title="Visit the East"
-className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-lime-500/70 uppercase font-serif"
+className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-purple-500/70 uppercase font-serif"
 >
 Magneum Api
 </a>
@@ -163,7 +163,7 @@ servers or configurations.
 </p>
 <a
 href="/screens/magneumapi"
-className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-lime-800 rounded-md cursor-pointer group shadow-xl shadow-lime-900 ease focus:outline-none hover:bg-lime-900"
+className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-purple-800 rounded-md cursor-pointer group shadow-xl shadow-purple-900 ease focus:outline-none hover:bg-purple-900"
 >
 <span className="mr-2">
 <MdCode />{" "}
@@ -173,7 +173,7 @@ Lauch
 </div>
 </div>
 
-<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-lime-600">
+<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
 <Image
 width={800}
 height={800}
@@ -185,7 +185,7 @@ alt=""
 <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
 <a
 href="https://www.npmjs.com/settings/magneum/packages"
-className="transition-colors duration-200 text-blue-gray-900 hover:text-lime-700"
+className="transition-colors duration-200 text-blue-gray-900 hover:text-purple-700"
 aria-label="Category"
 title="traveling"
 >
@@ -197,7 +197,7 @@ traveling
 href="https://www.npmjs.com/settings/magneum/packages"
 aria-label="Category"
 title="Visit the East"
-className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-lime-500/70 uppercase font-serif"
+className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-purple-500/70 uppercase font-serif"
 >
 Node NPM Packages
 </a>
@@ -209,7 +209,7 @@ private development as well.
 </p>
 <a
 href="https://www.npmjs.com/settings/magneum/packages"
-className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-lime-800 rounded-md cursor-pointer group shadow-xl shadow-lime-900 ease focus:outline-none hover:bg-lime-900"
+className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-purple-800 rounded-md cursor-pointer group shadow-xl shadow-purple-900 ease focus:outline-none hover:bg-purple-900"
 >
 <span className="mr-2">
 <MdCode />{" "}
@@ -219,7 +219,7 @@ Lauch
 </div>
 </div>
 
-<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-lime-600">
+<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
 <Image
 width={800}
 height={800}
@@ -231,7 +231,7 @@ alt=""
 <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
 <a
 href="https://vlkyre.up.railway.app/vlkyre"
-className="transition-colors duration-200 text-blue-gray-900 hover:text-lime-700"
+className="transition-colors duration-200 text-blue-gray-900 hover:text-purple-700"
 aria-label="Category"
 title="traveling"
 >
@@ -243,7 +243,7 @@ traveling
 href="https://vlkyre.up.railway.app/vlkyre"
 aria-label="Category"
 title="Visit the East"
-className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-lime-500/70 uppercase font-serif"
+className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-purple-500/70 uppercase font-serif"
 >
 Vlkyre Home Page
 </a>
@@ -255,7 +255,7 @@ Official Groups in vlkyre-home-page.
 </p>
 <a
 href="https://vlkyre.up.railway.app/vlkyre"
-className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-lime-800 rounded-md cursor-pointer group shadow-xl shadow-lime-900 ease focus:outline-none hover:bg-lime-900"
+className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-purple-800 rounded-md cursor-pointer group shadow-xl shadow-purple-900 ease focus:outline-none hover:bg-purple-900"
 >
 <span className="mr-2">
 <MdCode />{" "}
@@ -265,7 +265,7 @@ Lauch
 </div>
 </div>
 
-<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-lime-600">
+<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
 <Image
 width={800}
 height={800}
@@ -277,7 +277,7 @@ alt=""
 <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
 <a
 href="https://www.youtube.com/channel/UC5_VwWIUIdmv96OvR5rFvaA"
-className="transition-colors duration-200 text-blue-gray-900 hover:text-lime-700"
+className="transition-colors duration-200 text-blue-gray-900 hover:text-purple-700"
 aria-label="Category"
 title="traveling"
 >
@@ -289,7 +289,7 @@ traveling
 href="https://www.youtube.com/channel/UC5_VwWIUIdmv96OvR5rFvaA"
 aria-label="Category"
 title="Visit the East"
-className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-lime-500/70 uppercase font-serif"
+className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-purple-500/70 uppercase font-serif"
 >
 Vlkyre YouTube
 </a>
@@ -302,7 +302,7 @@ continuous integration, and wikis for every project.
 </p>
 <a
 href="https://www.youtube.com/channel/UC5_VwWIUIdmv96OvR5rFvaA"
-className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-lime-800 rounded-md cursor-pointer group shadow-xl shadow-lime-900 ease focus:outline-none hover:bg-lime-900"
+className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-purple-800 rounded-md cursor-pointer group shadow-xl shadow-purple-900 ease focus:outline-none hover:bg-purple-900"
 >
 <span className="mr-2">
 <MdCode />{" "}
@@ -312,7 +312,7 @@ Lauch
 </div>
 </div>
 
-<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-lime-600">
+<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
 <Image
 width={800}
 height={800}
@@ -324,7 +324,7 @@ alt=""
 <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
 <a
 href="/screens/animehub"
-className="transition-colors duration-200 text-blue-gray-900 hover:text-lime-700"
+className="transition-colors duration-200 text-blue-gray-900 hover:text-purple-700"
 aria-label="Category"
 title="traveling"
 >
@@ -336,7 +336,7 @@ traveling
 href="/screens/animehub"
 aria-label="Category"
 title="Visit the East"
-className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-lime-500/70 uppercase font-serif"
+className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-purple-500/70 uppercase font-serif"
 >
 Anime Hub
 </a>
@@ -349,7 +349,7 @@ regardless of style or origin.
 </p>
 <a
 href="/screens/animehub"
-className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-lime-800 rounded-md cursor-pointer group shadow-xl shadow-lime-900 ease focus:outline-none hover:bg-lime-900"
+className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-purple-800 rounded-md cursor-pointer group shadow-xl shadow-purple-900 ease focus:outline-none hover:bg-purple-900"
 >
 <span className="mr-2">
 <MdCode />{" "}
@@ -359,7 +359,7 @@ Lauch
 </div>
 </div>
 
-<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-lime-600">
+<div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
 <Image
 width={800}
 height={800}
@@ -371,7 +371,7 @@ alt=""
 <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
 <a
 href="https://hub.docker.com/repositories/magneum"
-className="transition-colors duration-200 text-blue-gray-900 hover:text-lime-700"
+className="transition-colors duration-200 text-blue-gray-900 hover:text-purple-700"
 aria-label="Category"
 title="traveling"
 >
@@ -383,7 +383,7 @@ traveling
 href="https://hub.docker.com/repositories/magneum"
 aria-label="Category"
 title="Visit the East"
-className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-lime-500/70 uppercase font-serif"
+className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-purple-500/70 uppercase font-serif"
 >
 Magneum Docker
 </a>
@@ -395,7 +395,7 @@ software that hosts the containers is called Docker Engine.
 </p>
 <a
 href="https://hub.docker.com/repositories/magneum"
-className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-lime-800 rounded-md cursor-pointer group shadow-xl shadow-lime-900 ease focus:outline-none hover:bg-lime-900"
+className="box-border z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-medium text-white text-sm tracking-widest transition-all duration-300 bg-purple-800 rounded-md cursor-pointer group shadow-xl shadow-purple-900 ease focus:outline-none hover:bg-purple-900"
 >
 <span className="mr-2">
 <MdCode />{" "}
