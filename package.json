@@ -8,11 +8,11 @@
     "lint": "clear && next lint",
     "start": "clear && next start",
     "build": "clear && next build",
-    "pfmpegdev": "nodemon pfmpeg.js",
-    "pfmpegstart": "forever pfmpeg.js",
-    "server": "yarn build && yarn start",
-    "magdev": "concurrently --kill-others \"yarn dev\" \"yarn pfmpegdev\"",
-    "magstart": "concurrently --kill-others \"yarn start\" \"yarn pfmpegstart\""
+    "pfmpegdev": "clear && nodemon pfmpeg.js",
+    "pfmpegstart": "clear && forever pfmpeg.js",
+    "server": "clear && yarn build && yarn start",
+    "magdev": "clear && concurrently --kill-others \"yarn dev\" \"yarn pfmpegdev\"",
+    "magstart": "clear && concurrently --kill-others \"yarn start\" \"yarn pfmpegstart\""
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
