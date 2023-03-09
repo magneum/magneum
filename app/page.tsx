@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MdCode } from "react-icons/md";
@@ -23,7 +22,7 @@ export default function Home() {
         <header className="w-full h-screen bg-neutral-900">
           <div
             className="bg-cover bg-no-repeat bg-center"
-            style={{ backgroundImage: `url("/space_blur_red.gif")` }}
+            style={{ backgroundImage: "url('/space_blur_red.gif')" }}
           >
             <section className="relative w-full h-screen mx-auto">
               <div className="absolute inset-0 top-[120px]  max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5">
