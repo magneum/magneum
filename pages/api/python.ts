@@ -8,11 +8,11 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     if (req.query.q) {
       let argument = req.query.q as any;
       if (
-        decodeURI(argument).includes("install") &&
-        decodeURI(argument).includes("sudo") &&
-        decodeURI(argument).includes("pip3") &&
-        decodeURI(argument).includes("pip") &&
-        decodeURI(argument).includes("su") &&
+        decodeURI(argument).includes("install") ||
+        decodeURI(argument).includes("sudo") ||
+        decodeURI(argument).includes("pip3") ||
+        decodeURI(argument).includes("pip") ||
+        decodeURI(argument).includes("su") ||
         decodeURI(argument).includes("i")
       ) {
         return res.status(500).json({
