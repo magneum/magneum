@@ -1,8 +1,10 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MdCode } from "react-icons/md";
 import EarthCanvas from "./lib/canvas/Earth";
+import ComputerCanvas from "./lib/canvas/Computers";
 import { useTypewriter as Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
@@ -19,59 +21,114 @@ export default function Home() {
   return (
     <div>
       <section>
-        <header className="w-full h-screen bg-neutral-900">
-          <div
-            className="bg-cover bg-no-repeat bg-center"
-            style={{ backgroundImage: `url("/space_blur_red.gif")` }}
-          >
-            <section className="relative w-full h-screen mx-auto">
-              <div className="absolute inset-0 top-[120px]  max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5">
-                <div className="flex flex-col justify-center items-center mt-5">
-                  <div className="w-1 sm:h-80 h-40 violet-gradient" />
+        <div
+          style={{ backgroundImage: `url("/space_blur_red.gif")` }}
+          className="bg-cover bg-no-repeat bg-center hero min-h-screen"
+        >
+          <div className="hero-content text-center">
+            <div className="max-w-7xl">
+              <motion.div
+                initial={{ y: 500, opacity: 0, scale: 1.6 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <div className="animate-pulse ring-1 ring-purple-600/50 relative rounded-lg mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-purple-400 font-bold">
+                  made with <span className="animate-ping">❣️</span> using
+                  nextjs + tailwindcss + threejs
                 </div>
-                <div>
-                  <motion.div
-                    initial={{ y: 500, opacity: 0, scale: 1.6 }}
-                    animate={{ y: 0, opacity: 1, scale: 1 }}
-                    transition={{ duration: 1 }}
-                  >
-                    <div className="animate-pulse ring-1 ring-purple-600/50 relative rounded-lg mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-purple-400 font-bold">
-                      made with <span className="animate-ping">❣️</span> using
-                      nextjs + tailwindcss + threejs
-                    </div>
-                  </motion.div>
-                  <motion.div
-                    initial={{ x: 500, opacity: 0, scale: 1 }}
-                    animate={{ x: 0, opacity: 1, scale: 1 }}
-                    transition={{ duration: 1 }}
-                  >
-                    <h1 className="font-serif font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[45px] lg:leading-[98px] mt-2">
-                      Hi, I&apos;m{" "}
-                      <span className="text-[#ff5e5e]">{TypeHero}</span>
-                    </h1>
-
-                    <motion.div
-                      initial={{ x: 500, opacity: 0, scale: 1.3 }}
-                      animate={{ x: 0, opacity: 1, scale: 1 }}
-                      transition={{ duration: 1 }}
-                    >
-                      <h2 className="italic text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[20px] lg:leading-[40px] mt-2">
-                        I develop web applications and Apis.
-                        <br></br>
-                        Here is my world for you to visit.
-                      </h2>
-                    </motion.div>
-                  </motion.div>
-                </div>
-              </div>
+              </motion.div>
+              <motion.div
+                initial={{ x: 500, opacity: 0, scale: 1 }}
+                animate={{ x: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <h1 className="font-serif font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[35px] lg:leading-[98px] mt-2">
+                  Hi, I&apos;m{" "}
+                  <span className="text-[#ff5e5e]">{TypeHero}</span>
+                </h1>
+                <motion.div
+                  initial={{ x: 500, opacity: 0, scale: 1.3 }}
+                  animate={{ x: 0, opacity: 1, scale: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <h2 className="italic text-[#dfd9ff]/70 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[20px] lg:leading-[40px] mt-2">
+                    Deserunt laborum aliqua occaecat cillum. Officia mollit
+                    Lorem nisi cillum ad culpa laborum minim ad dolore culpa ut
+                    aliqua excepteur. Ea tempor nulla aliquip duis qui occaecat
+                    reprehenderit dolore anim sunt reprehenderit.
+                  </h2>
+                </motion.div>
+              </motion.div>
               <EarthCanvas />
-            </section>
+            </div>
           </div>
-        </header>
+        </div>
+
+        {/* <header className="w-full h-screen bg-neutral-900">
+<div
+className="bg-cover bg-no-repeat bg-center"
+style={{ backgroundImage: `url("/space_blur_red.gif")` }}
+>
+<section className="relative w-full h-screen mx-auto">
+<div className="absolute inset-0 top-[120px]  max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5">
+<div className="flex flex-col justify-center items-center mt-5">
+<div className="w-1 sm:h-80 h-40 violet-gradient" />
+</div>
+<div>
+<motion.div
+initial={{ y: 500, opacity: 0, scale: 1.6 }}
+animate={{ y: 0, opacity: 1, scale: 1 }}
+transition={{ duration: 1 }}
+>
+<div className="animate-pulse ring-1 ring-purple-600/50 relative rounded-lg mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-purple-400 font-bold">
+made with <span className="animate-ping">❣️</span> using
+nextjs + tailwindcss + threejs
+</div>
+</motion.div>
+<motion.div
+initial={{ x: 500, opacity: 0, scale: 1 }}
+animate={{ x: 0, opacity: 1, scale: 1 }}
+transition={{ duration: 1 }}
+>
+<h1 className="font-serif font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[35px] lg:leading-[98px] mt-2">
+Hi, I&apos;m{" "}
+<span className="text-[#ff5e5e]">{TypeHero}</span>
+</h1>
+
+<motion.div
+initial={{ x: 500, opacity: 0, scale: 1.3 }}
+animate={{ x: 0, opacity: 1, scale: 1 }}
+transition={{ duration: 1 }}
+>
+<h2 className="italic text-[#dfd9ff]/70 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[20px] lg:leading-[40px] mt-2">
+Deserunt laborum aliqua occaecat cillum. Officia mollit
+Lorem nisi cillum ad culpa laborum minim ad dolore culpa
+ut aliqua excepteur. Ea tempor nulla aliquip duis qui
+occaecat reprehenderit dolore anim sunt reprehenderit.
+</h2>
+</motion.div>
+</motion.div>
+</div>
+</div>
+<div>
+<Image
+width={400}
+height={400}
+alt="Bitmoji"
+src="/Bitmoji.png"
+></Image>
+</div>
+<EarthCanvas />
+</section>
+</div>
+</header> */}
         <hr className="h-1 bg-[#ff5e5e]/40 border-0" />
       </section>
       {/* ============================================================================== */}
-      <section className="items-center justify-center text-xl bg-[#1b1b1b]">
+      <div
+        id="#Orbit-Stream"
+        className="items-center justify-center text-xl bg-[#1b1b1b]"
+      >
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
             <div className="ring-1 ring-purple-600/50 relative rounded-lg ml-4 mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-purple-600 font-bold">
@@ -79,7 +136,7 @@ export default function Home() {
               tailwindcss
             </div>
             <h2 className="mb-6 font-bold tracking-wide text-purple-400/70 capitalize text-4xl md:text-5xl lg:text-6xl xl:text-7xl  sm:leading-none">
-              {TypeHead}
+              % {TypeHead}
             </h2>
             <p className="mb-6 text-base font-thin text-gray-400/70 md:text-lg md:text-center lg:text-center xl:text-center capitalize italic">
               Dive into the galaxy of unknowns and discover new skills.
@@ -463,7 +520,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
