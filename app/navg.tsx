@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
-function Navg({ children }: { children: React.ReactNode }) {
+function Navg() {
   return (
     <div className="sticky z-40 top-0 pl-8 pr-4 p-6 navbar bg-[#1d1c20]/80 backdrop-blur-md shadow-2xl shadow-black">
       <motion.div

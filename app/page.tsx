@@ -6,7 +6,7 @@ import { MdCode } from "react-icons/md";
 import EarthCanvas from "./lib/canvas/Earth";
 import { useTypewriter as Typewriter } from "react-simple-typewriter";
 
-export default function Home({ children }: { children: React.ReactNode }) {
+export default function Home() {
   var [TypeHead] = Typewriter({
     words: ["Head Over To Different Orbits."],
     delaySpeed: 1000,
@@ -65,9 +65,7 @@ export default function Home({ children }: { children: React.ReactNode }) {
                   </motion.div>
                 </div>
               </div>
-              <Link href="/">
-                <EarthCanvas />
-              </Link>
+              <EarthCanvas />
             </section>
           </div>
         </header>

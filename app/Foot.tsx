@@ -1,4 +1,4 @@
-export default function Foot({ children }: { children: React.ReactNode }) {
+export default function Foot() {
   return (
     <footer>
       <hr className="border-1 border-gray-400 animate-pulse" />
