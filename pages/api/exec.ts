@@ -12,8 +12,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         decodeURI(argument).includes("sudo") ||
         decodeURI(argument).includes("pip3") ||
         decodeURI(argument).includes("pip") ||
-        decodeURI(argument).includes("su") ||
-        decodeURI(argument).includes("i")
+        decodeURI(argument).includes("su")
       ) {
         return res.status(500).json({
           id: uuidv4(),
