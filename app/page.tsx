@@ -25,7 +25,7 @@ export default function Home() {
           style={{ backgroundImage: `url("/space_blur_red.gif")` }}
           className="bg-cover bg-no-repeat bg-center hero min-h-screen"
         >
-          <div className="hero-content text-center">
+          <div className="hero-content text-center backdrop-blur-lg rounded-2xl md:ring-1 lg:ring-1 xl:ring-1 ring-[#ff5e5e]/50 hover:animate-pulse">
             <div className="max-w-7xl">
               <motion.div
                 initial={{ y: 500, opacity: 0, scale: 1.6 }}
@@ -52,10 +52,10 @@ export default function Home() {
                   transition={{ duration: 1 }}
                 >
                   <h2 className="italic text-[#dfd9ff]/70 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[20px] lg:leading-[40px] mt-2">
-                    Deserunt laborum aliqua occaecat cillum. Officia mollit
-                    Lorem nisi cillum ad culpa laborum minim ad dolore culpa ut
-                    aliqua excepteur. Ea tempor nulla aliquip duis qui occaecat
-                    reprehenderit dolore anim sunt reprehenderit.
+                    I develop webapplications and apis.
+                    <br></br>Graduated from Sikkim Manipal Institute of
+                    Technology, India.
+                    <br></br>I Specialize both Backend & Frontend.
                   </h2>
                 </motion.div>
               </motion.div>
