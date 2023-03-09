@@ -22,7 +22,7 @@ export default function Home() {
         <header className="w-full h-screen bg-neutral-900">
           <div
             className="bg-cover bg-no-repeat bg-center"
-            style={{ backgroundImage: "url('/space_blur_red.gif')" }}
+            style={{ backgroundImage: `url("/space_blur_red.gif")` }}
           >
             <section className="relative w-full h-screen mx-auto">
               <div className="absolute inset-0 top-[120px]  max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5">
@@ -90,7 +90,7 @@ export default function Home() {
 
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-1 lg:py-20">
           <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
-            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
+            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
               <Image
                 width={800}
                 height={800}
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
+            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
               <Image
                 width={800}
                 height={800}
@@ -185,7 +185,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
+            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
               <Image
                 width={800}
                 height={800}
@@ -230,7 +230,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
+            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
               <Image
                 width={800}
                 height={800}
@@ -276,7 +276,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
+            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
               <Image
                 width={800}
                 height={800}
@@ -322,7 +322,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
+            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
               <Image
                 width={800}
                 height={800}
@@ -369,7 +369,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
+            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
               <Image
                 width={800}
                 height={800}
@@ -416,7 +416,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl xl:hover:scale-105 lg:hover:scale-105 md:hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
+            <div className="overflow-hidden transition-shadow duration-300 bg-[#222522] rounded-2xl shadow-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-600">
               <Image
                 width={800}
                 height={800}
