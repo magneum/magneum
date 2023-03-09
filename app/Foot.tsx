@@ -1,6 +1,6 @@
 export default function Foot({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <footer>
       <hr className="border-1 border-gray-400 animate-pulse" />
       <div className="px-4 pt-16 mx-auto max-w-full md:px-24 lg:px-8 bg-[#1d1c20]">
         <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -150,6 +150,6 @@ export default function Foot({ children }: { children: React.ReactNode }) {
           </ul>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
