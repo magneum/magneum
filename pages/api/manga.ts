@@ -2,7 +2,7 @@ import https from "https";
 import logger from "@/log";
 import moment from "moment";
 import { v4 as uuidv4 } from "uuid";
-import { Manga } from "@shineiichijo/marika";
+const { Manga } = require("@shineiichijo/marika");
 import type { NextApiRequest, NextApiResponse } from "next";
 
 function shorten(url: any) {
@@ -19,9 +19,9 @@ function shorten(url: any) {
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
+      let argument = req.query.q as any;
       var manga = new Manga();
-      var argument: any = decodeURI(req.query.q);
-      var resp = await manga.searchManga(argument);
+      var resp = await manga.searchManga(decodeURI(argument));
       if (!resp.data) {
         return res.status(500).json({
           id: uuidv4(),

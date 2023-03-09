@@ -2,7 +2,7 @@ import got from "got";
 import https from "https";
 import logger from "@/log";
 import moment from "moment";
-import singer from "play-dl";
+const singer = require("play-dl");
 import YouTube_Sr from "yt-search";
 import { v4 as uuidv4 } from "uuid";
 import type { NextApiRequest, NextApiResponse } from "next";

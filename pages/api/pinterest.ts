@@ -37,7 +37,8 @@ function Pinterest(querry: any) {
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
-      const cobra = await Pinterest(decodeURI(req.query.q));
+      let argument = req.query.q as any;
+      const cobra = await Pinterest(decodeURI(argument));
       return res.status(200).json({
         resp: {
           id: uuidv4(),
@@ -46,7 +47,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         },
         meta: {
           topic: "PINTEREST: image",
-          query: decodeURI(req.query.q),
+          query: decodeURI(argument),
           links: cobra,
         },
       });

@@ -33,7 +33,8 @@ export default async function animation(
   res: NextApiResponse
 ) {
   try {
-    switch (decodeURI(req.query.q)) {
+    let argument = req.query.q as any;
+    switch (decodeURI(argument)) {
       case "ass":
         var __ass = ls_ass[Math.floor(Math.random() * ls_ass.length)];
         res.status(200).json({
@@ -45,7 +46,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "I know you like anime ass~ uwu",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __ass,
           },
         });
@@ -61,7 +62,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "If you don't know what it is, search it up",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __bdsm,
           },
         });
@@ -79,7 +80,7 @@ export default async function animation(
             topic: "HENTAI: .png, .jpg",
             description:
               "Basically an image of a girl sucking on a sharp blade!",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __blowjob,
           },
         });
@@ -96,7 +97,7 @@ export default async function animation(
             topic: "HENTAI: .png, .jpg",
             description:
               "Basically sticky white stuff that is usually milked from sharpies.",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __cum,
           },
         });
@@ -112,7 +113,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "Sends a random doujin page imageURL!",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __doujin,
           },
         });
@@ -128,7 +129,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "So you like smelly feet huh?",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __feet,
           },
         });
@@ -144,7 +145,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "Female Domination over you",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __femdom,
           },
         });
@@ -161,7 +162,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "Girl's that are wannabe foxes, yes",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __foxgirl,
           },
         });
@@ -178,7 +179,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "Wow, I won't even question your fetishes.",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __netorare,
           },
         });
@@ -195,7 +196,7 @@ export default async function animation(
             topic: "HENTAI: .png, .jpg",
             description:
               "Maids, Maid Uniforms, etc, you know what maids are :3",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __maid,
           },
         });
@@ -212,7 +213,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "The power of solo queue",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __masturbation,
           },
         });
@@ -228,7 +229,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "Group Lewd Acts",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __orgy,
           },
         });
@@ -245,7 +246,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "I mean... just why? You like underwear?",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __panties,
           },
         });
@@ -261,7 +262,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "School Uniforms!~ Yatta~!",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __pussy,
           },
         });
@@ -277,7 +278,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "School Uniforms!~ Yatta~!",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __school,
           },
         });
@@ -295,7 +296,7 @@ export default async function animation(
             topic: "HENTAI: .png, .jpg",
             description:
               "Spooky Succubus, oh I'm so scared~ Totally don't suck me~",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __succubus,
           },
         });
@@ -312,7 +313,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "I'm sorry but, why do they look like intestines?",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __tentacles,
           },
         });
@@ -328,7 +329,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "The top part of your legs, very hot, isn't it?",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __thighs,
           },
         });
@@ -345,7 +346,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "The one thing most of us can all agree to hate :)",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __uglyBastard,
           },
         });
@@ -362,7 +363,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "Military, Konbini, Work, Nurse Uniforms, etc!~ Sexy~",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __uniform,
           },
         });
@@ -378,7 +379,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "Girls on Girls, and Girl's only!<3",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __yuri,
           },
         });
@@ -394,7 +395,7 @@ export default async function animation(
           meta: {
             topic: "HENTAI: .png, .jpg",
             description: "Random hentai...",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             url: __hentai,
           },
         });

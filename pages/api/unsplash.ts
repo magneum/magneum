@@ -7,11 +7,12 @@ import type { NextApiRequest, NextApiResponse } from "next";
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
+      let argument = req.query.q as any;
       const unsplash = createApi({
         accessKey: "OGx0PMTS_u06PSSsRwTmmxjxfe3OhABXYpDimOjE4d4",
       });
       const cobra: any = await unsplash.search.getPhotos({
-        query: `${decodeURI(req.query.q)}`,
+        query: `${decodeURI(argument)}`,
         page: 1,
         perPage: 1,
         orderBy: "latest",
@@ -37,7 +38,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           },
           meta: {
             topic: "Unsplash HD Wallpapers",
-            query: decodeURI(req.query.q),
+            query: decodeURI(argument),
             created_at: cobra.resp.results[0].created_at,
             updated_at: cobra.resp.results[0].updated_at,
             promoted_at: cobra.resp.results[0].promoted_at,

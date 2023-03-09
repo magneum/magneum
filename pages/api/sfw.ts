@@ -40,7 +40,8 @@ let Found: any;
 export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
-      switch (decodeURI(req.query.q)) {
+      let argument = req.query.q as any;
+      switch (decodeURI(argument)) {
         case "waifu":
           var __waifu = ls_waifu[Math.floor(Math.random() * ls_waifu.length)];
           res.status(200).json({
@@ -51,7 +52,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: yeet",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __waifu,
             },
           });
@@ -66,7 +67,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: neko",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __neko,
             },
           });
@@ -82,7 +83,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: shinobu",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __shinobu,
             },
           });
@@ -98,7 +99,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: megumin",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __megumin,
             },
           });
@@ -113,7 +114,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: bully",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __bully,
             },
           });
@@ -129,7 +130,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: cuddle",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __cuddle,
             },
           });
@@ -144,7 +145,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: cry",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __cry,
             },
           });
@@ -159,7 +160,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: hug",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __hug,
             },
           });
@@ -174,7 +175,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: awoo",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __awoo,
             },
           });
@@ -189,7 +190,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: kiss",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __kiss,
             },
           });
@@ -204,7 +205,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: lick",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __lick,
             },
           });
@@ -219,7 +220,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: yeet",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __pat,
             },
           });
@@ -234,7 +235,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: smug",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __smug,
             },
           });
@@ -249,7 +250,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: bonk",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __bonk,
             },
           });
@@ -264,7 +265,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: yeet",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __yeet,
             },
           });
@@ -279,7 +280,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: blush",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __blush,
             },
           });
@@ -294,7 +295,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: smile",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __smile,
             },
           });
@@ -309,7 +310,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: wave",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __wave,
             },
           });
@@ -325,7 +326,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: highfive",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __highfive,
             },
           });
@@ -341,7 +342,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: handhold",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __handhold,
             },
           });
@@ -356,7 +357,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: nom",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __nom,
             },
           });
@@ -371,7 +372,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: bite",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __bite,
             },
           });
@@ -386,7 +387,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: glomp",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __glomp,
             },
           });
@@ -401,7 +402,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: slap",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __slap,
             },
           });
@@ -416,7 +417,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: kill",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __kill,
             },
           });
@@ -431,7 +432,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: kick",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __kick,
             },
           });
@@ -446,7 +447,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: happy",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __happy,
             },
           });
@@ -461,7 +462,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: wink",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __wink,
             },
           });
@@ -476,7 +477,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: poke",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __poke,
             },
           });
@@ -491,7 +492,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: dance",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __dance,
             },
           });
@@ -507,7 +508,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
             },
             meta: {
               topic: "SFW IMAGES: cringe",
-              query: decodeURI(req.query.q),
+              query: decodeURI(argument),
               url: __cringe,
             },
           });

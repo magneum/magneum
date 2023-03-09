@@ -11,9 +11,10 @@ export default async function Google(
 ) {
   try {
     if (req.query.q) {
+      let argument = req.query.q as any;
       const body = await got("https://www.google.com/search", {
         searchParams: {
-          q: `${decodeURI(req.query.q)}`,
+          q: `${decodeURI(argument)}`,
         },
         headers: {
           origin: "https://www.google.com",

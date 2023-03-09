@@ -21,7 +21,8 @@ export default async function animation(
   res: NextApiResponse
 ) {
   try {
-    switch (decodeURI(req.query.q)) {
+    let argument = req.query.q as any;
+    switch (decodeURI(argument)) {
       case "nsfw":
         await got("https://www.reddit.com/r/nsfw/random.json").then(
           async (Form) => {
@@ -36,7 +37,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -70,7 +71,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -104,7 +105,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -138,7 +139,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -172,7 +173,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -206,7 +207,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -240,7 +241,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -274,7 +275,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -308,7 +309,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -342,7 +343,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -376,7 +377,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -410,7 +411,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -445,7 +446,7 @@ export default async function animation(
               },
               meta: {
                 topic: "[NSFW Images]",
-                query: decodeURI(req.query.q),
+                query: decodeURI(argument),
                 url: shorten(FFLink),
                 domain: FF[0].data.children[0].data.domain,
                 sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -478,7 +479,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -512,7 +513,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -546,7 +547,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -580,7 +581,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -614,7 +615,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -648,7 +649,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -682,7 +683,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -716,7 +717,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -750,7 +751,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -784,7 +785,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -818,7 +819,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -853,7 +854,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -887,7 +888,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -921,7 +922,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -957,7 +958,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -991,7 +992,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
@@ -1027,7 +1028,7 @@ export default async function animation(
                 },
                 meta: {
                   topic: "[NSFW Images]",
-                  query: decodeURI(req.query.q),
+                  query: decodeURI(argument),
                   url: shorten(FFLink),
                   domain: FF[0].data.children[0].data.domain,
                   sub_reddit_id: FF[0].data.children[0].data.subreddit_id,
