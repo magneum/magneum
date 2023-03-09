@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MdCode } from "react-icons/md";
-import EarthCanvas from "./test/canvas/Earth";
+import EarthCanvas from "./lib/canvas/Earth";
 import { useTypewriter as Typewriter } from "react-simple-typewriter";
 
 export default function Home() {

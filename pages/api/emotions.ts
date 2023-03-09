@@ -33,453 +33,453 @@ import ls_thinking from "@/db/emotions/thinking.json";
 
 let _Found: any;
 export default async function animation(
-req: NextApiRequest,
-res: NextApiResponse
+  req: NextApiRequest,
+  res: NextApiResponse
 ) {
-try {
-switch (req.query.q) {
-case "dance":
-var __dance = ls_dance[Math.floor(Math.random() * ls_dance.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __dance,
-},
-});
-break;
-case "cuddle":
-var __cuddle = ls_cuddle[Math.floor(Math.random() * ls_cuddle.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __cuddle,
-},
-});
-break;
-case "bite":
-var __bite = ls_bite[Math.floor(Math.random() * ls_bite.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __bite,
-},
-});
-break;
-case "slap":
-var __slap = ls_slap[Math.floor(Math.random() * ls_slap.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __slap,
-},
-});
-break;
-case "wink":
-var __wink = ls_wink[Math.floor(Math.random() * ls_wink.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __wink,
-},
-});
-break;
-case "bonk":
-var __bonk = ls_bonk[Math.floor(Math.random() * ls_bonk.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __bonk,
-},
-});
-break;
-case "hug":
-var __hug = ls_hug[Math.floor(Math.random() * ls_hug.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __hug,
-},
-});
-break;
-case "kiss":
-var __kiss = ls_kiss[Math.floor(Math.random() * ls_kiss.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __kiss,
-},
-});
-break;
-case "pat":
-var __pat = ls_pat[Math.floor(Math.random() * ls_pat.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __pat,
-},
-});
-break;
-case "happy":
-var __happy = ls_happy[Math.floor(Math.random() * ls_happy.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __happy,
-},
-});
-break;
-case "kill":
-var __kill = ls_kill[Math.floor(Math.random() * ls_kill.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __kill,
-},
-});
-break;
-case "highfive":
-var __highfive =
-ls_highfive[Math.floor(Math.random() * ls_highfive.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __highfive,
-},
-});
-break;
-case "wave":
-var __wave = ls_wave[Math.floor(Math.random() * ls_wave.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __wave,
-},
-});
-break;
-case "cry":
-var __cry = ls_cry[Math.floor(Math.random() * ls_cry.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __cry,
-},
-});
-break;
-case "smile":
-var __smile = ls_smile[Math.floor(Math.random() * ls_smile.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __smile,
-},
-});
-break;
-case "punch":
-var __punch = ls_punch[Math.floor(Math.random() * ls_punch.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __punch,
-},
-});
-break;
-case "kick":
-var __kick = ls_kick[Math.floor(Math.random() * ls_kick.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __kick,
-},
-});
-break;
-case "confused":
-var __confused =
-ls_confused[Math.floor(Math.random() * ls_confused.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __confused,
-},
-});
-break;
-case "sad":
-var __sad = ls_sad[Math.floor(Math.random() * ls_sad.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __sad,
-},
-});
-break;
-case "thinking":
-var __thinking =
-ls_thinking[Math.floor(Math.random() * ls_thinking.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __thinking,
-},
-});
-break;
-case "yeet":
-var __yeet = ls_yeet[Math.floor(Math.random() * ls_yeet.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __yeet,
-},
-});
-break;
-case "stare":
-var __stare = ls_stare[Math.floor(Math.random() * ls_stare.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __stare,
-},
-});
-break;
-case "bored":
-var __bored = ls_bored[Math.floor(Math.random() * ls_bored.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __bored,
-},
-});
-break;
-case "scream":
-var __scream = ls_scream[Math.floor(Math.random() * ls_scream.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __scream,
-},
-});
-break;
-case "nervous":
-var __nervous =
-ls_nervous[Math.floor(Math.random() * ls_nervous.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __nervous,
-},
-});
-break;
-case "yes":
-var __yes = ls_yes[Math.floor(Math.random() * ls_yes.length)];
-res.status(200).json({
-resp: {
-id: uuidv4(),
-status: true,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-},
-meta: {
-topic: "EMOTIONS: gif",
-query: req.query.q,
-url: __yes,
-},
-});
-break;
-default:
-res.status(500).json({
-id: uuidv4(),
-status: false,
-message: "Arguments not satisfied.",
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-usage: {
-endpoint: "/api/emotions?q=",
-example: "/api/emotions?q=bite",
-querry: [
-"bite",
-"bonk",
-"bored",
-"confused",
-"cry",
-"cuddle",
-"dance",
-"happy",
-"highfive",
-"hug",
-"kick",
-"kill",
-"kiss",
-"nervous",
-"pat",
-"punch",
-"sad",
-"scream",
-"slap",
-"smile",
-"stare",
-"wave",
-"wink",
-"yeet",
-"yes",
-"thinking",
-],
-},
-});
-break;
-}
-} catch (error: any) {
-logger.error(error.message);
-return res.status(500).json({
-id: uuidv4(),
-status: false,
-timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
-message: error.message,
-});
-}
+  try {
+    switch (decodeURI(req.query.q)) {
+      case "dance":
+        var __dance = ls_dance[Math.floor(Math.random() * ls_dance.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __dance,
+          },
+        });
+        break;
+      case "cuddle":
+        var __cuddle = ls_cuddle[Math.floor(Math.random() * ls_cuddle.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __cuddle,
+          },
+        });
+        break;
+      case "bite":
+        var __bite = ls_bite[Math.floor(Math.random() * ls_bite.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __bite,
+          },
+        });
+        break;
+      case "slap":
+        var __slap = ls_slap[Math.floor(Math.random() * ls_slap.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __slap,
+          },
+        });
+        break;
+      case "wink":
+        var __wink = ls_wink[Math.floor(Math.random() * ls_wink.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __wink,
+          },
+        });
+        break;
+      case "bonk":
+        var __bonk = ls_bonk[Math.floor(Math.random() * ls_bonk.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __bonk,
+          },
+        });
+        break;
+      case "hug":
+        var __hug = ls_hug[Math.floor(Math.random() * ls_hug.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __hug,
+          },
+        });
+        break;
+      case "kiss":
+        var __kiss = ls_kiss[Math.floor(Math.random() * ls_kiss.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __kiss,
+          },
+        });
+        break;
+      case "pat":
+        var __pat = ls_pat[Math.floor(Math.random() * ls_pat.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __pat,
+          },
+        });
+        break;
+      case "happy":
+        var __happy = ls_happy[Math.floor(Math.random() * ls_happy.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __happy,
+          },
+        });
+        break;
+      case "kill":
+        var __kill = ls_kill[Math.floor(Math.random() * ls_kill.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __kill,
+          },
+        });
+        break;
+      case "highfive":
+        var __highfive =
+          ls_highfive[Math.floor(Math.random() * ls_highfive.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __highfive,
+          },
+        });
+        break;
+      case "wave":
+        var __wave = ls_wave[Math.floor(Math.random() * ls_wave.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __wave,
+          },
+        });
+        break;
+      case "cry":
+        var __cry = ls_cry[Math.floor(Math.random() * ls_cry.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __cry,
+          },
+        });
+        break;
+      case "smile":
+        var __smile = ls_smile[Math.floor(Math.random() * ls_smile.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __smile,
+          },
+        });
+        break;
+      case "punch":
+        var __punch = ls_punch[Math.floor(Math.random() * ls_punch.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __punch,
+          },
+        });
+        break;
+      case "kick":
+        var __kick = ls_kick[Math.floor(Math.random() * ls_kick.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __kick,
+          },
+        });
+        break;
+      case "confused":
+        var __confused =
+          ls_confused[Math.floor(Math.random() * ls_confused.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __confused,
+          },
+        });
+        break;
+      case "sad":
+        var __sad = ls_sad[Math.floor(Math.random() * ls_sad.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __sad,
+          },
+        });
+        break;
+      case "thinking":
+        var __thinking =
+          ls_thinking[Math.floor(Math.random() * ls_thinking.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __thinking,
+          },
+        });
+        break;
+      case "yeet":
+        var __yeet = ls_yeet[Math.floor(Math.random() * ls_yeet.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __yeet,
+          },
+        });
+        break;
+      case "stare":
+        var __stare = ls_stare[Math.floor(Math.random() * ls_stare.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __stare,
+          },
+        });
+        break;
+      case "bored":
+        var __bored = ls_bored[Math.floor(Math.random() * ls_bored.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __bored,
+          },
+        });
+        break;
+      case "scream":
+        var __scream = ls_scream[Math.floor(Math.random() * ls_scream.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __scream,
+          },
+        });
+        break;
+      case "nervous":
+        var __nervous =
+          ls_nervous[Math.floor(Math.random() * ls_nervous.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __nervous,
+          },
+        });
+        break;
+      case "yes":
+        var __yes = ls_yes[Math.floor(Math.random() * ls_yes.length)];
+        res.status(200).json({
+          resp: {
+            id: uuidv4(),
+            status: true,
+            timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          },
+          meta: {
+            topic: "EMOTIONS: gif",
+            query: decodeURI(req.query.q),
+            url: __yes,
+          },
+        });
+        break;
+      default:
+        res.status(500).json({
+          id: uuidv4(),
+          status: false,
+          message: "Arguments not satisfied.",
+          timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+          usage: {
+            endpoint: "/api/emotions?q=",
+            example: "/api/emotions?q=bite",
+            querry: [
+              "bite",
+              "bonk",
+              "bored",
+              "confused",
+              "cry",
+              "cuddle",
+              "dance",
+              "happy",
+              "highfive",
+              "hug",
+              "kick",
+              "kill",
+              "kiss",
+              "nervous",
+              "pat",
+              "punch",
+              "sad",
+              "scream",
+              "slap",
+              "smile",
+              "stare",
+              "wave",
+              "wink",
+              "yeet",
+              "yes",
+              "thinking",
+            ],
+          },
+        });
+        break;
+    }
+  } catch (error: any) {
+    logger.error(error.message);
+    return res.status(500).json({
+      id: uuidv4(),
+      status: false,
+      timestamp: moment().format("DD-MM-YYYY hh:mm:ss"),
+      message: error.message,
+    });
+  }
 }
