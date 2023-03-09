@@ -1,8 +1,0 @@
-[MAGGEUM API]: 2023-03-09 21:00:50:050::[31m[1merror[22m[39m>>
-[31m[1mCommand failed: yt-dlp[22m[39m
-
-[31m[1mUsage: yt-dlp [OPTIONS] URL [URL...][22m[39m
-
-[31m[1myt-dlp: error: You must provide at least one URL.[22m[39m
-[31m[1mType yt-dlp --help to see a list of all options.[22m[39m
-[31m[1m[22m[39m
