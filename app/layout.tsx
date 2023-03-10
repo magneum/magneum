@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../db/globals.css";
 import Foot from "./Foot";
 import Navg from "./navg";
 
