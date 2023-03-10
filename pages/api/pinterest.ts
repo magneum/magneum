@@ -38,7 +38,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
       let argument = req.query.q as any;
-      const cobra = await Pinterest(decodeURI(argument));
+      const cobra = await Pinterest(argument);
       return res.status(200).json({
         resp: {
           id: uuidv4(),
@@ -47,7 +47,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         },
         meta: {
           topic: "PINTEREST: image",
-          query: decodeURI(argument),
+          query: argument,
           links: cobra,
         },
       });

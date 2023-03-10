@@ -34,7 +34,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
       let argument = req.query.q as any;
-      const cobra = await Wallpaper_Flare(decodeURI(argument));
+      const cobra = await Wallpaper_Flare(argument);
       return res.status(200).json({
         resp: {
           id: uuidv4(),
@@ -43,7 +43,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         },
         meta: {
           topic: "Wallpapers from Wallpaper Flare",
-          query: decodeURI(argument),
+          query: argument,
           links: cobra,
         },
       });

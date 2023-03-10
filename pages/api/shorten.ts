@@ -20,7 +20,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
       let argument = req.query.q as any;
-      if (validUrl.isUri(decodeURI(argument))) {
+      if (validUrl.isUri(argument)) {
         return res.status(200).json({
           resp: {
             id: uuidv4(),
@@ -29,8 +29,8 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
           },
           meta: {
             topic: "Shorten Url",
-            query: decodeURI(argument),
-            url: shorten(decodeURI(argument)),
+            query: argument,
+            url: shorten(argument),
           },
         });
       } else

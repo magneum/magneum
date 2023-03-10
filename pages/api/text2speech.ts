@@ -8,7 +8,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
       let argument = req.query.q as any;
-      const urlMedia = googleTTS.getAudioUrl(decodeURI(argument), {
+      const urlMedia = googleTTS.getAudioUrl(argument, {
         lang: "en",
         slow: false,
         host: "https://translate.google.com",
@@ -21,7 +21,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         },
         meta: {
           topic: "Text To Speech",
-          query: decodeURI(argument),
+          query: argument,
           url: urlMedia,
         },
       });

@@ -8,11 +8,11 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     if (req.query.q) {
       let argument = req.query.q as any;
       if (
-        decodeURI(argument).includes("install") ||
-        decodeURI(argument).includes("sudo") ||
-        decodeURI(argument).includes("pip3") ||
-        decodeURI(argument).includes("pip") ||
-        decodeURI(argument).includes("su")
+        argument.includes("install") ||
+        argument.includes("sudo") ||
+        argument.includes("pip3") ||
+        argument.includes("pip") ||
+        argument.includes("su")
       ) {
         return res.status(500).json({
           id: uuidv4(),
@@ -22,7 +22,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
         });
       } else
         require("child_process").exec(
-          "python3 " + decodeURI(argument),
+          "python3 " + argument,
           async (error: any, stdout: any) => {
             if (error) {
               logger.error(error.message);
@@ -41,7 +41,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
                 },
                 meta: {
                   topic: "PYTHON: .py execution",
-                  query: decodeURI(argument),
+                  query: argument,
                   output: stdout,
                 },
               });

@@ -21,7 +21,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
     if (req.query.q) {
       let argument = req.query.q as any;
       var manga = new Manga();
-      var resp = await manga.searchManga(decodeURI(argument));
+      var resp = await manga.searchManga(argument);
       if (!resp.data) {
         return res.status(500).json({
           id: uuidv4(),

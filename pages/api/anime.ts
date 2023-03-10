@@ -8,7 +8,7 @@ export default async function test(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.query.q) {
       let argument = req.query.q as any;
-      var _resp: any = await malScraper.getInfoFromName(decodeURI(argument));
+      var _resp: any = await malScraper.getInfoFromName(argument);
       if (!_resp) {
         return res.status(500).json({
           status: false,

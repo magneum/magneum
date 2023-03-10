@@ -38,7 +38,7 @@ export default async function animation(
 ) {
   try {
     let argument = req.query.q as any;
-    switch (decodeURI(argument)) {
+    switch (argument) {
       case "dance":
         var __dance = ls_dance[Math.floor(Math.random() * ls_dance.length)];
         res.status(200).json({
@@ -49,7 +49,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __dance,
           },
         });
@@ -64,7 +64,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __cuddle,
           },
         });
@@ -79,7 +79,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __bite,
           },
         });
@@ -94,7 +94,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __slap,
           },
         });
@@ -109,7 +109,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __wink,
           },
         });
@@ -124,7 +124,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __bonk,
           },
         });
@@ -139,7 +139,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __hug,
           },
         });
@@ -154,7 +154,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __kiss,
           },
         });
@@ -169,7 +169,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __pat,
           },
         });
@@ -184,7 +184,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __happy,
           },
         });
@@ -199,7 +199,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __kill,
           },
         });
@@ -215,7 +215,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __highfive,
           },
         });
@@ -230,7 +230,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __wave,
           },
         });
@@ -245,7 +245,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __cry,
           },
         });
@@ -260,7 +260,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __smile,
           },
         });
@@ -275,7 +275,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __punch,
           },
         });
@@ -290,7 +290,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __kick,
           },
         });
@@ -306,7 +306,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __confused,
           },
         });
@@ -321,7 +321,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __sad,
           },
         });
@@ -337,7 +337,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __thinking,
           },
         });
@@ -352,7 +352,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __yeet,
           },
         });
@@ -367,7 +367,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __stare,
           },
         });
@@ -382,7 +382,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __bored,
           },
         });
@@ -397,7 +397,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __scream,
           },
         });
@@ -413,7 +413,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __nervous,
           },
         });
@@ -428,7 +428,7 @@ export default async function animation(
           },
           meta: {
             topic: "EMOTIONS: gif",
-            query: decodeURI(argument),
+            query: argument,
             url: __yes,
           },
         });
