@@ -19,116 +19,40 @@ export default function Home() {
     loop: true,
   });
   return (
-    <div>
-      <section>
-        <div
-          style={{ backgroundImage: `url("/space_blur_red.gif")` }}
-          className="bg-cover bg-no-repeat bg-center hero min-h-screen"
-        >
-          <div className="hero-content text-center backdrop-blur-lg rounded-2xl md:ring-1 lg:ring-1 xl:ring-1 ring-[#ff5e5e]/50 hover:animate-pulse">
-            <div className="max-w-7xl">
-              <motion.div
-                initial={{ y: 500, opacity: 0, scale: 1.6 }}
-                animate={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <div className="animate-pulse ring-1 ring-purple-600/50 relative rounded-lg mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-purple-400 font-bold">
-                  made with <span className="animate-ping">❣️</span> using
-                  nextjs + tailwindcss + threejs
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ x: 500, opacity: 0, scale: 1 }}
-                animate={{ x: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <h1 className="font-serif font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[35px] lg:leading-[98px] mt-2">
-                  Hi, I&apos;m{" "}
-                  <span className="text-[#ff5e5e]">{TypeHero}</span>
-                </h1>
-                <motion.div
-                  initial={{ x: 500, opacity: 0, scale: 1.3 }}
-                  animate={{ x: 0, opacity: 1, scale: 1 }}
-                  transition={{ duration: 1 }}
-                >
-                  <h2 className="italic text-[#dfd9ff]/70 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[20px] lg:leading-[40px] mt-2">
-                    I develop webapplications and apis.
-                    <br></br>Graduated from Sikkim Manipal Institute of
-                    Technology, India.
-                    <br></br>I Specialize both Backend & Frontend.
-                  </h2>
-                </motion.div>
-              </motion.div>
-              <EarthCanvas />
-            </div>
+    <main>
+      <div
+        style={{ backgroundImage: `url("/space_blur_red.gif")` }}
+        className="bg-cover bg-no-repeat bg-center hero min-h-screen bg-opacity-50"
+      >
+        <div className="hero-content text-center">
+          <div className="max-w-7xl">
+            <motion.div
+              initial={{ x: 200, opacity: 0, scale: 1 }}
+              animate={{ x: 0, opacity: 1, scale: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="animate-pulse relative rounded-lg mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-purple-400 font-bold">
+                made with <span className="animate-ping">❣️</span> using nextjs
+                + tailwindcss + threejs
+              </div>
+              <h1 className="font-serif font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[35px] lg:leading-[98px] mt-2">
+                Hi, I&apos;m <span className="text-[#ff5e5e]">{TypeHero}</span>
+              </h1>
+              <h2 className="italic text-[#dfd9ff]/70 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[20px] lg:leading-[40px] mt-2">
+                Self learned Developer :)
+                <br></br>I develop Web-Applications and Apis.
+                <br></br>Specialized in Backend & Frontend.
+                <br></br>Graduated from Sikkim Manipal Institute of Technology,
+                India.
+              </h2>
+            </motion.div>
+            <EarthCanvas />
           </div>
         </div>
-
-        {/* <header className="w-full h-screen bg-neutral-900">
-<div
-className="bg-cover bg-no-repeat bg-center"
-style={{ backgroundImage: `url("/space_blur_red.gif")` }}
->
-<section className="relative w-full h-screen mx-auto">
-<div className="absolute inset-0 top-[120px]  max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5">
-<div className="flex flex-col justify-center items-center mt-5">
-<div className="w-1 sm:h-80 h-40 violet-gradient" />
-</div>
-<div>
-<motion.div
-initial={{ y: 500, opacity: 0, scale: 1.6 }}
-animate={{ y: 0, opacity: 1, scale: 1 }}
-transition={{ duration: 1 }}
->
-<div className="animate-pulse ring-1 ring-purple-600/50 relative rounded-lg mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-purple-400 font-bold">
-made with <span className="animate-ping">❣️</span> using
-nextjs + tailwindcss + threejs
-</div>
-</motion.div>
-<motion.div
-initial={{ x: 500, opacity: 0, scale: 1 }}
-animate={{ x: 0, opacity: 1, scale: 1 }}
-transition={{ duration: 1 }}
->
-<h1 className="font-serif font-black text-white lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[35px] lg:leading-[98px] mt-2">
-Hi, I&apos;m{" "}
-<span className="text-[#ff5e5e]">{TypeHero}</span>
-</h1>
-
-<motion.div
-initial={{ x: 500, opacity: 0, scale: 1.3 }}
-animate={{ x: 0, opacity: 1, scale: 1 }}
-transition={{ duration: 1 }}
->
-<h2 className="italic text-[#dfd9ff]/70 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[20px] lg:leading-[40px] mt-2">
-Deserunt laborum aliqua occaecat cillum. Officia mollit
-Lorem nisi cillum ad culpa laborum minim ad dolore culpa
-ut aliqua excepteur. Ea tempor nulla aliquip duis qui
-occaecat reprehenderit dolore anim sunt reprehenderit.
-</h2>
-</motion.div>
-</motion.div>
-</div>
-</div>
-<div>
-<Image
-width={400}
-height={400}
-alt="Bitmoji"
-src="/Bitmoji.png"
-></Image>
-</div>
-<EarthCanvas />
-</section>
-</div>
-</header> */}
-        <hr className="h-1 bg-[#ff5e5e]/40 border-0" />
-      </section>
+      </div>
+      <hr className="h-1 bg-[#ff5e5e]/40 border-0" />
       {/* ============================================================================== */}
-      <div
-        id="#Orbit-Stream"
-        className="items-center justify-center text-xl bg-[#1b1b1b]"
-      >
+      <div className="items-center justify-center text-xl bg-[#1b1b1b]">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
             <div className="ring-1 ring-purple-600/50 relative rounded-lg ml-4 mr-4 mb-4 py-1 pb-2 px-3 text-sm leading-6 shadow-2xl shadow-black bg-neutral-900/50 text-purple-600 font-bold">
@@ -521,6 +445,6 @@ src="/Bitmoji.png"
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
