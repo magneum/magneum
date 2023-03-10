@@ -63,6 +63,7 @@
     "react-dom": "18.2.0",
     "react-hacker-text-effect": "^1.0.2",
     "react-icons": "^4.7.1",
+    "react-intersection-observer": "^9.4.3",
     "react-simple-typewriter": "^5.0.1",
     "react-social-icons": "^5.15.0",
     "react-syntax-highlighter": "^15.5.0",
