@@ -1,6 +1,6 @@
 <h3 align="center">A passionate fullstack developer from India</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=magneum&label=Profile%20views&color=0e75b6&style=flat" alt="magneum" /> </p>
+<!-- <p align="left"> <img src="https://komarev.com/ghpvc/?username=magneum&label=Profile%20views&color=0e75b6&style=flat" alt="magneum" /> </p> -->
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=magneum" alt="magneum" /></a> </p>
 
@@ -34,4 +34,3 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=magneum&show_icons=true&locale=en" alt="magneum" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=magneum&" alt="magneum" /></p>
-
