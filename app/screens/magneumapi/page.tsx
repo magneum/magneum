@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Header from "@/pages/navigator";
 import SFW from "@/pages/examples/SFW";
 import Nsfw from "@/pages/examples/Nsfw";
 import Manga from "@/pages/examples/Manga";
@@ -20,7 +21,8 @@ type Props = {};
 
 const MAGNEUMAPI = (props: Props) => {
   return (
-    <div>
+    <div className="bg-neutral-900">
+      <Header />
       <section className="backdrop-blur-3xl bg-gradient-to-tl from-stone-900 via-slate-900 to-black min-w-fit min-h-screen">
         <div className="flex flex-col items-center justify-center px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:pt-32 md:px-0">
           <div className="flex flex-col items-center max-w-2xl md:px-8">

@@ -1,7 +1,7 @@
 import https from "https";
 import moment from "moment";
 import logger from "@/log";
-import { v4 as uuidv4 } from "uuid";
+import { uuid as uuidv4 } from "uuidv4";
 const validUrl = require("valid-url");
 import type { NextApiRequest, NextApiResponse } from "next";
 

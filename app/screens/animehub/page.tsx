@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import Image from "next/image";
+import Header from "@/pages/navigator";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import React, { useRef, useState } from "react";
@@ -17,9 +18,7 @@ function ANIMEHUB({}: Props) {
   var handleSubmit = async (event: any) => {
     setLoading(true);
     event.preventDefault();
-    var crons = await axios.get(
-      `/api/animehub?title=${userInput.current.value}`
-    );
+    var crons = await axios.get(`/api/anime?q=${userInput.current.value}`);
     setSearchData(crons.data);
     setLoading(false);
   };
@@ -32,6 +31,7 @@ function ANIMEHUB({}: Props) {
 
   return (
     <div className="bg-[#131313]">
+      <Header />
       <section>
         <div className="items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
           <div className="flex w-full mx-auto text-left">
@@ -95,8 +95,9 @@ function ANIMEHUB({}: Props) {
                     <p className="sm:text-sm md:text-lg lg:text-1xl xl:text-2xl text-sm font-semibold leading-snug capatilize tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-500 uppercase">
                       Title:{" "}
                       <span className="text-white/50 text-sm italic font-medium">
-                        {isSearchData._title} || {isSearchData._jp_title} ||{" "}
-                        {isSearchData._en_title}
+                        {isSearchData.meta.title} ||{" "}
+                        {isSearchData.meta.jp_title} ||{" "}
+                        {isSearchData.meta.en_title}
                       </span>
                     </p>
                   </div>
@@ -104,7 +105,7 @@ function ANIMEHUB({}: Props) {
                 <p className="mb-4 sm:text-sm md:text-lg lg:text-1xl xl:text-2xl text-sm font-semibold leading-snug capatilize tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-500 uppercase">
                   synopsis:{" "}
                   <span className="text-white/50 text-sm italic font-medium lowercase text-gray-300">
-                    {isSearchData._synopsis}
+                    {isSearchData.meta.synopsis}
                   </span>
                 </p>
                 <div className="grid gap-8 row-gap-8 sm:grid-cols-2">
@@ -113,7 +114,7 @@ function ANIMEHUB({}: Props) {
                       premiered
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._premiered}
+                      {isSearchData.meta.premiered}
                     </p>
                   </div>
 
@@ -122,7 +123,7 @@ function ANIMEHUB({}: Props) {
                       webpage
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._webpage}
+                      {isSearchData.meta.webpage}
                     </p>
                   </div>
 
@@ -131,7 +132,7 @@ function ANIMEHUB({}: Props) {
                       broadcast
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._broadcast}
+                      {isSearchData.meta.broadcast}
                     </p>
                   </div>
 
@@ -140,7 +141,7 @@ function ANIMEHUB({}: Props) {
                       genres
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._genres}
+                      {isSearchData.meta.genres}
                     </p>
                   </div>
 
@@ -149,7 +150,7 @@ function ANIMEHUB({}: Props) {
                       type
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._type}
+                      {isSearchData.meta.type}
                     </p>
                   </div>
 
@@ -158,7 +159,7 @@ function ANIMEHUB({}: Props) {
                       episodes
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._episodes}
+                      {isSearchData.meta.episodes}
                     </p>
                   </div>
 
@@ -167,7 +168,7 @@ function ANIMEHUB({}: Props) {
                       rating
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._rating}
+                      {isSearchData.meta.rating}
                     </p>
                   </div>
 
@@ -176,7 +177,7 @@ function ANIMEHUB({}: Props) {
                       aired
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._aired}
+                      {isSearchData.meta.aired}
                     </p>
                   </div>
 
@@ -185,7 +186,7 @@ function ANIMEHUB({}: Props) {
                       score
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._score}
+                      {isSearchData.meta.score}
                     </p>
                   </div>
 
@@ -194,7 +195,7 @@ function ANIMEHUB({}: Props) {
                       scores
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._scores}
+                      {isSearchData.meta.scores}
                     </p>
                   </div>
 
@@ -203,7 +204,7 @@ function ANIMEHUB({}: Props) {
                       favourites
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._favourites}
+                      {isSearchData.meta.favourites}
                     </p>
                   </div>
                   <div>
@@ -211,7 +212,7 @@ function ANIMEHUB({}: Props) {
                       rank
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._rank}
+                      {isSearchData.meta.rank}
                     </p>
                   </div>
                   <div>
@@ -219,7 +220,7 @@ function ANIMEHUB({}: Props) {
                       duration
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._duration}
+                      {isSearchData.meta.duration}
                     </p>
                   </div>
                   <div>
@@ -227,7 +228,7 @@ function ANIMEHUB({}: Props) {
                       studios
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._studios}
+                      {isSearchData.meta.studios}
                     </p>
                   </div>
                   <div>
@@ -235,7 +236,7 @@ function ANIMEHUB({}: Props) {
                       producers
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._producers}
+                      {isSearchData.meta.producers}
                     </p>
                   </div>
                   <div>
@@ -243,7 +244,7 @@ function ANIMEHUB({}: Props) {
                       popularity
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._popularity}
+                      {isSearchData.meta.popularity}
                     </p>
                   </div>
                   <div>
@@ -251,7 +252,7 @@ function ANIMEHUB({}: Props) {
                       members
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._members}
+                      {isSearchData.meta.members}
                     </p>
                   </div>
                   <div>
@@ -259,7 +260,7 @@ function ANIMEHUB({}: Props) {
                       source
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._source}
+                      {isSearchData.meta.source}
                     </p>
                   </div>
                   <div>
@@ -267,7 +268,7 @@ function ANIMEHUB({}: Props) {
                       synonyms
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._synonyms}
+                      {isSearchData.meta.synonyms}
                     </p>
                   </div>
                   <div>
@@ -275,7 +276,7 @@ function ANIMEHUB({}: Props) {
                       characters
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._characters}
+                      {isSearchData.meta.characters}
                     </p>
                   </div>
                   <div>
@@ -283,7 +284,7 @@ function ANIMEHUB({}: Props) {
                       staffs
                     </h6>
                     <p className="text-sm text-gray-300 italic">
-                      {isSearchData._scores}
+                      {isSearchData.meta.scores}
                     </p>
                   </div>
                 </div>
@@ -294,7 +295,7 @@ function ANIMEHUB({}: Props) {
                   width={900}
                   height={900}
                   className="object-cover w-full h-56 rounded shadow-2xl shadow-black sm:h-96"
-                  src={isSearchData._image}
+                  src={isSearchData.meta.image}
                   alt=""
                 />
               </div>

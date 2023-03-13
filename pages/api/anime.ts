@@ -1,6 +1,6 @@
 import logger from "@/log";
 import moment from "moment";
-import { v4 as uuidv4 } from "uuid";
+import { uuid as uuidv4 } from "uuidv4";
 var malScraper = require("mal-scraper");
 import type { NextApiRequest, NextApiResponse } from "next";
 

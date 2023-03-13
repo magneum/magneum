@@ -2,7 +2,7 @@ import got from "got";
 import logger from "@/log";
 import moment from "moment";
 import { load } from "cheerio";
-import { v4 as uuidv4 } from "uuid";
+import { uuid as uuidv4 } from "uuidv4";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function Google(
@@ -25,8 +25,8 @@ export default async function Google(
       }).text();
       const $ = load(body);
       const data_: any = [];
-      $("div.tF2Cxc").each(function () {
-        const el = $(this);
+      $("div.tF2Cxc").each(function (d) {
+        const el = $(d);
         const header = el.find("cite.iUh30").text();
         const title = el.find("div.yuRUbf > a > h3").text();
         const url = el.find("div.yuRUbf > a[href]").attr("href");

@@ -2,7 +2,7 @@ import axios from "axios";
 import logger from "@/log";
 import moment from "moment";
 import { load } from "cheerio";
-import { v4 as uuidv4 } from "uuid";
+import { uuid as uuidv4 } from "uuidv4";
 const malScraper = require("mal-scraper");
 import type { NextApiRequest, NextApiResponse } from "next";
 

@@ -2,6 +2,7 @@
 import axios from "axios";
 import Link from "next/link";
 import Image from "next/image";
+import Header from "@/pages/navigator";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import React, { useRef, useState } from "react";
@@ -47,7 +48,8 @@ function SPOTIFY({}: Props) {
     loop: true,
   });
   return (
-    <div>
+    <div className="bg-neutral-900">
+      <Header />
       <section id="Hero" className="bg-[#121112] text-white h-screen">
         <div className="items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
           <div className="flex w-full mx-auto text-left">

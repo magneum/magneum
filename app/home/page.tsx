@@ -337,7 +337,9 @@ export default function Page() {
                   aria-label="Category"
                   title="Visit the East"
                   className="inline-block mb-3 text-2xl font-semibold leading-5 transition-colors duration-200 text-purple-500/70 uppercase font-serif"
-                ></a>
+                >
+                  Anime Hub
+                </a>
                 <p className="mb-4 text-gray-400 text-sm">
                   Anime is hand-drawn and computer-generated animation
                   originating from Japan. Outside of Japan and in English, anime

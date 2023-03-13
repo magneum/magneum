@@ -4,7 +4,7 @@ import logger from "@/log";
 import moment from "moment";
 const singer = require("play-dl");
 import YouTube_Sr from "yt-search";
-import { v4 as uuidv4 } from "uuid";
+import { uuid as uuidv4 } from "uuidv4";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 function shorten(url: any) {
